@@ -1,6 +1,9 @@
 const express = require('express')
 const next = require('next')
 
+const fs = require('fs');
+const matter = require('gray-matter');
+
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -19,6 +22,10 @@ app.prepare().then(() => {
 
   server.get('/posts/:id', (req, res) => {
     return app.render(req, res, '/posts', { id: req.params.id })
+  })
+
+  server.get('/blogs/meta', (req, res) => {
+
   })
 
   server.get('*', (req, res) => {

@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
+import { store } from '../store';
+// import blogs from '../misc/blogs.json';
 
 function Index(props) {
-	const [ dt, setDt ] = useState({});
-	// setDt(props.stars);
-	// console.log('Client:', props.stars);
-	console.log('Client:', dt);
+	let stars;
+	if (props.stars) {
+		stars = props.stars
+		store.setCache('stars', props.stars);
+	} else {
+		stars = store.getCache('stars');
+	}
+	console.log('Client:', stars);
+	// console.log(blogs);
 	return (
 		<ul>
 			<li>
@@ -30,11 +37,13 @@ function Index(props) {
 Index.getInitialProps = async ({ req }) => {
 	const x = 0;
 	let d = {};
+	let blogs={};
 	if (req) {
 		d = await axios.get('http://localhost:3002');
-		console.log(d.data);
+		blogs = await import('../misc/blogs.json');
+		console.log(blogs.default);
 	}
-	return { stars: d.data };
+	return { stars: blogs.default };
 };
 
 export default Index;
@@ -62,7 +71,7 @@ export default Index;
 function Index(props) {
 	console.log('Client:', props.stars);
 	return (
-		
+
 		<div>
 			<Link href="/about">
 				<a>About Page</a>
