@@ -12,7 +12,7 @@ function Index(props) {
 	} else {
 		stars = store.getCache('stars');
 	}
-	console.log('Client:', stars);
+	console.log('Client:', props.query);
 	// console.log(blogs);
 	return (
 		<ul>
@@ -34,8 +34,8 @@ function Index(props) {
 		</ul>
 	);
 }
-Index.getInitialProps = async ({ req }) => {
-	const x = 0;
+Index.getInitialProps = async ({req,query}) => {
+	console.log('server:', query);
 	let d = {};
 	let blogs={};
 	if (req) {
@@ -43,7 +43,7 @@ Index.getInitialProps = async ({ req }) => {
 		blogs = await import('../misc/blogs.json');
 		console.log(blogs.default);
 	}
-	return { stars: blogs.default };
+	return { stars: blogs.default, query: query };
 };
 
 export default Index;

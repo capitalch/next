@@ -24,8 +24,12 @@ app.prepare().then(() => {
     return app.render(req, res, '/posts', { id: req.params.id })
   })
 
-  server.get('/blogs/meta', (req, res) => {
+  // server.get('/blogs/meta', (req, res) => {
+  //   return app.render(req, res, '/blogs', { details:'This is blogs'})
+  // })
 
+  server.get('/', (req, res) => {
+    return app.render(req, res, '/', [{ 'myName': "Sushant", 'myAddress': '12 J.L' }, { 'hisName': 'abcd', 'hisAddress': 'abcd' }])
   })
 
   server.get('*', (req, res) => {
@@ -36,4 +40,6 @@ app.prepare().then(() => {
     if (err) throw err
     console.log(`> Ready on http://localhost:${port}`)
   })
+}).catch((a) => {
+  console.log(a)
 })
