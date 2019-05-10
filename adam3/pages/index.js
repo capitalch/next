@@ -7,7 +7,7 @@ import { store } from '../store';
 function Index(props) {
 	let stars;
 	if (props.stars) {
-		stars = props.stars
+		stars = props.stars;
 		store.setCache('stars', props.stars);
 	} else {
 		stars = store.getCache('stars');
@@ -31,13 +31,18 @@ function Index(props) {
 					<a>post #2</a>
 				</Link>
 			</li>
+			<li>
+			<Link href={{ pathname: '/blogs/meta' }}>
+					<a>Blogs</a>
+				</Link>
+			</li>
 		</ul>
 	);
 }
-Index.getInitialProps = async ({req,query}) => {
+Index.getInitialProps = async ({ req, query }) => {
 	console.log('server:', query);
 	let d = {};
-	let blogs={};
+	let blogs = {};
 	if (req) {
 		d = await axios.get('http://localhost:3002');
 		blogs = await import('../misc/blogs.json');
