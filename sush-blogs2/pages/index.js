@@ -5,12 +5,18 @@ export default () => {
 	return (
 		<div>
 			<div>This is index page</div>
-			<a href="/allposts">posts</a>
+			<Link href="/posts">
+				<a>posts</a>
+			</Link>
+			<Link href="/testmd">
+				<a>About</a>
+			</Link>
 		</div>
 	);
 };
 
 /*
+<a href="/posts">posts</a>
 <Link  href='/allposts' >
 				<a>
 					posts
