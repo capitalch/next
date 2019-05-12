@@ -6,7 +6,7 @@ function Posts({ posts }) {
 	return (
 		<div>
 			<div>This is posts page</div>
-			{posts.map((x: any, index: number) => {
+			{posts.map((x, index) => {
 				return (
 					<div key={index}>
 						<Link href={`/post/${x.slug}`} as={`/post/${x.slug}`}>
@@ -23,15 +23,19 @@ function Posts({ posts }) {
 }
 
 Posts.getInitialProps = async ({ req, res }) => {
-	const isServer = !!req;
-	let data: any = {};
-	if (isServer) {
-		data.posts = res.locals.posts;
-	} else {
-		const d = await axios.get('/client-posts');
-		data = d.data;
+	try {
+		const isServer = !!req;
+		let data = {};
+		if (isServer) {
+			data.posts = res.locals.posts;
+		} else {
+			const d = await axios.get('/client-posts');
+			data = d.data;
+		}
+		return data;
+	} catch (e) {
+		console.log(e);
 	}
-	return data;
 };
 
 export default Posts;

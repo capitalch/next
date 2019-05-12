@@ -35,35 +35,54 @@ app.prepare().then(() => {
 	const server = express();
 
 	server.get('/posts', (req, res) => {
+		console.log('posts');
+		res.locals.posts = posts;
+		return app.render(req, res, '/posts');
+	});
+
+	server.get('/api/posts', (req, res) => {
+		console.log('posts');
 		res.locals.posts = posts;
 		return app.render(req, res, '/posts');
 	});
 
 	server.get('/client-posts', (req, res) => {
+		console.log('client-posts');
 		res.status(200).json({ posts: posts });
 	});
 
 	server.get('/post/:slug', (req, res) => {
-    const slug = req.params.slug;
-		const {data,content} = matter.read(`./posts/${slug}.md`);
+		console.log('post/slug');
+		const slug = req.params.slug;
+		const { data, content } = matter.read(`./posts/${slug}.md`);
 		const html = '<b>Hi this is html</b>';
-    return app.render(req, res, '/post' , {data,content, html});
+		return app.render(req, res, '/post', { data, content, html });
 	});
 
 	server.get('*', (req, res) => {
+		console.log('*');
 		return handle(req, res);
 	});
 
-	server.listen(port, (err) => {
-		if (err) throw err;
-		console.log(`> Ready on http://localhost:${port}`);
-	});
+	module.exports = server;
+
+	// server.listen(port, (err) => {
+	// 	if (err) throw err;
+	// 	console.log(`> Ready on http://localhost:${port}`);
+	// });
 });
 
 /*
+ { "src": "/posts", "dest": "/" } ,
+    { "src": "/client-posts", "dest": "/" } ,
+    { "src": "/posts/*", "dest": "/" }
+{ "src": "/(.*)", "dest": "/" }
 server.get('/a', (req, res) => {
     return app.render(req, res, '/a', req.query)
-  })
+	})
+	
+	
+    { "src": "next.config.js", "use": "@now/next" },
 
   server.get('/b', (req, res) => {
     return app.render(req, res, '/b', req.query)

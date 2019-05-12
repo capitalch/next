@@ -1,29 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@now/next",
-        "config": {
-          "maxLambdaSize": "20mb"
-        }
-      },
-      {
-        "src": "static/*",
-        "use": "@now/static"
-      },
-      {
-        "src": "server.js",
-        "use": "@now/node-server",
-        "config": {
-          "maxLambdaSize": "20mb"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/catch/(.*)",
-        "dest": "/server.js"
-      }
-    ]
-  }
+	"version": 2,
+	"name": "nextjs",
+	"builds": [
+    { "src": "server.js", "use": "@now/node" },
+    { "src": "package.json", "use": "@now/next" }
+  ],
+	"routes": [ 
+    { "src": "/*", "dest": "/" } ,
+    { "src": "/client-posts", "dest": "/" } ,
+    { "src": "/posts/*", "dest": "/" }
+  ]
+}
