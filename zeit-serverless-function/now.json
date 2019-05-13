@@ -1,0 +1,33 @@
+{
+	"version": 2,
+	"name": "zeit-serverless-function",
+	"builds": [
+		{
+			"src": "*.js",
+			"use": "@now/node"
+		},
+		{
+			"src": "/lambdas/*.js",
+			"use": "@now/node"
+		},
+		{ "src": "package.json", "use": "@now/next" }
+	],
+	"routes": [
+		{
+			"src": "/a",
+			"dest": "/func1.js"
+		},
+		{
+			"src":"/b",
+			"dest":"/lambdas/func2.js"
+		},
+		{
+			"src":"/clientposts",
+			"dest":"/lambdas/posts.js"
+		},
+		{
+			"src":"/posts",
+			"dest":"/lambdas/posts.js"
+		}
+	]
+}
