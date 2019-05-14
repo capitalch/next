@@ -8,12 +8,9 @@
     "deploy": "npm run build && npm run export"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "express": "^4.16.4",
     "next": "^8.1.0",
-    "raw-loader": "^2.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-markdown": "^4.0.8"
+    "react-dom": "^16.8.6"
   }
 }

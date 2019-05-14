@@ -3,16 +3,16 @@ const next = require('next');
 const fs = require('fs');
 const matter = require('gray-matter');
 
-const port = parseInt(process.env.PORT, 10) || 3000;
+const port = parseInt(process.env.PORT, 10) || 3001;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const posts = [
-	{
-		title: 'This is post1',
-		slug: 'post1'
-	},
+	// {
+	// 	title: 'This is post1',
+	// 	slug: 'post1'
+	// },
 	{
 		title: 'This is post2',
 		slug: 'post2'
@@ -60,16 +60,16 @@ app.prepare().then(() => {
 	});
 
 	server.get('*', (req, res) => {
-		console.log('*');
+		// console.log('*');
 		return handle(req, res);
 	});
 
-	module.exports = server;
+	// module.exports = server;
 
-	// server.listen(port, (err) => {
-	// 	if (err) throw err;
-	// 	console.log(`> Ready on http://localhost:${port}`);
-	// });
+	server.listen(port, (err) => {
+		if (err) throw err;
+		console.log(`> Ready on http://localhost:${port}`);
+	});
 });
 
 /*
