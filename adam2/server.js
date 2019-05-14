@@ -41,11 +41,13 @@ app.prepare().then(() => {
 	server.get('/clientposts', (req, res) => {
 		console.log('clientposts');
 		res.status(200).json({ posts: posts });
-    });
-    
-    server.get('/a/b',(req,res)=>{
-        return app.render(req, res, '/about');
-    })
+	});
+
+	server.get('/docs/:slug', (req, res) => {
+		const slug = req.params.slug;
+		res.locals.slug = slug;
+		return app.render(req, res, '/post');
+	})
 
 	server.get('*', (req, res) => {
 		return handle(req, res);

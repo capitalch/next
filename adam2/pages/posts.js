@@ -9,7 +9,7 @@ function Posts({ posts }) {
 			{posts.map((x, index) => {
 				return (
 					<div key={index}>
-						<Link href={`/docs/${x.slug}`} as={`/docs/${x.slug}`}>
+						<Link href={`/docs?slug=${x.slug}`} as={`/docs/${x.slug}`}>
 							<a>{x.title}</a>
 						</Link>
 					</div>
