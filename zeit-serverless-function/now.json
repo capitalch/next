@@ -3,14 +3,17 @@
 	"name": "zeit-serverless-function",
 	"builds": [
 		{
+			"src": "next.config.js",
+			"use": "@now/next"
+		},
+		{
 			"src": "*.js",
 			"use": "@now/node"
 		},
 		{
 			"src": "/lambdas/*.js",
 			"use": "@now/node"
-		},
-		{ "src": "package.json", "use": "@now/next" }
+		}
 	],
 	"routes": [
 		{
@@ -18,16 +21,16 @@
 			"dest": "/func1.js"
 		},
 		{
-			"src":"/b",
-			"dest":"/lambdas/func2.js"
+			"src": "/b",
+			"dest": "/lambdas/func2.js"
 		},
 		{
-			"src":"/clientposts",
-			"dest":"/lambdas/posts.js"
+			"src": "/clientposts",
+			"dest": "/lambdas/posts.js"
 		},
 		{
-			"src":"/posts",
-			"dest":"/lambdas/posts.js"
+			"src": "/posts",
+			"dest": "/lambdas/posts.js"
 		}
 	]
 }
