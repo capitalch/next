@@ -5,14 +5,7 @@ const Home = () => (
   <div>
     Home page
     <p>
-      <Link href="/about" as = '/a/b'>
-        <a>about</a>
-      </Link>
-    </p>
-    <p>
-      <Link href='/posts'>
-        <a>posts</a>
-      </Link>
+      <a href = '/posts'>posts</a>
     </p>
     <style jsx>{`
       .hero {
@@ -64,3 +57,5 @@ const Home = () => (
 )
 
 export default Home
+/*
+*/

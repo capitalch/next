@@ -3,7 +3,7 @@ const fs = require('fs')
 const directories = source => fs.readdirSync(source, {
    withFileTypes: true
 }).reduce((a, c) => {
-   !c.isDirectory() && a.push({title:`this is ${c.name.split('.')[0]}`, slug:c.name.split('.')[0]})
+   a.push({title:`this is ${c.name.split('.')[0]}`, slug:c.name.split('.')[0]})
    return a
 }, [])
 

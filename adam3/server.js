@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
 const port = parseInt(process.env.PORT, 10) || 3000;
@@ -15,21 +16,20 @@ const files = source => fs.readdirSync(source, {
 
 async function arch(){
 	await app.prepare()
-	const server = express();
-	
+	const server = express()
+	server.use(compression())
 	server.get('/posts', (req, res) => {
 		const posts = files(__dirname.concat('/docs'))
 		res.locals.posts = posts;
 		// res.status(200).json({ posts: posts });
-		res.status(200).json({ posts: posts });
 		return app.render(req, res, '/posts');
 	});
 
-	server.get('/clientposts', (req, res) => {
-		const posts = files(__dirname.concat('/docs'))
-		console.log('clientposts');
-		res.status(200).json({ posts: posts });
-	});
+	// server.get('/clientposts', (req, res) => {
+	// 	const posts = files(__dirname.concat('/docs'))
+	// 	console.log('clientposts');
+	// 	res.status(200).json({ posts: posts });
+	// });
 
 	server.get('/docs/:slug', (req, res) => {
 		const slug = req.params.slug;

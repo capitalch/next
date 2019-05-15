@@ -11628,7 +11628,7 @@ function () {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /*!***********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts&absolutePagePath=C%3A%5Cprojects%5Cnext%5Cadam2%5Cpages%5Cposts.js ***!
   \***********************************************************************************************************************/
@@ -11651,5 +11651,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=posts.js.map
