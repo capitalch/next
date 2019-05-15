@@ -13,9 +13,3 @@ app.get('*', (req, res) => {
 });
 
 module.exports = app;
-// app.listen(3200);
-/*
-{ "src": "/test", "dest": "/" }, 
-{ "src": "/test1", "dest": "/" } 
-{ "src": "/(.*)", "dest": "/" }
-*/

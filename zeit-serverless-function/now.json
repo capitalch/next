@@ -3,7 +3,7 @@
 	"name": "zeit-serverless-function",
 	"builds": [
 		{
-			"src": "next.config.js",
+			"src": "package.json",
 			"use": "@now/next"
 		},
 		{
@@ -30,7 +30,7 @@
 		},
 		{
 			"src": "/posts",
-			"dest": "/lambdas/posts.js"
+			"dest": "/server.js"
 		}
 	]
 }

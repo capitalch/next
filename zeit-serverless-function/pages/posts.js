@@ -1,37 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import axios from 'axios';
 
 function Posts({ posts }) {
 	return (
 		<div>
-			<div>This is posts page</div>
+			This is posts
 			{posts.map((x, index) => {
 				return (
 					<div key={index}>
-						<Link href={`/post/${x.slug}`} as={`/post/${x.slug}`}>
-							<a>{x.title}</a>
-						</Link>
+						<a href={`/docs/${x.slug}`}>
+							{x.title}
+						</a>
 					</div>
 				);
 			})}
-			<Link href="/" as="/">
-				<a>home</a>
-			</Link>
+			<p>
+				<Link href="/">
+					<a>home</a>
+				</Link>
+			</p>
 		</div>
 	);
 }
 
 Posts.getInitialProps = async ({ req, res }) => {
 	try {
-		const isServer = !!req;
 		let data = {};
-		if (isServer) {
-			data.posts = res.locals.posts;
-		} else {
-			const d = await axios.get('/clientposts');
-			data = d.data;
-		}
+		data.posts = res.locals.posts;
 		return data;
 	} catch (e) {
 		console.log(e);
