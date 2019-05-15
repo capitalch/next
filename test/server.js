@@ -6,7 +6,14 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-const posts = [
+const files = source => fs.readdirSync(source, {
+	withFileTypes: true
+ }).reduce((a, c) => {
+	!c.isDirectory() && a.push({title:`this is ${c.name.split('.')[0]}`, slug:c.name.split('.')[0]})
+	return a
+ }, [])
+
+const posts1 = [
 	{
 		title: 'This is post1',
 		slug: 'post1'
@@ -31,17 +38,25 @@ const posts = [
 
 app.prepare().then(() => {
 	const server = express();
-
+	
 	server.get('/posts', (req, res) => {
+		const posts = files(__dirname.concat('/docs'))
 		console.log('posts');
 		res.locals.posts = posts;
 		return app.render(req, res, '/posts');
 	});
 
 	server.get('/clientposts', (req, res) => {
+		const posts = files(__dirname.concat('/docs'))
 		console.log('clientposts');
 		res.status(200).json({ posts: posts });
 	});
+
+	server.get('/docs/:slug', (req, res) => {
+		const slug = req.params.slug;
+		res.locals.slug = slug;
+		return app.render(req, res, '/post');
+	})
 
 	server.get('*', (req, res) => {
 		return handle(req, res);

@@ -28,12 +28,21 @@ Posts.getInitialProps = async ({ req, res }) => {
 	try {
 		const isServer = !!req;
 		let data = {};
-		if (isServer) {
+
+		if(res && res.locals){
 			data.posts = res.locals.posts;
 		} else {
-			const d = await axios.get('/clientposts');
+			const d = await axios.get('/posts');
 			data = d.data;
 		}
+
+		// if (!isServer) {
+		// 	const d = await axios.get('/posts');
+		// 	data = d.data;
+			
+		// } else {
+		// 	data.posts = res.locals.posts;
+		// }
 		return data;
 	} catch (e) {
 		console.log(e);
