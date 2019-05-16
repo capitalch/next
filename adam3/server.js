@@ -25,12 +25,6 @@ async function arch(){
 		return app.render(req, res, '/posts');
 	});
 
-	// server.get('/clientposts', (req, res) => {
-	// 	const posts = files(__dirname.concat('/docs'))
-	// 	console.log('clientposts');
-	// 	res.status(200).json({ posts: posts });
-	// });
-
 	server.get('/docs/:slug', (req, res) => {
 		const slug = req.params.slug;
 		res.locals.slug = slug;

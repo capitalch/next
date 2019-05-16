@@ -1,36 +1,40 @@
 {
 	"version": 2,
-	"name": "zeit-serverless-function",
+	"name": "zeit-serverless",
 	"builds": [
 		{
-			"src": "package.json",
+			"src": "next.config.js",
 			"use": "@now/next"
 		},
 		{
-			"src": "*.js",
+			"src": "/lambdas/func2.js",
 			"use": "@now/node"
 		},
 		{
-			"src": "/lambdas/*.js",
+			"src": "/lambdas/lcontacts.js",
 			"use": "@now/node"
+		},
+		{
+			"src": "/lambdas/lexpress.js",
+			"use": "@now/node-server"
 		}
 	],
 	"routes": [
 		{
-			"src": "/a",
-			"dest": "/func1.js"
+			"src":"/contacts",
+			"dest":"/lambdas/lcontacts.js"
 		},
 		{
-			"src": "/b",
-			"dest": "/lambdas/func2.js"
+			"src":"/users",
+			"dest":"/lambdas/lcontacts.js"
 		},
 		{
-			"src": "/clientposts",
-			"dest": "/lambdas/posts.js"
+			"src":"/posts",
+			"dest":"/lambdas/lexpress.js"
 		},
 		{
-			"src": "/posts",
-			"dest": "/lambdas/lambda-posts.js"
+			"src":"/func2",
+			"dest":"/lambdas/func2.js"
 		}
 	]
 }

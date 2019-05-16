@@ -40,7 +40,9 @@ app.prepare().then(() => {
 
 	server.get('*', (req, res) => {
 		return handle(req, res);
-	});
+    });
+    
+    // module.exports = server;
 
 	server.listen(port, (err) => {
 		if (err) throw err;
