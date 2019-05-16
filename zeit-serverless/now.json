@@ -30,7 +30,7 @@
 		},
 		{
 			"src": "/posts",
-			"dest": "/server.js"
+			"dest": "/lambdas/lambda-posts.js"
 		}
 	]
 }
