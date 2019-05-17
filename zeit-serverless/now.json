@@ -27,11 +27,7 @@
 		{
 			"src":"/users",
 			"dest":"/lambdas/lcontacts.js"
-		},
-		{
-			"src":"/posts",
-			"dest":"/lambdas/lexpress.js"
-		},
+		},		
 		{
 			"src":"/func2",
 			"dest":"/lambdas/func2.js"

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import axios from 'axios'
 
 function Posts() {
 	return (
@@ -19,7 +20,9 @@ Posts.getInitialProps = async ({ req, res }) => {
 		let data = {};
 
 		// data.posts = res.posts;
-		console.log(data)
+		const d = await axios.get('/test');
+		console.log(d.data);
+		// console.log(data)
 		return data;
 	} catch (e) {
 		console.log(e);

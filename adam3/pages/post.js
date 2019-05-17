@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown/with-html';
 
 function Post(props) {
+    console.log(props.myName)
     return (
         <div>
             <ReactMarkdown escapeHtml={false} source={props.content} />

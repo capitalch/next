@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Home = () => (
-  <div>
+const Home = (props) => {
+  // console.log('render:', props.myName)
+  return  <div>
     Home page
     <p>
       <a href = '/posts'>posts</a>
@@ -54,7 +55,12 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+}
+
+Home.getInitialProps = async ({ req, res}) => {
+  // console.log('aaa')
+  return {}
+}
 
 export default Home
 /*

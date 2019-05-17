@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 // import axios from 'axios';
 
-function Posts({ posts }) {
+function Posts({ posts, myName }) {
+	// console.log(myName)
 	return (
 		<div>
 			This is posts
@@ -24,7 +25,7 @@ function Posts({ posts }) {
 	);
 }
 
-Posts.getInitialProps = async ({ req, res }) => {
+Posts.getInitialProps = async ({ req, res}) => {
 	try {
 		// const isServer = !!req;
 		let data = {};
@@ -43,6 +44,7 @@ Posts.getInitialProps = async ({ req, res }) => {
 		// } else {
 		// 	data.posts = res.locals.posts;
 		// }
+		data.hisName = 'govindo'
 		return data;
 	} catch (e) {
 		console.log(e);
