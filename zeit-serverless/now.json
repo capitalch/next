@@ -16,7 +16,7 @@
 		},
 		{
 			"src": "/lambdas/lexpress.js",
-			"use": "@now/node-server"
+			"use": "@now/node"
 		}
 	],
 	"routes": [
@@ -35,6 +35,11 @@
 		{
 			"src":"/func2",
 			"dest":"/lambdas/func2.js"
+		},
+		{
+			
+			"src":"/test",
+			"dest":"/lambdas/lexpress.js"
 		}
 	]
 }

@@ -3,7 +3,7 @@ const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
 const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = process.env.NODE_ENV !== 'production';
+const dev = false // process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -14,14 +14,13 @@ const files = source => fs.readdirSync(source, {
 	return a
 }, [])
 
-async function arch(){
-	await app.prepare()
+
+app.prepare().then(() => {
 	const server = express()
 	server.use(compression())
 	server.get('/posts', (req, res) => {
 		const posts = files(__dirname.concat('/docs'))
 		res.locals.posts = posts;
-		// res.status(200).json({ posts: posts });
 		return app.render(req, res, '/posts');
 	});
 
@@ -39,9 +38,8 @@ async function arch(){
 		if (err) throw err;
 		console.log(`> Ready on http://localhost:${port}`);
 	});
-}
+})
 
-arch()
 
 
 

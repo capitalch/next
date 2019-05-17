@@ -18,7 +18,7 @@ Posts.getInitialProps = async ({ req, res }) => {
 	try {
 		let data = {};
 
-		data.posts = res.posts;
+		// data.posts = res.posts;
 		console.log(data)
 		return data;
 	} catch (e) {
