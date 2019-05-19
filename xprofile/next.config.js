@@ -1,10 +1,39 @@
-module.exports = {
-  webpack: config => {
-    // Fixes npm packages that depend on `fs` module
-    config.node = {
-      fs: 'empty'
-    }
+const withTypescript = require('@zeit/next-typescript');
+const withSass = require('@zeit/next-sass');
+const withCss = require('@zeit/next-css');
 
-    return config
-  }
-}
+module.exports = withTypescript(
+	withSass({
+		cssModules: true,
+		webpack: function(config) {
+			config.module.rules.push({
+				test: /\.md$/,
+				use: 'raw-loader'
+			});
+			config.node = {
+				fs: 'empty'
+			};
+			return config;
+		}
+	})
+);
+
+// module.exports = withTypescript(
+// 	withCss(
+
+// 		withSass({
+// 			webpack: function(config) {
+// 				config.module.rules.push({
+// 					test: /\.md$/,
+// 					use: 'raw-loader'
+// 				});
+// 				config.node = {
+// 					fs: 'empty'
+// 				};
+// 				return config;
+//       },
+//       cssModules: true
+//     })
+
+// 	)
+// );
