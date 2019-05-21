@@ -2,6 +2,7 @@
 
                                                 add scss
                                                 add typescript
+check mdx working instead of md files
 import markdown for react
 set strategy for scss
 set layout, header, footer, main etc
