@@ -20,7 +20,7 @@ const Nav = () => {
 				<div className="mow">test1</div>
 				test
 			</div>
-			<style jsx>{`styleJsx`}</style>
+			<style jsx global>{styleJsx}</style>
 		</div>
 	);
 };
