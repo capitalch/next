@@ -1,27 +1,13 @@
 import React from 'react';
-import css from 'styled-jsx/css';
-// import styles from './nav.module.scss';
-// import './nav.css';
+import styled from 'styled-components';
 
 const Nav = () => {
-	const myColor = 'pink';
-	const styleJsx = css`
-		.hero {
-			width: 100%;
-			color: red;
-		}
-		.mow {
-			color: pink;
-		}
-	`;
+	const MyDiv = styled.div`color:red`;
+	
 	return (
-		<div>
-			<div className="hero">
-				<div className="mow">test1</div>
-				test
-			</div>
-			<style jsx global>{styleJsx}</style>
-		</div>
+		<MyDiv>
+		Sushant
+		</MyDiv>
 	);
 };
 
