@@ -2,87 +2,53 @@ import React from 'react';
 // import Link from 'next/link';
 import Head from '../components/head';
 import Nav from '../components/nav';
+import Document from '../docs/home.mdx'
+// const mdx = require('@mdx-js/mdx');
 
-const Home = () => {
-	return <div>
-		<Head title="Home" />
-		<Nav />
+const Home = ({Content}) => {
+	// console.log(Document())
+	return <Document></Document>
+	// return <Content></Content>
 
-		<div>Heading</div>
-	</div>
-}
+	console.log('content:', props.content)
+	return <div>test</div>
+	// return (
+	// 	<div>
+	// 		<Head title="Home" />
+	// 		<Nav />
+
+	// 		<div>Heading</div>
+	// 	</div>
+	// );
+};
+
+Home.getInitialProps = async () => {
+	const Content = (await import('../docs/home.mdx')).default
+// const content = content1.default;
+	console.log({...Content.default});
+	return {Content};
+};
 
 export default Home;
 
 /*
-<style jsx>{`
-			.hero {
-				width: 100%;
-				color: #333;
-			}
-			.title {
-				margin: 0;
-				width: 100%;
-				padding-top: 80px;
-				line-height: 1.15;
-				font-size: 48px;
-			}
-			.title,
-			.description {
-				text-align: center;
-			}
-			.row {
-				max-width: 880px;
-				margin: 80px auto 40px;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-around;
-			}
-			.card {
-				padding: 18px 18px 24px;
-				width: 220px;
-				text-align: left;
-				text-decoration: none;
-				color: #434343;
-				border: 1px solid #9b9b9b;
-			}
-			.card:hover {
-				border-color: #067df7;
-			}
-			.card h3 {
-				margin: 0;
-				color: #067df7;
-				font-size: 18px;
-			}
-			.card p {
-				margin: 0;
-				padding: 12px 0 0;
-				font-size: 13px;
-				color: #333;
-			}
-		`}</style>
+import React from 'react'
+import Document from '../md/markdown.md'
+const H1 = props => <h1 style={{ color: 'tomato' }} {...props} />
+const InlineCode = props => <code id="codes" style={{ color: 'purple' }} {...props} />
+const Code = props => <code id="codes" style={{ fontWeight: 600 }} {...props} />
+const Pre = props => <pre id="codes" style={{ color: 'red' }} {...props} />
+export default () => <Document components={{ h1: H1, pre: Pre, code: Code, inlineCode: InlineCode }} />
 
-<div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
-      </div>
+
+
+const mdx = require('@mdx-js/mdx')
+ 
+const result = await mdx(`
+# Hello, MDX
+ 
+I <3 Markdown and JSX
+`)
+ 
+console.log(result)
 */

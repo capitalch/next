@@ -40,8 +40,7 @@ const Main = styled.div`
 function Layout(props) {
 	return (
 		<StyledLayout>
-			<Header>Home</Header>
-			{/* <img src="/static/images/banner1-gray.jpg" style={{ 'grid-area': 'banner', width:'100%', height:'200px' }} /> */}
+			<Header>Home</Header>			
 			<Banner src="/static/images/banner1-gray.jpg" alt="image">
 			</Banner>
 			<Left></Left>
@@ -59,19 +58,13 @@ function Layout(props) {
 export default Layout;
 
 /*
-
-	.header {
-		grid-area: header;
-	}
-	.left {
-		grid-area: left;
-		overflow-y: auto;
-	}
-	.main {
-		grid-area: main;
-		overflow-y: auto;
-	}
-	.footer {
-		grid-area: footer;
-	}
+const mdx = require('@mdx-js/mdx')
+ 
+const result = await mdx(`
+# Hello, MDX
+ 
+I <3 Markdown and JSX
+`)
+ 
+console.log(result)
 */

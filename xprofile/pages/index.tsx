@@ -2,14 +2,13 @@ import React from 'react';
 import Head from '../components/head';
 import Layout from '../components/layout';
 import { createGlobalStyle } from 'styled-components';
-import ReactMarkdown from 'react-markdown/with-html';
+const mdx = require('@mdx-js/mdx')
 
 const GlobalStyle = createGlobalStyle`
 body{
   margin:0.1em;
 }`
 
-const home = 'This is home'
 
 const Home = (props) => (
 	<div>
@@ -21,8 +20,22 @@ const Home = (props) => (
 );
 
 Home.getInitialProps = async () => {
-	const content = (await require(`../docs/pages/home.md`)).default;
+	// const content = (await import(`../docs/pages/home.md`)).default;
+	const content = (await import(`../docs/pages/home.mdx`));
+	// const content = await mdx(content1);
 	return {content};
 }
 
 export default Home;
+
+/*
+const mdx = require('@mdx-js/mdx')
+ 
+const result = await mdx(`
+# Hello, MDX
+ 
+I <3 Markdown and JSX
+`)
+ 
+console.log(result)
+*/
