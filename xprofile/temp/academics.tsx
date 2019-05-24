@@ -6,13 +6,13 @@ import GlobalStyle from '../handy/globalStyle';
 const IndexPage = ({ content }) => (
 	<div>
 		<GlobalStyle />
-		<Head title="Resume" />
+		<Head title="Home" />
 		<Layout content={content} isBanner={false} />
 	</div>
 );
 
 IndexPage.getInitialProps = async () => {
-	const content = (await import(`../docs/pages/resume.md`)).default;
+	const content = (await import(`../docs/pages/academics.md`)).default;
 	return { content };
 };
 

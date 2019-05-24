@@ -1,36 +1,18 @@
 import React from 'react';
-// import Link from 'next/link';
-import Head from '../components/head';
-import Nav from '../components/nav';
-// import Document from '../docs/home.mdx'
-import Layout from '../components/layout'
-import ReactMarkdown from 'react-markdown/with-html';
-// const mdx = require('@mdx-js/mdx');
 
-const Home = ({ title,Component, Content }) => {
-	console.log(Component)
-	// console.log(Document())
-	// console.log(Content)
-	return <div>
-		{/* <ReactMarkdown escapeHtml={false} source={Content} /> */}
-		{/* <div dangerouslySetInnerHTML={{ __html: Content }}></div> */}
-		{/* <Content></Content> */}
-		<Component></Component>
-	</div>
-	// return <Content></Content>
+const Home = ({pageProps}) => {
+	console.log(pageProps)
+	return <div>Test</div>
 };
 
-Home.getInitialProps = () => {
-	const {
-		default: Component
-		// ,meta: { title }
-	} = require("../docs/home.mdx")
+// Home.getInitialProps = async ({req}) => {
+// 	console.log('url:',req.url)
+// 	return {test:true}
+// };
 
-	console.log(Component)
-	return {
-		Component
-		// ,		title
-	}
+export default Home;
+
+/*
 
 
 	// const Content = (require('../docs/home.mdx')).default
@@ -38,12 +20,6 @@ Home.getInitialProps = () => {
 	// console.log(Content.default.Function);
 	// const content = content1.default;
 	// console.log({ ...Content.default });
-	return { Content };
-};
-
-export default Home;
-
-/*
 const {
     default: Component,
     meta: { title }

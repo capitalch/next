@@ -27,7 +27,7 @@ const IndexPage = ({ content, isMDPage, slug }) => {
 	return (
 		<div>
 			<GlobalStyle />
-			<Head title={slug} />
+			<Head title="Home" />
 			{/* {isMDPage && <Layout content={content} isBanner={true} />} */}
 			{getPageContent({ content, isMDPage, slug })}
 		</div>
