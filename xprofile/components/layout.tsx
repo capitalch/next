@@ -23,6 +23,9 @@ const Left = styled.div`
 	grid-area: left;
 	background-color: whitesmoke;
 	min-height: 100vh;
+	/* display:flex;
+	flex-direction:column;
+	flex-grow:1 */
 `;
 
 const Right = styled.div`
@@ -35,7 +38,17 @@ const Main = styled.div`
 	grid-area: main;
 	background-color: whitesmoke;
 	min-height: 100vh;
+	font-size:1.3em;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	line-height:1.6em;
+	text-align:justify;
 `;
+
+const ProfileImage = styled.img`
+	float:right;
+	padding-top: 30px;
+	padding-right:30px;
+`
 
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
@@ -43,7 +56,10 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 			<StyledLayout>
 				<Header>Home</Header>
 				{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
-				<Left />
+				<Left>
+					<ProfileImage src='/static/images/sush1.jpg'></ProfileImage>
+					{/* <label>Sushant Agrawal</label> */}
+				</Left>
 				{content && (
 					<Main>
 						<ReactMarkdown escapeHtml={false} source={content} />

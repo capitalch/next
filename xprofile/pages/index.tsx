@@ -6,73 +6,48 @@ import Contact from '../components/contact';
 import Skillset from '../components/skillset';
 import Blogs from '../components/blogs';
 
-const allMDPages: string[] = [ 'about', 'resume', 'academics', 'projects', 'qa' ];
-const comps = {
-	contact: () => <Contact />,
-	skillset: () => <Skillset />,
-	blogs: () => <Blogs />
-};
-
-function getPageContent({ content, isMDPage, slug }) {
-	let Ret;
-	if (isMDPage) {
-		Ret = <Layout content={content} isBanner={true} />;
-	} else {
-		Ret = <Layout isBanner={true}>{comps[slug]()}</Layout>;
-	}
-	return Ret;
-}
-
-const IndexPage = ({ content, isMDPage, slug }) => {
+const IndexPage = ({ content, slug }) => {
 	return (
 		<div>
 			<GlobalStyle />
 			<Head title={slug} />
-			{/* {isMDPage && <Layout content={content} isBanner={true} />} */}
-			{getPageContent({ content, isMDPage, slug })}
+			{getPageContent({ content, slug })}
 		</div>
 	);
 };
 
 IndexPage.getInitialProps = async ({ res }) => {
-	// console.log('pathname:', pathname)
-	const slug = res.locals.slug || 'about';
-	// console.log('slug:', slug);
+	let slug = res.locals.slug || 'about';
+	(!allPages[slug]) && (slug = 'about');
+
 	let content;
-	let isMDPage = false;
-	if (allMDPages.includes(slug)) {
-		content = (await import(`../docs/pages/${slug}.md`)).default;
-		isMDPage = true;
-	}
-	// const content = (await import(`../docs/pages/about.md`)).default;
-	return { content, isMDPage, slug };
+	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+	return { content, slug };
 };
+
+function getPageContent({ content, slug }) {
+	let Ret;
+	if (allPages[slug].isMDFile) {
+		Ret = <Layout content={content} isBanner={allPages[slug].isBanner} />;
+	} else {
+		Ret = <Layout isBanner={allPages[slug].isBanner}>{allPages[slug].component()}</Layout>;
+	}
+	return Ret;
+}
+
+const allPages = {
+	about: { isBanner: true, isMDFile: true },
+	contact: { isBanner: false, isMDFile: false, component: () => <Contact></Contact> },
+	resume: { isBanner: false, isMDFile: true },
+	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },
+	academics: { isBanner: false, isMDFile: true },
+	projects: { isBanner: false, isMDFile: true },
+	qa: { isBanner: false, isMDFile: true },
+	blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
+}
 
 export default IndexPage;
 
 /*
 
-let slug = 'about';
-res.locals && res.locals.slug && (slug = res.locals.slug);
-console.log('slug:', slug);
-
-console.log(req.url);
-console.log(allMDPages);
-const allMDPages=['about','resume']
-const path = location.pathname
-const mdx = require('@mdx-js/mdx')
-
-const result = await mdx(`
-# Hello, MDX
-
-I <3 Markdown and JSX
-`)
-
-console.log(result)
-
-import { createGlobalStyle } from 'styled-components';
-const GlobalStyle = createGlobalStyle`
-body{
-  margin:0.1em;
-}`;
 */

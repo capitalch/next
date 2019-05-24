@@ -1,21 +1,17 @@
-# About
+# About Sushant
 
-Welcome to **Home Sushant**!
-<h1>This is header</h1>
-<img src='/static/images/cave.jpeg' style='float:left; margin-right:20px;margin-bottom:20px;'></img>
+I consider myself a passionate full stack software developer. I am in the software industry since last 3 decades back from year 2018. So far I have worked in capacity of Chief technology officer, Project manager, team lead, front end developer, back-end developer, Sql-developer, low end developer, technical architect, QA and also worked for pre-sales, deployment, training, migration and many more. Over period of time I gained experience in controlling finance, HR and operations, business development, legal of a business organization. I have solid domain knowledge of Financial accounting, inventory management, asset management, human relations and legal.
 
-Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”
+I hold a B.Tech degree in computer science and I started my carrier during DOS days working on DBASE, Clipper, assembly language and PowerBuilder during year 1990. I gradually learnt and did considerable software development work with  Microsoft technologies, SharePoint, dot net, Java, Sybase, Postgresql, JavaScript, Node.js, Angular, react.js, Flutter, dart, Cordova, Ionic and many more. I have given effect to several mission critical software projects in Financial accounting, Legal, Human resource management, payroll, Inventory management, Point of sales, Asset management, Engineering systems, Medical and health care and Legal domain.
 
-As Cicero would put it, “Um, not so fast.”
+I have seen many ups and downs in software industry and change in trends and technology. People say I am good in picking up new technologies and am a good self learner. I solve complex software problems after decomposing them to simple ones.  I excel in devising intelligent algorithms to solve intricate business problems.
 
-The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.
+In last few years we have seen a massive shift towards open source technologies and software development challenges have increased manifold. At this juncture of time the industry needs time and tested experienced software professionals who are also aware of the old systems. There is acute shortage of such skill-set in the software market. I am proud to say that I belong to such category of software professionals.
 
-Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
+Presently in year 2018 I am associated with a multinational company as Chief Technology Officer. I am also doing low end software development work in several technologies as part of my job. I am hands on with latest technology such as ES6, Angular, React, Dart, nodejs and flutter. My company is doing well in terms of business and I am proud of being associated with this company.
 
-In particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work, with the most notable passage excerpted below:
+I have sufficient free time at present and I am looking for business opportunities in challenging open source software development area.
 
-“Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”
-A 1914 English translation by Harris Rackham reads:
+Purpose of this blog site is to expose myself to the outside world. If somebody has great software development based business idea along with supporting finance and he / she is looking for strong and proven technical cum operational help in carrying out such idea, I am the right person to contact with.
 
-“Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure.”
-McClintock's eye for detail certainly helped narrow the whereabouts of lorem ipsum's origin, however, the “how and when” still remain something of a mystery, with competing theories and timelines.
+I work from Kolkata, West Bengal, India and can be contacted at my email address capitalch@gmail.com
