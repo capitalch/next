@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 const StyleHeader = styled.div`
 	grid-area: header;
-    background-color: #2F4555;
+    /* background-color: #2F4555; */
+    background-color:#373C2F;
     height: 58px;
     
     display:flex;
@@ -14,15 +15,18 @@ const StyleHeader = styled.div`
 
     a {
         margin-left:25px;
+        /* color:black; */
+        font-weight:bolder;
         color:white;
         text-decoration:none;
         /* align-self:center; */
         margin-top:auto;
         margin-bottom:13px;
+        font-family:sans-serif;
     }
 
     a[aria-current="page"]{
-        color: aquamarine;
+        /* color: aquamarine; */
     }
 
     label {
@@ -41,8 +45,8 @@ function Header() {
     return <StyleHeader>
         <label>Sushant Agrawal's profile</label>
         <a href="/">Home</a>
-        <a href="#">Contact</a>
-        <a href="#">Resume</a>
+        <a href="/contact">Contact</a>
+        <a href="/resume">Resume</a>
         <a href="#">Skillset</a>
         <a href="#">Academics</a>
         <a href="#">Projects</a>

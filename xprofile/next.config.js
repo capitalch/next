@@ -1,9 +1,9 @@
 const withTypescript = require('@zeit/next-typescript');
 const withSass = require('@zeit/next-sass');
-const withCss = require('@zeit/next-css');
-const withMDX = require('@next/mdx')({
-	extension: /\.mdx?$/
-});
+// const withCss = require('@zeit/next-css');
+// const withMDX = require('@next/mdx')({
+// 	extension: /\.mdx?$/
+// });
 
 module.exports = withTypescript(
 	withSass(
@@ -19,10 +19,10 @@ module.exports = withTypescript(
 				};
 				return config;
 			}
-		},
-		withMDX({
-			pageExtensions: [ 'js', 'jsx', 'md', 'mdx' ]
-		})
+		}
+		// ,withMDX({
+		// 	pageExtensions: [ 'js', 'jsx', 'md', 'mdx' ]
+		// })
 	)
 );
 
