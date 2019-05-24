@@ -20,12 +20,12 @@ app.prepare().then(() => {
 	server.use(compression())
 
 
-	server.get('/:slug', (req, res) => {
-		const slug = req.params.slug || 'about';
-		console.log('express:', slug)
-		res.locals.slug = slug;
-		return app.render(req, res, '/');
-	})
+	// server.get('/:slug', (req, res) => {
+	// 	const slug = req.params.slug || 'about';
+	// 	console.log('express:', slug)
+	// 	res.locals.slug = slug;
+	// 	return app.render(req, res, '/');
+	// })
 
 	// server.get('/pages/:slug', (req, res) => {
 	// 	const slug = req.params.slug || 'about';

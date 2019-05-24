@@ -1,39 +1,33 @@
 import React from 'react';
 import Head from '../components/head';
 import Layout from '../components/layout';
-import { createGlobalStyle } from 'styled-components';
-// import Router from 'next/router'
-
-const GlobalStyle = createGlobalStyle`
-body{
-  margin:0.1em;
-}`
-
-const allMDPages=['about','resume']
-// const path = location.pathname
+import GlobalStyle from '../handy/globalStyle';
 
 const IndexPage = ({ content }) => (
 	<div>
-		
-		<GlobalStyle></GlobalStyle>
+		<GlobalStyle />
 		<Head title="Home" />
-		<Layout content={content} isBanner={true}></Layout>
+		<Layout content={content} isBanner={true} />
 	</div>
 );
 
-IndexPage.getInitialProps = async ({req,res}) => {
-	console.log(allMDPages);
-	console.log(req.url);
-	let slug = 'about';
-	res.locals && res.locals.slug && (slug = res.locals.slug) 
-	console.log('slug:',slug)
-	const content = (await import(`../docs/pages/${slug}.md`)).default;
+IndexPage.getInitialProps = async () => {
+	const content = (await import(`../docs/pages/about.md`)).default;
 	return { content };
-}
+};
 
 export default IndexPage;
 
 /*
+
+let slug = 'about';
+res.locals && res.locals.slug && (slug = res.locals.slug);
+console.log('slug:', slug);
+
+console.log(req.url);
+console.log(allMDPages);
+const allMDPages=['about','resume']
+const path = location.pathname
 const mdx = require('@mdx-js/mdx')
 
 const result = await mdx(`
@@ -43,4 +37,10 @@ I <3 Markdown and JSX
 `)
 
 console.log(result)
+
+import { createGlobalStyle } from 'styled-components';
+const GlobalStyle = createGlobalStyle`
+body{
+  margin:0.1em;
+}`;
 */

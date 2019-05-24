@@ -47,11 +47,11 @@ function Header() {
         <a href="/">Home</a>
         <a href="/contact">Contact</a>
         <a href="/resume">Resume</a>
-        <a href="#">Skillset</a>
-        <a href="#">Academics</a>
-        <a href="#">Projects</a>
-        <a href="#">Q & A</a>
-        <a href="#">Blogs</a>
+        <a href="/skillset">Skillset</a>
+        <a href="/academics">Academics</a>
+        <a href="projects">Projects</a>
+        <a href="/qa">QA</a>
+        <a href="/blogs">Blogs</a>
     </StyleHeader>
 }
 
