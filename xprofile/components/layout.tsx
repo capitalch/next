@@ -23,9 +23,6 @@ const Left = styled.div`
 	grid-area: left;
 	background-color: whitesmoke;
 	min-height: 100vh;
-	/* display:flex;
-	flex-direction:column;
-	flex-grow:1 */
 `;
 
 const Right = styled.div`
@@ -46,8 +43,13 @@ const Main = styled.div`
 
 const ProfileImage = styled.img`
 	float:right;
-	padding-top: 30px;
-	padding-right:30px;
+	padding-top: 2em;
+	padding-right:4em;
+`
+const ProfileText = styled.div`
+	clear:right;
+	padding-right:5em;
+	float:right
 `
 
 function Layout({ isBanner = true, content = '', children = '' }) {
@@ -57,7 +59,8 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 				<Header>Home</Header>
 				{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
 				<Left>
-					<ProfileImage src='/static/images/sush1.jpg'></ProfileImage>
+					<ProfileImage src='/static/images/sush3.jpg'></ProfileImage>
+					<ProfileText>Sushant Agrawal <div>capitalch@gmail.com</div></ProfileText>
 					{/* <label>Sushant Agrawal</label> */}
 				</Left>
 				{content && (
@@ -72,14 +75,15 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 	);
 }
 
-// Layout.getInitialProps = async () => {
-// 	const content = (await require(`../docs/pages/home.md`)).default;
-// 	return {content};
-// }
 
 export default Layout;
 
 /*
+
+Layout.getInitialProps = async () => {
+const content = (await require(`../docs/pages/home.md`)).default;
+return {content};
+}
 const mdx = require('@mdx-js/mdx')
 
 const result = await mdx(`
