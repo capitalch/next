@@ -37,7 +37,7 @@ function getPageContent({ content, slug }) {
 
 const allPages = {
 	about: { isBanner: true, isMDFile: true },
-	contact: { isBanner: false, isMDFile: false, component: () => <Contact></Contact> },
+	contact: { isBanner: true, isMDFile: false, component: () => <Contact></Contact> },
 	resume: { isBanner: false, isMDFile: true },
 	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },
 	academics: { isBanner: false, isMDFile: true },

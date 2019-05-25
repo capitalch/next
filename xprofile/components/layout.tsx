@@ -15,8 +15,8 @@ const StyledLayout = styled.div`
 const Banner = styled.img`
 	grid-area: banner;
 	width: 100%;
-	height: ${(props) => props.ht};
-	background-color: aqua;
+	/* height: ${(props) => props.ht}; */
+	/* background-color: aqua; */
 `;
 
 const Left = styled.div`
@@ -35,22 +35,23 @@ const Main = styled.div`
 	grid-area: main;
 	background-color: whitesmoke;
 	min-height: 100vh;
-	font-size:1.3em;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	line-height:1.6em;
-	text-align:justify;
+	line-height: 2rem;
+	font-size: 1.3rem;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	text-align: justify;
 `;
 
 const ProfileImage = styled.img`
-	float:right;
-	padding-top: 2em;
-	padding-right:4em;
-`
+	float: right;
+	padding-top: 2rem;
+	padding-right: 4rem;
+`;
 const ProfileText = styled.div`
-	clear:right;
-	padding-right:5em;
-	float:right
-`
+	clear: right;
+	padding-right: 5rem;
+	float: right;
+`;
 
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
@@ -59,8 +60,10 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 				<Header>Home</Header>
 				{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
 				<Left>
-					<ProfileImage src='/static/images/sush3.jpg'></ProfileImage>
-					<ProfileText>Sushant Agrawal <div>capitalch@gmail.com</div></ProfileText>
+					<ProfileImage src="/static/images/sush3.jpg" />
+					<ProfileText>
+						Sushant Agrawal <div>capitalch@gmail.com</div>
+					</ProfileText>
 					{/* <label>Sushant Agrawal</label> */}
 				</Left>
 				{content && (
@@ -74,7 +77,6 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 		)
 	);
 }
-
 
 export default Layout;
 

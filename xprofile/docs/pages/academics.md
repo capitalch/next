@@ -1,17 +1,51 @@
 # Academics
-
-Lorem ipsum dolor sit amet, te omnesque apeirian pri, eos id voluptua apeirian. Iudico intellegat eum et, ut vis alii nominavi. Sumo sapientem sit ad, putant dissentias id pri. Nec ad imperdiet temporibus!
-
-Pri verterem patrioque ne, sea ne facer honestatis. Ius in exerci invenire signiferumque, eu his fastidii posidonium instructior. Cum regione aperiri intellegam ad, mel in error quidam suavitate? Pri no stet voluptaria, id his nonumy nullam definitionem, te vel decore epicuri conceptam. Ei vim populo integre, libris conceptam nec et.
-
-Ut quis adhuc contentiones per, et has eros tollit, vidisse epicurei usu at. Sea quod audire ea, est solum homero abhorreant ea. Te summo patrioque euripidis cum! Eam tantas pericula interpretaris ea?
-
-Case viris eligendi at vel. At mollis veritus sed, ferri nostrum torquatos cum ad, cu atqui mundi quidam vim. Eu pri modo dolorum dolores, eu liber feugiat nam. Te mel posse melius vocent, natum essent no vis!
-
-Eam in hinc veniam audiam. Ut vel elitr putant sapientem, has an utamur scaevola verterem. Vero detracto qui ne. Ei est minimum sapientem, eum eu solum ipsum perfecto, mundi equidem mea an? Pro quod veniam atomorum at, vix causae offendit nominati te, no commodo volumus electram pro. Dicta deserunt vel at. Vix ei sint autem doming, eum ad mnesarchum reprehendunt, ut commodo equidem sententiae nec.
-
-Sea ex meis intellegam, eum tibique minimum convenire ex. Ad pro tritani persequeris. Ex agam sensibus cum, postea voluptatibus eum no. Cum ad ipsum soleat periculis! Lobortis splendide an cum, in idque alienum sed.
-
-Ex utamur nominati duo, te tantas cetero pri. Viris vivendum tractatos qui no! Porro probatus salutatus vel at, in wisi oratio ullamcorper cum! Nec et probo dictas vivendum, eu nec sale prompta blandit! At sea iuvaret ceteros petentium.
-
-Eos scaevola detraxit ei, has ex tibique vituperatoribus, ut assum ornatus intellegam usu. Pri ut graeci ullamcorper. Nam veri dicunt saperet eu? Sea nostrum molestiae ex? Id sea mutat torquatos conceptam. Id hinc lorem everti quo, nonumy albucius in mel.
+<style>
+td {
+    border: 1px solid black;
+    font-size:1rem;
+}
+</style>
+<table>
+<tbody>
+<tr>
+<th>Period</th>
+<th>Institute</th>
+<th>Stream</th>
+<th>Remarks</th>
+</tr>
+<tr>
+<td>1982 - 1986</td>
+<td>Birla Institute of Technology</td>
+<td>B.Tech (Computer Science)</td>
+<td><b>Topped in the branch</b></td>
+</tr>
+<tr>
+<td>1980 - 1982</td>
+<td>Scottish Church College</td>
+<td>Class 11 + 12</td>
+<td>West bengal Board of Higher Secondary Education (Pure Science) <b>63.2% marks</b></td>
+</tr>
+<tr>
+<td>1976 - 1980</td>
+<td>Hindi High School (now Birla High School)</td>
+<td>Class 6 - Class 10</td>
+<td><b>CBSE score was 80%</b></td>
+</tr>
+<tr>
+<td>1975</td>
+<td>Junior Hindi High School</td>
+<td>Class 5</td>
+<td></td>
+</tr>
+<tr>
+<td>1969 - 1974</td>
+<td>Abhniv Bharti Balmandir</td>
+<td>Class KG to Class 4</td>
+<td>Montessori School</td>
+</tr>
+</tbody>
+</table>
+<div>Sushant was always good in Alzebra and Science group. He had interest in English and Hindi languages.</div>
+<div>His educational certificates are below:</div>
+<div><a href="https://sushant2018.files.wordpress.com/2018/05/sushant-agrawal-higher-secondary-mark-sheet.pdf">Higher Secondary mark Sheet</a>
+<a href="https://sushant2018.files.wordpress.com/2018/05/susantagrawal_engineering-degree.pdf">B.Tech. Engineering Degree</a></div>
