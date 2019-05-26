@@ -1,11 +1,51 @@
-# Resume
+# Resume of Sushant
 
-Lorem ipsum dolor sit amet, at nam mnesarchum suscipiantur. Qui ne adhuc labores consequat, eum nibh clita laoreet ad. At doming erroribus vis. Eum ut dolore laudem dignissim, ad feugiat reprimique nec. Ei equidem detraxit est, aliquip repudiandae pri eu, no mollis vocibus cum.
+<style>
+td {
+    border: 1px solid black;
+    font-size:1rem;
+}
 
-Facer integre praesent mel in, possim iriure minimum sea ad, ignota molestiae cu duo. Vel eu suas nonumy, in hendrerit appellantur qui. Liber primis aeterno te nec, cu erat conceptam per. His argumentum philosophia ad, paulo voluptatum no pro. No ius expetenda appellantur. Malis malorum ut ius.
+</style>
 
-Ne vix agam animal complectitur. Pro eu illud omnes appellantur, impetus praesent at cum. Esse vocent per te, ne sea populo doming inciderint, his tamquam posidonium ad. Affert laudem mollis quo ut, qui ad dicta appareat.
-
-At eam tempor docendi consulatu, mutat quidam vivendum nam ex. Solum choro prodesset an nam, ea sed impetus ocurreret comprehensam. Nisl senserit ex nec, per ex mucius ornatus, percipit gloriatur inciderint sea ei. Sed semper imperdiet id, quidam malorum insolens ea ius. Ea diceret recteque deterruisset eos. Mel porro iudico regione ex, in vix timeam gloriatur. Vim vidit utamur ne, ex probo maluisset eam, no qui mollis nusquam vulputate.
-
-At voluptua luptatum est, tacimates concludaturque at quo. Graeci suscipit euripidis ex mei, te pri esse natum iriure. Salutandi efficiendi his ex. Soleat accommodare vis ne, vel eu torquatos comprehensam.
+<table>
+    <tbody>
+        <tr>
+            <td>Experience</td>
+            <td>3+ decades</td>
+        </tr>
+        <tr>
+            <td>2019</td>
+            <td>Chief Technology Officer of a multinational company</td>
+        </tr>
+        <tr>
+            <td>Worked with</td>
+            <td>Angular 2/ 4/ 5/6/7, React.js, Node.js, IONIC mobile framework, dart, flutter mobile, Cordova, J2EE, J2SE,
+            .NET, WCF, WPF, REST, SharePoint, Office 365, ASP.NET, C#, JavaScript frameworks and libraries,
+            ES6, SQL server, PostGreSql, Oracle, MySQL, Mongo DB, Backbone,
+            WordPress, PHP, LifeRay, Jasper reports, PowerBuilder, Sybase Sql Anywhere</td>
+        </tr>
+        <tr>
+            <td>Extensive experience</td>
+            <td>Docker, Ubuntu, Flutter mobile, dart, React.js, Mobile cordova based systems, Angular 2/ 4/ 5/6/7, node.js based REST API and PostGreSql</td>
+        </tr>
+        <tr>
+            <td>Other qualities</td>
+            <td>Team worker and also can work alone, Technical writer,
+            English communication skill, Can design and implement a complete system consisting of front end, middle tier and back end</td>
+        </tr>
+        <tr>
+            <td>Interested in</td>
+            <td>Design and development of mission critical software big challenging software systems from start to end</td>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td>1) Challenges are interesting.
+            2) Failures do not exist.
+            3) In software development 5% people do original work,
+            40% follow them and rest are billing machines.
+            4) Smart work overrides hard work.
+            5) Machine learning and artificial intelligence are old wines in new bottle.</td>
+        </tr>
+    </tbody>
+</table>

@@ -11,7 +11,7 @@ function Contact() {
 	return (
 		<div>
 			<AddressDetails>
-				<h1>Contact details</h1>
+				<h1>Contact details of Sushant</h1>
 				<div> {contactDetails.address1}</div>
 				<div>{contactDetails.address2}</div>
 				<div>{contactDetails.nearLocation}</div>
@@ -20,7 +20,7 @@ function Contact() {
 				<div>{contactDetails.phone}</div>
 				<div>{contactDetails.email}</div>
 			</AddressDetails>
-			<h2>Directly mail to me</h2>
+			<h2>Directly mail to Sushant</h2>
 			<div>
 				<Form onSubmit={sendEmail}>
 					<table>

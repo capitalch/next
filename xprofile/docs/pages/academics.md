@@ -1,4 +1,4 @@
-# Academics
+# Academics of Sushant
 <style>
 td {
     border: 1px solid black;

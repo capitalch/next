@@ -1,353 +1,114 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import skills from '../handy/skills.json'
 
+
+function Skillset() {
+	let runningIndex=0;
+	function Skill({ allSkills, skillGroup }) {		
+		return allSkills[skillGroup].map((skill, index) => {
+			runningIndex++;
+			return (
+				<tr key={index}>
+					<td>{runningIndex}</td>
+					<td>{skill.name}</td>
+					<td>						
+						<StyledDiv style={{ width: `${skill.level * 10}%` }}></StyledDiv>
+						<span>{skill.level}</span>
+					</td>
+					<td><img src={skill.handsOn ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
+					<td><img src={skill.interested ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
+					<td>{skill.projects}</td>
+				</tr>
+			);
+		});
+	};
+
+	const skillGroups = Object.keys(skills).map((skillGroup, index) => {
+		return (
+			<Fragment key={index}>
+				<tr>
+					<th />
+					<th colSpan="5">{skillGroup}</th>
+				</tr>
+				{<Skill allSkills={skills} skillGroup={skillGroup} />}
+			</Fragment>
+		);
+	});
+
+	const Container = (
+		<div>
+			<h1>Software development skills of Sushant</h1>
+			<StyledTable>
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Skill name</th>
+						<th>Skill bar (10 is best)</th>
+						<th>Hands on</th>
+						<th>Interested</th>
+						<th>Experience</th>
+					</tr>
+				</thead>
+				<tbody>{skillGroups}</tbody>
+			</StyledTable>
+		</div>
+	);
+
+	return Container;
+}
+
+function getRandomColor() {
+	return 'hsla(' + Math.floor(Math.random() * 360) + ', 100%, 70%, 1)';
+}
+
+const StyledTable = styled.table`
+	thead {
+		background-color: #dfdfdf;
+		font-size: 1.3rem;
+		th {
+			border: 1px solid #a0a0a0;
+		}
+	}
+	th {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		border: 1px solid lightgray;
+		background-color: #f3f3f3;
+	}
+	td {
+		border: 1px solid lightgray;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		img {
+			display: block;
+			margin: auto;
+		}
+		span {
+			vertical-align: middle;
+			margin-left: 0.3rem;
+		}
+	}
+	font-size: 1.1rem;
+	border-collapse: collapse;
+`;
+
+const StyledDiv = styled.div`
+	display: inline-block;
+	height: 10px;
+	border: 2px solid yellow;
+	vertical-align: middle;
+	background-color: ${() => getRandomColor()};
+	margin-left: 0.3rem;
+`;
+
+export default Skillset;
+
+/*
 interface skill {
 	w: string;
 	b: string;
 }
-
-const StyledTable = styled.table`
-	td,
-	th,
-	tr {
-		border: 1px solid lightgray;
-		font-size: 1rem;
-	}
-`;
-
-const StyledDiv =
-	styled.div <
-	skill >
-	`
-        width: ${(props: skill) => props.w + 'px'};
-		display: inline-block;
-        background-color:${(props:skill)=>props.b};
-        height: 10px;
-        border: 1px solid black;
-        vertical-align:middle;
-`;
-
-function Skillset() {
-	return (
-		<StyledTable>
-			{/* <tbody> */}
-			<tr>
-				<th>Item</th>
-				<th>Skill</th>
-				<th>Remarks</th>
-			</tr>
-			{/* <tr>
-                    <th></th>
-                </tr> */}
-			<tr>
-				<td>Gatsby</td>
-				<td>
-					<StyledDiv w="300" b="green"/>
-				</td>
-				<td>1 Project</td>
-			</tr>
-			{/* </tbody> */}
-		</StyledTable>
-	);
-}
-
-const skills = {
-	'Front end': [
-		{
-			name: 'React core',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'React Gatsby',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: '2 projects'
-		},
-		{
-			name: 'React Next.js',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: '2 projects'
-		},
-		{
-			name: 'Angular',
-			level: '8',
-			handsOn: false,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'HTML5',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'CSS',
-			level: '6',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Javascript / ES6 / Typescript',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'React mobile',
-			level: '4',
-			handsOn: false,
-			intrested: true,
-			remarks: 'learned'
-		},
-		{
-			name: 'Flutter from Google',
-			level: '8',
-			handsOn: false,
-			intrested: true,
-			remarks: '1 project'
-		},
-		{
-			name: 'Ionic',
-			level: '8',
-			handsOn: false,
-			intrested: false,
-			remarks: '3 projects'
-		}
-	],
-	'Server side': [
-		{
-			name: 'C#',
-			level: '8',
-			handsOn: false,
-			intrested: false,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Java',
-			level: '7',
-			handsOn: false,
-			intrested: false,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Python',
-			level: '5',
-			handsOn: false,
-			intrested: true,
-			remarks: 'learned'
-		},
-		{
-			name: 'Node.js / Javascript',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'asp.net',
-			level: '5',
-			handsOn: false,
-			intrested: false,
-			remarks: 'Many projects'
-		}
-	],
-	Databases: [
-		{
-			name: 'Microsoft Sql Server',
-			level: '7',
-			handsOn: false,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'PostgreSQL',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'MySql',
-			level: '4',
-			handsOn: false,
-			intrested: false,
-			remarks: 'Learned'
-		},
-		{
-			name: 'Oracle',
-			level: '4',
-			handsOn: false,
-			intrested: false,
-			remarks: '1 project'
-		},
-		{
-			name: 'MongoDB',
-			level: '4',
-			handsOn: false,
-			intrested: true,
-			remarks: 'Learned'
-		},
-		{
-			name: 'RethinkDB',
-			level: '5',
-			handsOn: false,
-			intrested: true,
-			remarks: '1 project'
-		}
-	],
-	API: [
-		{
-			name: 'GraphQL Apollo',
-			level: '7',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Learned'
-		},
-		{
-			name: 'Core API development in node.js',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		}
-	],
-	'Javascript Libraries': [
-		{
-			name: 'moment.js',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Lodash',
-			level: '7',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'socket.io',
-			level: '8',
-			handsOn: false,
-			intrested: true,
-			remarks: '1 project'
-		},
-		{
-			name: 'jquery',
-			level: '8',
-			handsOn: false,
-			intrested: false,
-			remarks: 'many projects'
-		},
-		{
-			name: 'd3.js',
-			level: '3',
-			handsOn: false,
-			intrested: true,
-			remarks: '1 projects'
-		}
-	],
-	Cloud: [
-		{
-			name: 'Docker',
-			level: '6',
-			handsOn: false,
-			intrested: true,
-			remarks: '2 projects'
-		},
-		{
-			name: 'Serverless functions (Lambda in Zeit) ',
-			level: '6',
-			handsOn: true,
-			intrested: true,
-			remarks: '1 projects'
-		},
-		{
-			name: 'Cloud hosting',
-			level: '4',
-			handsOn: false,
-			intrested: true,
-			remarks: 'Learned'
-		}
-	],
-	Sharepoint: [
-		{
-			name: 'SharePoint on premises',
-			level: '8',
-			handsOn: false,
-			intrested: false,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Office365',
-			level: '4',
-			handsOn: false,
-			intrested: false,
-			remarks: 'Learned'
-		}
-	],
-	'Domain knowledge': [
-		{
-			name: 'Algorithms',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Framework designs',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Many projects'
-		},
-		{
-			name: 'Financial accounting',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: '1 project'
-		},
-		{
-			name: 'Payroll',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: '1 project'
-		},
-		{
-			name: 'Legal',
-			level: '6',
-			handsOn: true,
-			intrested: true,
-			remarks: 'Some projects'
-		},
-		{
-			name: 'Inventory',
-			level: '8',
-			handsOn: true,
-			intrested: true,
-			remarks: '3 projects'
-		},
-		{
-			name: 'E-commerce',
-			level: '6',
-			handsOn: true,
-			intrested: true,
-			remarks: '1 project'
-		}
-	]
-};
-
-export default Skillset;
+width: ${(props: skill) => props.w + 'px'};
+background-color:${(props:skill)=>props.b};
+*/

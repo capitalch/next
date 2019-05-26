@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyleHeader = styled.div`
+const StyledNav = styled.nav`
 	grid-area: header;
     /* background-color: #2F4555; */
     background-color:#373C2F;
@@ -42,7 +42,7 @@ const StyleHeader = styled.div`
 `
 
 function Header() {
-    return <StyleHeader>
+    return <StyledNav>
         <label>Sushant Agrawal's profile</label>
         <a href="/">Home</a>
         <a href="/contact">Contact</a>
@@ -52,7 +52,7 @@ function Header() {
         <a href="projects">Projects</a>
         <a href="/qa">QA</a>
         <a href="/blogs">Blogs</a>
-    </StyleHeader>
+    </StyledNav>
 }
 
 export default Header

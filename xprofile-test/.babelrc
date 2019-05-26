@@ -3,11 +3,9 @@
     "next/babel",
     "@zeit/next-typescript/babel"
   ],
-  "plugins": ["babel-plugin-styled-components"]
-}
-
-/*
-[
+  "plugins": [
+    // ["babel-plugin-root-import"],
+    [
       "styled-components",
       {
         "ssr": true,
@@ -15,4 +13,5 @@
         "preprocess": false
       }
     ]
-*/
+  ]
+}

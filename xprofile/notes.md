@@ -9,17 +9,16 @@
                                                 left area with photo
 right area with articles / blogs
 client routing
-create contacts page
-create skillset page
-create home.md
-create resume.md
+                                                create contacts page
+                                                create skillset page
+                                                create home.md
+    create resume.md
 create academics.md
 create projects.md
 create qa.md
 create blogs page and blogs folder
-@media strategy for responsive design
+    @media strategy for responsive design
 no of hits incorporation
-_app.js strategy
 Comments incorporation
 seo implementation
-Set proper HTML tags for different sections
+                                                Set proper HTML tags for different sections
