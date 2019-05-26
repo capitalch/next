@@ -6,52 +6,62 @@ import ReactMarkdown from 'react-markdown/with-html';
 const banner = false;
 const StyledLayout = styled.div`
 	display: grid;
-	grid-template-areas: "header header header" "banner banner banner" "left main right";
-	grid-template-columns: 20% auto 33%;
-	grid-template-rows: auto;
-	/* grid-gap: 0.1em; */
-`;
+
+	@media(max-width:768px) {
+			grid-template-areas: "header" "main" "left";
+			grid-template-columns: auto;
+			grid-template-rows: auto;
+		}
+
+	@media only screen and (max-width:992px) and (min-width:768px){
+		grid-template-areas: "header" "main" "left";
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+	}
+
+	@media only screen and (max-width:1500px) and (min-width:992px){
+		grid-template-areas: "header header" "left main";
+		grid-template-columns: 16% auto;
+		grid-template-rows: auto;
+	}
+
+	@media only screen and (max-width:4600px) and (min-width:1500px){
+		grid-template-areas: "header header header" "banner banner banner" "left main right";
+		grid-template-columns: 16% auto 40%;
+		grid-template-rows: auto;
+}`
 
 const Banner = styled.img`
 	grid-area: banner;
-	width: 100%;
-	/* height: ${(props) => props.ht}; */
-	/* background-color: aqua; */
-`;
+	width: 100%;`
 
 const Left = styled.div`
 	grid-area: left;
-	background-color: whitesmoke;
-	min-height: 100vh;
-`;
+	background-color: white;`
 
 const Right = styled.div`
 	grid-area: right;
-	background-color: whitesmoke;
-	min-height: 100%;
-`;
+	background-color: white;
+	min-height: 100%;`
 
 const Main = styled.div`
 	grid-area: main;
-	background-color: whitesmoke;
+	background-color: white;
 	min-height: 100vh;
 	line-height: 2rem;
 	font-size: 1.3rem;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-	text-align: justify;
-`;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+	padding-left:1rem;
+	padding-right:1.3rem;
+	text-align: justify;`
 
 const ProfileImage = styled.img`
-	float: right;
-	padding-top: 2rem;
-	padding-right: 4rem;
-`;
+	display:block;
+	margin:auto;
+	padding-top: 2rem;`
+
 const ProfileText = styled.div`
-	clear: right;
-	padding-right: 5rem;
-	float: right;
-`;
+	text-align:center;`
 
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
@@ -64,7 +74,6 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 					<ProfileText>
 						Sushant Agrawal <div>capitalch@gmail.com</div>
 					</ProfileText>
-					{/* <label>Sushant Agrawal</label> */}
 				</Left>
 				{content && (
 					<Main>

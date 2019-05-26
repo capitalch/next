@@ -4,21 +4,21 @@ import skills from '../handy/skills.json'
 
 
 function Skillset() {
-	let runningIndex=0;
-	function Skill({ allSkills, skillGroup }) {		
+	let runningIndex = 0;
+	function Skill({ allSkills, skillGroup }) {
 		return allSkills[skillGroup].map((skill, index) => {
 			runningIndex++;
 			return (
 				<tr key={index}>
 					<td>{runningIndex}</td>
 					<td>{skill.name}</td>
-					<td>						
+					<td>
 						<StyledDiv style={{ width: `${skill.level * 10}%` }}></StyledDiv>
 						<span>{skill.level}</span>
 					</td>
-					<td><img src={skill.handsOn ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
-					<td><img src={skill.interested ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
-					<td>{skill.projects}</td>
+					<td className='media-768'><img src={skill.handsOn ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
+					<td className='media-768'><img src={skill.interested ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
+					<td className='media-992'>{skill.projects}</td>
 				</tr>
 			);
 		});
@@ -38,16 +38,16 @@ function Skillset() {
 
 	const Container = (
 		<div>
-			<h1>Software development skills of Sushant</h1>
+			<StyledH1>Software development skills of Sushant</StyledH1>
 			<StyledTable>
 				<thead>
 					<tr>
 						<th>No</th>
 						<th>Skill name</th>
 						<th>Skill bar (10 is best)</th>
-						<th>Hands on</th>
-						<th>Interested</th>
-						<th>Experience</th>
+						<th className='media-768'>Hands on</th>
+						<th className='media-768'>Interested</th>
+						<th className='media-992'>Experience</th>
 					</tr>
 				</thead>
 				<tbody>{skillGroups}</tbody>
@@ -62,13 +62,20 @@ function getRandomColor() {
 	return 'hsla(' + Math.floor(Math.random() * 360) + ', 100%, 70%, 1)';
 }
 
+const StyledH1 = styled.h1`
+	font-size: 1.4rem;
+	margin-left: 1rem;
+	@media(max-width:992px){
+		font-size: 1.2rem;
+}`
+
 const StyledTable = styled.table`
 	thead {
 		background-color: #dfdfdf;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		th {
 			border: 1px solid #a0a0a0;
-		}
+		}		
 	}
 	th {
 		padding-left: 0.5rem;
@@ -86,11 +93,25 @@ const StyledTable = styled.table`
 		}
 		span {
 			vertical-align: middle;
-			margin-left: 0.3rem;
+			margin-left: 0.1rem;
 		}
 	}
-	font-size: 1.1rem;
+	font-size: 1.0rem;
 	border-collapse: collapse;
+	margin-left:1rem;
+
+	.media-768{
+		@media (max-width:768px){		
+		display:none;
+		}
+	}
+
+	.media-992{
+		@media(max-width:992px){
+			display:none;
+		}
+	}
+
 `;
 
 const StyledDiv = styled.div`

@@ -28,27 +28,20 @@ display: grid;
 	grid-template-areas: "header header header" "banner banner banner" "left main right";
 	grid-template-columns: 16% auto 40%;
 	grid-template-rows: auto;
-}
-
-
-`
+}`
 
 const Banner = styled.img`
 	grid-area: banner;
-	width: 100%;
-`;
+	width: 100%;`
 
 const Left = styled.div`
 	grid-area: left;
-	background-color: whitesmoke;
-	/* min-height: 100vh; */
-`;
+	background-color: whitesmoke;`
 
 const Right = styled.div`
 	grid-area: right;
 	background-color: whitesmoke;
-	min-height: 100%;
-`;
+	min-height: 100%;`
 
 const Main = styled.div`
 	grid-area: main;
@@ -59,18 +52,15 @@ const Main = styled.div`
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	padding-left:1rem;
 	padding-right:1rem;
-	text-align: justify;
-`;
+	text-align: justify;`
 
 const ProfileImage = styled.img`
 	display:block;
 	margin:auto;
-	padding-top: 2rem;
-	/* padding-right: 4rem; */
-`;
+	padding-top: 2rem;`
+
 const ProfileText = styled.div`
-	text-align:center;
-`;
+	text-align:center;`
 
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
