@@ -411,6 +411,13 @@
 			"handsOn": false,
 			"interested": false,
 			"projects": "Many projects"
+		},
+		{
+			"name": "WPF",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
 		}
 	]
 }
