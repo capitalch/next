@@ -3,7 +3,7 @@ const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
 const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = true // process.env.NODE_ENV !== 'production';
+const dev = false // process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 

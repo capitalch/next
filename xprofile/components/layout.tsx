@@ -65,7 +65,7 @@ const ProfileText = styled.div`
 
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
-		{ banner } && (
+		// { banner } && (
 			<StyledLayout>
 				<Header>Home</Header>
 				{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
@@ -83,7 +83,7 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 				{children && <Main>{children}</Main>}
 				<Right />
 			</StyledLayout>
-		)
+		// )
 	);
 }
 
