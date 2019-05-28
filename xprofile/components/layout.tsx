@@ -29,6 +29,7 @@ const StyledLayout = styled.div`
 		grid-template-areas: "header header header" "banner banner banner" "left main right";
 		grid-template-columns: 16% auto 40%;
 		grid-template-rows: auto;
+	
 }`
 
 const Banner = styled.img`
@@ -65,23 +66,23 @@ const ProfileText = styled.div`
 
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
-			<StyledLayout>
-				<Header>Home</Header>
-				{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
-				<Left>
-					<ProfileImage src="/static/images/sush3.jpg" />
-					<ProfileText>
-						Sushant Agrawal <div>capitalch@gmail.com</div>
-					</ProfileText>
-				</Left>
-				{content && (
-					<Main>
-						<ReactMarkdown escapeHtml={false} source={content} />
-					</Main>
-				)}
-				{children && <Main>{children}</Main>}
-				<Right />
-			</StyledLayout>
+		<StyledLayout>
+			<Header>Home</Header>
+			{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
+			<Left>
+				<ProfileImage src="/static/images/sush3.jpg" />
+				<ProfileText>
+					Sushant Agrawal <div>capitalch@gmail.com</div>
+				</ProfileText>
+			</Left>
+			{content && (
+				<Main>
+					<ReactMarkdown escapeHtml={false} source={content} />
+				</Main>
+			)}
+			{children && <Main>{children}</Main>}
+			<Right />
+		</StyledLayout>
 	);
 }
 

@@ -1,42 +1,64 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown/with-html';
+import GlobalStyle from '../handy/globalStyle';
+import Layout from '../components/layout';
+import Head from '../components/head';
+import highlight from 'highlight'
 import { Converter } from 'showdown';
-var Markdown = require('react-remarkable');
+import styled from 'styled-components';
 
-function BlogPage({content, meta}) {
+const StyledDiv = styled.div`
+    /* Layout{ */
+        .table {
+		td {
+			border:1px solid black;
+		}
+		/* color:red; */
+	}
+    /* } */
+`
+
+function BlogPage({ content, meta }) {
     console.log(meta)
+
     return (
-        <div>
-            {/* <ReactMarkdown escapeHtml={false} source={content} disallowedTypes = {['link']}/> */}
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-            {/* <Markdown source={content}></Markdown> */}
-            
-            <p>
-                <a href="/blogs">
-                    blogs
-                </a>
-            </p>
-        </div>
+        <StyledDiv>
+            <GlobalStyle />
+            <Head title='Blog' />
+            <Layout isBanner={false}>
+                <h2>{meta.title}</h2>
+                <div dangerouslySetInnerHTML={{ __html: content }} />
+            </Layout>
+        </StyledDiv>
     );
 }
 
-BlogPage.getInitialProps = async ({res}) => {
+BlogPage.getInitialProps = async ({ res }) => {
     const slug = res.locals.slug
 
-    const converter = new Converter({metadata:true});
-    const d = (await require(`../docs/blogs/${slug}.md`));
-    const content = converter.makeHtml(d.default);
+    const converter = new Converter({ 
+        metadata: true,
+        extensions: [highlight]
+        }
+    );
+    const d = (await require(`../docs/blogs/${slug}.md`)).default;
+    const content = converter.makeHtml(d);
     const meta = converter.getMetadata();
-
-    // const text      = `# hello, markdown!`,
-    // content      = converter.makeHtml(text);
-
-    // const content      = d.default
-    // const meta = {}
-
-    // const d = (await require(`../docs/blogs/${slug}.md`));
-    // const content = d.default;
-    return { content , meta};
+    return { content, meta };
 }
 
 export default BlogPage
+
+/*
+
+var Markdown = require('react-remarkable');
+import ReactMarkdown from 'react-markdown/with-html';
+
+const text      = `# hello, markdown!`,
+content      = converter.makeHtml(text);
+
+const content      = d.default
+const meta = {}
+
+const d = (await require(`../docs/blogs/${slug}.md`));
+const content = d.default;
+*/

@@ -418,6 +418,13 @@
 			"handsOn": false,
 			"interested": false,
 			"projects": "Many projects"
+		},
+		{
+			"name": "Windows forms",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
 		}
 	]
 }
