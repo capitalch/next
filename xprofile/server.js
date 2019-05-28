@@ -21,6 +21,7 @@ app.prepare().then(() => {
 
 	server.get('/blogs', (req, res) => {
 		const blogs = files(__dirname.concat('/docs/blogs'))
+		// console.log(blogs)
 		res.locals.blogs = blogs;
 		return app.render(req, res, '/blogs');
 	});
@@ -32,7 +33,7 @@ app.prepare().then(() => {
 		return app.render(req, res, '/');
 	})
 
-	server.get('/docs/:slug', (req, res) => {
+	server.get('/blog/:slug', (req, res) => {
 		const slug = req.params.slug;
 		res.locals.slug = slug;
 		return app.render(req, res, '/blog');

@@ -7,8 +7,8 @@
                                                 create home page with home.md content. content folder has content for all pages
                                                 server side css attachment
                                                 left area with photo
-                                                 Set proper HTML tags for different sections
-                                                 create contacts page
+                                                Set proper HTML tags for different sections
+                                                create contacts page
                                                 create skillset page
                                                 create home.md
 right area with articles / blogs

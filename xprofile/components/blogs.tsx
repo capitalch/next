@@ -1,8 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
 
-function Blogs(){
-    return <div>This is blogs page </div>
+function Blogs({ blogs }) {
+    return <div>
+        <h1>Blogs by Sushant</h1>
+         	{blogs.map((x, index) => {
+            return (
+                <div key={index}>
+                    <a href={`/blog/${x.slug}`}>
+                        {x.title}
+                    </a>
+                </div>
+            );
+        })}
+    </div>
 }
 
 export default Blogs
