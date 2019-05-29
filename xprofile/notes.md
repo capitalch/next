@@ -22,6 +22,7 @@ create blogs page and blogs folder
 no of hits incorporation
 Comments incorporation
 seo implementation
+syntax highlight
 blogs implement
     create blogs page
     create blog page

@@ -4,7 +4,7 @@ slug: post1
 category: general
 ---
 
-<div style='color:red'>This is html</div>
+<div style='color:red'>This is html1</div>
 
 #### Proin eget velit vel mi pulvinar sagittis et nec augue. 
 
@@ -14,29 +14,30 @@ category: general
 </tr>
 </table>
 
-<pre><code class="javascript">
-    let x=0; 
+<pre><code class="language-css">
+    // let x=0; 
     x++;
     y = x+=1;
     if ( x === y) {
         z = 200;
+        z++;
+    }
+
+    function putErrors(key: string, value: string) {
+        errors[key] = value || undefined; //undefined value will not be displayed by ErrorDisplay        
+        const isAnyError = Object.values(errors).some(v => v != undefined);
+        setControlErrors(formId, formId, (isAnyError || undefined));
+        setErrors({ ...errors });
     }
 </code></pre>
 
-\`\`\`js
-function sayHello (msg, who) {
-    return `${who} says: msg`;
-}
-sayHello("Hello World", "Johnny");
-\`\`\`
-`);
-
 ```js
-function sayHello (msg, who) {
-    return `${who} says: msg`;
-}
-sayHello("Hello World", "Johnny");
+    function sayHello (msg, who) {
+        return `${who} says: msg`;
+    }
+    sayHello("Hello World", "Johnny");
 ```
+
 
 Cras felis purus, pellentesque et odio vel, dignissim semper mi. Sed non quam elit. Nam id nulla lacus. Vestibulum mollis enim at nibh tincidunt, id accumsan ligula dapibus. Donec sem justo, blandit et nulla sed, tincidunt aliquet neque. Phasellus ultrices et elit in molestie. Morbi tempus ut lacus vel efficitur. Aliquam erat volutpat. Duis pulvinar leo ut purus ullamcorper, nec cursus ligula hendrerit. Duis in diam dapibus, ullamcorper ipsum consectetur, malesuada justo. Vestibulum condimentum odio vitae nibh rutrum dictum.
 
