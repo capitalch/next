@@ -23,12 +23,6 @@ category: general
         z++;
     }
 
-    function putErrors(key: string, value: string) {
-        errors[key] = value || undefined; //undefined value will not be displayed by ErrorDisplay        
-        const isAnyError = Object.values(errors).some(v => v != undefined);
-        setControlErrors(formId, formId, (isAnyError || undefined));
-        setErrors({ ...errors });
-    }
 </code></pre>
 
 ```js
