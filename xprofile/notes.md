@@ -30,4 +30,7 @@ blogs implement
     do necessary changes in blogs.tsx and blog.tsx files
     server.js initialy returns just a dummy blogs list with title
     modify server.js with correct blogs list with files hierarchy
+
+//javascript highlighting
+https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/
                                                
