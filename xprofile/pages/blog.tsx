@@ -2,11 +2,18 @@ import React from 'react';
 import GlobalStyle from '../handy/globalStyle';
 import Layout from '../components/layout';
 import Head from '../components/head';
-import highlight from 'highlight'
-import { Converter } from 'showdown';
+// import highlight from 'highlight'
+import showdown from 'showdown';
+// import { Converter } from 'showdown';
 import styled from 'styled-components';
 
+const showdownHighlight = require("showdown-highlight")
+
 const StyledDiv = styled.div`
+/* code{
+    color:white;
+    background-color:black;
+} */
     /* Layout{ */
         .table {
 		td {
@@ -35,9 +42,9 @@ function BlogPage({ content, meta }) {
 BlogPage.getInitialProps = async ({ res }) => {
     const slug = res.locals.slug
 
-    const converter = new Converter({ 
-        metadata: true,
-        extensions: [highlight]
+    const converter = new showdown.Converter({ 
+        metadata: true
+        // ,extensions: [showdownHighlight]
         }
     );
     const d = (await require(`../docs/blogs/${slug}.md`)).default;

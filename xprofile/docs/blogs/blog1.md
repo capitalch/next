@@ -14,15 +14,29 @@ category: general
 </tr>
 </table>
 
-<pre><code>let x=0; x++</code></pre>
+<pre><code class="javascript">
+    let x=0; 
+    x++;
+    y = x+=1;
+    if ( x === y) {
+        z = 200;
+    }
+</code></pre>
 
 \`\`\`js
 function sayHello (msg, who) {
-    return \`\${who} says: msg\`;
+    return `${who} says: msg`;
 }
 sayHello("Hello World", "Johnny");
 \`\`\`
 `);
+
+```js
+function sayHello (msg, who) {
+    return `${who} says: msg`;
+}
+sayHello("Hello World", "Johnny");
+```
 
 Cras felis purus, pellentesque et odio vel, dignissim semper mi. Sed non quam elit. Nam id nulla lacus. Vestibulum mollis enim at nibh tincidunt, id accumsan ligula dapibus. Donec sem justo, blandit et nulla sed, tincidunt aliquet neque. Phasellus ultrices et elit in molestie. Morbi tempus ut lacus vel efficitur. Aliquam erat volutpat. Duis pulvinar leo ut purus ullamcorper, nec cursus ligula hendrerit. Duis in diam dapibus, ullamcorper ipsum consectetur, malesuada justo. Vestibulum condimentum odio vitae nibh rutrum dictum.
 
