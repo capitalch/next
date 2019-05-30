@@ -1,9 +1,8 @@
 ---
-title: this is post1 title
+title: this is post1 title for the purpose of testing
 slug: post1
 category: general
 ---
-
 <div style='color:red'>This is html1</div>
 
 #### Proin eget velit vel mi pulvinar sagittis et nec augue. 

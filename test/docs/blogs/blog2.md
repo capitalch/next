@@ -1,6 +1,6 @@
 ---
-title: this is post2
-category: technical
+title: this is post2 title
+category: aechanical
 slug: post2
 ---
 In congue tincidunt nisl, eget vehicula leo mattis in. Sed ante risus, convallis in enim at, pulvinar eleifend dolor. Ut maximus erat non egestas ultricies. Sed laoreet condimentum nunc, a ultricies nunc bibendum non. Duis eu blandit turpis. Sed facilisis ligula lorem, porta dapibus mauris congue dictum. Cras dolor nisl, congue eu dolor id, ultrices tempus ipsum.

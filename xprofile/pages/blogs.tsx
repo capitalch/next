@@ -5,7 +5,6 @@ import Blogs from '../components/blogs';
 import Layout from '../components/layout';
 
 function BlogsPage({ blogs }) {
-    // console.log(blogs);
     return (
         <div>
             <GlobalStyle />

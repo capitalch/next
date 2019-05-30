@@ -9,10 +9,13 @@
     "axios": "^0.18.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "gray-matter": "^4.0.2",
     "next": "^8.1.0",
+    "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.8",
+    "showdown": "^1.9.0",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {

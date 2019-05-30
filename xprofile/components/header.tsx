@@ -52,7 +52,7 @@ function Header() {
         <a href="/resume">Resume</a>
         <a href="/skillset">Skillset</a>
         <a href="/academics">Academics</a>
-        <a href="projects">Projects</a>
+        <a href="/projects">Projects</a>
         <a href="/qa">QA</a>
         <a href="/blogs">Blogs</a>
         <label>Sushant's profile</label>

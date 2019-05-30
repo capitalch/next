@@ -8,7 +8,7 @@ function Blogs({ blogs }) {
                 <div style={{ textTransform: 'capitalize' }}>{cat}</div>
                 {blogs[cat].map((obj, index) => {
                     return <div key={index}>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<a href={`/blog/${obj.slug}`}>{obj.title}</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<a style={{fontSize:'1rem', lineHeight:'1rem'}} href={`/blog/${obj.slug}`}>{obj.title}</a>
                     </div>
                 })}
             </div>

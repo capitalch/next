@@ -20,9 +20,12 @@
                                                         do necessary changes in blogs.tsx and blog.tsx files
                                                         server.js initialy returns just a dummy blogs list with title
                                                         modify server.js with correct blogs list with files hierarchy
+                                                         skills.json to be hot editable like md files: not doable
 
 right area with articles / blogs
-client routing   
+client routing
+blogs page styling
+blogs listing on date descending and category ascending
 content writing                                             
  create resume.md
  create academics.md
@@ -31,7 +34,6 @@ content writing
 @media strategy for responsive design
 no of hits incorporation
 Comments incorporation
-seo implementation
-remove not necessary files
-From blog page to projects give error
+seo implementation                                   
+cleanup
                                                
