@@ -4,14 +4,15 @@ import Layout from '../components/layout';
 import Head from '../components/head';
 
 import showdown from 'showdown';
-// import styled from 'styled-components';
 
-import Prism from "./prism.js";
+import Prism from 'prismjs';
 import './prism.scss'
-const showdownHighlight = require("showdown-highlight")
 
+
+// import styled from 'styled-components';
+// const showdownHighlight = require("showdown-highlight")
+// Prism.highlightAll();
 function BlogPage({ content, meta }) {
-   
     useEffect(() => {
         Prism.highlightAll();
     })
@@ -31,15 +32,20 @@ function BlogPage({ content, meta }) {
 BlogPage.getInitialProps = async ({ res }) => {
     const slug = res.locals.slug
 
-    const converter = new showdown.Converter({
-        metadata: true
-        ,extensions: [showdownHighlight]
-    }
+    const converter = new showdown.Converter(
+        {
+            metadata: true
+            //,
+            // extensions: [showdownHighlight]
+        }
     );
     const d = (await require(`../docs/blogs/${slug}.md`)).default;
     const content = converter.makeHtml(d);
     const meta = converter.getMetadata();
-    return { content, meta };
+    return {
+        content
+        , meta
+    };
 }
 
 export default BlogPage

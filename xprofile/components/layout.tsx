@@ -68,9 +68,9 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
 		<StyledLayout>
 			<Header>Home</Header>
-			{isBanner && <Banner src="/static/images/banner1-gray.jpg" alt="image" ht="200px" />}
+			{isBanner && <Banner src="/static/images/banner1.jpg" alt="image" ht="200px" />}
 			<Left>
-				<ProfileImage src="/static/images/sush3.jpg" />
+				<ProfileImage src="/static/images/sush4.jpg" />
 				<ProfileText>
 					Sushant Agrawal <div>capitalch@gmail.com</div>
 				</ProfileText>

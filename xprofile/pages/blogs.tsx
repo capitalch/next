@@ -5,7 +5,7 @@ import Blogs from '../components/blogs';
 import Layout from '../components/layout';
 
 function BlogsPage({ blogs }) {
-    console.log(blogs);
+    // console.log(blogs);
     return (
         <div>
             <GlobalStyle />
@@ -17,7 +17,6 @@ function BlogsPage({ blogs }) {
 
 BlogsPage.getInitialProps = async ({ res }) => {
     try {
-
         let data: any = {};
         data.blogs = res.locals.blogs;
         return data;

@@ -11,27 +11,27 @@
                                                 create contacts page
                                                 create skillset page
                                                 create home.md
+                                                syntax highlight
+                                                    blogs implement
+                                                        create blogs page
+                                                        create blog page
+                                                        put two snippets /blogs and /blogs/:slug in server.js
+                                                        create blogs folder and put there the blogs file
+                                                        do necessary changes in blogs.tsx and blog.tsx files
+                                                        server.js initialy returns just a dummy blogs list with title
+                                                        modify server.js with correct blogs list with files hierarchy
+
 right area with articles / blogs
-client routing                                                
-    create resume.md
-create academics.md
-create projects.md
-create qa.md
-create blogs page and blogs folder
-    @media strategy for responsive design
+client routing   
+content writing                                             
+ create resume.md
+ create academics.md
+ create projects.md
+ create qa.md
+@media strategy for responsive design
 no of hits incorporation
 Comments incorporation
 seo implementation
-syntax highlight
-blogs implement
-    create blogs page
-    create blog page
-    put two snippets /blogs and /blogs/:slug in server.js
-    create blogs folder and put there the blogs file
-    do necessary changes in blogs.tsx and blog.tsx files
-    server.js initialy returns just a dummy blogs list with title
-    modify server.js with correct blogs list with files hierarchy
-
-//javascript highlighting
-https://www.taniarascia.com/adding-syntax-highlighting-to-code-snippets/
+remove not necessary files
+From blog page to projects give error
                                                

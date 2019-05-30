@@ -6,22 +6,12 @@ const path = require('path');
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = true // process.env.NODE_ENV !== 'production';
 const app = next({ dev });
-const frontMatter = require('front-matter');
 const matter = require('gray-matter');
 const handle = app.getRequestHandler();
 
-const files = source => fs.readdirSync(source, {
-	withFileTypes: true
-}).reduce((a, c) => {
-	!c.isDirectory() && a.push({ title: `this is ${c.name.split('.')[0]}`, slug: c.name.split('.')[0] })
-	return a
-}, [])
-
 const folderPath = path.join(__dirname, 'docs', 'blogs');
-const blogs = getBlogs(folderPath)
-console.log(blogs)
 
-function getBlogs(folderPath) {
+function getBlogs(req, res, app, folderPath) {
 	fs.readdir(folderPath, (err, files) => {
 		if (err) return console.error(err);
 		const blogs = files.reduce((a, c) => {
@@ -39,8 +29,11 @@ function getBlogs(folderPath) {
 				return a
 			}
 		}, {})
-		return blogs;
+		// console.log(blogs);
+		res.locals.blogs = blogs;
+		return app.render(req, res, '/blogs');
 	})
+
 }
 
 
@@ -50,16 +43,11 @@ app.prepare().then(() => {
 
 	server.get('/blogs', (req, res) => {
 		const folderPath = path.join(__dirname, 'docs', 'blogs');
-		// const blogs = files(__dirname.concat('/docs/blogs'))
-		const blogs = getBlogs(folderPath)
-		console.log(blogs)
-		res.locals.blogs = blogs;
-		return app.render(req, res, '/blogs');
+		getBlogs(req, res, app, folderPath)
 	});
 
 	server.get('/:slug', (req, res) => {
 		const slug = req.params.slug || 'about';
-		// console.log('express:', slug)
 		res.locals.slug = slug;
 		return app.render(req, res, '/');
 	})
@@ -67,6 +55,10 @@ app.prepare().then(() => {
 	server.get('/blog/:slug', (req, res) => {
 		const slug = req.params.slug;
 		res.locals.slug = slug;
+		// const filePath = path.join(folderPath, 'blog1.md');
+		// const { content, data } = matter.read(filePath);
+		// res.locals.content = content;
+		// res.locals.meta = data;
 		return app.render(req, res, '/blog');
 	})
 
@@ -82,6 +74,13 @@ app.prepare().then(() => {
 
 
 /*
+const files = source => fs.readdirSync(source, {
+	withFileTypes: true
+}).reduce((a, c) => {
+	!c.isDirectory() && a.push({ title: `this is ${c.name.split('.')[0]}`, slug: c.name.split('.')[0] })
+	return a
+}, [])
+
 const express = require('express');
 const next = require('next');
 const fs = require('fs');

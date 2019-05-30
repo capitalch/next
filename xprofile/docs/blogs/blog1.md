@@ -14,7 +14,7 @@ category: general
 </tr>
 </table>
 
-<pre><code class="language-css">
+<pre><code class="language-javascript">
     // let x=0; 
     x++;
     y = x+=1;
@@ -25,7 +25,7 @@ category: general
 
 </code></pre>
 
-```js
+```javascript
     function sayHello (msg, who) {
         return `${who} says: msg`;
     }
