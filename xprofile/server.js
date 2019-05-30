@@ -2,9 +2,12 @@ const express = require('express');
 const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
+const path = require('path');
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = true // process.env.NODE_ENV !== 'production';
 const app = next({ dev });
+const frontMatter = require('front-matter');
+const matter = require('gray-matter');
 const handle = app.getRequestHandler();
 
 const files = source => fs.readdirSync(source, {
@@ -14,14 +17,42 @@ const files = source => fs.readdirSync(source, {
 	return a
 }, [])
 
+const folderPath = path.join(__dirname, 'docs', 'blogs');
+const blogs = getBlogs(folderPath)
+console.log(blogs)
+
+function getBlogs(folderPath) {
+	fs.readdir(folderPath, (err, files) => {
+		if (err) return console.error(err);
+		const blogs = files.reduce((a, c) => {
+			if (!c.isDirectory) {
+				const filePath = path.join(folderPath, c);
+				const mtime = fs.statSync(filePath).mtimeMs;
+				const { data } = matter.read(filePath);
+				const cat = data.category;
+				a[cat] || (a[cat] = []);
+				a[cat].push({
+					title: data.title
+					, slug: c.split('.')[0]
+					, mtime: mtime
+				})
+				return a
+			}
+		}, {})
+		return blogs;
+	})
+}
+
 
 app.prepare().then(() => {
 	const server = express()
 	server.use(compression())
 
 	server.get('/blogs', (req, res) => {
-		const blogs = files(__dirname.concat('/docs/blogs'))
-		// console.log(blogs)
+		const folderPath = path.join(__dirname, 'docs', 'blogs');
+		// const blogs = files(__dirname.concat('/docs/blogs'))
+		const blogs = getBlogs(folderPath)
+		console.log(blogs)
 		res.locals.blogs = blogs;
 		return app.render(req, res, '/blogs');
 	});

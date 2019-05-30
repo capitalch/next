@@ -1,5 +1,5 @@
 ---
-title: this is post3
+title: this is post3 title
 slug: post3
 category: general
 ---
