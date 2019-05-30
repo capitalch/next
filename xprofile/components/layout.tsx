@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Header from './header';
 
 import ReactMarkdown from 'react-markdown/with-html';
-// const banner = false;
 const StyledLayout = styled.div`
 	display: grid;
 

@@ -24,7 +24,7 @@
 
 right area with articles / blogs
 client routing
-blogs page styling
+                                                        blogs page styling
 blogs listing on date descending and category ascending
 content writing                                             
  create resume.md
