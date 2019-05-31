@@ -53,13 +53,10 @@ const StyledLayout = styled.div`
 	}
 
 	@media only screen and (max-width:992px) and (min-width:768px){
-		grid-template-areas: 'header' 'main' 'left';
-		grid-template-rows: 58px auto auto;
+		grid-template-areas: 'header' 'banner' 'main' 'left';
+		grid-template-rows: 58px 100px auto auto;
 		.right {
 			display:none;
-		}
-		.banner {
-			display: none;
 		}
 	}
 
