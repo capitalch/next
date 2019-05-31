@@ -4,13 +4,23 @@ import Layout from '../components/layout';
 import GlobalStyle from '../handy/globalStyle';
 import Contact from '../components/contact';
 import Skillset from '../components/skillset';
-import Blogs from '../components/blogs';
+// import Blogs from '../components/blogs';
 
+const slugMapping = {
+	about: 'Home for Sushant',
+	contact: 'Contact details of Sushant',
+	resume: 'Resume of Sushant',
+	skillset: 'Skillsets of Sushant',
+	academics: 'Academics of Sushant',
+	projects: 'Projects done by Sushant',
+	qa: 'Questions and answers by Sushant',
+
+}
 const IndexPage = ({ content, slug }) => {
 	return (
 		<div>
 			<GlobalStyle />
-			<Head title={slug} />
+			<Head title={slugMapping[slug]} />
 			{getPageContent({ content, slug })}
 		</div>
 	);
@@ -22,6 +32,8 @@ IndexPage.getInitialProps = async ({ res }) => {
 
 	let content;
 	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+	// const skills = (await import(`../docs/skills.json`)).default
+	// console.log(skills);
 	return { content, slug };
 };
 
@@ -43,7 +55,7 @@ const allPages = {
 	academics: { isBanner: false, isMDFile: true },
 	projects: { isBanner: false, isMDFile: true },
 	qa: { isBanner: false, isMDFile: true },
-	blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
+	// blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
 }
 
 export default IndexPage;

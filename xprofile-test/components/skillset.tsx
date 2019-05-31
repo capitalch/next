@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import skills from '../handy/skills.json'
 
 
-function Skillset() {
+const  Skillset=() => {
 	let runningIndex = 0;
+	// console.log(skills)
 	function Skill({ allSkills, skillGroup }) {
 		return allSkills[skillGroup].map((skill, index) => {
 			runningIndex++;
@@ -113,8 +114,6 @@ const StyledTable = styled.table`
 	}
 
 `;
-
-
 
 const StyledDiv = styled.div`
 	display: inline-block;

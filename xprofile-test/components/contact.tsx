@@ -105,6 +105,7 @@ function Contact() {
 
 const AddressDetails = styled.div`
 	margin-top: 0.5em;
+	width:100%;
 `;
 const Form = styled.form`
 	.required {

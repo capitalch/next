@@ -393,21 +393,35 @@
 	"Outdated": [
 		{
 			"name": "Powerbuilder",
-			"level": "9",
+			"level": "8",
 			"handsOn": true,
 			"interested": true,
 			"projects": "Many projects"
 		},
 		{
 			"name": "SQL Anywhere",
-			"level": "9",
+			"level": "8",
 			"handsOn": true,
 			"interested": true,
 			"projects": "Many projects"
 		},
 		{
 			"name": "Foxpro, dbase, clipper",
-			"level": "8",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "WPF",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Windows forms",
+			"level": "6",
 			"handsOn": false,
 			"interested": false,
 			"projects": "Many projects"
