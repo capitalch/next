@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Header from './header';
+import Header from './header';
 
 import ReactMarkdown from 'react-markdown/with-html';
 
@@ -14,7 +14,7 @@ import ReactMarkdown from 'react-markdown/with-html';
 function Layout({ isBanner = true, content = '', children = '' }) {
 	return (
 		<StyledLayout>
-			<div className='header'>Header</div>
+			<Header >Header</Header>
 			<div className='banner'>Banner</div>
 			<div className='left'>Left</div>
 			<div className='right'></div>
@@ -43,7 +43,8 @@ const StyledLayout = styled.div`
 	height:calc(100vh - 3px);
 	@media(max-width:768px) {
 		grid-template-areas: 'header' 'main' 'left';
-		grid-template-rows: 58px auto auto;
+		grid-auto-rows: min-content auto auto;
+		/* grid-template-rows: auto auto auto; */
 		.right {
 			display:none;
 		}
@@ -54,19 +55,19 @@ const StyledLayout = styled.div`
 
 	@media only screen and (max-width:992px) and (min-width:768px){
 		grid-template-areas: 'header' 'banner' 'main' 'left';
-		grid-template-rows: 58px 100px auto auto;
+		grid-auto-rows: min-content 100px auto auto;
 		.right {
 			display:none;
 		}
 	}
 
 	@media only screen and (max-width:1200px) and (min-width:992px){
-		grid-template-areas: 'header header' 'banner banner' 'left main';
-		grid-template-columns: 16% auto;
-		grid-template-rows: 58px 200px;
-		.right {
+		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
+		grid-template-columns: 16% auto 16%;
+		grid-template-rows: 58px 200px auto;
+		/* .right {
 			display:none;
-		}
+		} */
 	}
 
 	@media only screen and (min-width:1200px) {
@@ -77,7 +78,8 @@ const StyledLayout = styled.div`
 
 	.header {
 		grid-area: header;
-		background-color:indigo;		
+		background-color: greenyellow;
+		/* height: 800px;	 */
 	}
 	.banner{
 		grid-area: banner;
@@ -104,10 +106,10 @@ const Banner = styled.div`
 	background-color:gray;
 	width: 100%;
 	`
-const Header = styled.div`
-	grid-area:header;
-	background-color:indigo;
-`
+// const Header = styled.div`
+// 	grid-area:header;
+// 	background-color:indigo;
+// `
 const Left = styled.div`
 	grid-area: left;
 	background-color: white;`

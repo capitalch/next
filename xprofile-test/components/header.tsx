@@ -4,30 +4,63 @@ import styled from 'styled-components'
 const StyledNav = styled.nav`
 	grid-area: header;
     background-color:#373C2F;
-    height: 58px;
-    width:100%;
-    display:flex;
-    /* font-size: 20px; */
+    /* height:58px; */
+    /* width:100%; */
+    ul {
+        display:flex;
+        list-style-type: none;
+        overflow-x:hidden;
+        /* height: 58px; */
+        @media (max-width:992px){ 
+            flex-direction: column;
+            /* display: none; */
+        }
+    }
     
-    a {
-        margin-left:1rem;
+    /* box-sizing: border-box; */
+    
+    /* display:none; */
+    
+    li {
+        /* margin-left:1rem; */
         font-weight:bolder;
-        color:white;
-        text-decoration:none;
-        margin-top:auto;
-        margin-bottom:13px;
+        /* color:white; */
+        /* text-decoration:none; */
+        /* margin-top:auto; */
+        /* margin-bottom:13px; */
         font-size: 1.3rem;
         font-family:sans-serif;
-        /* @media(max-width:768px){
-            display:none;
-        } */
+        @media(max-width:992px){
+            border: 1px outset white;
+            line-height: 2rem;
+            /* flex: 1 1 auto; */
+            padding :0.5rem;
+        }
+        a {
+            color:white;
+            text-decoration:none;
+            margin-left: 1rem;
+        }
     }
 
-    /* a[aria-current="page"]{ */
-        /* color: aquamarine; */
-    /* } */
+    /* * {
+        box-sizing: border-box;
+    } */
 
-    label {
+    button {
+        width:75px;
+        height:35px; 
+        margin-top:'auto';
+        margin-bottom:'auto';
+        display:inline-block;
+    }
+
+    @media (max-width:992px){ 
+        flex-direction: column;
+        /* display: none; */
+    }
+
+    /* label {
         color:#DBEAD0;
         font-family: cursive;
         font-size: 1.1rem;
@@ -36,25 +69,27 @@ const StyledNav = styled.nav`
         margin-top:auto;
         margin-bottom:13px;
         margin-right:1em;
-        /* @media(max-width:992px){
-            display:none;
-        } */
-        /* margin-right: 2em; */
-        /* align-self:flex-end; */
-    }
+    } */
 `
 
+function activateVerticalMenu() {
+
+}
+
 function Header() {
-    return <StyledNav>
-        <a href="/">Home</a>
-        <a href="/contact">Contact</a>
-        <a href="/resume">Resume</a>
-        <a href="/skillset">Skillset</a>
-        <a href="/academics">Academics</a>
-        <a href="/projects">Projects</a>
-        <a href="/qa">QA</a>
-        <a href="/blogs">Blogs</a>
-        <label>Sushant's profile</label>
+    return <StyledNav >
+        <button onClick={() => { activateVerticalMenu() }} >Menu</button>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/skillset">Skillset</a></li>
+            <li><a href="/academics">Academics</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/qa">QA</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+        </ul>
+        {/* <label>Portfolio of Sushant</label> */}
     </StyledNav>
 }
 
