@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from '../components/head';
-import Layout from '../components/layout';
+import Layout from '../components/layout1';
 import GlobalStyle from '../handy/globalStyle';
 import Contact from '../components/contact';
 import Skillset from '../components/skillset';
@@ -40,9 +40,9 @@ IndexPage.getInitialProps = async ({ res }) => {
 function getPageContent({ content, slug }) {
 	let Ret;
 	if (allPages[slug].isMDFile) {
-		Ret = <Layout content={content} isBanner={allPages[slug].isBanner} />;
+		Ret = <Layout currentPage={slug} content={content} isBanner={allPages[slug].isBanner} />;
 	} else {
-		Ret = <Layout isBanner={allPages[slug].isBanner}>{allPages[slug].component()}</Layout>;
+		Ret = <Layout currentPage={slug} isBanner={allPages[slug].isBanner}>{allPages[slug].component()}</Layout>;
 	}
 	return Ret;
 }

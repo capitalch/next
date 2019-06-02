@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from './header';
+import Header from './header2';
 
 import ReactMarkdown from 'react-markdown/with-html';
 
@@ -11,10 +11,10 @@ import ReactMarkdown from 'react-markdown/with-html';
 	larger than 1200px (large devices)
 */
 
-function Layout({ isBanner = true, content = '', children = '' }) {
+function Layout({ currentPage='', isBanner = true, content = '', children = '' }) {
 	return (
 		<StyledLayout>
-			<Header >Header</Header>
+			<Header currentPage={currentPage}>Header</Header>
 			<div className='banner'>Banner</div>
 			<div className='left'>Left</div>
 			<div className='right'></div>
@@ -41,6 +41,7 @@ function Layout({ isBanner = true, content = '', children = '' }) {
 const StyledLayout = styled.div`
 	display: grid;
 	height:calc(100vh - 3px);
+	
 	@media(max-width:768px) {
 		grid-template-areas: 'header' 'main' 'left';
 		grid-auto-rows: min-content auto auto;
@@ -53,7 +54,7 @@ const StyledLayout = styled.div`
 		}
 	}
 
-	@media only screen and (max-width:992px) and (min-width:768px){
+	@media only screen and (max-width:992px) and (min-width:769px){
 		grid-template-areas: 'header' 'banner' 'main' 'left';
 		grid-auto-rows: min-content 100px auto auto;
 		.right {
@@ -110,6 +111,7 @@ const Banner = styled.div`
 // 	grid-area:header;
 // 	background-color:indigo;
 // `
+
 const Left = styled.div`
 	grid-area: left;
 	background-color: white;`

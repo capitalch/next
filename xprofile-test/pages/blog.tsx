@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import GlobalStyle from '../handy/globalStyle';
-import Layout from '../components/layout';
+import Layout from '../components/layout1';
 import Head from '../components/head';
 
 import showdown from 'showdown';
