@@ -16,10 +16,11 @@ const StyledMenuIcon = styled.div`
 const StyledMenuItems = styled.ul`
     display:flex;
     flex-direction:column;
+    width: 60%;
     a {
         text-decoration:none;
         margin: 1rem;
-        line-height:1.5rem;
+        /* line-height:1.5rem; */
     }
 
     li {
@@ -27,6 +28,7 @@ const StyledMenuItems = styled.ul`
         /* margin: 0.05rem 0;  */
         border: 1px solid white;
         border-collapse: collapse;
+        line-height:2.5rem;
     }
 `
 
