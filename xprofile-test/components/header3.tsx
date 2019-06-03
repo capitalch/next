@@ -5,12 +5,15 @@ const StyledMenuIcon = styled.div`
     div {
         width: 35px;
         height: 5px;
-        background-color: white;
+        background-color: #fff;
         margin: 6px 0;
     }
     margin:0.5rem;
-    margin-left:auto; // for right alignment
+    margin-left:2rem; // for right alignment after fixed text
     cursor:pointer;
+    @media only screen and (min-width: 993px) {
+		display:none;
+	}
 `
 
 const StyledMenuItems = styled.ul`
@@ -19,30 +22,52 @@ const StyledMenuItems = styled.ul`
     width: 60%;
     a {
         text-decoration:none;
-        margin: 1rem;
-        /* line-height:1.5rem; */
+        display:block; // to make whole area clickable
+        padding:1rem;
+        font-size:1.3rem;
     }
 
     li {
         list-style-type: none;
-        /* margin: 0.05rem 0;  */
         border: 1px solid white;
         border-collapse: collapse;
-        line-height:2.5rem;
     }
+
+    @media only screen and (min-width: 993px) {
+		flex-direction:row;
+        align-items:center;
+        li {
+            border:0px;
+        }
+	}
 `
 
 const StyledHeader = styled.nav`
     grid-area: header;
     background-color:darkgrey;
     display:flex;
+    
 `
 
 const StyledActiveMenuItem = styled.span`
     font-weight:700;
     font-size:1.3rem;
     margin: auto 1rem;
+    color: #fff;
     text-transform:capitalize;
+    @media only screen and (min-width: 993px) {
+        display:none;
+    }
+`
+
+const StyledText = styled.span`
+    font-size:1rem;
+    font-weight:bold;
+    color:#fff;
+    margin-left: auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:0.5rem;
 `
 
 
@@ -62,21 +87,31 @@ function MenuItems() {
     </StyledMenuItems>
 }
 
-// function ActiveMenuItem({currentPage}){
-//     return <StyledActiveMenuItem>
-//         {currentPage}
-//     </StyledActiveMenuItem>
-// }
-
-
-
 function Header({ currentPage }) {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false)
+
+    function screenTest(e) {
+        e.matches ? setShow(true) : setShow(false)
+    }
+
+    useEffect(() => {
+        const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+        if (width >= 993) { (setShow(true)) }
+        const mql = window.matchMedia('(min-width: 992px)')
+        mql.addListener(screenTest)
+        return () => mql.removeListener(screenTest)
+    })
 
     return <StyledHeader>
-        {show ? <MenuItems ></MenuItems> : <StyledActiveMenuItem>{currentPage}</StyledActiveMenuItem>}
-        <MenuIcon show={show} setShow={setShow}></MenuIcon>
+        {show && <MenuItems ></MenuItems>}
+        {(!show) && <StyledActiveMenuItem>{currentPage}</StyledActiveMenuItem>}
+        <StyledText>Portfolio of Sushant</StyledText>
+        {<MenuIcon show={show} setShow={setShow}></MenuIcon>}
     </StyledHeader>
 }
 
 export default Header
+
+/*
+
+*/
