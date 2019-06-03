@@ -31,9 +31,11 @@ content writing
  create academics.md
  create projects.md
  create qa.md
-@media strategy for responsive design
+                                                @media strategy for responsive design
 no of hits incorporation
 Comments incorporation
 seo implementation                                   
 cleanup
+can speak languages
+visited countries
                                                
