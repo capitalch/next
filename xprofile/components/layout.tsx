@@ -1,35 +1,116 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './header';
-
 import ReactMarkdown from 'react-markdown/with-html';
+
 const StyledLayout = styled.div`
 	display: grid;
+	min-height:calc(100vh - 3px);
+	@media(max-width: 500px){
+		grid-template-areas:'header' 'main' 'left';
+    	grid-auto-rows: min-content auto auto;
+		/* .banner {
+			display:none;
+		} */
 
-	@media(max-width:768px) {
-			grid-template-areas: "header" "main" "left";
-			grid-template-columns: auto;
-			grid-template-rows: auto;
+		.right{
+			display:none;
 		}
-
-	@media only screen and (max-width:992px) and (min-width:768px){
-		grid-template-areas: "header" "main" "left";
-		grid-template-columns: auto;
-		grid-template-rows: auto;
 	}
 
-	@media only screen and (max-width:1500px) and (min-width:992px){
-		grid-template-areas: "header header" "left main";
-		grid-template-columns: 16% auto;
-		grid-template-rows: auto;
+	@media only screen and (min-width: 501px) and (max-width: 992px) {
+		grid-template-areas: 'header' 'banner' 'main' 'left';
+		grid-auto-rows: min-content 100px auto auto;
+		.right{
+			display:none;
+		}
 	}
 
-	@media only screen and (max-width:4600px) and (min-width:1500px){
-		grid-template-areas: "header header header" "banner banner banner" "left main right";
-		grid-template-columns: 16% auto 40%;
-		grid-template-rows: auto;
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
+		grid-template-columns: 16% auto 16%;
+		grid-template-rows: 58px 200px auto;
+	}
+
+	@media only screen and (min-width: 1201px){
+		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
+		grid-template-columns: 16% auto 35%;
+		grid-template-rows: 58px 200px auto;
+	}
 	
-}`
+`
+
+const StyledBanner = styled.img`
+		grid-area: banner;
+		width: 100%;
+		height:100%;
+		@media(max-width: 500px){
+			display:none;
+		}
+	`
+
+const StyledLeft = styled.div`
+		grid-area: left;
+		background-color: yellow;
+	`
+const StyledRight = styled.div`
+		grid-area: right;
+		background-color: red;
+		@media(max-width: 992px){
+			display:none;
+		}
+	`
+const Styledmain = styled.div`
+		grid-area: main;
+		background-color:#fff;
+		line-height: 2rem;
+		font-size: 1.3rem;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+		padding-left:1rem;
+		padding-right:1.3rem;
+		text-align: justify;
+		/* height:100vh; */
+		/* height:4fr; */
+	`
+
+
+
+function Layout({ currentPage = '', isBanner = true, content = '', children = '' }) {
+
+
+	return (
+		<StyledLayout>
+			<Header currentPage={currentPage}>Home</Header>
+			<StyledBanner src="/static/images/banner1.jpg" alt="image"></StyledBanner>
+			<StyledLeft></StyledLeft>
+			<StyledRight></StyledRight>
+			{content && <Styledmain>
+				<ReactMarkdown escapeHtml={false} source={content} />
+			</Styledmain>}
+		</StyledLayout>
+	);
+}
+
+export default Layout;
+/*
+{isBanner && <Banner src="/static/images/banner1.jpg" alt="image" ht="200px" />}
+			<Left>
+				<ProfileImage src="/static/images/sush4.jpg" />
+				<ProfileText>
+					Sushant Agrawal <div>capitalch@gmail.com</div>
+				</ProfileText>
+			</Left>
+			{content && (
+				<Main>
+					<ReactMarkdown escapeHtml={false} source={content} />
+				</Main>
+			)}
+			{children && <Main>{children}</Main>}
+			<Right />
+*/
+
+
+/*
 
 const Banner = styled.img`
 	grid-area: banner;
@@ -62,44 +143,25 @@ const ProfileImage = styled.img`
 
 const ProfileText = styled.div`
 	text-align:center;`
-
-function Layout({ isBanner = true, content = '', children = '' }) {
-	return (
-		<StyledLayout>
-			<Header>Home</Header>
-			{isBanner && <Banner src="/static/images/banner1.jpg" alt="image" ht="200px" />}
-			<Left>
-				<ProfileImage src="/static/images/sush4.jpg" />
-				<ProfileText>
-					Sushant Agrawal <div>capitalch@gmail.com</div>
-				</ProfileText>
-			</Left>
-			{content && (
-				<Main>
-					<ReactMarkdown escapeHtml={false} source={content} />
-				</Main>
-			)}
-			{children && <Main>{children}</Main>}
-			<Right />
-		</StyledLayout>
-	);
-}
-
-export default Layout;
-
-/*
-
-Layout.getInitialProps = async () => {
-const content = (await require(`../docs/pages/home.md`)).default;
-return {content};
-}
-const mdx = require('@mdx-js/mdx')
-
-const result = await mdx(`
-# Hello, MDX
-
-I <3 Markdown and JSX
-`)
-
-console.log(result)
 */
+
+
+	/* .left {
+		grid-area: left;
+		background-color: yellow;
+	}
+
+	.main {
+		grid-area: main;
+		background-color:green;
+	}
+
+	.banner {
+		grid-area: banner;
+		background-color:gray;
+	}
+
+	.right {
+		grid-area: right;
+		background-color: red;
+	} */

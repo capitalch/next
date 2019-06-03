@@ -4,21 +4,22 @@ import Head from '../components/head';
 import Blogs from '../components/blogs';
 import Layout from '../components/layout';
 
-function BlogsPage({ blogs }) {
+function BlogsPage({ blogs, slug }) {
     return (
         <div>
             <GlobalStyle />
             <Head title='Blogs' />
-            <Layout isBanner={false}><Blogs blogs={blogs}></Blogs></Layout>
+            <Layout currentPage={slug} isBanner={false}><Blogs blogs={blogs}></Blogs></Layout>
         </div>
     );
 }
 
 BlogsPage.getInitialProps = async ({ res }) => {
     try {
-        let data: any = {};
-        data.blogs = res.locals.blogs;
-        return data;
+        // let data: any = {};
+        const blogs = res.locals.blogs;
+        const slug = 'blogs'
+        return {blogs, slug};
     } catch (e) {
         console.log(e);
     }
