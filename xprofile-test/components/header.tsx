@@ -85,13 +85,13 @@ function MenuItems() {
     return <StyledMenuItems>
         {/* <li><a href='/'>Home</a></li> */}
         <li><Link href='/'><a>Home</a></Link></li>
-        <li><a href='/contact'>Contact</a></li>
-        <li><a href='/resume'>Resume</a></li>
-        <li><a href='/skillset'>Skillset</a></li>
-        <li><a href='/academics'>Academics</a></li>
-        <li><a href='/projects'>Projects</a></li>
-        <li><a href='qa'>QA</a></li>
-        <li><a href='/blogs'>Blogs</a></li>
+        <li><Link href='/' as='/contact'><a>Contact</a></Link></li>
+        <li><Link href='/' as='/resume'><a>Resume</a></Link></li>
+        <li><Link href='/' as='/skillset'><a>Skillset</a></Link></li>
+        <li><Link href='/' as='/academics'><a>Academics</a></Link></li>
+        <li><Link href='/' as='/projects'><a>Projects</a></Link></li>
+        <li><Link href='/' as='/qa'><a>QA</a></Link></li>
+        <li><Link href='/blogs' as = '/blogs'><a>Blogs</a></Link></li>
     </StyledMenuItems>
 }
 

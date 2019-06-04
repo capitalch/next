@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import GlobalStyle from '../handy/globalStyle';
 import Contact from '../components/contact';
 import Skillset from '../components/skillset';
-// import Blogs from '../components/blogs';
+import Blogs from '../components/blogs';
 
 const slugMapping = {
 	home: 'Home for Sushant',
@@ -26,11 +26,23 @@ const IndexPage = ({ content, slug }) => {
 	);
 };
 
-IndexPage.getInitialProps = async ({ res }) => {
-	let slug = res.locals.slug || 'home';
+IndexPage.getInitialProps = async ({ req, res, asPath }) => {
+	const isServer = !!req;
+	let slug
+	if (isServer) {
+		console.log('server side executed')
+		slug = res.locals.slug || 'home';		
+	} else {
+		slug = asPath.slice(1)
+	}
 	(!allPages[slug]) && (slug = 'home');
-	let content;
-	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+		let content;
+		(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+	// let slug = res.locals.slug || 'home';
+	// console.log('path:', asPath);
+	// (!allPages[slug]) && (slug = 'home');
+	// let content;
+	// (allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
 	return { content, slug };
 };
 
@@ -52,7 +64,7 @@ const allPages = {
 	academics: { isBanner: false, isMDFile: true },
 	projects: { isBanner: false, isMDFile: true },
 	qa: { isBanner: false, isMDFile: true },
-	// blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
+	blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
 }
 
 export default IndexPage;
