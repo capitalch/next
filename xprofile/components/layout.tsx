@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import Header from './header';
 import ReactMarkdown from 'react-markdown/with-html';
 
@@ -8,29 +8,33 @@ const StyledLayout = styled.div`
 	min-height:calc(100vh - 3px);
 	@media(max-width: 500px){
 		grid-template-areas:'header' 'main' 'left';
-    	grid-auto-rows: min-content auto auto;		
+    	grid-auto-rows: min-content auto auto;
+		
 	}
+	
+	
 
 	@media only screen and (min-width: 501px) and (max-width: 992px) {
-		grid-template-areas: 'header' 'banner' 'main' 'left';
-		grid-auto-rows: min-content 100px auto auto;		
+		grid-template-areas: 'header header' 'banner banner' 'main right' 'left right';
+		grid-auto-rows: min-content 100px auto auto;
+		grid-template-columns: auto minmax(10%,20%);
 	}
 
 	@media only screen and (min-width: 993px) and (max-width: 1200px) {
 		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
-		grid-template-columns: 16% auto 16%;
+		grid-template-columns: 16% auto 25%;
 		grid-template-rows: 58px 200px auto;
 	}
 
 	@media only screen and (min-width: 1201px) and (max-width: 1500px){
 		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
-		grid-template-columns: 16% auto 20%;
+		grid-template-columns: 16% auto 30%;
 		grid-template-rows: 58px 200px auto;
 	}
 
 	@media only screen and (min-width: 1501px) {
 		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
-		grid-template-columns: 16% auto 35%;
+		grid-template-columns: 16% auto 43%;
 		grid-template-rows: 58px 200px auto;
 	}
 	
@@ -47,7 +51,7 @@ const StyledBanner = styled.img`
 
 const StyledRight = styled.div`
 		grid-area: right;
-		background-color: red;
+		background-color: #fff;;
 		@media(max-width: 992px){
 			display:none;
 		}
@@ -74,7 +78,7 @@ const ProfileText = styled.div`
 
 const StyledLeft = styled.div`
 		grid-area: left;
-		background-color: lightyellow;
+		background-color: #fff;
 	`
 
 function Layout({ currentPage = '', content = '', children = '' }) {

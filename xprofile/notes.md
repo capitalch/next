@@ -21,21 +21,24 @@
                                                         server.js initialy returns just a dummy blogs list with title
                                                         modify server.js with correct blogs list with files hierarchy
                                                          skills.json to be hot editable like md files: not doable
+                                                blogs page styling
+                                                @media strategy for responsive design
 
 right area with articles / blogs
 client routing
-                                                        blogs page styling
+                                                        
 blogs listing on date descending and category ascending
 content writing                                             
  create resume.md
  create academics.md
  create projects.md
  create qa.md
-                                                @media strategy for responsive design
+                                                
 no of hits incorporation
 Comments incorporation
 seo implementation                                   
 cleanup
-can speak languages
-visited countries
+content
+ can speak languages
+ visited countries
                                                
