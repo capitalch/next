@@ -1,94 +1,145 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 
-const StyledNav = styled.div`
-	grid-area: header;
-    background-color:#373C2F;
-    ul {
-        display:flex;
-        list-style-type: none;
-        /* @media (max-width:992px){ 
-            flex-direction: column;
-        }
-        @media (min-width:992px){ 
-            flex-direction: row;
-        } */
-    }
-    
-    li {
-        /* font-weight:bolder;
-        font-size: 1.3rem;
-        font-family:sans-serif;
-        border: 1px solid white; */
-        /* width : 50%; */
-        /* @media(max-width:992px){
-            border: 1px outset white;
-            line-height: 2rem;
-            padding :0.5rem;
-        } */
-        a {
-            color:white;
-            text-decoration:none;
-            margin-left: 1rem;
-        }
-    }
 
-    button {
-        width:75px;
-        height:35px; 
-        margin:1rem;
-        float:right;
-        @media(min-width:992px) {
-            display:none;
-        }
+const StyledMenuIcon = styled.div`
+    div {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 0;
     }
-
+    margin:0.5rem;
+    margin-left:2rem; // for right alignment after fixed text
+    cursor:pointer;
+    @media only screen and (min-width: 993px) {
+		display:none;
+	}
 `
 
-function Header() {
-    const [display, setDisplay] = useState('block');
-
-    function toggleMenu() {
-        setDisplay(display === 'none' ? 'block' : 'none')
+const StyledMenuItems = styled.ul`
+    display:flex;
+    flex-direction:column;
+    width: 60%;
+    a {
+        text-decoration:none;
+        display:block; // to make whole area clickable
+        padding:1rem;
+        font-size:1.3rem;
     }
 
-    return <StyledNav >
-        <button onClick={() => { toggleMenu() }} >Menu</button>
-        <ul style={{ display: `${display}` }}>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/contact">Contact</a>
-            </li>
-            <li>
-                <a href="/resume">Resume</a>
-            </li>
-            <li>
-                <a href="/skillset">Skillset</a>
-            </li>
-            <li>
-                <a href="/academics">Academics</a>
-            </li>
-            <li>
-                <a href="/projects">Projects</a>
-            </li>
-            <li>
-                <a href="/qa">QA</a>
-            </li>
-            <li>
-                <a href="/blogs">Blogs</a>
-            </li>
-        </ul>
-        
-    </StyledNav>
+    li {
+        list-style-type: none;
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+
+    @media only screen and (min-width: 993px) {
+		flex-direction:row;
+        align-items:center;
+        li {
+            border:0px;
+        }
+	}
+`
+
+const StyledHeader = styled.nav`
+    grid-area: header;
+    background-color:darkgrey;
+    display:flex;
+    
+`
+
+const StyledActiveMenuItem = styled.span`
+    font-weight:700;
+    font-size:1.3rem;
+    margin: auto 1rem;
+    color: #fff;
+    text-transform:capitalize;
+    @media only screen and (min-width: 993px) {
+        display:none;
+    }
+`
+
+const StyledText = styled.span`
+    font-size:1rem;
+    font-weight:bold;
+    color:#fff;
+    margin-left: auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:0.5rem;
+`
+
+
+function MenuIcon({ show, setShow }): any {
+    return <StyledMenuIcon onClick={() => setShow(!show)}>
+        <div></div>
+        <div></div>
+        <div></div>
+    </StyledMenuIcon>
+}
+
+function MenuItems() {
+    return <StyledMenuItems>
+        {/* <li><a href='/'>Home</a></li> */}
+        <li><Link href='/'><a>Home</a></Link></li>
+        <li><a href='/contact'>Contact</a></li>
+        <li><a href='/resume'>Resume</a></li>
+        <li><a href='/skillset'>Skillset</a></li>
+        <li><a href='/academics'>Academics</a></li>
+        <li><a href='/projects'>Projects</a></li>
+        <li><a href='qa'>QA</a></li>
+        <li><a href='/blogs'>Blogs</a></li>
+    </StyledMenuItems>
+}
+
+function Header({ currentPage }) {
+    const [show, setShow] = useState(false)
+
+    function screenTest(e) {
+        e.matches ? setShow(true) : setShow(false)
+    }
+
+    useEffect(() => {
+        const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+        if (width >= 993) { (setShow(true)) }
+        const mql = window.matchMedia('(min-width: 992px)')
+        mql.addListener(screenTest)
+        return () => mql.removeListener(screenTest)
+    })
+
+    return <StyledHeader>
+        {show && <MenuItems ></MenuItems>}
+        {(!show) && <StyledActiveMenuItem>{currentPage}</StyledActiveMenuItem>}
+        <StyledText>Portfolio of Sushant</StyledText>
+        {<MenuIcon show={show} setShow={setShow}></MenuIcon>}
+    </StyledHeader>
 }
 
 export default Header
 
 /*
+const StyledNav = styled.nav`
+	grid-area: header;
+    background-color:#373C2F;
+    height: 58px;
+    width:100%;
+    display:flex;
 
-     label {
+    a {
+        margin-left:1rem;
+        font-weight:bolder;
+        color:white;
+        text-decoration:none;
+        margin-top:auto;
+        margin-bottom:13px;
+        font-size: 1.3rem;
+        font-family:sans-serif;
+    }
+
+    label {
         color:#DBEAD0;
         font-family: cursive;
         font-size: 1.1rem;
@@ -97,7 +148,25 @@ export default Header
         margin-top:auto;
         margin-bottom:13px;
         margin-right:1em;
-    } 
+        @media(max-width:992px){
+            display:none;
+        }
 
-    { <label>Portfolio of Sushant</label> }
+    }
+`
+
+function Header({currentPage}) {
+    return <StyledNav>
+
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/resume">Resume</a>
+        <a href="/skillset">Skillset</a>
+        <a href="/academics">Academics</a>
+        <a href="/projects">Projects</a>
+        <a href="/qa">QA</a>
+        <a href="/blogs">Blogs</a>
+        <label>Sushant's profile</label>
+    </StyledNav>
+}
 */

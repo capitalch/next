@@ -47,7 +47,7 @@ app.prepare().then(() => {
 	});
 
 	server.get('/:slug', (req, res) => {
-		const slug = req.params.slug || 'about';
+		const slug = req.params.slug || 'home';
 		res.locals.slug = slug;
 		return app.render(req, res, '/');
 	})

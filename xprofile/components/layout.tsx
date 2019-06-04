@@ -5,15 +5,13 @@ import ReactMarkdown from 'react-markdown/with-html';
 
 const StyledLayout = styled.div`
 	display: grid;
-	min-height:calc(100vh - 3px);
+	min-height:calc(100vh - 3px); 
 	@media(max-width: 500px){
 		grid-template-areas:'header' 'main' 'left';
     	grid-auto-rows: min-content auto auto;
 		
 	}
 	
-	
-
 	@media only screen and (min-width: 501px) and (max-width: 992px) {
 		grid-template-areas: 'header header' 'banner banner' 'main right' 'left right';
 		grid-auto-rows: min-content 100px auto auto;

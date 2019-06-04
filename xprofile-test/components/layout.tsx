@@ -1,26 +1,107 @@
 import React from 'react';
-import styled from 'styled-components';
-import Header from './header2';
-
+import styled, {css} from 'styled-components';
+import Header from './header';
 import ReactMarkdown from 'react-markdown/with-html';
 
-/*
-	smaller than or equal to 768 px (smartphones)
-	larger than 768 px (small devices, tablets)
-	larger than 992 px (medium devices)
-	larger than 1200px (large devices)
-*/
+const StyledLayout = styled.div`
+	display: grid;
+	min-height:calc(100vh - 3px); 
+	@media(max-width: 500px){
+		grid-template-areas:'header' 'main' 'left';
+    	grid-auto-rows: min-content auto auto;
+		
+	}
+	
+	@media only screen and (min-width: 501px) and (max-width: 992px) {
+		grid-template-areas: 'header header' 'banner banner' 'main right' 'left right';
+		grid-auto-rows: min-content 100px auto auto;
+		grid-template-columns: auto minmax(10%,20%);
+	}
 
-function Layout({ currentPage='', isBanner = true, content = '', children = '' }) {
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
+		grid-template-columns: 16% auto 25%;
+		grid-template-rows: 58px 200px auto;
+	}
+
+	@media only screen and (min-width: 1201px) and (max-width: 1500px){
+		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
+		grid-template-columns: 16% auto 30%;
+		grid-template-rows: 58px 200px auto;
+	}
+
+	@media only screen and (min-width: 1501px) {
+		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
+		grid-template-columns: 16% auto 43%;
+		grid-template-rows: 58px 200px auto;
+	}
+	
+`
+
+const StyledBanner = styled.img`
+		grid-area: banner;
+		width: 100%;
+		height:100%;
+		@media(max-width: 500px){
+			display:none;
+		}
+	`
+
+const StyledRight = styled.div`
+		grid-area: right;
+		background-color: #fff;;
+		@media(max-width: 992px){
+			display:none;
+		}
+	`
+const StyledMain = styled.div`
+		grid-area: main;
+		background-color:#fff;
+		line-height: 2rem;
+		font-size: 1.3rem;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+		padding-left:2rem;
+		padding-right:2.3rem;
+		text-align: justify;
+	`
+const ProfileImage = styled.img`
+		display:block;
+		margin:auto;
+		padding-top: 2rem;
+	`
+
+const ProfileText = styled.div`
+		text-align:center;
+	`
+
+const StyledLeft = styled.div`
+		grid-area: left;
+		background-color: #fff;
+	`
+
+function Layout({ currentPage = '', content = '', children = '' }) {
 	return (
 		<StyledLayout>
-			<Header currentPage={currentPage}>Header</Header>
-			<div className='banner'>Banner</div>
-			<div className='left'>Left</div>
-			<div className='right'></div>
-			<div className='main'>Main</div>
-			{/* <Header>Home</Header>
-			{isBanner && <Banner> <img width='100%' src="/static/images/banner1.jpg" ht="200px" /> </Banner>}
+			<Header currentPage={currentPage}>Home</Header>
+			<StyledBanner src="/static/images/banner1.jpg" alt="image"></StyledBanner>
+			<StyledLeft>
+			<ProfileImage src="/static/images/sush4.jpg" />
+				<ProfileText>
+					Sushant Agrawal <div>capitalch@gmail.com</div>
+				</ProfileText>
+			</StyledLeft>
+			<StyledRight></StyledRight>
+			{content && <StyledMain>
+				<ReactMarkdown escapeHtml={false} source={content} />
+			</StyledMain>}
+			{children && <StyledMain>{children}</StyledMain>}
+		</StyledLayout>
+	);
+}
+
+export default Layout;
+/*
+{isBanner && <Banner src="/static/images/banner1.jpg" alt="image" ht="200px" />}
 			<Left>
 				<ProfileImage src="/static/images/sush4.jpg" />
 				<ProfileText>
@@ -32,85 +113,16 @@ function Layout({ currentPage='', isBanner = true, content = '', children = '' }
 					<ReactMarkdown escapeHtml={false} source={content} />
 				</Main>
 			)}
-			{children && <Main>{children}</Main>} */}
-			{/* <Right /> */}
-		</StyledLayout>
-	);
-}
+			{children && <Main>{children}</Main>}
+			<Right />
+*/
 
-const StyledLayout = styled.div`
-	display: grid;
-	height:calc(100vh - 3px);
-	
-	@media(max-width:768px) {
-		grid-template-areas: 'header' 'main' 'left';
-		grid-auto-rows: min-content auto auto;
-		/* grid-template-rows: auto auto auto; */
-		.right {
-			display:none;
-		}
-		.banner {
-			display: none;
-		}
-	}
 
-	@media only screen and (max-width:992px) and (min-width:769px){
-		grid-template-areas: 'header' 'banner' 'main' 'left';
-		grid-auto-rows: min-content 100px auto auto;
-		.right {
-			display:none;
-		}
-	}
+/*
 
-	@media only screen and (max-width:1200px) and (min-width:992px){
-		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
-		grid-template-columns: 16% auto 16%;
-		grid-template-rows: 58px 200px auto;
-		/* .right {
-			display:none;
-		} */
-	}
-
-	@media only screen and (min-width:1200px) {
-		grid-template-areas: 'header header header' 'banner banner banner'  'left main right';
-		grid-template-columns: 16% auto 35%;
-		grid-template-rows: 58px 200px auto;
-	}
-
-	.header {
-		grid-area: header;
-		background-color: greenyellow;
-		/* height: 800px;	 */
-	}
-	.banner{
-		grid-area: banner;
-		background-color:gray;
-		width: 100%;
-	}
-	.left {
-		grid-area: left;
-		background-color: yellow;
-	}
-	.right {
-		grid-area: right;
-		background-color: red;
-	}
-	.main {
-		grid-area: main;
-		background-color:green;
-		min-height:1fr;
-	}
-`
-//
-const Banner = styled.div`
+const Banner = styled.img`
 	grid-area: banner;
-	background-color:gray;
-	width: 100%;
-	`
-// const Header = styled.div`
-// 	grid-area:header;
-// 	background-color:indigo;
-// `
+	width: 100%;`
 
 const Left = styled.div`
 	grid-area: left;
@@ -118,46 +130,46 @@ const Left = styled.div`
 
 const Right = styled.div`
 	grid-area: right;
-	background-color: red;
-	`
+	background-color: white;
+	min-height: 100%;`
+
 const Main = styled.div`
-	grid-area:main;
-	background-color:green;
-`
-// const Main = styled.div`
-// 	grid-area: main;
-// 	background-color: cornsilk;
-// 	line-height: 2rem;
-// 	font-size: 1.3rem;
-// 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
-// 	padding-left:1rem;
-// 	padding-right:1.3rem;
-// 	text-align: justify;`
+	grid-area: main;
+	background-color: white;
+	min-height: 100vh;
+	line-height: 2rem;
+	font-size: 1.3rem;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+	padding-left:1rem;
+	padding-right:1.3rem;
+	text-align: justify;`
 
 const ProfileImage = styled.img`
 	display:block;
 	margin:auto;
-	padding-top: 2rem;
-	`
+	padding-top: 2rem;`
 
 const ProfileText = styled.div`
 	text-align:center;`
-
-export default Layout;
-
-/*
-
-Layout.getInitialProps = async () => {
-const content = (await require(`../docs/pages/home.md`)).default;
-return {content};
-}
-const mdx = require('@mdx-js/mdx')
-
-const result = await mdx(`
-# Hello, MDX
-
-I <3 Markdown and JSX
-`)
-
-console.log(result)
 */
+
+
+	/* .left {
+		grid-area: left;
+		background-color: yellow;
+	}
+
+	.main {
+		grid-area: main;
+		background-color:green;
+	}
+
+	.banner {
+		grid-area: banner;
+		background-color:gray;
+	}
+
+	.right {
+		grid-area: right;
+		background-color: red;
+	} */

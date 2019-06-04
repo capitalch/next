@@ -14,6 +14,8 @@ const Home = () => (
         <a>posts</a>
       </Link>
     </p>
+    
+    
     <style jsx>{`
       .hero {
         width: 100%;
