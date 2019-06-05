@@ -26,23 +26,12 @@ const IndexPage = ({ content, slug }) => {
 	);
 };
 
-IndexPage.getInitialProps = async ({ req, res, asPath }) => {
-	const isServer = !!req;
-	let slug
-	if (isServer) {
-		console.log('server side executed')
-		slug = res.locals.slug || 'home';		
-	} else {
-		slug = asPath.slice(1)
-	}
+IndexPage.getInitialProps = async ({asPath }) => {
+	let slug = asPath.slice(1) || 'home';
+
 	(!allPages[slug]) && (slug = 'home');
 		let content;
 		(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
-	// let slug = res.locals.slug || 'home';
-	// console.log('path:', asPath);
-	// (!allPages[slug]) && (slug = 'home');
-	// let content;
-	// (allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
 	return { content, slug };
 };
 
