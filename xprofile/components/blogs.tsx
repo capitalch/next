@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function Blogs({ blogs }) {
     return <div>
-        <h1>Blogs by Sushant</h1>
+        <h3>Blogs by Sushant</h3>
         {Object.keys(blogs).map((cat, index) => {
             return <div key={index}>
                 <Styledcat style={{ textTransform: 'capitalize' }}>{cat}</Styledcat>

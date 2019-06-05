@@ -56,8 +56,8 @@ const StyledRight = styled.div`
 const StyledMain = styled.div`
 		grid-area: main;
 		background-color:#fff;
-		line-height: 2rem;
-		font-size: 1.3rem;
+		line-height: 1.7rem;
+		font-size: 1.2rem;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
 		padding-left:2rem;
 		padding-right:2.3rem;
@@ -77,6 +77,7 @@ const StyledLeft = styled.div`
 		grid-area: left;
 		background-color: #fff;
 	`
+
 
 function Layout({ currentPage = '', content = '', children = '' }) {
 	return (

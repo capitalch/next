@@ -25,7 +25,7 @@
                                                 @media strategy for responsive design
 
 right area with articles / blogs
-client routing
+                                                client routing
                                                         
 blogs listing on date descending and category ascending
 content writing                                             
@@ -36,9 +36,11 @@ content writing
                                                 
 no of hits incorporation
 Comments incorporation
-seo implementation                                   
-cleanup
+                                                seo implementation                                   
+                                                cleanup
 content
  can speak languages
  visited countries
+domain registration
+check with cloudjiffy
                                                

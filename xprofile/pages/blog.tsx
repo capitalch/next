@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Link from 'next/link'
+import styled from 'styled-components';
 import GlobalStyle from '../handy/globalStyle';
 import Layout from '../components/layout';
 import Head from '../components/head';
@@ -18,15 +20,16 @@ function BlogPage({ content, meta }) {
             <GlobalStyle />
             <Head title='Blog' />
             <Layout>
-                <h2>{meta.title}</h2>
+                <StyledLink><Link href='/blogs'><a>Back to blogs</a></Link></StyledLink>
+                <h3>{meta.title}</h3>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
             </Layout>
         </div>
     );
 }
 
-BlogPage.getInitialProps = async ({asPath }) => {
-    const slug = asPath.split('/')[2] ;
+BlogPage.getInitialProps = async ({ asPath }) => {
+    const slug = asPath.split('/')[2];
     const converter = new showdown.Converter(
         {
             metadata: true
@@ -42,6 +45,10 @@ BlogPage.getInitialProps = async ({asPath }) => {
         , meta
     };
 }
+
+const StyledLink = styled.div`
+    margin-top:1rem;  
+`
 
 export default BlogPage
 

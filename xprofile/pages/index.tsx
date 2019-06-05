@@ -17,8 +17,6 @@ const slugMapping = {
 
 }
 
-{/* <meta name="Description" content="Put your description here."> */}
-
 const IndexPage = ({ content, slug }) => {
 	return (
 		<div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-// import settings from '../settings.json'
+import settings from '../settings.json'
 
 function Contact() {
     const [ name, setName ] = useState('');
@@ -11,7 +11,7 @@ function Contact() {
 	return (
 		<div>
 			<AddressDetails>
-				<h1>Contact details of Sushant</h1>
+				<h3>Contact details of Sushant</h3>
 				<div> {contactDetails.address1}</div>
 				<div>{contactDetails.address2}</div>
 				<div>{contactDetails.nearLocation}</div>
@@ -20,7 +20,7 @@ function Contact() {
 				<div>{contactDetails.phone}</div>
 				<div>{contactDetails.email}</div>
 			</AddressDetails>
-			<h2>Directly mail to Sushant</h2>
+			<h4>Directly mail to Sushant</h4>
 			<div>
 				<Form onSubmit={sendEmail}>
 					<table>
@@ -111,10 +111,10 @@ const Form = styled.form`
 		color: red;
 	}
     input{
-        min-width:200px;
+        min-width:180px;
     }
     textarea{
-        min-width:200px;
+        min-width:180px;
         margin-top: 1rem;
     }
     .notes{

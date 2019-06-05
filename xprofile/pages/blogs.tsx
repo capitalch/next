@@ -17,7 +17,6 @@ function BlogsPage({ blogs, slug }) {
 
 BlogsPage.getInitialProps = async ({ req, res }) => {
     try {
-
         const isServer = !!req;
         let blogs;
         if (isServer) {
