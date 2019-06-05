@@ -81,20 +81,6 @@ function MenuIcon({ show, setShow }): any {
     </StyledMenuIcon>
 }
 
-function MenuItems() {
-    return <StyledMenuItems>
-        {/* <li><a href='/'>Home</a></li> */}
-        <li><Link href='/'><a>Home</a></Link></li>
-        <li><Link href='/' as='/contact'><a>Contact</a></Link></li>
-        <li><Link href='/' as='/resume'><a>Resume</a></Link></li>
-        <li><Link href='/' as='/skillset'><a>Skillset</a></Link></li>
-        <li><Link href='/' as='/academics'><a>Academics</a></Link></li>
-        <li><Link href='/' as='/projects'><a>Projects</a></Link></li>
-        <li><Link href='/' as='/qa'><a>QA</a></Link></li>
-        <li><Link href='/blogs' as = '/blogs'><a>Blogs</a></Link></li>
-    </StyledMenuItems>
-}
-
 function Header({ currentPage }) {
     const [show, setShow] = useState(false)
 
@@ -116,6 +102,20 @@ function Header({ currentPage }) {
         <StyledText>Portfolio of Sushant</StyledText>
         {<MenuIcon show={show} setShow={setShow}></MenuIcon>}
     </StyledHeader>
+
+    function MenuItems() {
+        return <StyledMenuItems>
+            <li><Link href='/'><a onClick={() => setShow(false)}>Home</a></Link></li>
+            <li><Link href='/' as='/contact'><a onClick={() => setShow(false)}>Contact</a></Link></li>
+            <li><Link href='/' as='/resume'><a onClick={() => setShow(false)}>Resume</a></Link></li>
+            <li><Link href='/' as='/skillset'><a onClick={() => setShow(false)}>Skillset</a></Link></li>
+            <li><Link href='/' as='/academics'><a onClick={() => setShow(false)}>Academics</a></Link></li>
+            <li><Link href='/' as='/projects'><a onClick={() => setShow(false)}>Projects</a></Link></li>
+            <li><Link href='/' as='/qa'><a onClick={() => setShow(false)}>QA</a></Link></li>
+            <li><Link href='/blogs' as='/blogs'><a onClick={() => setShow(false)}>Blogs</a></Link></li>
+        </StyledMenuItems>
+    }
+
 }
 
 export default Header

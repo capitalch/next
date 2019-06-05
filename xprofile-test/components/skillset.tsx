@@ -17,8 +17,8 @@ const  Skillset=() => {
 						<StyledDiv style={{ width: `${skill.level * 10}%` }}></StyledDiv>
 						<span>{skill.level}</span>
 					</td>
-					<td className='media-768'><img src={skill.handsOn ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
-					<td className='media-768'><img src={skill.interested ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
+					<td className='media-768'><img src={skill.handsOn ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'} alt='Yes no icon'></img></td>
+					<td className='media-768'><img src={skill.interested ? '/static/images/yes-20px.png' : '/static/images/no-20px.png' } alt = 'yes no icon'></img></td>
 					<td className='media-992'>{skill.projects}</td>
 				</tr>
 			);
