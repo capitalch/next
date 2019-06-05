@@ -4,10 +4,10 @@ import axios from 'axios'
 import settings from '../settings.json'
 
 function Contact() {
-    const [ name, setName ] = useState('');
-    const [ mobile, setMobile ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ message, setMessage ] = useState('');
+	const [name, setName] = useState('');
+	const [mobile, setMobile] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
 	return (
 		<div>
 			<AddressDetails>
@@ -23,7 +23,47 @@ function Contact() {
 			<h4>Directly mail to Sushant</h4>
 			<div>
 				<Form onSubmit={sendEmail}>
-					<table>
+					<div>
+						<label>
+							Your name: <span className='required'>*</span>
+						</label>
+					</div>
+					<div>
+						<input
+							type="text"
+							required
+							name="name"
+							value={name}
+							onChange={(e) => setName(e.target.value)}
+						/>
+					</div>
+					<br></br>
+					<div>
+						<label>Your mobile: <span className='required'>*</span></label>
+					</div>
+					<div>
+						<input type="text" pattern="[0-9]*" required name="mobile" value={mobile} minLength={10} maxLength={10} onChange={e => setMobile(e.target.value)} />
+					</div>
+					<br></br>
+					<div>
+					<label>Your email: <span className='required'>*</span></label>
+					</div>
+					<div>
+					<input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" value={email} onChange={e => setEmail(e.target.value)} />
+					</div>
+					<br></br>
+					<div>
+					<label>Message: <span className='required'>*</span></label>
+					</div>
+					<div>
+					<textarea required rows={6} name="message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+					</div>
+					<br></br>
+					<div>
+					<button type="submit" className="mailButton">Submit</button>
+					</div>
+					<div className='notes'> Fields marked with <span className='required'>*</span> are required</div>
+					{/* <table>
 						<tbody>
 							<tr>
 								<td>
@@ -66,33 +106,33 @@ function Contact() {
 								</td>
 							</tr>
 							<tr>
-                                <td></td>
+								<td></td>
 								<td>
 									<button type="submit" className="mailButton">Submit</button>
 								</td>
 							</tr>
 						</tbody>
 					</table>
-                    <div className='notes'> Fields marked with <span className='required'>*</span> are required</div>
+					<div className='notes'> Fields marked with <span className='required'>*</span> are required</div> */}
 				</Form>
-				
+
 			</div>
 		</div>
-    );
-    
-    function sendEmail(evt) {
-        evt.preventDefault();
-        const data = {
-            subject: `Message from Sushant Agrawal's profile`,
-            text:`From: ${email},\r\nName: ${name}\r\nMobile: ${mobile}\r\nMessage: ${message}`
-        };
-    
-        axios.post(settings.emailHost, data)
-            .then(() => resetForm())
-            .catch(err => console.log(err));
-    }
+	);
 
-    function resetForm() {
+	function sendEmail(evt) {
+		evt.preventDefault();
+		const data = {
+			subject: `Message from Sushant Agrawal's profile`,
+			text: `From: ${email},\r\nName: ${name}\r\nMobile: ${mobile}\r\nMessage: ${message}`
+		};
+
+		axios.post(settings.emailHost, data)
+			.then(() => resetForm())
+			.catch(err => console.log(err));
+	}
+
+	function resetForm() {
 		setName("");
 		setMobile("");
 		setEmail("");
@@ -111,11 +151,16 @@ const Form = styled.form`
 		color: red;
 	}
     input{
-        min-width:180px;
+        /* min-width:180px; */
+		width: 100%;
+		font-size:1rem;
+		line-height: 1.3rem;
     }
     textarea{
-        min-width:180px;
-        margin-top: 1rem;
+        /* min-width:180px; */
+		width:100%;
+        /* margin-top: 1rem; */
+		font-size:1rem;
     }
     .notes{
         font-size:0.9rem;

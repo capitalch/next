@@ -42,5 +42,9 @@ content
  can speak languages
  visited countries
 domain registration
-check with cloudjiffy
+                                                check with cloudjiffy
+
+//bugs
+1. Contacts getting wrapped
+2. Javascript code gets wider in mobile
                                                

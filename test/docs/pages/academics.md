@@ -1,4 +1,4 @@
-# Academics of Sushant
+### Academics of Sushant
 
 <div>Sushant was always good in Alzebra and Science group. He had interest in English and Hindi languages.</div>
 <div>His educational certificates are below:</div>

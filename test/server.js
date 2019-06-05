@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = false // process.env.NODE_ENV !== 'production';
+
 const app = next({ dev });
 const matter = require('gray-matter');
 const handle = app.getRequestHandler();
@@ -29,16 +30,13 @@ function getBlogs(req, res, app, folderPath, client) {
 				return a
 			}
 		}, {})
-		// console.log(blogs);
 		if (client) {
 			res.json(blogs)
 		} else {
 			res.locals.blogs = blogs;
 			return app.render(req, res, '/blogs');
 		}
-
 	})
-
 }
 
 const robotsOptions = {
