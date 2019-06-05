@@ -1,5 +1,6 @@
 import React from 'react';
 import GlobalStyle from '../handy/globalStyle';
+import axios from 'axios';
 import Head from '../components/head';
 import Blogs from '../components/blogs';
 import Layout from '../components/layout';
@@ -9,17 +10,24 @@ function BlogsPage({ blogs, slug }) {
         <div>
             <GlobalStyle />
             <Head title='Blogs' />
-            <Layout currentPage={slug} isBanner={false}><Blogs blogs={blogs}></Blogs></Layout>
+            <Layout currentPage={slug}><Blogs blogs={blogs}></Blogs></Layout>
         </div>
     );
 }
 
-BlogsPage.getInitialProps = async ({ res }) => {
+BlogsPage.getInitialProps = async ({ req, res }) => {
     try {
-        // let data: any = {};
-        const blogs = res.locals.blogs;
+
+        const isServer = !!req;
+        let blogs;
+        if (isServer) {
+            blogs = res.locals.blogs;
+        } else {
+            const d = await axios.get('/blogs?client=true');
+			blogs = d.data;
+        }
         const slug = 'blogs'
-        return {blogs, slug};
+        return { blogs, slug };
     } catch (e) {
         console.log(e);
     }

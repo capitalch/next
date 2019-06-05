@@ -16,6 +16,9 @@ const slugMapping = {
 	qa: 'Questions and answers by Sushant',
 
 }
+
+{/* <meta name="Description" content="Put your description here."> */}
+
 const IndexPage = ({ content, slug }) => {
 	return (
 		<div>
@@ -26,11 +29,12 @@ const IndexPage = ({ content, slug }) => {
 	);
 };
 
-IndexPage.getInitialProps = async ({ res }) => {
-	let slug = res.locals.slug || 'home';
+IndexPage.getInitialProps = async ({asPath }) => {
+	let slug = asPath.slice(1) || 'home'; // remove first char (/) from asPath
+
 	(!allPages[slug]) && (slug = 'home');
-	let content;
-	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+		let content;
+		(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
 	return { content, slug };
 };
 
@@ -51,7 +55,7 @@ const allPages = {
 	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },
 	academics: { isBanner: false, isMDFile: true },
 	projects: { isBanner: false, isMDFile: true },
-	qa: { isBanner: false, isMDFile: true },
+	qa: { isBanner: false, isMDFile: true }//,
 	// blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
 }
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
+
 
 const StyledMenuIcon = styled.div`
     div {
@@ -25,6 +27,7 @@ const StyledMenuItems = styled.ul`
         display:block; // to make whole area clickable
         padding:1rem;
         font-size:1.3rem;
+        color:#fff;
     }
 
     li {
@@ -44,9 +47,8 @@ const StyledMenuItems = styled.ul`
 
 const StyledHeader = styled.nav`
     grid-area: header;
-    background-color:darkgrey;
+    background-color:black;
     display:flex;
-    
 `
 
 const StyledActiveMenuItem = styled.span`
@@ -81,14 +83,15 @@ function MenuIcon({ show, setShow }): any {
 
 function MenuItems() {
     return <StyledMenuItems>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/contact'>Contact</a></li>
-        <li><a href='/resume'>Resume</a></li>
-        <li><a href='/skillset'>Skillset</a></li>
-        <li><a href='/academics'>Academics</a></li>
-        <li><a href='/projects'>Projects</a></li>
-        <li><a href='qa'>QA</a></li>
-        <li><a href='/blogs'>Blogs</a></li>
+        {/* <li><a href='/'>Home</a></li> */}
+        <li><Link href='/'><a>Home</a></Link></li>
+        <li><Link href='/' as='/contact'><a>Contact</a></Link></li>
+        <li><Link href='/' as='/resume'><a>Resume</a></Link></li>
+        <li><Link href='/' as='/skillset'><a>Skillset</a></Link></li>
+        <li><Link href='/' as='/academics'><a>Academics</a></Link></li>
+        <li><Link href='/' as='/projects'><a>Projects</a></Link></li>
+        <li><Link href='/' as='/qa'><a>QA</a></Link></li>
+        <li><Link href='/blogs' as = '/blogs'><a>Blogs</a></Link></li>
     </StyledMenuItems>
 }
 
@@ -118,52 +121,5 @@ function Header({ currentPage }) {
 export default Header
 
 /*
-const StyledNav = styled.nav`
-	grid-area: header;
-    background-color:#373C2F;
-    height: 58px;
-    width:100%;
-    display:flex;
 
-    a {
-        margin-left:1rem;
-        font-weight:bolder;
-        color:white;
-        text-decoration:none;
-        margin-top:auto;
-        margin-bottom:13px;
-        font-size: 1.3rem;
-        font-family:sans-serif;
-    }
-
-    label {
-        color:#DBEAD0;
-        font-family: cursive;
-        font-size: 1.1rem;
-        font-weight:200;
-        margin-left:auto;
-        margin-top:auto;
-        margin-bottom:13px;
-        margin-right:1em;
-        @media(max-width:992px){
-            display:none;
-        }
-
-    }
-`
-
-function Header({currentPage}) {
-    return <StyledNav>
-
-        <a href="/">Home</a>
-        <a href="/contact">Contact</a>
-        <a href="/resume">Resume</a>
-        <a href="/skillset">Skillset</a>
-        <a href="/academics">Academics</a>
-        <a href="/projects">Projects</a>
-        <a href="/qa">QA</a>
-        <a href="/blogs">Blogs</a>
-        <label>Sushant's profile</label>
-    </StyledNav>
-}
 */

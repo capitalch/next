@@ -11,7 +11,7 @@ const handle = app.getRequestHandler();
 
 const folderPath = path.join(__dirname, 'docs', 'blogs');
 
-function getBlogs(req, res, app, folderPath) {
+function getBlogs(req, res, app, folderPath, client) {
 	fs.readdir(folderPath, (err, files) => {
 		if (err) return console.error(err);
 		const blogs = files.reduce((a, c) => {
@@ -30,31 +30,48 @@ function getBlogs(req, res, app, folderPath) {
 			}
 		}, {})
 		// console.log(blogs);
-		res.locals.blogs = blogs;
-		return app.render(req, res, '/blogs');
+		if (client) {
+			res.json(blogs)
+		} else {
+			res.locals.blogs = blogs;
+			return app.render(req, res, '/blogs');
+		}
+
 	})
 
 }
 
+const robotsOptions = {
+	root: __dirname + '/static/',
+	headers: {
+		'Content-Type': 'text/plain;charset=UTF-8',
+	}
+};
 
 app.prepare().then(() => {
 	const server = express()
 	server.use(compression())
 
+	server.get('/robots.txt', (req, res) => (
+		res.status(200).sendFile('robots.txt', robotsOptions)
+	));
+
 	server.get('/blogs', (req, res) => {
 		const folderPath = path.join(__dirname, 'docs', 'blogs');
-		getBlogs(req, res, app, folderPath)
+		getBlogs(req, res, app, folderPath, req.query.client)
 	});
 
 	server.get('/:slug', (req, res) => {
-		const slug = req.params.slug || 'home';
-		res.locals.slug = slug;
+		// const slug = req.params.slug || 'home';
+		// res.locals.slug = slug;
 		return app.render(req, res, '/');
 	})
 
 	server.get('/blog/:slug', (req, res) => {
-		const slug = req.params.slug;
-		res.locals.slug = slug;
+		// const slug = req.params.slug;
+		// res.locals.slug = slug;
+
+
 		// const filePath = path.join(folderPath, 'blog1.md');
 		// const { content, data } = matter.read(filePath);
 		// res.locals.content = content;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import settings from '../settings.json'
+// import settings from '../settings.json'
 
 function Contact() {
     const [ name, setName ] = useState('');
@@ -84,7 +84,6 @@ function Contact() {
         evt.preventDefault();
         const data = {
             subject: `Message from Sushant Agrawal's profile`,
-            // text: 'From: '.concat(email, '\r\n', 'Name: ', name, '\r\n', 'Mobile: ', mobile, '\r\n', 'Message: ', message)
             text:`From: ${email},\r\nName: ${name}\r\nMobile: ${mobile}\r\nMessage: ${message}`
         };
     

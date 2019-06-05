@@ -27,7 +27,7 @@ const IndexPage = ({ content, slug }) => {
 };
 
 IndexPage.getInitialProps = async ({asPath }) => {
-	let slug = asPath.slice(1) || 'home';
+	let slug = asPath.slice(1) || 'home'; // remove first char (/) from asPath
 
 	(!allPages[slug]) && (slug = 'home');
 		let content;
@@ -52,8 +52,8 @@ const allPages = {
 	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },
 	academics: { isBanner: false, isMDFile: true },
 	projects: { isBanner: false, isMDFile: true },
-	qa: { isBanner: false, isMDFile: true },
-	blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
+	qa: { isBanner: false, isMDFile: true }//,
+	// blogs: { isBanner: false, isMDFile: false, component: () => <Blogs></Blogs> }
 }
 
 export default IndexPage;
