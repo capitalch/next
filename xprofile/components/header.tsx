@@ -9,10 +9,6 @@ const StyledMenuIcon = styled.div`
         height: 5px;
         background-color: #fff;
         margin: 6px 0;
-        /* margin-top:6px;
-        margin-bottom:6px;
-        margin-left:auto;
-        margin-right: 2px; */
     }
     margin:0.5rem;
     margin-left:2rem; // for right alignment after fixed text
@@ -25,7 +21,6 @@ const StyledMenuIcon = styled.div`
 const StyledMenuItems = styled.ul`
     display:flex;
     flex-direction:column;
-    /* justify-self: center; */
     width: 60%;
     a {
         text-decoration:none;
@@ -78,7 +73,6 @@ const StyledPortfolio = styled.span`
     margin-top:auto;
     margin-bottom:auto;
     margin-right:0.5rem;
-    /* display:none; */
 `
 
 function MenuIcon({ show, setShow, portfolio, setPortfolio }): any {
@@ -95,6 +89,10 @@ function Header({ currentPage }) {
 
     function screenTest(e) {
         e.matches ? setShow(true) : setShow(false)
+    }
+
+    const XAnchor = (x) =>{
+        return <a onClick={() => {setShow(false); setPortfolio(true)} }>{x}</a>
     }
 
     useEffect(() => {
@@ -114,14 +112,14 @@ function Header({ currentPage }) {
 
     function MenuItems() {
         return <StyledMenuItems>
-            <li><Link href='/'><a onClick={() => {setShow(false) ; setPortfolio(true)}}>Home</a></Link></li>
-            <li><Link href='/' as='/contact'><a onClick={() => {setShow(false); setPortfolio(true)} }>Contact</a></Link></li>
-            <li><Link href='/' as='/resume'><a onClick={() => {setShow(false) ; setPortfolio(true)} }>Resume</a></Link></li>
-            <li><Link href='/' as='/skillset'><a onClick={() => {setShow(false) ; setPortfolio(true)} }>Skillset</a></Link></li>
-            <li><Link href='/' as='/academics'><a onClick={() => {setShow(false) ; setPortfolio(true)}}>Academics</a></Link></li>
-            <li><Link href='/' as='/projects'><a onClick={() => {setShow(false) ; setPortfolio(true)}}>Projects</a></Link></li>
-            <li><Link href='/' as='/qa'><a onClick={() => {setShow(false) ; setPortfolio(true)} }>QA</a></Link></li>
-            <li><Link href='/blogs' as='/blogs'><a onClick={() => {setShow(false); setPortfolio(true)}}>Blogs</a></Link></li>
+            <li><Link href='/'>{XAnchor('Home')}</Link></li>
+            <li><Link href='/' as='/contact'>{XAnchor('Contact')}</Link></li>
+            <li><Link href='/' as='/resume'>{XAnchor('Resume')}</Link></li>
+            <li><Link href='/' as='/skillset'>{XAnchor('Skillset')}</Link></li>
+            <li><Link href='/' as='/academics'>{XAnchor('Academics')}</Link></li>
+            <li><Link href='/' as='/projects'>{XAnchor('Projects')}</Link></li>
+            <li><Link href='/' as='/qa'>{XAnchor('QA')}</Link></li>
+            <li><Link href='/blogs' as='/blogs'><a onClick={() => {setShow(false); setPortfolio(true)} }>Blogs</a></Link></li>
         </StyledMenuItems>
     }
 
