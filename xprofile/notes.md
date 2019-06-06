@@ -12,39 +12,29 @@
                                                 create skillset page
                                                 create home.md
                                                 syntax highlight
-                                                    blogs implement
-                                                        create blogs page
-                                                        create blog page
-                                                        put two snippets /blogs and /blogs/:slug in server.js
-                                                        create blogs folder and put there the blogs file
-                                                        do necessary changes in blogs.tsx and blog.tsx files
-                                                        server.js initialy returns just a dummy blogs list with title
-                                                        modify server.js with correct blogs list with files hierarchy
-                                                         skills.json to be hot editable like md files: not doable
+                                                blogs implement
                                                 blogs page styling
                                                 @media strategy for responsive design
-
-right area with articles / blogs
+                                                seo implementation
                                                 client routing
-                                                        
+
+right area with articles / blogs                    
 blogs listing on date descending and category ascending
-content writing                                             
- create resume.md
- create academics.md
- create projects.md
- create qa.md
-                                                
+content writing                                 
 no of hits incorporation
-Comments incorporation
-                                                seo implementation                                   
-                                                cleanup
+                                                             
 content
  can speak languages
  visited countries
 domain registration
-                                                check with cloudjiffy
+Blog short heading and remove portfolio of Sushant fro blog
+Comments incorporation
+    Database
+    server side in tools
+    client side show comments
+    moderation
+    Admin to upload files and moderate comments with authentication
 
 //bugs
-1. Contacts getting wrapped
 2. Javascript code gets wider in mobile
                                                
