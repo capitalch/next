@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-
+import axios from 'axios'
 
 const StyledMenuIcon = styled.div`
     div {
@@ -76,7 +76,7 @@ const StyledPortfolio = styled.span`
 `
 
 function MenuIcon({ show, setShow, portfolio, setPortfolio }): any {
-    return <StyledMenuIcon onClick={() => {setShow(!show); setPortfolio(!portfolio)} }>
+    return <StyledMenuIcon onClick={() => { setShow(!show); setPortfolio(!portfolio) }}>
         <div></div>
         <div></div>
         <div></div>
@@ -91,13 +91,13 @@ function Header({ currentPage }) {
         e.matches ? setShow(true) : setShow(false)
     }
 
-    const XAnchor = (x) =>{
-        return <a onClick={() => {setShow(false); setPortfolio(true)} }>{x}</a>
+    const XAnchor = (x) => {
+        return <a onClick={() => { setShow(false); setPortfolio(true) }}>{x}</a>
     }
 
     useEffect(() => {
         const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-        if (width >= 993) { (setShow(true)) ; setPortfolio(true)}
+        if (width >= 993) { (setShow(true)); setPortfolio(true) }
         const mql = window.matchMedia('(min-width: 992px)')
         mql.addListener(screenTest)
         return () => mql.removeListener(screenTest)
@@ -107,7 +107,7 @@ function Header({ currentPage }) {
         {show && <MenuItems ></MenuItems>}
         {(!show) && <StyledActiveMenuItem>{currentPage}</StyledActiveMenuItem>}
         {(portfolio) && <StyledPortfolio>Portfolio of Sushant</StyledPortfolio>}
-        {<MenuIcon show={show} setShow={setShow} portfolio = {portfolio} setPortfolio={setPortfolio}></MenuIcon>}
+        {<MenuIcon show={show} setShow={setShow} portfolio={portfolio} setPortfolio={setPortfolio}></MenuIcon>}
     </StyledHeader>
 
     function MenuItems() {
@@ -119,8 +119,62 @@ function Header({ currentPage }) {
             <li><Link href='/' as='/academics'>{XAnchor('Academics')}</Link></li>
             <li><Link href='/' as='/projects'>{XAnchor('Projects')}</Link></li>
             <li><Link href='/' as='/qa'>{XAnchor('QA')}</Link></li>
-            <li><Link href='/blogs' as='/blogs'><a onClick={() => {setShow(false); setPortfolio(true)} }>Blogs</a></Link></li>
+            <li><Link href='/blogs' as='/blogs'><a onClick={() => { setShow(false); setPortfolio(true) }}>Blogs</a></Link></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { newComment() }}>New comment</button></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { deleteComment() }}>Delete comment</button></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { getComments() }}>Get comments</button></li>
         </StyledMenuItems>
+    }
+
+    function getComments() {
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
+
+        doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
+            token: token
+        })
+    }
+
+    function deleteComment() {
+        const payload = {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
+            , commentId: 41
+        }
+        doPost('http://localhost:3002/tools/comments/sushantagrawal.com', payload)
+    }
+
+    function newComment() {
+        const payload = {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY',
+            text: 'id:new-comment',
+            values:
+            {
+                parentId: ''
+                , mname: 'Anshuman'
+                , email: 'ans@gmail.com'
+                , visitorSite: 'www.abc.com'
+                , comment: 'This is a wonderful comment'
+            }
+        }
+        doPost('http://localhost:3002/tools/comments/sushantagrawal.com/projects', payload)
+    }
+
+    function doPost(url, payload) {
+        axios.post(url, payload)
+            .then(res => {
+                console.log(res)
+            }).catch(e => {
+                console.log((e.response && e.response.data.message) || e.message)
+            })
+    }
+
+    function doGet(url, params) {
+        axios.get(url, {
+            params: params
+        }).then(res => {
+            console.log(res.data)
+        }).catch(e => {
+            console.log((e.response && e.response.data.message) || e.message)
+        })
     }
 
 }
