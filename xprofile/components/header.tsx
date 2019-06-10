@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import axios from 'axios'
+import treeify from 'treeify-js'
 
 const StyledMenuIcon = styled.div`
     div {
@@ -123,8 +124,11 @@ function Header({ currentPage }) {
             <li><button style={{ marginLeft: '1rem' }} onClick={() => { newComment() }}>New comment</button></li>
             <li><button style={{ marginLeft: '1rem' }} onClick={() => { deleteComment() }}>Delete comment</button></li>
             <li><button style={{ marginLeft: '1rem' }} onClick={() => { getComments() }}>Get comments</button></li>
+            {/* <li><button style={{ marginLeft: '1rem' }} onClick={() => { makeTree() }}>Tree</button></li> */}
         </StyledMenuItems>
     }
+
+    
 
     function getComments() {
         const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
@@ -182,5 +186,35 @@ function Header({ currentPage }) {
 export default Header
 
 /*
-
+function makeTree() {
+        const comments = [{
+            id: 1,
+            parent_id: null,
+            mname: 'a'
+        }, {
+            id: 2,
+            parent_id: 1,
+            mname: 'a'
+        }, {
+            id: 3,
+            parent_id: 1,
+            mname: 'a'
+        }, {
+            id: 4,
+            parent_id: 2,
+            mname: 'a'
+        }, {
+            id: 5,
+            parent_id: null,
+            mname: 'a'
+        }]
+        
+        const nest = (items, id = null, link = 'parent_id') =>
+          items
+            .filter(item => item[link] === id)
+            .map(item => ({ ...item, children: nest(items, item.id) }))
+        
+        const a = nest(comments)
+        console.log(a)
+    }
 */
