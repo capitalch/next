@@ -25,7 +25,7 @@
                                                 @media strategy for responsive design
 
 right area with articles / blogs
-client routing
+                                                client routing
                                                         
 blogs listing on date descending and category ascending
 content writing                                             
@@ -36,6 +36,11 @@ content writing
                                                 
 no of hits incorporation
 Comments incorporation
+    Font adjustment
+    convert date to local
+    Capture comments and reply
+    Download comment as per page
+    SEO for comments
 seo implementation                                   
 cleanup
 content

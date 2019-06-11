@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 function Comments() {
     const [arr, setArr] = useState([])
@@ -10,11 +10,21 @@ function Comments() {
         doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
             token: token
         }, setArr)
-    },[])
-    // const outArray = getCommentsArray(pageComments)
-    return <div>
+    }, [])
+    return <div style={{ marginTop: '2rem' }}>
         {arr.map((x, index) => {
-            return <div key={index}>{x.level}{x.comment}</div>
+            return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
+                {/* <div style={{ marginLeft: `${x.level * 4}rem` }}></div> */}
+                <div>
+                    <StyledName>
+                        {x.mname}
+                    </StyledName>
+                    <StyledTime>{x.commented_on}</StyledTime>
+                </div>
+                <div >{x.comment}</div>
+                <div><StyledReply onClick={() => console.log('clicked')}>Reply</StyledReply></div>
+            </StyledItem>
+
         })}
     </div>
 }
@@ -23,7 +33,7 @@ function getCommentsArray(pageComm) {
     const outArray: any[] = []
     function process(arr: any[], level: number) {
         arr.forEach(x => {
-            outArray.push({ level: level, comment: x.comment })
+            outArray.push({ level: level, ...x })
             x.children && (x.children.length > 0) && process(x.children, level + 1)
         })
     }
@@ -35,12 +45,48 @@ async function doGet(url, params, setArr) {
     try {
         const ret = await axios.get(url, { params: params })
         setArr(getCommentsArray(ret.data))
-        // console.log(ret.data)
     } catch (e) {
         console.log((e.response && e.response.data.message) || e.message)
     }
 }
 
+const StyledName = styled.span`
+    color:red;
+    margin-right:0.5rem;
+`
+
+const StyledTime = styled.span`
+    font-size:0.9rem;
+`
+
+const StyledReply = styled.button`
+    /* font-weight:bold; */
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    cursor:pointer;
+    margin: 0px;
+    padding: 0px;
+    color: blue;
+    :focus {
+        outline: none;
+    }
+`
+
+const StyledItem = styled.div`
+    display:flex;
+    flex-direction:column;
+    font-size: 1.1rem;
+    /* ${StyledName}{
+        font-size:4rem;
+    } */
+`
+
+
+
+export default Comments
+/*
 const pageComments = [
     {
         mname: 'top1',
@@ -104,5 +150,4 @@ const pageComments = [
         ]
     }
 ]
-
-export default Comments
+*/
