@@ -34,6 +34,7 @@
     "@mdx-js/loader": "^1.0.20",
     "@next/mdx": "^8.1.0",
     "babel-plugin-root-import": "^6.2.0",
-    "babel-plugin-styled-components": "^1.10.0"
+    "babel-plugin-styled-components": "^1.10.0",
+    "treeify-js": "^1.0.3"
   }
 }

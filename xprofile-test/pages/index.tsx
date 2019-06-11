@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import GlobalStyle from '../handy/globalStyle';
 import Contact from '../components/contact';
 import Skillset from '../components/skillset';
-import Blogs from '../components/blogs';
+// import Blogs from '../components/blogs';
 
 const slugMapping = {
 	home: 'Home for Sushant',
@@ -16,6 +16,7 @@ const slugMapping = {
 	qa: 'Questions and answers by Sushant',
 
 }
+
 const IndexPage = ({ content, slug }) => {
 	return (
 		<div>

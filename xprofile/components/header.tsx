@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import axios from 'axios'
-import treeify from 'treeify-js'
 
 const StyledMenuIcon = styled.div`
     div {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-
+import axios from 'axios'
 
 const StyledMenuIcon = styled.div`
     div {
@@ -25,8 +25,11 @@ const StyledMenuItems = styled.ul`
     a {
         text-decoration:none;
         display:block; // to make whole area clickable
-        padding:1rem;
+        margin-left:1.3rem;
+        margin-top:0.3rem;
+        margin-bottom:0.3rem;
         font-size:1.3rem;
+        color:#fff;
     }
 
     li {
@@ -46,9 +49,9 @@ const StyledMenuItems = styled.ul`
 
 const StyledHeader = styled.nav`
     grid-area: header;
-    background-color:darkgrey;
+    background-color:black;
     display:flex;
-    
+    justify-content:space-between;
 `
 
 const StyledActiveMenuItem = styled.span`
@@ -62,7 +65,7 @@ const StyledActiveMenuItem = styled.span`
     }
 `
 
-const StyledText = styled.span`
+const StyledPortfolio = styled.span`
     font-size:1rem;
     font-weight:bold;
     color:#fff;
@@ -72,39 +75,29 @@ const StyledText = styled.span`
     margin-right:0.5rem;
 `
 
-
-function MenuIcon({ show, setShow }): any {
-    return <StyledMenuIcon onClick={() => setShow(!show)}>
+function MenuIcon({ show, setShow, portfolio, setPortfolio }): any {
+    return <StyledMenuIcon onClick={() => { setShow(!show); setPortfolio(!portfolio) }}>
         <div></div>
         <div></div>
         <div></div>
     </StyledMenuIcon>
 }
 
-function MenuItems() {
-    return <StyledMenuItems>
-        {/* <li><a href='/'>Home</a></li> */}
-        <li><Link href='/'><a>Home</a></Link></li>
-        <li><Link href='/' as='/contact'><a>Contact</a></Link></li>
-        <li><Link href='/' as='/resume'><a>Resume</a></Link></li>
-        <li><Link href='/' as='/skillset'><a>Skillset</a></Link></li>
-        <li><Link href='/' as='/academics'><a>Academics</a></Link></li>
-        <li><Link href='/' as='/projects'><a>Projects</a></Link></li>
-        <li><Link href='/' as='/qa'><a>QA</a></Link></li>
-        <li><Link href='/blogs' as = '/blogs'><a>Blogs</a></Link></li>
-    </StyledMenuItems>
-}
-
 function Header({ currentPage }) {
     const [show, setShow] = useState(false)
+    const [portfolio, setPortfolio] = useState(true)
 
     function screenTest(e) {
         e.matches ? setShow(true) : setShow(false)
     }
 
+    const XAnchor = (x) => {
+        return <a onClick={() => { setShow(false); setPortfolio(true) }}>{x}</a>
+    }
+
     useEffect(() => {
         const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-        if (width >= 993) { (setShow(true)) }
+        if (width >= 993) { (setShow(true)); setPortfolio(true) }
         const mql = window.matchMedia('(min-width: 992px)')
         mql.addListener(screenTest)
         return () => mql.removeListener(screenTest)
@@ -113,13 +106,114 @@ function Header({ currentPage }) {
     return <StyledHeader>
         {show && <MenuItems ></MenuItems>}
         {(!show) && <StyledActiveMenuItem>{currentPage}</StyledActiveMenuItem>}
-        <StyledText>Portfolio of Sushant</StyledText>
-        {<MenuIcon show={show} setShow={setShow}></MenuIcon>}
+        {(portfolio) && <StyledPortfolio>Portfolio of Sushant</StyledPortfolio>}
+        {<MenuIcon show={show} setShow={setShow} portfolio={portfolio} setPortfolio={setPortfolio}></MenuIcon>}
     </StyledHeader>
+
+    function MenuItems() {
+        return <StyledMenuItems>
+            <li><Link href='/'>{XAnchor('Home')}</Link></li>
+            <li><Link href='/' as='/contact'>{XAnchor('Contact')}</Link></li>
+            <li><Link href='/' as='/resume'>{XAnchor('Resume')}</Link></li>
+            <li><Link href='/' as='/skillset'>{XAnchor('Skillset')}</Link></li>
+            <li><Link href='/' as='/academics'>{XAnchor('Academics')}</Link></li>
+            <li><Link href='/' as='/projects'>{XAnchor('Projects')}</Link></li>
+            <li><Link href='/' as='/qa'>{XAnchor('QA')}</Link></li>
+            <li><Link href='/blogs' as='/blogs'><a onClick={() => { setShow(false); setPortfolio(true) }}>Blogs</a></Link></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { newComment() }}>New comment</button></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { deleteComment() }}>Delete comment</button></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { getComments() }}>Get comments</button></li>
+            {/* <li><button style={{ marginLeft: '1rem' }} onClick={() => { makeTree() }}>Tree</button></li> */}
+        </StyledMenuItems>
+    }
+
+    
+
+    function getComments() {
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
+
+        doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
+            token: token
+        })
+    }
+
+    function deleteComment() {
+        const payload = {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
+            , commentId: 41
+        }
+        doPost('http://localhost:3002/tools/comments/sushantagrawal.com', payload)
+    }
+
+    function newComment() {
+        const payload = {
+            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY',
+            text: 'id:new-comment',
+            values:
+            {
+                parentId: ''
+                , mname: 'Anshuman'
+                , email: 'ans@gmail.com'
+                , visitorSite: 'www.abc.com'
+                , comment: 'This is a wonderful comment'
+            }
+        }
+        doPost('http://localhost:3002/tools/comments/sushantagrawal.com/projects', payload)
+    }
+
+    function doPost(url, payload) {
+        axios.post(url, payload)
+            .then(res => {
+                console.log(res)
+            }).catch(e => {
+                console.log((e.response && e.response.data.message) || e.message)
+            })
+    }
+
+    function doGet(url, params) {
+        axios.get(url, {
+            params: params
+        }).then(res => {
+            console.log(res.data)
+        }).catch(e => {
+            console.log((e.response && e.response.data.message) || e.message)
+        })
+    }
+
 }
 
 export default Header
 
 /*
-
+function makeTree() {
+        const comments = [{
+            id: 1,
+            parent_id: null,
+            mname: 'a'
+        }, {
+            id: 2,
+            parent_id: 1,
+            mname: 'a'
+        }, {
+            id: 3,
+            parent_id: 1,
+            mname: 'a'
+        }, {
+            id: 4,
+            parent_id: 2,
+            mname: 'a'
+        }, {
+            id: 5,
+            parent_id: null,
+            mname: 'a'
+        }]
+        
+        const nest = (items, id = null, link = 'parent_id') =>
+          items
+            .filter(item => item[link] === id)
+            .map(item => ({ ...item, children: nest(items, item.id) }))
+        
+        const a = nest(comments)
+        console.log(a)
+    }
 */

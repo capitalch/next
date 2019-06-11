@@ -1,34 +1,18 @@
 ---
-title: this is post1 title for the purpose of testing
+title: This is post1 title
 slug: post1
 category: general
 ---
-<div style='color:red'>This is html1</div>
+<div style='color:red'>This is html123</div>
 
 #### Proin eget velit vel mi pulvinar sagittis et nec augue. 
 
-<table class = 'table'>
-<tr>
-    <td >col1</td>
-</tr>
-</table>
-
-<pre><code class="language-javascript">
-    // let x=0; 
-    x++;
-    y = x+=1;
-    if ( x === y) {
-        z = 200;
-        z++;
-    }
-
-</code></pre>
 
 ```javascript
-    function sayHello (msg, who) {
-        return `${who} says: msg`;
-    }
-    sayHello("Hello World", "Johnny");
+let x= 0;
+for(let i=0; i<=10; i++){
+    const x = a+ b;
+}
 ```
 
 

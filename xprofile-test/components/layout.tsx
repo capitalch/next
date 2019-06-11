@@ -9,7 +9,6 @@ const StyledLayout = styled.div`
 	@media(max-width: 500px){
 		grid-template-areas:'header' 'main' 'left';
     	grid-auto-rows: min-content auto auto;
-		
 	}
 	
 	@media only screen and (min-width: 501px) and (max-width: 992px) {
@@ -57,8 +56,8 @@ const StyledRight = styled.div`
 const StyledMain = styled.div`
 		grid-area: main;
 		background-color:#fff;
-		line-height: 2rem;
-		font-size: 1.3rem;
+		line-height: 1.7rem;
+		font-size: 1.2rem;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
 		padding-left:2rem;
 		padding-right:2.3rem;
@@ -79,13 +78,14 @@ const StyledLeft = styled.div`
 		background-color: #fff;
 	`
 
+
 function Layout({ currentPage = '', content = '', children = '' }) {
 	return (
 		<StyledLayout>
 			<Header currentPage={currentPage}>Home</Header>
-			<StyledBanner src="/static/images/banner1.jpg" alt="image"></StyledBanner>
+			<StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>
 			<StyledLeft>
-			<ProfileImage src="/static/images/sush4.jpg" />
+			<ProfileImage src="/static/images/sush4.jpg" alt = 'Image of Sushant Agrawal'/>
 				<ProfileText>
 					Sushant Agrawal <div>capitalch@gmail.com</div>
 				</ProfileText>

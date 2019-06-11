@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = true // process.env.NODE_ENV !== 'production';
+
 const app = next({ dev });
 const matter = require('gray-matter');
 const handle = app.getRequestHandler();
@@ -29,22 +30,29 @@ function getBlogs(req, res, app, folderPath, client) {
 				return a
 			}
 		}, {})
-		// console.log(blogs);
-		if(client){
+		if (client) {
 			res.json(blogs)
 		} else {
 			res.locals.blogs = blogs;
 			return app.render(req, res, '/blogs');
 		}
-		
 	})
-
 }
 
+const robotsOptions = {
+	root: __dirname + '/static/',
+	headers: {
+		'Content-Type': 'text/plain;charset=UTF-8',
+	}
+};
 
 app.prepare().then(() => {
 	const server = express()
 	server.use(compression())
+
+	server.get('/robots.txt', (req, res) => (
+		res.status(200).sendFile('robots.txt', robotsOptions)
+	));
 
 	server.get('/blogs', (req, res) => {
 		const folderPath = path.join(__dirname, 'docs', 'blogs');
@@ -61,7 +69,7 @@ app.prepare().then(() => {
 		// const slug = req.params.slug;
 		// res.locals.slug = slug;
 
-		
+
 		// const filePath = path.join(folderPath, 'blog1.md');
 		// const { content, data } = matter.read(filePath);
 		// res.locals.content = content;
