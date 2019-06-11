@@ -1,53 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react'
 import Link from 'next/link'
-import styled from 'styled-components';
-import GlobalStyle from '../handy/globalStyle';
-import Layout from '../components/layout';
-import Head from '../components/head';
+import styled from 'styled-components'
+import GlobalStyle from '../handy/globalStyle'
+import Layout from '../components/layout'
+import Head from '../components/head'
+import Comments from '../components/comments'
 // import axios from 'axios'
-import showdown from 'showdown';
+import showdown from 'showdown'
 
 import Prism from 'prismjs';
 import './prism.scss'
-
-function Comments() {
-    const pageComments = [
-        {
-            mname: 'ABCD',
-            comment: 'hjhhjkj',
-            children: [
-                {
-                    mname: 'child1',
-                    comment: 'child1 comment'
-                }
-            ]
-        },
-        {
-            mname: 'bbnm',
-            comment: 'uuhgf'
-        }
-    ]
-    return getComments(pageComments)
-}
-
-function getComments(pageComments:any[]) {
-    const commentsArray: any[] = [];
-    function process(arr,level) {
-        arr.forEach(x => {
-            commentsArray.push({level:level, comment: x.comment})
-            x.children && (x.children.length > 0) && process(x.children, ++level)
-        })
-    }
-    process(pageComments,0)
-
-    return <div>
-        {
-            commentsArray.map((x, index) => {
-                return <div key={index}>{x.level}{x.comment}</div>
-            }
-            )}
-    </div>
-}
 
 function BlogPage({ content, meta }) {
     useEffect(() => {
