@@ -9,21 +9,21 @@ function Comments({ pageComments }) {
         setArr(getCommentsArray(pageComments))
     }, [])
 
-    return <div style={{ margin: '2rem'}}>
+    return <div style={{ margin: '2rem' }}>
         {arr.map((x, index) => {
-            if(x.id){
-            return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
-                <div>
-                    <StyledName>
-                        {x.mname}
-                    </StyledName>
-                    <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
-                </div>
-                <div >{x.comment}</div>
-                <div><StyledReply onClick={() => {arr.push(InputForm()); setArr([...arr])}}>Reply</StyledReply></div>
-            </StyledItem>
+            if (x.id) {
+                return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
+                    <div>
+                        <StyledName>
+                            {x.mname}
+                        </StyledName>
+                        <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
+                    </div>
+                    <div >{x.comment}</div>
+                    <div><StyledReply onClick={() => { setForm(arr, setArr, x) }}>Reply</StyledReply></div>
+                </StyledItem>
             } else {
-                return <div key = {index}>{x}</div>
+                return <div key={index}>{x}</div>
             }
         })}
     </div>
@@ -41,8 +41,14 @@ function getCommentsArray(pageComm) {
     return outArray
 }
 
-function InputForm(){
+function InputForm() {
     return <button>My Button</button>
+}
+
+function setForm(arr: any[], setArr: any, arrayItem: any) {
+    const arrIndex = arr.findIndex((value) => value.id === arrayItem.id)
+    arr.splice(arrIndex + 1, 0, <div><button>Click me</button></div>)
+    setArr([...arr])
 }
 
 const StyledName = styled.span`
