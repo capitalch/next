@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import settings from '../settings.json'
+// import {axiosGet, getCommentsArray} from '../utils'
 import styled from 'styled-components';
 
 function Comments() {
     const [arr, setArr] = useState([])
 
-    useEffect(() => {
-        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
-        doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
-            token: token
+    useEffect(() => {        
+        doGet(`${settings.commentsUrl}/projects`, {
+            token: settings.token
         }, setArr)
     }, [])
     return <div style={{ marginTop: '2rem' }}>
@@ -24,9 +25,17 @@ function Comments() {
                 <div >{x.comment}</div>
                 <div><StyledReply onClick={() => console.log('clicked')}>Reply</StyledReply></div>
             </StyledItem>
-
         })}
     </div>
+}
+
+async function doGet(url, params, setArr) {
+    try {
+        const ret = await axios.get(url, { params: params })
+        setArr(getCommentsArray(ret.data))
+    } catch (e) {
+        console.log((e.response && e.response.data.message) || e.message)
+    }
 }
 
 function getCommentsArray(pageComm) {
@@ -41,14 +50,7 @@ function getCommentsArray(pageComm) {
     return outArray
 }
 
-async function doGet(url, params, setArr) {
-    try {
-        const ret = await axios.get(url, { params: params })
-        setArr(getCommentsArray(ret.data))
-    } catch (e) {
-        console.log((e.response && e.response.data.message) || e.message)
-    }
-}
+
 
 const StyledName = styled.span`
     color:red;
