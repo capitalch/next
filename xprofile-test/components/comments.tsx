@@ -1,41 +1,32 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import settings from '../settings.json'
-// import {axiosGet, getCommentsArray} from '../utils'
-import styled from 'styled-components';
+import moment from 'moment'
+import styled from 'styled-components'
 
-function Comments() {
+function Comments({ pageComments }) {
     const [arr, setArr] = useState([])
 
-    useEffect(() => {        
-        doGet(`${settings.commentsUrl}/projects`, {
-            token: settings.token
-        }, setArr)
+    useEffect(() => {
+        setArr(getCommentsArray(pageComments))
     }, [])
-    return <div style={{ marginTop: '2rem' }}>
+
+    return <div style={{ margin: '2rem'}}>
         {arr.map((x, index) => {
+            if(x.id){
             return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
-                {/* <div style={{ marginLeft: `${x.level * 4}rem` }}></div> */}
                 <div>
                     <StyledName>
                         {x.mname}
                     </StyledName>
-                    <StyledTime>{x.commented_on}</StyledTime>
+                    <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
                 </div>
                 <div >{x.comment}</div>
-                <div><StyledReply onClick={() => console.log('clicked')}>Reply</StyledReply></div>
+                <div><StyledReply onClick={() => {arr.push(InputForm()); setArr([...arr])}}>Reply</StyledReply></div>
             </StyledItem>
+            } else {
+                return <div key = {index}>{x}</div>
+            }
         })}
     </div>
-}
-
-async function doGet(url, params, setArr) {
-    try {
-        const ret = await axios.get(url, { params: params })
-        setArr(getCommentsArray(ret.data))
-    } catch (e) {
-        console.log((e.response && e.response.data.message) || e.message)
-    }
 }
 
 function getCommentsArray(pageComm) {
@@ -50,7 +41,9 @@ function getCommentsArray(pageComm) {
     return outArray
 }
 
-
+function InputForm(){
+    return <button>My Button</button>
+}
 
 const StyledName = styled.span`
     color:red;
@@ -62,7 +55,6 @@ const StyledTime = styled.span`
 `
 
 const StyledReply = styled.button`
-    /* font-weight:bold; */
     border: 0;
     background: none;
     box-shadow: none;
@@ -80,14 +72,26 @@ const StyledItem = styled.div`
     display:flex;
     flex-direction:column;
     font-size: 1.1rem;
-    /* ${StyledName}{
-        font-size:4rem;
-    } */
 `
 
-
-
 export default Comments
+
+/*
+async function doGet(url, params, setArr) {
+    try {
+        const ret = await axios.get(url, { params: params })
+        setArr(getCommentsArray(ret.data))
+    } catch (e) {
+        console.log((e.response && e.response.data.message) || e.message)
+    }
+}
+
+        // doGet(`${settings.commentsUrl}/projects`, {
+        //     token: settings.token
+        // }, setArr)
+
+*/
+
 /*
 const pageComments = [
     {

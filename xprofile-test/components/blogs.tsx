@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Comments from './comments'
+// import Comments from './comments'
 
 function Blogs({ blogs }) {
     return <div>
@@ -16,7 +16,7 @@ function Blogs({ blogs }) {
                 })}
             </div>
         })}
-        <Comments></Comments>
+        {/* <Comments></Comments> */}
     </div>
 }
 

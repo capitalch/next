@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from '../components/head';
-import Layout from '../components/layout';
-import GlobalStyle from '../handy/globalStyle';
-import Contact from '../components/contact';
-import Skillset from '../components/skillset';
-// import Blogs from '../components/blogs';
+import React from 'react'
+import Head from '../components/head'
+import Layout from '../components/layout'
+import GlobalStyle from '../handy/globalStyle'
+import Contact from '../components/contact'
+import Skillset from '../components/skillset'
+import axios from 'axios'
 
 const slugMapping = {
 	home: 'Home for Sushant',
@@ -27,12 +27,15 @@ const IndexPage = ({ content, slug }) => {
 	);
 };
 
-IndexPage.getInitialProps = async ({asPath }) => {
+IndexPage.getInitialProps = async ({ asPath }) => {
 	let slug = asPath.slice(1) || 'home'; // remove first char (/) from asPath
 
 	(!allPages[slug]) && (slug = 'home');
-		let content;
-		(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+	let content;
+	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+
+
+
 	return { content, slug };
 };
 

@@ -36,11 +36,16 @@ content writing
                                                 
 no of hits incorporation
 Comments incorporation
-    Font adjustment
-    convert date to local
-    Capture comments and reply
-    Download comment as per page
-    SEO for comments
+                    Font adjustment
+                    convert date to local
+                    Download comment as per page
+                    SEO for comments
+                     positioning of comments component in the grid
+    Capture comments and reply                
+    Delete comments UI
+    reverse order
+    icon for person
+                   
 seo implementation                                   
 cleanup
 content

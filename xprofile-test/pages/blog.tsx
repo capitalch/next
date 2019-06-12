@@ -5,16 +5,17 @@ import GlobalStyle from '../handy/globalStyle'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Comments from '../components/comments'
-// import axios from 'axios'
+import axios from 'axios'
 import showdown from 'showdown'
+import settings from '../settings.json'
 
 import Prism from 'prismjs';
 import './prism.scss'
 
-function BlogPage({ content, meta }) {
+function BlogPage({ content, meta, pageComments }) {
     useEffect(() => {
         Prism.highlightAll();
-    })
+    }, [])
 
     return (
         <div>
@@ -24,28 +25,43 @@ function BlogPage({ content, meta }) {
                 <StyledLink><Link href='/blogs'><a>Back to blogs</a></Link></StyledLink>
                 <h3>{meta.title}</h3>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
+                <Comments pageComments={pageComments}></Comments>
             </Layout>
-            <Comments></Comments>
+            
         </div>
     );
 }
 
 BlogPage.getInitialProps = async ({ asPath }) => {
-    const slug = asPath.split('/')[2];
-    const converter = new showdown.Converter(
-        {
-            metadata: true
-            //,
-            // extensions: [showdownHighlight]
+    try {
+        const slug = asPath.split('/')[2];
+        const converter = new showdown.Converter(
+            {
+                metadata: true
+                //,
+                // extensions: [showdownHighlight]
+            }
+        );
+        const d = (await require(`../docs/blogs/${slug}.md`)).default;
+        const content = converter.makeHtml(d);
+        const meta = converter.getMetadata();
+
+        const url = `${settings.commentsUrl}/projects`
+        const params = {
+            token: settings.token
         }
-    );
-    const d = (await require(`../docs/blogs/${slug}.md`)).default;
-    const content = converter.makeHtml(d);
-    const meta = converter.getMetadata();
-    return {
-        content
-        , meta
-    };
+        const pageComments = (await axios.get(url, {
+            params: params
+        })).data
+
+        return {
+            content
+            , meta
+            , pageComments
+        };
+    } catch (e) {
+        console.log((e.response && e.response.data.message) || e.message)
+    }
 }
 
 const StyledLink = styled.div`
@@ -55,45 +71,5 @@ const StyledLink = styled.div`
 export default BlogPage
 
 /*
-function Comments() {
-    const [comm, setComm] = useState()
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
-    const url = 'http://localhost:3002/tools/comments/sushantagrawal.com/projects'
-    const params = {
-        token: token
-    }
 
-    useEffect(()=>{
-        // axios.get(url, {
-        //     params: params
-        // }).then(res => {
-        //     // console.log(res.data)
-        //     setComm(res.data)
-        // }).catch(e => {
-        //     console.log((e.response && e.response.data.message) || e.message)
-        // })
-    })
-
-
-
-    return <div>Test</div>
-}
-
-// function getComments() {
-//     const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
-
-//     doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
-//         token: token
-//     })
-// }
-
-// function doGet(url, params) {
-//     axios.get(url, {
-//         params: params
-//     }).then(res => {
-//         console.log(res.data)
-//     }).catch(e => {
-//         console.log((e.response && e.response.data.message) || e.message)
-//     })
-// }
 */

@@ -1,10 +1,12 @@
-import React from 'react';
-import Head from '../components/head';
-import Layout from '../components/layout';
-import GlobalStyle from '../handy/globalStyle';
-import Contact from '../components/contact';
-import Skillset from '../components/skillset';
-// import Blogs from '../components/blogs';
+import React from 'react'
+import Head from '../components/head'
+import Layout from '../components/layout'
+import GlobalStyle from '../handy/globalStyle'
+import Contact from '../components/contact'
+import Skillset from '../components/skillset'
+import axios from 'axios'
+import settings from '../settings.json'
+import Comments from '../components/comments'
 
 const slugMapping = {
 	home: 'Home for Sushant',
@@ -17,31 +19,41 @@ const slugMapping = {
 
 }
 
-const IndexPage = ({ content, slug }) => {
+const IndexPage = ({ content, slug, pageComments }) => {
 	return (
 		<div>
 			<GlobalStyle />
 			<Head title={slugMapping[slug]} />
-			{getPageContent({ content, slug })}
+			{getPageContent({ content, slug, pageComments })}
+			{/* <Comments pageComments={pageComments}></Comments> */}
 		</div>
 	);
 };
 
-IndexPage.getInitialProps = async ({asPath }) => {
+IndexPage.getInitialProps = async ({ asPath }) => {
 	let slug = asPath.slice(1) || 'home'; // remove first char (/) from asPath
 
 	(!allPages[slug]) && (slug = 'home');
-		let content;
-		(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
-	return { content, slug };
+	let content;
+	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+
+	const url = `${settings.commentsUrl}/${slug}`
+	const params = {
+		token: settings.token
+	}
+	const pageComments = (await axios.get(url, {
+		params: params
+	})).data
+
+	return { content, slug, pageComments };
 };
 
-function getPageContent({ content, slug }) {
+function getPageContent({ content, slug, pageComments }) {
 	let Ret;
 	if (allPages[slug].isMDFile) {
-		Ret = <Layout currentPage={slug} content={content} />;
+		Ret = <Layout currentPage={slug} content={content}><Comments pageComments={pageComments}></Comments></Layout>;
 	} else {
-		Ret = <Layout currentPage={slug}>{allPages[slug].component()}</Layout>;
+		Ret = <Layout currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments}></Comments></Layout>;
 	}
 	return Ret;
 }

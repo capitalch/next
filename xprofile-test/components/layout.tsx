@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import Header from './header';
 import ReactMarkdown from 'react-markdown/with-html';
 
@@ -78,6 +78,10 @@ const StyledLeft = styled.div`
 		background-color: #fff;
 	`
 
+// const StyledComments = styled.div`
+// 		grid-area:comments;
+// 		background-color: gray;
+// `
 
 function Layout({ currentPage = '', content = '', children = '' }) {
 	return (
@@ -85,20 +89,35 @@ function Layout({ currentPage = '', content = '', children = '' }) {
 			<Header currentPage={currentPage}>Home</Header>
 			<StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>
 			<StyledLeft>
-			<ProfileImage src="/static/images/sush4.jpg" alt = 'Image of Sushant Agrawal'/>
+				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
 				<ProfileText>
 					Sushant Agrawal <div>capitalch@gmail.com</div>
 				</ProfileText>
 			</StyledLeft>
 			<StyledRight></StyledRight>
-			{content && <StyledMain>
-				<ReactMarkdown escapeHtml={false} source={content} />
-			</StyledMain>}
-			{children && <StyledMain>{children}</StyledMain>}
+			<XMain content={content} children={children}></XMain>
 		</StyledLayout>
 	);
 }
 
+function XMain({ content, children }) {
+	let ret;
+	if (content && children) {
+		ret = <StyledMain>
+			<ReactMarkdown escapeHtml={false} source={content} />
+			<StyledMain>{children}</StyledMain>
+		</StyledMain>
+	} else {
+		ret = <StyledMain>{children}</StyledMain>
+	}
+	return ret
+}
+
 export default Layout;
 /*
+{content && <StyledMain>
+				<ReactMarkdown escapeHtml={false} source={content} />
+				{ <div>{children}</div> }
+				</StyledMain>}
+				{children && <StyledMain>{children}</StyledMain>}
 */
