@@ -4,5 +4,6 @@
     "subject": "Mail from Sushant Agrawal's profile site",
     "hitCountUrl":"http://chisel.cloudjiffy.net/tools/analytics/hitcount/sushantagrawal.com",
     "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY",
-    "commentsUrl":"http://localhost:3002/tools/comments/sushantagrawal.com"
+    "commentsUrl":"http://localhost:3002/tools/comments/sushantagrawal.com",
+    "newCommentId":"id:new-comment"
 }

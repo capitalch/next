@@ -40,12 +40,15 @@ Comments incorporation
                     convert date to local
                     Download comment as per page
                     SEO for comments
-                     positioning of comments component in the grid
-    Capture comments and reply                
+                    positioning of comments component in the grid
+                    Capture comments and reply
+                    reverse order
+                    submit form
+                    new root level comments                    
+                    Show success message
     Delete comments UI
-    reverse order
     icon for person
-                   
+    Show count for comments
 seo implementation                                   
 cleanup
 content

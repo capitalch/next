@@ -25,7 +25,6 @@ const IndexPage = ({ content, slug, pageComments }) => {
 			<GlobalStyle />
 			<Head title={slugMapping[slug]} />
 			{getPageContent({ content, slug, pageComments })}
-			{/* <Comments pageComments={pageComments}></Comments> */}
 		</div>
 	);
 };
@@ -51,9 +50,9 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 function getPageContent({ content, slug, pageComments }) {
 	let Ret;
 	if (allPages[slug].isMDFile) {
-		Ret = <Layout currentPage={slug} content={content}><Comments pageComments={pageComments}></Comments></Layout>;
+		Ret = <Layout currentPage={slug} content={content}><Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	} else {
-		Ret = <Layout currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments}></Comments></Layout>;
+		Ret = <Layout currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	}
 	return Ret;
 }

@@ -1,34 +1,44 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
-import styled, {keyframes} from 'styled-components'
-import {rollIn} from 'react-animations'
+import axios from 'axios'
+import styled, { keyframes } from 'styled-components'
+import { rollIn, fadeIn, fadeOut } from 'react-animations'
+import settings from '../settings.json'
 
 
-function Comments({ pageComments }) {
+function Comments({ pageComments, slug }) {
     const [arr, setArr] = useState([])
-    const [index,setIndex] = useState(-1)
+    let [index, setIndex] = useState(-1)
+
     useEffect(() => {
         setArr(getCommentsArray(pageComments))
     }, [])
 
-    function setForm(arrayItem: any) {        
-        if(index !== -1){
-            arr.splice(index,1)
+    function setRootForm() {
+        if (index !== -1) {
+            arr.splice(index, 1)
+        }
+        index = 0
+        setIndex(index)
+        const parentId = null
+        arr.unshift(<SubmitForm startPos={0} props={{ index, setIndex, arr, setArr, slug, parentId }}></SubmitForm>)
+        setArr([...arr])
+    }
+
+    function setForm(arrayItem) {
+        if (index !== -1) {
+            arr.splice(index, 1)
         }
         const arrIndex = arr.findIndex((value) => value.id === arrayItem.id)
-        setIndex(arrIndex +1)
-        arr.splice(arrIndex + 1, 0, <StyledForm style={{marginLeft:`${arrayItem.level * 4}rem`}}>
-                <div><textarea placeholder="Comments"></textarea></div>
-                <div><input type='text' placeholder='Name'></input></div>
-                <div><input type='email' placeholder="Email"></input></div>
-                <div><input type='text' placeholder="Web site"></input></div>
-                <button>Submit</button>
-            </StyledForm>)
+        index = arrIndex + 1
+        setIndex(index)
+        const parentId = arrayItem.id
+        arr.splice(index, 0, <SubmitForm startPos={arrayItem.level} props={{ index, setIndex, arr, setArr, slug, parentId }}></SubmitForm>)
         setArr([...arr]) //for refresh purpose ...arr is used
     }
-    
-    return <div style={{ margin: '2rem' }}>
-        <StyledCommentButton>Please provide your Comments by clicking here ...</StyledCommentButton>
+
+    return <div>
+        <StyledCommentButton onClick={() => { setRootForm() }}>Please provide your Comments by clicking here ...</StyledCommentButton>
         {arr.map((x, index) => {
             if (x.id) {
                 return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
@@ -39,7 +49,7 @@ function Comments({ pageComments }) {
                         <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
                     </div>
                     <div>{x.comment}</div>
-                    <div><StyledCommentButton onClick={() => { setForm( x) }}>Reply</StyledCommentButton></div>
+                    <div><StyledCommentButton onClick={() => { setForm(x) }}>Reply</StyledCommentButton></div>
                 </StyledItem>
             } else {
                 return <div key={index}>{x}</div>
@@ -60,18 +70,120 @@ function getCommentsArray(pageComm) {
     return outArray
 }
 
-const StyledForm = styled.div`
-    animation:2s ${keyframes`${rollIn}` } ;
+function SubmitForm({ startPos, props }) {
+    const [comment, setComment] = useState('')
+    const [mname, setMname] = useState('')
+    const [email, setEmail] = useState('')
+    const [webSite, setWebSite] = useState('')
+    const [success, setSuccess] = useState(false)
+    const { index, setIndex, arr, setArr, slug, parentId } = props;
+
+    function newComment(e) {
+        e.preventDefault();
+        const payload = {
+            token: settings.token,
+            text: settings.newCommentId,
+            values:
+            {
+                parentId: parentId
+                , mname: mname
+                , email: email
+                , visitorSite: webSite
+                , comment: comment
+            }
+        }
+        axios.post(`${settings.commentsUrl}/${slug}`, payload)
+            .then(() => {
+                // if (index !== -1) {
+                //     arr.splice(index, 1)
+                // }
+                // setIndex(-1)
+                setSuccess(true)
+                setArr([...arr])
+            })
+            .catch(e => {
+                console.log((e.response && e.response.data.message) || e.message)
+            })
+    }
+
+    function cancelComment(){
+        if (index !== -1) {
+            arr.splice(index, 1) //delete at index
+        }
+        setIndex(-1)
+        setArr([...arr]) //refresh
+    }
+
+    const styledForm =  <StyledForm onSubmit={newComment} style={{ marginLeft: `${startPos * 4 + 4}rem` }}>
+        <div>
+            <textarea
+                required
+                rows={6}
+                placeholder="Give comments"
+                name="comment"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}>
+            </textarea>
+        </div>
+        <div>
+            <input type='text'
+                required
+                placeholder='Your name'
+                name="mname"
+                value={mname}
+                onChange={e => setMname(e.target.value)}
+            ></input>
+        </div>
+        <div>
+            <input
+                required
+                type='email'
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                placeholder="Your email"
+                name="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}>
+            </input>
+        </div>
+        <div>
+            <input
+                type='text'
+                placeholder="Your web site"
+                name="webSite"
+                value={webSite}
+                onChange={e => setWebSite(e.target.value)}>
+            </input>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" onClick={()=>cancelComment()}>Cancel comments</button>
+    </StyledForm>
+
+    const successMessage = <StyledSuccess>
+        Your comment is successfully submitted. It will appear here within 48 hours after proper verification.
+    </StyledSuccess>
+
+    return success ? successMessage : styledForm
+}
+
+const StyledSuccess = styled.div`
+    background-color:#fff;
+    color: red;
+    font-size: 1rem;
+    font-weight: bolder;
+`
+
+const StyledForm = styled.form`
+    animation:2s ${keyframes`${rollIn}`} ;
     width:auto;
     border: 1px solid grey;
     
-    margin-top: 1rem;
+    margin-bottom: 2rem;
     input, textarea {
         width:90%;
     }
     input {
         height: 2rem;
-        margin: 0.3rem 1rem ;
+        margin: 0.5rem 1rem  ;
     }
     textArea{
         height: 6rem;
@@ -103,6 +215,7 @@ const StyledCommentButton = styled.button`
     :focus {
         outline: none;
     }
+    margin-bottom:2rem;
 `
 
 const StyledItem = styled.div`
@@ -114,83 +227,10 @@ const StyledItem = styled.div`
 export default Comments
 
 /*
-async function doGet(url, params, setArr) {
-    try {
-        const ret = await axios.get(url, { params: params })
-        setArr(getCommentsArray(ret.data))
-    } catch (e) {
-        console.log((e.response && e.response.data.message) || e.message)
-    }
-}
 
-        // doGet(`${settings.commentsUrl}/projects`, {
-        //     token: settings.token
-        // }, setArr)
 
 */
 
 /*
-const pageComments = [
-    {
-        mname: 'top1',
-        comment: 'top1 comment',
-        children: [
-            {
-                mname: 'child1',
-                comment: 'child1 comment',
-                children: [
-                    {
-                        name: 'child11',
-                        comment: 'child11 comment',
-                        children: [
-                            {
-                                name: 'child111',
-                                comment: 'child111 comment',
-                                children: [
-                                    {
-                                        name: 'child1111',
-                                        comment: 'child1111 comment'
-                                    },
-                                    {
-                                        name: 'child1112',
-                                        comment: 'child1112 comment'
-                                    }
-                                ]
-                            },
-                            {
-                                name: 'child112',
-                                comment: 'child112 comment'
-                            },
-                            {
-                                name: 'child113',
-                                comment: 'child113 comment'
-                            }
 
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        mname: 'top2',
-        comment: 'top2 comment',
-        children: [
-            {
-                mname: 'child2',
-                comment: 'child2 comment'
-            },
-            {
-                mname: 'child3',
-                comment: 'child3 comment',
-                children: [
-                    {
-                        mname: 'child31',
-                        comment: 'child31 comment'
-                    }
-                ]
-            }
-        ]
-    }
-]
 */

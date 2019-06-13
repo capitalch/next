@@ -78,11 +78,6 @@ const StyledLeft = styled.div`
 		background-color: #fff;
 	`
 
-// const StyledComments = styled.div`
-// 		grid-area:comments;
-// 		background-color: gray;
-// `
-
 function Layout({ currentPage = '', content = '', children = '' }) {
 	return (
 		<StyledLayout>

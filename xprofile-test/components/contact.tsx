@@ -46,23 +46,23 @@ function Contact() {
 					</div>
 					<br></br>
 					<div>
-					<label>Your email: <span className='required'>*</span></label>
+						<label>Your email: <span className='required'>*</span></label>
 					</div>
 					<div>
-					<input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" value={email} onChange={e => setEmail(e.target.value)} />
+						<input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" value={email} onChange={e => setEmail(e.target.value)} />
 					</div>
 					<br></br>
 					<div>
-					<label>Message: <span className='required'>*</span></label>
+						<label>Message: <span className='required'>*</span></label>
 					</div>
 					<div>
-					<textarea required rows={6} name="message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+						<textarea required rows={6} name="message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
 					</div>
 					<br></br>
 					<div>
-					<button type="submit" className="mailButton">Submit</button>
+						<button type="submit" className="mailButton">Submit</button>
 					</div>
-					<div className='notes'> Fields marked with <span className='required'>*</span> are required</div>					
+					<div className='notes'> Fields marked with <span className='required'>*</span> are required</div>
 				</Form>
 			</div>
 		</div>
