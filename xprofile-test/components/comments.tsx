@@ -1,15 +1,34 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+import {rollIn} from 'react-animations'
+
 
 function Comments({ pageComments }) {
     const [arr, setArr] = useState([])
-
+    const [index,setIndex] = useState(-1)
     useEffect(() => {
         setArr(getCommentsArray(pageComments))
     }, [])
 
+    function setForm(arrayItem: any) {        
+        if(index !== -1){
+            arr.splice(index,1)
+        }
+        const arrIndex = arr.findIndex((value) => value.id === arrayItem.id)
+        setIndex(arrIndex +1)
+        arr.splice(arrIndex + 1, 0, <StyledForm style={{marginLeft:`${arrayItem.level * 4}rem`}}>
+                <div><textarea placeholder="Comments"></textarea></div>
+                <div><input type='text' placeholder='Name'></input></div>
+                <div><input type='email' placeholder="Email"></input></div>
+                <div><input type='text' placeholder="Web site"></input></div>
+                <button>Submit</button>
+            </StyledForm>)
+        setArr([...arr]) //for refresh purpose ...arr is used
+    }
+    
     return <div style={{ margin: '2rem' }}>
+        <StyledCommentButton>Please provide your Comments by clicking here ...</StyledCommentButton>
         {arr.map((x, index) => {
             if (x.id) {
                 return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
@@ -19,8 +38,8 @@ function Comments({ pageComments }) {
                         </StyledName>
                         <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
                     </div>
-                    <div >{x.comment}</div>
-                    <div><StyledReply onClick={() => { setForm(arr, setArr, x) }}>Reply</StyledReply></div>
+                    <div>{x.comment}</div>
+                    <div><StyledCommentButton onClick={() => { setForm( x) }}>Reply</StyledCommentButton></div>
                 </StyledItem>
             } else {
                 return <div key={index}>{x}</div>
@@ -41,15 +60,27 @@ function getCommentsArray(pageComm) {
     return outArray
 }
 
-function InputForm() {
-    return <button>My Button</button>
-}
-
-function setForm(arr: any[], setArr: any, arrayItem: any) {
-    const arrIndex = arr.findIndex((value) => value.id === arrayItem.id)
-    arr.splice(arrIndex + 1, 0, <div><button>Click me</button></div>)
-    setArr([...arr])
-}
+const StyledForm = styled.div`
+    animation:2s ${keyframes`${rollIn}` } ;
+    width:auto;
+    border: 1px solid grey;
+    
+    margin-top: 1rem;
+    input, textarea {
+        width:90%;
+    }
+    input {
+        height: 2rem;
+        margin: 0.3rem 1rem ;
+    }
+    textArea{
+        height: 6rem;
+        margin: 0.5rem 1rem ;
+    }
+    button{
+        margin: 0.5rem 1rem ;
+    }
+`
 
 const StyledName = styled.span`
     color:red;
@@ -60,7 +91,7 @@ const StyledTime = styled.span`
     font-size:0.9rem;
 `
 
-const StyledReply = styled.button`
+const StyledCommentButton = styled.button`
     border: 0;
     background: none;
     box-shadow: none;

@@ -23,6 +23,7 @@
     "prismjs": "^1.16.0",
     "raw-loader": "^2.0.0",
     "react": "^16.8.6",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.0.8",
     "react-remarkable": "^1.1.3",
