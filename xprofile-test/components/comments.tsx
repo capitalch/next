@@ -165,7 +165,7 @@ function SubmitForm({ startPos, props }) {
     </StyledForm>
 
     const successMessage = <StyledSuccess>
-        Your comment is successfully submitted. It will appear here within 48 hours after moderation.
+        Your comment is successfully submitted. It will appear here within 48 hours after moderation. Your email will not be published.
     </StyledSuccess>
 
     return success ? successMessage : styledForm
