@@ -14,7 +14,7 @@ function Comments({ pageComments, slug }) {
         setArr(getCommentsArray(pageComments))
     }, [])
 
-    return <div>        
+    return <div>
         <StyledCommentButton onClick={() => { setRootForm() }}>Click for new comments...</StyledCommentButton>
         <CommentsCount>Total {arr.length} comments</CommentsCount>
         {arr.map((x, index) => {
@@ -35,7 +35,6 @@ function Comments({ pageComments, slug }) {
                 return <div key={index}>{x}</div>
             }
         })}
-        
     </div>
 
     function setRootForm() {
@@ -98,10 +97,6 @@ function SubmitForm({ startPos, props }) {
         }
         axios.post(`${settings.commentsUrl}/${slug}`, payload)
             .then(() => {
-                // if (index !== -1) {
-                //     arr.splice(index, 1)
-                // }
-                // setIndex(-1)
                 setSuccess(true)
                 setArr([...arr])
             })
@@ -159,13 +154,13 @@ function SubmitForm({ startPos, props }) {
             </input>
         </div>
         <div>
-        <button type="submit">Submit comments</button>
-        <button type="button" onClick={() => cancelComment()}>Cancel comments</button>
+            <button type="submit">Submit comments</button>
+            <button type="button" onClick={() => cancelComment()}>Cancel comments</button>
         </div>
     </StyledForm>
 
     const successMessage = <StyledSuccess>
-        Your comment is successfully submitted. It will appear here within 48 hours after moderation. Your email will not be published.
+        Your comment is successfully submitted. It will soon appear here after moderation. Your email will not be published.
     </StyledSuccess>
 
     return success ? successMessage : styledForm
@@ -185,9 +180,15 @@ const CommentsCount = styled.span`
 `
 const StyledSuccess = styled.div`
     background-color:#fff;
-    color: red;
-    font-size: 1rem;
-    font-weight: bolder;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    /* text-decoration:underline; */
+    padding:1rem;
+    background-color:#EEFECF;
+    font-style:italic;
+    border:1px solid red;
 `
 
 const StyledForm = styled.form`
@@ -246,11 +247,6 @@ const StyledItem = styled.div`
 `
 
 export default Comments
-
-/*
-
-
-*/
 
 /*
 

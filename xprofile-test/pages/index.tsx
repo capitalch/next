@@ -9,7 +9,8 @@ import settings from '../settings.json'
 import Comments from '../components/comments'
 
 const slugMapping = {
-	home: 'Home for Sushant',
+	home: 'Home',
+	about: 'About Sushant',
 	contact: 'Contact details of Sushant',
 	resume: 'Resume of Sushant',
 	skillset: 'Skillsets of Sushant',
@@ -59,6 +60,7 @@ function getPageContent({ content, slug, pageComments }) {
 
 const allPages = {
 	home: { isBanner: true, isMDFile: true },
+	about: { isBanner: true, isMDFile: true },
 	contact: { isBanner: true, isMDFile: false, component: () => <Contact></Contact> },
 	resume: { isBanner: false, isMDFile: true },
 	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },

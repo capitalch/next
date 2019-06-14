@@ -3,6 +3,36 @@ import styled, { css } from 'styled-components';
 import Header from './header';
 import ReactMarkdown from 'react-markdown/with-html';
 
+function Layout({ currentPage = '', content = '', children = '' }) {
+	return (
+		<StyledLayout>
+			<Header currentPage={currentPage}>Home</Header>
+			<StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>
+			<StyledLeft>
+				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
+				<ProfileText>
+					Sushant Agrawal <div>capitalch@gmail.com</div>
+				</ProfileText>
+			</StyledLeft>
+			<StyledRight></StyledRight>
+			<XMain content={content} children={children}></XMain>
+		</StyledLayout>
+	);
+}
+
+function XMain({ content, children }) {
+	let ret;
+	if (content && children) {
+		ret = <StyledMain>
+			<ReactMarkdown escapeHtml={false} source={content} />
+			<StyledMain>{children}</StyledMain>
+		</StyledMain>
+	} else {
+		ret = <StyledMain>{children}</StyledMain>
+	}
+	return ret
+}
+
 const StyledLayout = styled.div`
 	display: grid;
 	min-height:calc(100vh - 3px); 
@@ -77,36 +107,6 @@ const StyledLeft = styled.div`
 		grid-area: left;
 		background-color: #fff;
 	`
-
-function Layout({ currentPage = '', content = '', children = '' }) {
-	return (
-		<StyledLayout>
-			<Header currentPage={currentPage}>Home</Header>
-			<StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>
-			<StyledLeft>
-				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
-				<ProfileText>
-					Sushant Agrawal <div>capitalch@gmail.com</div>
-				</ProfileText>
-			</StyledLeft>
-			<StyledRight></StyledRight>
-			<XMain content={content} children={children}></XMain>
-		</StyledLayout>
-	);
-}
-
-function XMain({ content, children }) {
-	let ret;
-	if (content && children) {
-		ret = <StyledMain>
-			<ReactMarkdown escapeHtml={false} source={content} />
-			<StyledMain>{children}</StyledMain>
-		</StyledMain>
-	} else {
-		ret = <StyledMain>{children}</StyledMain>
-	}
-	return ret
-}
 
 export default Layout;
 /*

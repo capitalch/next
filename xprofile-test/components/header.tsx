@@ -45,6 +45,10 @@ const StyledMenuItems = styled.ul`
             border:0px;
         }
 	}
+
+    .active{
+        color:red;
+    }
 `
 
 const StyledHeader = styled.nav`
@@ -91,10 +95,6 @@ function Header({ currentPage }) {
         e.matches ? setShow(true) : setShow(false)
     }
 
-    const XAnchor = (x) => {
-        return <a onClick={() => { setShow(false); setPortfolio(true) }}>{x}</a>
-    }
-
     useEffect(() => {
         const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
         if (width >= 993) { (setShow(true)); setPortfolio(true) }
@@ -104,7 +104,7 @@ function Header({ currentPage }) {
     })
 
     return <StyledHeader>
-        {show && <MenuItems ></MenuItems>}
+        {show && <MenuItems></MenuItems>}
         {(!show) && <StyledActiveMenuItem>{currentPage}</StyledActiveMenuItem>}
         {(portfolio) && <StyledPortfolio>Portfolio of Sushant</StyledPortfolio>}
         {<MenuIcon show={show} setShow={setShow} portfolio={portfolio} setPortfolio={setPortfolio}></MenuIcon>}
@@ -113,23 +113,43 @@ function Header({ currentPage }) {
     function MenuItems() {
         return <StyledMenuItems>
             <li><Link href='/'>{XAnchor('Home')}</Link></li>
+            <li><Link href='/' as='/about'>{XAnchor('About')}</Link></li>
             <li><Link href='/' as='/contact'>{XAnchor('Contact')}</Link></li>
             <li><Link href='/' as='/resume'>{XAnchor('Resume')}</Link></li>
             <li><Link href='/' as='/skillset'>{XAnchor('Skillset')}</Link></li>
             <li><Link href='/' as='/academics'>{XAnchor('Academics')}</Link></li>
             <li><Link href='/' as='/projects'>{XAnchor('Projects')}</Link></li>
             <li><Link href='/' as='/qa'>{XAnchor('QA')}</Link></li>
-            <li><Link href='/blogs' as='/blogs'><a onClick={() => { setShow(false); setPortfolio(true) }}>Blogs</a></Link></li>
+            <li><Link href='/blogs' as='/blogs'>{XAnchor('Blogs')}</Link></li>
+            {/* <li><Link href='/blogs' as='/blogs'><a onClick={() => { setShow(false); setPortfolio(true) }}>Blogs</a></Link></li> */}
             {/* <li><button style={{ marginLeft: '1rem' }} onClick={() => { newComment() }}>New comment</button></li>
             <li><button style={{ marginLeft: '1rem' }} onClick={() => { deleteComment() }}>Delete comment</button></li>
             <li><button style={{ marginLeft: '1rem' }} onClick={() => { getComments() }}>Get comments</button></li> */}
             {/* <li><button style={{ marginLeft: '1rem' }} onClick={() => { makeTree() }}>Tree</button></li> */}
         </StyledMenuItems>
+
+        function XAnchor(x) {
+            return <a style={{ color: `${getColor(x)}` }} onClick={() => {
+                setShow(false);
+                setPortfolio(true);
+            }}>{x}</a>
+        }
+
+        function getColor(x: string) {
+            if (x.toLowerCase() === currentPage.toLowerCase()) {
+                return '#FF6600'
+            } else {
+                return 'white'
+            }
+
+        }
     }
+}
 
-    
+export default Header
 
-    function getComments() {
+/*
+function getComments() {
         const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
 
         doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
@@ -178,42 +198,5 @@ function Header({ currentPage }) {
         }).catch(e => {
             console.log((e.response && e.response.data.message) || e.message)
         })
-    }
-
-}
-
-export default Header
-
-/*
-function makeTree() {
-        const comments = [{
-            id: 1,
-            parent_id: null,
-            mname: 'a'
-        }, {
-            id: 2,
-            parent_id: 1,
-            mname: 'a'
-        }, {
-            id: 3,
-            parent_id: 1,
-            mname: 'a'
-        }, {
-            id: 4,
-            parent_id: 2,
-            mname: 'a'
-        }, {
-            id: 5,
-            parent_id: null,
-            mname: 'a'
-        }]
-        
-        const nest = (items, id = null, link = 'parent_id') =>
-          items
-            .filter(item => item[link] === id)
-            .map(item => ({ ...item, children: nest(items, item.id) }))
-        
-        const a = nest(comments)
-        console.log(a)
     }
 */

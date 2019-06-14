@@ -1,4 +1,4 @@
-### About Sushant
+### Home Sushant
 
 I am a full stack software developer. I am in the software industry since last 3 decades back from year 2018. So far I have worked in capacity of Chief technology officer, Project manager, team lead, front end developer, back-end developer, Sql-developer, low end developer, technical architect, QA and also worked for pre-sales, deployment, training, migration and many more. Over period of time I gained experience in controlling finance, HR and operations, business development, legal of a business organization. I have solid domain knowledge of Financial accounting, inventory management, asset management, human relations and legal.
 
