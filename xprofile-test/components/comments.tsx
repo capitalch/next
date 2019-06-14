@@ -14,6 +14,30 @@ function Comments({ pageComments, slug }) {
         setArr(getCommentsArray(pageComments))
     }, [])
 
+    return <div>        
+        <StyledCommentButton onClick={() => { setRootForm() }}>Click for new comments...</StyledCommentButton>
+        <CommentsCount>Total {arr.length} comments</CommentsCount>
+        {arr.map((x, index) => {
+            const src = `/static/persons/${Math.floor(Math.random() * Math.floor(150))}.png`
+            if (x.id) {
+                return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem` }}>
+                    <div>
+                        <StyledPerson src={src} alt='person'></StyledPerson>
+                        <StyledName>
+                            {x.mname}
+                        </StyledName>
+                        <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
+                    </div>
+                    <div>{x.comment}</div>
+                    <div><StyledCommentButton onClick={() => { setForm(x) }}>Reply</StyledCommentButton></div>
+                </StyledItem>
+            } else {
+                return <div key={index}>{x}</div>
+            }
+        })}
+        
+    </div>
+
     function setRootForm() {
         if (index !== -1) {
             arr.splice(index, 1)
@@ -36,26 +60,6 @@ function Comments({ pageComments, slug }) {
         arr.splice(index, 0, <SubmitForm startPos={arrayItem.level} props={{ index, setIndex, arr, setArr, slug, parentId }}></SubmitForm>)
         setArr([...arr]) //for refresh purpose ...arr is used
     }
-
-    return <div>
-        <StyledCommentButton onClick={() => { setRootForm() }}>Please provide your Comments by clicking here ...</StyledCommentButton>
-        {arr.map((x, index) => {
-            if (x.id) {
-                return <StyledItem key={index} style={{ marginLeft: `${x.level * 4}rem`, marginTop: '1rem' }}>
-                    <div>
-                        <StyledName>
-                            {x.mname}
-                        </StyledName>
-                        <StyledTime>{moment(x.commented_on).format('lll')}</StyledTime>
-                    </div>
-                    <div>{x.comment}</div>
-                    <div><StyledCommentButton onClick={() => { setForm(x) }}>Reply</StyledCommentButton></div>
-                </StyledItem>
-            } else {
-                return <div key={index}>{x}</div>
-            }
-        })}
-    </div>
 }
 
 function getCommentsArray(pageComm) {
@@ -106,7 +110,7 @@ function SubmitForm({ startPos, props }) {
             })
     }
 
-    function cancelComment(){
+    function cancelComment() {
         if (index !== -1) {
             arr.splice(index, 1) //delete at index
         }
@@ -114,7 +118,7 @@ function SubmitForm({ startPos, props }) {
         setArr([...arr]) //refresh
     }
 
-    const styledForm =  <StyledForm onSubmit={newComment} style={{ marginLeft: `${startPos * 4 + 4}rem` }}>
+    const styledForm = <StyledForm onSubmit={newComment} style={{ marginLeft: `${startPos * 4 + 4}rem` }}>
         <div>
             <textarea
                 required
@@ -154,17 +158,31 @@ function SubmitForm({ startPos, props }) {
                 onChange={e => setWebSite(e.target.value)}>
             </input>
         </div>
-        <button type="submit">Submit</button>
-        <button type="button" onClick={()=>cancelComment()}>Cancel comments</button>
+        <div>
+        <button type="submit">Submit comments</button>
+        <button type="button" onClick={() => cancelComment()}>Cancel comments</button>
+        </div>
     </StyledForm>
 
     const successMessage = <StyledSuccess>
-        Your comment is successfully submitted. It will appear here within 48 hours after proper verification.
+        Your comment is successfully submitted. It will appear here within 48 hours after moderation.
     </StyledSuccess>
 
     return success ? successMessage : styledForm
 }
 
+const StyledPerson = styled.img`
+    height:15px;
+    width:15px;
+    margin-right:0.5rem;
+    margin-bottom:-0.1rem;
+`
+
+const CommentsCount = styled.span`
+    margin-left:1rem;
+    font-size: 1.0rem;
+    color:red;
+`
 const StyledSuccess = styled.div`
     background-color:#fff;
     color: red;
@@ -177,9 +195,11 @@ const StyledForm = styled.form`
     width:auto;
     border: 1px solid grey;
     
-    margin-bottom: 2rem;
+    /* margin: 1rem 0 2rem 0; */
+    margin-bottom:1.5rem;
+    margin-top:0.5rem;
     input, textarea {
-        width:90%;
+        width:92%;
     }
     input {
         height: 2rem;
@@ -187,10 +207,11 @@ const StyledForm = styled.form`
     }
     textArea{
         height: 6rem;
-        margin: 0.5rem 1rem ;
+        margin: 1rem 1rem 0.5rem 1rem;
     }
     button{
-        margin: 0.5rem 1rem ;
+        margin: 1rem 1rem ;
+        cursor:pointer;
     }
 `
 
@@ -215,7 +236,7 @@ const StyledCommentButton = styled.button`
     :focus {
         outline: none;
     }
-    margin-bottom:2rem;
+    margin-bottom:1rem;
 `
 
 const StyledItem = styled.div`

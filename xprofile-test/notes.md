@@ -46,9 +46,10 @@ Comments incorporation
                     submit form
                     new root level comments                    
                     Show success message
+                    icon file size correction
+                    Show count for comments
+    Form currently stays on in new page                 
     Delete comments UI
-    icon for person
-    Show count for comments
 seo implementation                                   
 cleanup
 content

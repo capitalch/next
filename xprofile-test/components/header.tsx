@@ -120,9 +120,9 @@ function Header({ currentPage }) {
             <li><Link href='/' as='/projects'>{XAnchor('Projects')}</Link></li>
             <li><Link href='/' as='/qa'>{XAnchor('QA')}</Link></li>
             <li><Link href='/blogs' as='/blogs'><a onClick={() => { setShow(false); setPortfolio(true) }}>Blogs</a></Link></li>
-            <li><button style={{ marginLeft: '1rem' }} onClick={() => { newComment() }}>New comment</button></li>
+            {/* <li><button style={{ marginLeft: '1rem' }} onClick={() => { newComment() }}>New comment</button></li>
             <li><button style={{ marginLeft: '1rem' }} onClick={() => { deleteComment() }}>Delete comment</button></li>
-            <li><button style={{ marginLeft: '1rem' }} onClick={() => { getComments() }}>Get comments</button></li>
+            <li><button style={{ marginLeft: '1rem' }} onClick={() => { getComments() }}>Get comments</button></li> */}
             {/* <li><button style={{ marginLeft: '1rem' }} onClick={() => { makeTree() }}>Tree</button></li> */}
         </StyledMenuItems>
     }
