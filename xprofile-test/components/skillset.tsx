@@ -41,7 +41,9 @@ const  Skillset=() => {
 	const Container = (
 		<div>
 			<StyledH1>Software development skills of Sushant</StyledH1>
-			<StyledText>{settings.texts.skillset}</StyledText>
+			<StyledText>{settings.texts.skillset[0]}</StyledText>
+			<StyledText>{settings.texts.skillset[1]}</StyledText>
+			<StyledText>{settings.texts.skillset[2]}</StyledText><br></br>
 			<StyledTable>
 				<thead>
 					<tr>
@@ -66,7 +68,7 @@ function getRandomColor() {
 }
 
 const StyledText = styled.div`
-	margin-bottom:2rem;
+	margin-bottom:1rem;
 	font-size: 1rem;
 	margin-left:1rem;
 `

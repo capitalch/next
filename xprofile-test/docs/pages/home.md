@@ -1,5 +1,5 @@
 ### Home Sushant
-
+---
 This site is my technical portfolio. I am a software engineer holding B.Tech degree in computer science from BIT, Mesra, india. I do <span style='color:red'>full stack</span> software development. I am completely hands-on with several software development languages and technology and I plan to do massive development work in years 2019, 2020 and beyond.
 
 After passing out from engineering college I joined my family business. My first mentionable project was to computerize a retail business. Here I developed software for Inventory management, financial accounting, customer billing, purchase invoicing, accounts receivable and payables, product search, purchase order management etc. Thereafter I developed a service management software to automate repairs and service workflow of authorized service centres. Both softwares were developed from scratch using then popular development tool Powerbuilder and they are still in use today.

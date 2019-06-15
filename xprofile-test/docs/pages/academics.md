@@ -1,25 +1,5 @@
 ### Academics of Sushant
 
-<style>
-    table{
-        border-collapse: collapse;
-    }
-    td, th {
-        border: 1px solid grey;    
-        padding: 0.5rem;
-    }
-    td {
-        font-size: 1.0rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-    button {
-        margin-top: 20rem;
-    }
-</style>
-
-
 | Period | Institute | Stream | Remarks |
 | :---  |   :---   |      :---- | :---- |
 | 1982 - 1986 | Birla Institute Of technology, Mesra | B.Tech (Computer Science) | Topped in the branch |
@@ -34,3 +14,19 @@ I was always good in Alzebra and Science group. I had interest in English and Hi
 My educational certificates are below:
 <div><a target='_blank' href='/static/documents/sushant-agrawal-higher-secondary-mark-sheet.pdf'>Higher Secondary mark Sheet</a></div>
 <div><a target='_blank' href='/static/documents/susantagrawal_engineering-degree.pdf'>B.Tech. Engineering Degree</a></div>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid grey;    
+        padding: 0.5rem;
+    }
+    td {
+        font-size: 1.0rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+</style>

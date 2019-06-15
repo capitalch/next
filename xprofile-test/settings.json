@@ -11,6 +11,8 @@
             "submitted":"Your comment is successfully submitted. It will soon appear here after moderation. Your email will not be published."
             , "clickForNewComments":"Click for new comments..."
         },
-        "skillset":"I have multiple skills. I am a good learner and can readily pick up those which I don’t know. I generally take around two to four weeks to pick up new skill to be productive.\r\nHaving multiple skills in client and server side is particularly useful for a full stack developer when migration is required.\r\nAt one time I may be hands on in limited number of skills but having knowledge and low level past working experience in other skills is a boon for executing a real time project.\r\n For skills I am presently not hands-on, I may take around 1-2 weeks of warm up time.\r\nFollowing table charts out my skill levels, whether hands on at present and whether I am interested in coding for that skill. I may have knowledge and past working experience for some items, but I may be not interested in working for that."
+        "skillset":["I have multiple skills. I am a good learner and can readily pick up what I don’t know. I normally take two to four weeks to pick up new skill.",
+            "Having multiple skills in client and server side is particularly useful for full stack development when migration from legacy systems is required. At one time I may be hands on in limited number of skills but having knowledge and low level past working experience in other skills is a boon for executing real time project.",
+            "For skills I am presently not hands-on, I may take around one to two weeks of warm up time. Following table charts up my skill levels, whether I am hands on at present and whether I am interested in coding for that skill. I may have knowledge and past working experience for some items, but I may not be interested in working for that. But the knowledge and experience certainly helps out"]
     }
 }
