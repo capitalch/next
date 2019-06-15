@@ -48,9 +48,10 @@ Comments incorporation
                     Show success message
                     icon file size correction
                     Show count for comments
-    Form currently stays on in new page                 
+                    Form currently stays on in new page                 
     Delete comments UI
-seo implementation                                   
+seo implementation
+Bug: Banner always showing up                                 
 cleanup
 content
  can speak languages

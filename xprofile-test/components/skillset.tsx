@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
+import React, { Fragment } from 'react'
+import styled from 'styled-components'
 import skills from '../handy/skills.json'
+import settings from '../settings.json'
 
 
 const  Skillset=() => {
@@ -40,6 +41,7 @@ const  Skillset=() => {
 	const Container = (
 		<div>
 			<StyledH1>Software development skills of Sushant</StyledH1>
+			<StyledText>{settings.texts.skillset}</StyledText>
 			<StyledTable>
 				<thead>
 					<tr>
@@ -62,6 +64,12 @@ const  Skillset=() => {
 function getRandomColor() {
 	return 'hsla(' + Math.floor(Math.random() * 360) + ', 100%, 70%, 1)';
 }
+
+const StyledText = styled.div`
+	margin-bottom:2rem;
+	font-size: 1rem;
+	margin-left:1rem;
+`
 
 const StyledH1 = styled.h1`
 	font-size: 1.4rem;

@@ -15,7 +15,7 @@ function Comments({ pageComments, slug }) {
     }, [])
 
     return <div>
-        <StyledCommentButton onClick={() => { setRootForm() }}>Click for new comments...</StyledCommentButton>
+        <StyledCommentButton onClick={() => { setRootForm() }}>{settings.texts.comments.clickForNewComments}</StyledCommentButton>
         <CommentsCount>Total {arr.length} comments</CommentsCount>
         {arr.map((x, index) => {
             const src = `/static/persons/${Math.floor(Math.random() * Math.floor(150))}.png`
@@ -160,7 +160,7 @@ function SubmitForm({ startPos, props }) {
     </StyledForm>
 
     const successMessage = <StyledSuccess>
-        Your comment is successfully submitted. It will soon appear here after moderation. Your email will not be published.
+        {settings.texts.comments.submitted}
     </StyledSuccess>
 
     return success ? successMessage : styledForm
@@ -238,12 +238,13 @@ const StyledCommentButton = styled.button`
         outline: none;
     }
     margin-bottom:1rem;
+    margin-top:2rem;
 `
 
 const StyledItem = styled.div`
     display:flex;
     flex-direction:column;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
 `
 
 export default Comments

@@ -87,7 +87,7 @@ const StyledMain = styled.div`
 		grid-area: main;
 		background-color:#fff;
 		color:#696969;
-		line-height: 1.7rem;
+		line-height: 2rem;
 		font-size: 1.2rem;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
 		/* font-family:serif, 'sans-serif', script, decorative; */
