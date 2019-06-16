@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import skills from '../handy/skills.json'
-import settings from '../settings.json'
+import diction from '../diction.json'
 
 
 const  Skillset=() => {
@@ -41,7 +41,9 @@ const  Skillset=() => {
 	const Container = (
 		<div>
 			<StyledH1>Software development skills of Sushant</StyledH1>
-			<StyledText>{settings.texts.skillset}</StyledText>
+			<StyledText>{diction.skillset[0]}</StyledText>
+			<StyledText>{diction.skillset[1]}</StyledText>
+			<StyledText>{diction.skillset[2]}</StyledText><br></br>
 			<StyledTable>
 				<thead>
 					<tr>
@@ -66,7 +68,7 @@ function getRandomColor() {
 }
 
 const StyledText = styled.div`
-	margin-bottom:2rem;
+	margin-bottom:1rem;
 	font-size: 1rem;
 	margin-left:1rem;
 `

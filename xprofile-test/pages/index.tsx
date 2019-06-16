@@ -44,6 +44,8 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	const pageComments = (await axios.get(url, {
 		params: params
 	})).data
+	const hitCount = (await axios.get(settings.hitCountUrl)).data
+	console.log(hitCount)
 
 	return { content, slug, pageComments };
 };
@@ -51,9 +53,9 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 function getPageContent({ content, slug, pageComments }) {
 	let Ret;
 	if (allPages[slug].isMDFile) {
-		Ret = <Layout currentPage={slug} content={content}><Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
+		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug} content={content}><Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	} else {
-		Ret = <Layout currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
+		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	}
 	return Ret;
 }

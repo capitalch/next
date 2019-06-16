@@ -1,5 +1,7 @@
 ### About Sushant
 
+---
+
 My first software program was in Visual basic, way back in 1984 in a Casio programmable calculator PB100. Originally, I wanted to be an electronic engineer but exposure to programming left me crazy and I shifted to Computer Science in engineering college. There I learnt Fortran, Cobol, Pascal and assembly language. After passing out I learnt C, Dbase, Foxpro, Clipper, Powerbuilder, Sql Anywhere and Java of my own. Since year 2005 I learnt JavaScript, ASP.Net, C#, SharePoint, Sql Server, Oracle, SSIS, SSRS, WPF, WCF and allied proprietary technology. I developed several web parts in SharePoint during that time. Over the years I learnt and worked upon Python, advanced JavaScript, ES6, Angular 2 onwards, React.js, Node.js and associated frameworks.
 
 In early matured days of software development per say during year 2005 - 2010, the scope was broadly confined to proprietary technologies as ASP.net, C#, Java, Sql server and oracle. Very few options were available as choice of technology and tools and upgradation of tools was mostly on yearly or once in three-year basis. The technology was quite mature and good documentation with good working code samples were readily available. Some very good business softwares were written in this period.

@@ -1,13 +1,14 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Header from './header';
+import Footer from './footer'
 import ReactMarkdown from 'react-markdown/with-html';
 
-function Layout({ currentPage = '', content = '', children = '' }) {
+function Layout({ currentPage = '', content = '', children = '' , isBanner=false}) {
 	return (
 		<StyledLayout>
 			<Header currentPage={currentPage}>Home</Header>
-			<StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>
+			{isBanner && <StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>}
 			<StyledLeft>
 				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
 				<ProfileText>
@@ -16,6 +17,7 @@ function Layout({ currentPage = '', content = '', children = '' }) {
 			</StyledLeft>
 			<StyledRight></StyledRight>
 			<XMain content={content} children={children}></XMain>
+			
 		</StyledLayout>
 	);
 }
@@ -26,9 +28,10 @@ function XMain({ content, children }) {
 		ret = <StyledMain>
 			<ReactMarkdown escapeHtml={false} source={content} />
 			<StyledMain>{children}</StyledMain>
+			<Footer></Footer>
 		</StyledMain>
 	} else {
-		ret = <StyledMain>{children}</StyledMain>
+		ret = <StyledMain>{children}<Footer></Footer></StyledMain>
 	}
 	return ret
 }
@@ -56,21 +59,19 @@ const StyledLayout = styled.div`
 	@media only screen and (min-width: 1201px) and (max-width: 1500px){
 		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
 		grid-template-columns: 16% auto 30%;
-		grid-template-rows: 58px 200px auto;
+		grid-template-rows: 58px minmax(0,200px) auto;
 	}
 
 	@media only screen and (min-width: 1501px) {
 		grid-template-areas: 'header header header' 'banner banner banner' 'left main right';
 		grid-template-columns: 16% auto 43%;
-		grid-template-rows: 58px 200px auto;
+		grid-template-rows: 58px min-content auto;
 	}
 	
 `
 
 const StyledBanner = styled.img`
 		grid-area: banner;
-		width: 100%;
-		height:100%;
 		@media(max-width: 500px){
 			display:none;
 		}
