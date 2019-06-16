@@ -2,7 +2,7 @@
 
 | Period | Institute | Stream | Remarks |
 | :---  |   :---   |      :---- | :---- |
-| 1982 - 1986 | Birla Institute Of technology, Mesra | B.Tech (Computer Science) | Topped in the branch |
+| 1982 - 1986 | Birla Institute Of Technology, Mesra | B.Tech (Computer Science) | Topped in the branch |
 | 1980 - 1982 | Scottish Church College | Class 11 + 12 | West bengal Board of Higher Secondary Education (Pure Science) 63.2% marks |
 | 1976 – 1980 | Birla High School | Class 6 – Class 10 | CBSE score was 80% |
 | 1975 | Junior Hindi High School | Class 5 |  |

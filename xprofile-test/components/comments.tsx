@@ -4,6 +4,7 @@ import axios from 'axios'
 import styled, { keyframes } from 'styled-components'
 import { rollIn, fadeIn, fadeOut } from 'react-animations'
 import settings from '../settings.json'
+import diction from '../diction.json'
 
 
 function Comments({ pageComments, slug }) {
@@ -15,7 +16,7 @@ function Comments({ pageComments, slug }) {
     }, [])
 
     return <div>
-        <StyledCommentButton onClick={() => { setRootForm() }}>{settings.texts.comments.clickForNewComments}</StyledCommentButton>
+        <StyledCommentButton onClick={() => { setRootForm() }}>{diction.comments.clickForNewComments}</StyledCommentButton>
         <CommentsCount>Total {arr.length} comments</CommentsCount>
         {arr.map((x, index) => {
             const src = `/static/persons/${Math.floor(Math.random() * Math.floor(150))}.png`
@@ -85,7 +86,7 @@ function SubmitForm({ startPos, props }) {
         e.preventDefault();
         const payload = {
             token: settings.token,
-            text: settings.newCommentId,
+            text: diction.newCommentId,
             values:
             {
                 parentId: parentId
@@ -160,7 +161,7 @@ function SubmitForm({ startPos, props }) {
     </StyledForm>
 
     const successMessage = <StyledSuccess>
-        {settings.texts.comments.submitted}
+        {diction.comments.submitted}
     </StyledSuccess>
 
     return success ? successMessage : styledForm
