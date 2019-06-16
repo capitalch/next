@@ -44,6 +44,8 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	const pageComments = (await axios.get(url, {
 		params: params
 	})).data
+	const hitCount = (await axios.get(settings.hitCountUrl)).data
+	console.log(hitCount)
 
 	return { content, slug, pageComments };
 };

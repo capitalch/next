@@ -2,7 +2,7 @@
 
 | | |
 | :---  |   :---   |
-|Experience | Hands-on from 3+ decades |
+|Experience | Professionsl hands-on experience of 14+ years. Developing software since 3 decades. |
 | Current engagement | Chief Technology Officer in a company for limited time involvement |
 | Experience in | Client side: <span class='highlight'>React.js</span>, Gatsby, <span class='highlight'>next.js</span>, Angular 2 / 4 / 5 / 6, <span class='highlight'>Advanced JavaScript frameworks</span>, Banckbone, ES6, Apollo GraphQL client, scss, HTML5, css-in-js, styled-components |
 |               | Server side: <span class='highlight'>Node.js</span>, J2EE, Java, C#, ASP.NET, Apollo GraphQL server|
@@ -19,7 +19,7 @@
     <p>1) Created this instant portal sushantagrawal.com. Used React Next.js<br></p>
     <p>2) Created a company static website at <a target='_blank' href='https://www.capital-chowringhee.com'>capital-chowringhee.com</a>. Used React Gatsby</p>
     <p>3) Supervised creation of static website at <a target='_blank' href='https://kushinfotech.com'>Kushinfotech.com</a>. Used React Gatsby</p>
-    <p>4) Supervised creation of static website at <a target='_blank' href='https://www.kyokushinkaikanindia.com/'>kyokushinkaikanindia.com</a>. Used React Gatsby</p>
+    <p>4) Supervised creation of static website at <a target='_blank' href='http://www.kyokushinkaikanindia.com/'>kyokushinkaikanindia.com</a>. Used React Gatsby</p>
     <p>5) Developed a dynamic entry forms utility named Ornate. This utility converts JSON objects to HTML form. On submit the entered data is sent to server in JSON format. All sort of syncronous and asyncronous validations are possible. Main attraction is the usage of unlimited group controls, repeater controls and deep nesting of group and repeater controls. Live demo is at <a target='_blank' href='http://chisel.cloudjiffy.net/apps/rx'>chisel.cloudjiffy.net/apps/rx</a>. Used React create-react-app</p>
     <p>6) Created an e-commerce demo solution at <a target='blank' href='http://chisel.cloudjiffy.net/apps/eshop'>http://chisel.cloudjiffy.net/apps/eshop</a>. Used Angular 6, PostgreSql, Node.js </p>
     <p>7) Supervised development of medical graphical interface for patient encounters with clinicians using Angular 4 and D3.js. A highly refractored docker hosted demo specimen can be seen at <a target="_blank" href="http://chisel.cloudjiffy.net:11010">http://chisel.cloudjiffy.net:11010</a> </p>

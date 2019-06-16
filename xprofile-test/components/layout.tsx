@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Header from './header';
+import Footer from './footer'
 import ReactMarkdown from 'react-markdown/with-html';
 
 function Layout({ currentPage = '', content = '', children = '' , isBanner=false}) {
@@ -16,6 +17,7 @@ function Layout({ currentPage = '', content = '', children = '' , isBanner=false
 			</StyledLeft>
 			<StyledRight></StyledRight>
 			<XMain content={content} children={children}></XMain>
+			
 		</StyledLayout>
 	);
 }
@@ -26,9 +28,10 @@ function XMain({ content, children }) {
 		ret = <StyledMain>
 			<ReactMarkdown escapeHtml={false} source={content} />
 			<StyledMain>{children}</StyledMain>
+			<Footer></Footer>
 		</StyledMain>
 	} else {
-		ret = <StyledMain>{children}</StyledMain>
+		ret = <StyledMain>{children}<Footer></Footer></StyledMain>
 	}
 	return ret
 }
@@ -69,8 +72,6 @@ const StyledLayout = styled.div`
 
 const StyledBanner = styled.img`
 		grid-area: banner;
-		/* width: 100%;
-		height:100%; */
 		@media(max-width: 500px){
 			display:none;
 		}
