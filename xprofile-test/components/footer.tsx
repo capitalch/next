@@ -1,18 +1,19 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-// import axios from 'axios'
-// import settings from '../settings.json'
+import axios from 'axios'
+import settings from '../settings.json'
 
 function Footer() {
-    // const [hitCount, setHitCount] = useState(0);
+    let [hitCount, setHitCount] = useState(0);
 
-    // useEffect(()=>{
-    //     const ret = axios.get(settings.hitCountUrl).then((res)=>{
-    //         console.log(res.data)
-    //     })
-    // },[])
+    useEffect(()=>{
+        axios.get(settings.hitCountUrl).then((res)=>{
+			hitCount = res.data.hits
+			setHitCount(hitCount)
+        })
+    },[])
 
-    return <StyledFooter>Footer</StyledFooter>
+    return <StyledFooter>Hits:{hitCount}</StyledFooter>
 }
 
 const StyledFooter = styled.div`

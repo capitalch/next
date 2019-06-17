@@ -24,36 +24,34 @@
                                                 blogs page styling
                                                 @media strategy for responsive design
 
-right area with articles / blogs
+
                                                 client routing
                                                         
-blogs listing on date descending and category ascending
-content writing                                             
- create resume.md
- create academics.md
- create projects.md
- create qa.md
+                                                content writing                                             
+                                                create resume.md
+                                                create academics.md
+                                                create projects.md
+                                                create qa.md
                                                 
-no of hits incorporation
-Comments incorporation
-                    Font adjustment
-                    convert date to local
-                    Download comment as per page
-                    SEO for comments
-                    positioning of comments component in the grid
-                    Capture comments and reply
-                    reverse order
-                    submit form
-                    new root level comments                    
-                    Show success message
-                    icon file size correction
-                    Show count for comments
-                    Form currently stays on in new page                 
-    Delete comments UI
-seo implementation
-Bug: Banner always showing up                                 
-cleanup
-content
- can speak languages
- visited countries
+                                                no of hits incorporation
+                                                Comments incorporation
+                                                                    Font adjustment
+                                                                    convert date to local
+                                                                    Download comment as per page
+                                                                    SEO for comments
+                                                                    positioning of comments component in the grid
+                                                                    Capture comments and reply
+                                                                    reverse order
+                                                                    submit form
+                                                                    new root level comments                    
+                                                                    Show success message
+                                                                    icon file size correction
+                                                                    Show count for comments
+                                                                    Form currently stays on in new page                 
+
+                                                Bug: Banner always showing up
+right area with articles / blogs
+Delete comments UI
+seo implementation     
+blogs listing on date descending and category ascending                      
                                                

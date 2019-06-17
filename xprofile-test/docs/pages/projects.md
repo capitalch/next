@@ -44,9 +44,9 @@ Here I display some of my recent key projects and discuss them
 | Motivation | To create a POC for e-commerce application using single page application which is fast and scalable.|
 | Technology | React Gatsby, scss, GraphQL, TypeScript, html5, ES6, PostgreSQL for hitcount calculations|
 | Development effort | 2 man weeks |
-| Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/capital-chowringhee' target='_blank'>https://github.com/capitalch/gatsby/tree/master/capital-chowringhee</a>|
-| Description | This is a simple static low cost website for a retail company. Key attraction is the set of image gallaries. Due to image optimization multiple images are downloaded in record time|
-|Performance matrix (Google lighthouse)| <img src='/static/images/PM-capital-chowringhee.png' alt='performance image of site'></img> |
+| Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/capital-chowringhee' target='_blank'>https://github.com/capitalch/gatsby/tree/master/capital-chowringhee</a> |
+| Description | This is a simple static low cost website for a retail company. Key attraction is the set of image gallaries. Due to image optimization multiple images are downloaded in record time |
+| Performance matrix (Google lighthouse) | <img class='matrix' src='/static/images/PM-capital-chowringhee.png' alt='performance image of site'></img> |
 
 ##### 5. <a target='_blank' href='http://chisel.cloudjiffy.net:11010'>http://chisel.cloudjiffy.net:11010</a> A graph application in medical domain
 |  |  |
@@ -66,7 +66,7 @@ Here I display some of my recent key projects and discuss them
 | Development effort | 2 man weeks |
 | Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/kush-infotech' target='_blank'>https://github.com/capitalch/gatsby/tree/master/kush-infotech</a>  |
 | Description | This is a static low cost web site using React gatsby framework.|
-|Performance matrix (Google lighthouse)| <img src='/static/images/PM-kush-infotech.png' alt='performance image of site'></img> |
+|Performance matrix (Google lighthouse)| <img class='matrix' src='/static/images/PM-kush-infotech.png' alt='performance image of site'></img> |
 
 ##### 7. <a target='_blank' href='http://www.kyokushinkaikanindia.com/'>http://www.kyokushinkaikanindia.com/</a> A low cost static website for kyokushin Karate club
 | | |
@@ -77,9 +77,7 @@ Here I display some of my recent key projects and discuss them
 | Development effort | 2 man weeks |
 | Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/kyokushin' target='_blank'>https://github.com/capitalch/gatsby/tree/master/kyokushin</a> |
 | Description | This is a static low cost web site using React gatsby framework.|
-|Performance matrix (Google lighthouse)| <img src='/static/images/PM-kyokushin.png' alt='performance image of site'></img> |
-
-
+|Performance matrix (Google lighthouse)| <img class='matrix' src='/static/images/PM-kyokushin.png' alt='performance image of site'></img> |
 <style>
     table {
         border-collapse: collapse;
@@ -101,6 +99,10 @@ Here I display some of my recent key projects and discuss them
 
     h5 {
         color:blue;
+    }
+
+    .matrix {
+        width: 100%;
     }
    
 </style>
