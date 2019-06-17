@@ -46,7 +46,7 @@ const StyledMenuItems = styled.ul`
         }
 	}
 
-    .active{
+    .active {
         color:red;
     }
 `
@@ -137,7 +137,7 @@ function Header({ currentPage }) {
 
         function getColor(x: string) {
             if (x.toLowerCase() === currentPage.toLowerCase()) {
-                return '#FF6600'
+                return 'aquamarine'
             } else {
                 return 'white'
             }
