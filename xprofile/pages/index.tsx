@@ -5,9 +5,12 @@ import GlobalStyle from '../handy/globalStyle'
 import Contact from '../components/contact'
 import Skillset from '../components/skillset'
 import axios from 'axios'
+import settings from '../settings.json'
+import Comments from '../components/comments'
 
 const slugMapping = {
-	home: 'Home for Sushant',
+	home: 'Home',
+	about: 'About Sushant',
 	contact: 'Contact details of Sushant',
 	resume: 'Resume of Sushant',
 	skillset: 'Skillsets of Sushant',
@@ -17,12 +20,12 @@ const slugMapping = {
 
 }
 
-const IndexPage = ({ content, slug }) => {
+const IndexPage = ({ content, slug, pageComments }) => {
 	return (
 		<div>
 			<GlobalStyle />
 			<Head title={slugMapping[slug]} />
-			{getPageContent({ content, slug })}
+			{getPageContent({ content, slug, pageComments })}
 		</div>
 	);
 };
@@ -34,23 +37,39 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	let content;
 	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
 
+	const url = `${settings.commentsUrl}/${slug}`
+	const params = {
+		token: settings.token
+	}
+	let pageComments;
+	try {
+		pageComments = (await axios.get(url, {
+			params: params
+		})).data
+	} catch (e) {
+		console.log((e.response && e.response.data.message) || e.message)
+	}
 
-
-	return { content, slug };
+	return {
+		content, slug
+		,
+		pageComments 
+	};
 };
 
-function getPageContent({ content, slug }) {
+function getPageContent({ content, slug, pageComments }) {
 	let Ret;
 	if (allPages[slug].isMDFile) {
-		Ret = <Layout currentPage={slug} content={content} />;
+		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug} content={content}><Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	} else {
-		Ret = <Layout currentPage={slug}>{allPages[slug].component()}</Layout>;
+		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	}
 	return Ret;
 }
 
 const allPages = {
 	home: { isBanner: true, isMDFile: true },
+	about: { isBanner: true, isMDFile: true },
 	contact: { isBanner: true, isMDFile: false, component: () => <Contact></Contact> },
 	resume: { isBanner: false, isMDFile: true },
 	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },

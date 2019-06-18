@@ -1,209 +1,110 @@
 ### Questions and answers
 
-Lorem ipsum dolor sit amet, aperiam facilisi ne pri, et modus maiorum suscipiantur usu? At vix assum congue primis, vel tale quaestio tractatos an, eu pro choro ornatus deseruisse? Ei dicat feugait volumus vim. Nominati sadipscing definitionem sit no, legere quaestio posidonium sed in. Atqui ludus consul cum in. Cum et oblique iudicabit, et mutat petentium pro, ex erant viris nemore duo. Vis cu prima ludus vocent, option repudiare sea ut, sit omnis dolorem definitionem ea.
+<p class='q'>Q. You claim to possess over 50 skills which are mixture of client and server side technologies. How is it possible for one person to maintain so many skill sets?</p>
 
-Cum ut tibique denique partiendo? Ex his error eloquentiam, eos illud volutpat ea. Quis adipisci pertinax ex vim, cu quodsi detraxit vel, vis ad persius efficiantur? Pri id adhuc voluptua percipit, at vel enim patrioque.
+I worked / did projects on many skill-sets sometime in past. I was productive in those skill sets at certain point of time. Over period of time I might have forgotten many of them, but I have my notes which will assist me in coming up to the speed within 1-2 weeks of time in any of skill sets I worked in past. I have mastered the art of learning.
 
-Has et prima debet suavitate? At vel dolore discere mediocrem. Eirmod veritus consulatu ne eam, at percipit verterem consetetur sea, nec prima menandri te. Ea mei nostrum tincidunt neglegentur? Ut quis facer mei, vim at habemus disputationi! Mundi ullamcorper est eu, mel id vide ancillae.
+<p class='q'>Q. You are already working for profit in a company. Will it be possible for you to work on external assignments?</p>
 
-An sed vero oblique recteque, at admodum voluptaria pro. Nisl legimus conclusionemque ei per, vocent partiendo in est. Vel et rebum assum utinam, mei sensibus efficiantur et. Cum audiam dissentiet ex, ius te vulputate cotidieque, alterum maiorum docendi ius te. Nec justo disputationi eu, adolescens rationibus has ea, qui ea dico reformidans! Ad graece veritus maluisset ius, sapientem disputando dissentiunt eu pro!
+This is true that I am working with a company. But I am not engaged there full time. The reason is that most of business still comes from proprietory software stack but almost all advancement and research is happening in open source stack and javaScript. I am committed to do work in modern technology area of open source. Hence I spend limited hours in that company and my capable collegues along with my friend and CEO Niraj takes care of business. As a result I have sufficient available hours to work remotely on external assignments of my choice. If I commit to some assignment I am bound to do that and I do that in all reality.
 
-Et pro omnium utamur posidonium, usu meliore consectetuer comprehensam ex. Et feugiat disputationi pro. Ex vix posse complectitur. Ad eam purto facete. Vim alii senserit cu, te nam postulant mediocrem. Eum movet suscipiantur id.
+<p class = 'q'>Q. Can you work on any project which lies within your skill set as mentioned in this portal or is there any condition?</p>
 
-Duo novum quodsi audire eu, usu doming regione saperet an, at oratio graeci quo? Ex corpora molestie apeirian vis. Sumo gubergren intellegebat no has, vel et oratio apeirian! Vidit aperiri temporibus quo ea, no quas qualisque vix, cu offendit verterem sea! Dicat facilis ius cu.
+I do have some choice. I want to work on projects of my choice which depends on latest technology trends, challenges of the project and payouts. It depends. For minimum confusion I have already mentioned an 'Interested' column in the skillset page of this portal.
 
-Qui te dolore laoreet qualisque, idque laoreet et quo. His te nullam numquam inermis. Quo ullum dolore graeci id, te mea oratio possit. Eruditi quaerendum mei ei.
+<p class='q'>Q. How many hours a week you can devote to an external project?</p>
 
-Sale iuvaret adipisci an nam, id mel erroribus percipitur. Nobis prompta interpretaris mei an, eum mucius conclusionemque ne? Eam ex nonumes accusam patrioque, id vix nonumy insolens vituperatoribus? Sea alia omnes repudiandae ea. Tota consequat eu ius, inimicus mediocritatem nec ei, detraxit instructior no quo.
+I can devote 32 - 48 hours per week if there is an agreement and committment.
 
-Ei nec omittam convenire scriptorem. Pri te exerci ignota. In congue noster sanctus usu, vim volutpat sententiae eu, quo ad reque petentium? No sed graeco equidem labores, ei usu oportere forensibus, an ius omnesque hendrerit consetetur. Quot periculis sed ea.
+<p class='q'>Q. Can you physically work in premises of a company who offers you a project?</p>
 
-Pri te dolorum detraxit, est ut odio modo patrioque, quo animal percipitur ad? Nullam omnesque cum an. Vim an latine labitur indoctum. Vel etiam liber id. An pro verear laboramus philosophia, est ex luptatum disputationi, per ea magna alterum. Eu saepe recteque instructior vel.
+I cannot work in premises of a company as full time employee. I have my own setup to do work. However I can visit company premises as per requirement or agreement as required.
 
-Sea ferri alienum at, ut vel ullum facete disputando! Dico eius alterum an sit. Vim at facer impetus mandamus, pri in facete inciderint! Modo homero has ut!
+<p class='q'>Q. Can you move to a different city or country apart from your home city, for your assignments?</p>
 
-No dicant principes per, cetero tritani intellegat quo ne, epicuri urbanitas ne pro. Ex vix deseruisse accommodare! Ius ne wisi torquatos, pertinacia adolescens voluptaria usu at, eu movet denique cum. Erant altera id nam, duo ea nisl dicunt?
+If required I can do so for limited period but not on long term basis.
 
-Nec altera moderatius ne, honestatis necessitatibus te vix! Ad eum porro semper minimum, no eam alterum quaestio? Ex quem dolorem officiis vix, qui te justo congue intellegam. Vis id elitr scribentur, his elit veri laboramus ut? Brute nostrum vis ne, animal hendrerit ei has?
+<p class='q'>Q. How can your client be certain about confidentiality?</p>
 
-His id graece ridens, dictas delectus oporteat no sea. Vis moderatius consectetuer ad, ex vim nonumes omittantur! Cu duo odio gloriatur delicatissimi, ad prima melius imperdiet nam. Viris verterem te mea, facer iusto labitur mea at. Vidit iriure abhorreant pro ut, per an vide euismod facilisi.
+Based on my profile client needs to have faith in me. I shall sign proper legal documents including confidentiality agreement.
 
-At nec vide graecis civibus, eu mei diam altera, nam at nisl rebum? Simul option senserit at quo. Nam quidam gloriatur dissentias ei. Suscipit epicurei complectitur te ius. Ad est odio iudicabit, nam sale rebum id?
+<p class='q'>Q. Can you accept an offer of full time employment?</p>
 
-No per sonet imperdiet. Ut vim errem perfecto constituto, at lobortis sententiae vel. Ex mel nemore tibique, et pro iisque labores, his an solet vivendo. Eu cum deleniti argumentum efficiendi. Nam labores admodum contentiones in, discere eruditi efficiendi ad sit?
+No, not at present. I prefer to work remotely from my own setup without a full time committment. But I can change my mind.
 
-Eu ullum diceret vel. Ei aliquam percipitur mei, munere inermis nonumes ne usu. Te per posse maiorum commune, nam ex sanctus singulis. Has ex facete fabellas, nusquam adolescens ne duo. Cu vis epicurei phaedrum postulant, an option dolorum duo.
+<p class='q'>Q. What is your rate for working in a project?</p>
 
-Vix convenire euripidis et, ea etiam nihil accusata usu! Sea rebum omittantur cu. Pro odio causae corpora ea. Maiorum quaestio eum ex, veri solet possit vel no, vim purto delicata intellegebat at.
 
-Delenit commune vivendum vis ex, his hinc vivendum ocurreret at. Eius graeco vis in, usu no nisl definitionem? Soluta insolens gloriatur sea ne, vel eu quem sapientem consulatu. Quo eu error utroque, ex idque possim vis, id qui sonet pertinax adolescens! Sanctus officiis persecuti qui id, animal appareat ut vim, agam tollit has ei?
+My rates vary from $10 – $60 per hour based on technology and challenges. For complex work my rates will be higher. For emerging technology where I have scope of learning I shall lower my rates. For routine project management and comparatively simple works I may charge as low as $10 per hour. It is negotiable.
 
-Cum diam autem facilisi ut. Usu ad legere praesent? Oblique sensibus sapientem cu duo, eos error tation ridens an, reprimique honestatis complectitur eam ea. Ad virtute accusam mel, stet posse falli per ex. Ut deserunt atomorum his, eos lucilius disputationi ei, nam accusam scriptorem ad. Sed cu dignissim adversarium, salutandi eloquentiam cum cu.
+<p class='q'>Q. Can you handle slightly bigger projects which require additional resources?</p>
 
-Ut mea omnes atomorum prodesset, mea at lorem nusquam. Ne iudico altera ius, quo te utroque deleniti referrentur, laudem ocurreret eu eos! Sea possit ornatus et? Cu mei natum congue, ne sed audiam debitis persequeris!
+I know some people who can work with me on projects on contract basis if so required.
 
-His at sale electram? Ut vix tota invenire intellegat, sea errem exerci partiendo no? Id ancillae electram his, ut tota iriure mei! Cum ut sonet liberavisse, ad veri vituperata per. At per nostrum comprehensam, ex tale utroque sapientem quo.
+<p class='q'>Q. What if you don’t know a technology, will you learn that for the project? What will be your rate during the learning phase?</p>
 
-Eos id integre volutpat honestatis. Prima debet cu vis. Ne iuvaret euripidis definitionem has. Delicata electram aliquando est eu, mei ridens tritani lobortis te, nisl audire urbanitas sea ea.
+I shall learn a technology if I don’t know that. My rate will be 50% lower during learning phase.
 
-Ius aperiam prompta recteque in, an stet summo essent eos. Nostro nonumes deleniti vix at? Ea per dicant accusamus suscipiantur. Ex autem saperet adolescens mel, convenire facilisis pri an! Ea dolor legendos explicari pri, pri libris luptatum probatus id? Sea at choro tantas minimum, patrioque percipitur mea at.
+<p class='q'>Q. Can you work as part of a big team?</p>
 
-Inermis ponderum cu sit, quo ea commune delicata, quaeque sapientem moderatius vis ne? Has quaestio maiestatis et, ut eos congue appetere legendos. Vix an convenire philosophia, vis veri officiis id, vel legere scribentur in. Mundi nobis nonumes te mei, vim in corrumpit efficiendi. Cu vel forensibus ullamcorper, eos in affert congue aliquid, cu verterem senserit constituam his.
+Yes.
 
-Et pro nobis laoreet moderatius. Ex purto illud quidam nam, tota nostro suavitate mei at, usu cu dolor adipisci scribentur? Eu menandri laboramus consectetuer vis? Mnesarchum incorrupte consectetuer cu mei? Ex posse atomorum eam.
+<p class='q'>Q. Can you work as project manager or trainer?</p>
 
-Eam id dicit vivendum, vis eius nemore ne! Cu dicat malorum suscipiantur sea, eos te melius nominati erroribus, duo purto adversarium voluptatibus no? In principes efficiantur ius. Persius ponderum consectetuer ut eos, cu qui cibo nullam, te vis nobis lucilius facilisis? An mea errem accumsan, nam no saepe alterum.
+I can do so but for maximum 8 hours a week.
 
-Cum cu enim voluptaria, quas probatus ea est, vis ex mazim apeirian. Ea vide magna assueverit nam, mei homero malorum qualisque ex! Tamquam consequat conclusionemque no has, augue vitae ceteros duo ea, est ea graeco volumus! Nullam utamur mentitum te est, rebum dicit mediocrem no duo. An insolens sapientem evertitur mel, sint quodsi tincidunt est et. Duo liber melius disputando ei, at usu movet iriure alienum?
+<p class='q'>Q. Do you also work on fixed priced projects or only on time and material?</p>
 
-Magna mazim albucius ea nam, et quot consulatu eum, ullum philosophia definitiones ad vim. Ne nibh duis ocurreret eum? Pro ei dolorem menandri? Erroribus moderatius dissentiunt vis ut, vix at tritani persius referrentur.
+I can work on fixed priced projects if requirements of the project are well defined. For any change in requirement I will look for change order.
 
-Vix an altera utroque deseruisse! Elaboraret persequeris appellantur pro te, ea sed eruditi suscipiantur, eu nusquam deserunt qualisque nec. Ex illud hendrerit sea, usu at delectus imperdiet. Ne mea ipsum altera indoctum, an vel tibique tincidunt.
+<p class='q'>Q. What are terms of payments for your job?</p>
 
-Natum facilis inimicus cu nec, agam oratio fabellas mea ad. Paulo probatus urbanitas nam an, an equidem copiosae consequat mel. Cum salutatus definitionem ad. In case audiam cum, ferri forensibus sed an. Saperet apeirian nec in? At mel nibh facete necessitatibus?
+I suggest an initial advance of 30% followed by weekly / monthly payments as per milestones achieved, transferred to my bank account. It is negotiable.
 
-Quaerendum comprehensam id eum. Id sit inani possit! Ut quas volumus accusamus usu. Sensibus instructior et nam, laudem albucius mel id!
+<p class='q'>Q. What are your strong points?</p>
 
-Mucius assueverit ei pro. Minim solet ius ex, te usu modus interpretaris. Ei eam purto paulo platonem? Cu eum tantas animal regione, id est nostro maiorum ullamcorper.
+I am good in mathematics and logic. I can solve critical business problems. I can devise high class algorithms. Generally I learn new skills in one - two weeks of time. I am good learner. I am methodical and organized. I break bigger problem to multiple smaller units and solve them individually to solve the big one.
 
-Cu purto erat populo quo, usu ea saepe complectitur, et quot salutandi euripidis quo. Vim an iusto prompta. Ea sed alia accommodare, vocent hendrerit sed ne, ridens debitis posidonium sit an. Quo ad consul altera eleifend? No noluisse assentior cum, dicat dicant veniam sit ea. Eos simul utamur elaboraret id.
+<p class='q'>Q. Do you work with free lancing portals?</p>
 
-Est an sensibus scriptorem, sensibus inimicus mea ut. Munere semper euripidis ei eos, nostrud voluptatum ad qui, mea eius iudico meliore te? His ne nostrud aliquid sapientem, mea ipsum volumus ad, nam accommodare delicatissimi ne. Mei cu rebum aeterno fierent, et alia luptatum efficiantur pri. Amet timeam fabellas te ius, velit tation fierent duo ut, tacimates rationibus cu qui. Nam at vide fastidii, justo nullam docendi ex duo.
+I tried to do so, but was not very successful because I am not a guy from the crowd.
 
-Oporteat cotidieque quo in, illud utinam imperdiet ea est, et vix accumsan luptatum adipisci. Vis ne timeam quaeque indoctum, ubique quaerendum complectitur te vim? Sit elitr nostrud nusquam et, augue postulant at mel. Ei altera aperiam vis, et debet ponderum sententiae duo! An sit timeam habemus oporteat, vis in mazim invenire! Mea an homero commodo alterum, partem adipisci explicari id sed.
+<p class='q'>Q. What is suggested way for providing maintenance once a project is complete?</p>
 
-Sumo mollis est ut, no persius moderatius mei. Eu hinc consetetur est, sea petentium intellegam et. Eam ex eirmod iudicabit maluisset? Pri eu persius electram forensibus, pro putant intellegam at. Mollis habemus mel et.
+Maintenance may be 10% of the entire development cost. It may not include new features.
 
-Vix facilisis posidonium te, in nostrud detraxit facilisi vis? Sale populo voluptaria his ut, amet dicant quaerendum te pri? Lorem choro sapientem no qui! Et pri clita admodum. Vim ut tota scripserit, id mea dicunt volutpat. At mei delenit disputando voluptatibus?
+<p class='q'>Q. Are you comfortable with American accent / English? Can you take part in discussions with Americans?</p>
 
-Eos essent adipisci id. Ex dictas interpretaris cum, omnis rebum iriure eos ad. Id vis omnium animal, ea eam tamquam voluptatum ullamcorper, ullum adipisci quo ex. Nam unum scribentur ea!
+Yes. I have done that many times.
 
-Veri ludus scripserit ad sea? In verear vidisse sit, doming vivendo adolescens mea at, te doctus patrioque nam. Cu vim oblique senserit facilisis, mel eu facete officiis. Vel pertinax delicata complectitur cu, populo everti menandri ei sea. Est populo euripidis instructior no, vide legimus ex pro.
+<p class='q'>Q. What is your domain knowledge in various verticals?</p>
 
-Tale deserunt evertitur vis ad, eam dicant numquam cotidieque te. Vim at sint adipisci, his ad vide accusamus. Usu soleat aliquando torquatos ad, ne mel molestie assueverit, consulatu comprehensam mea an? Te legimus deseruisse cotidieque mel, ne aeque nihil vitae qui, eum eu tibique gubergren. Nec ut dicunt nonumes patrioque, dicant petentium torquatos duo ut.
+Business, Financial accounting, Asset management, Payroll, Medical and Clinical Software, Billing software, Legal, Scientific calculations, Algorithms.
 
-Causae quaestio argumentum ut vim. Aeque democritum cu usu. Et probo sadipscing accommodare sea, duo cibo semper consetetur id. Et justo quando voluptatum duo. His cu quas nostro, per illud delenit admodum te, duo putant timeam ne. Eu qui lorem euismod, ius modus saepe te? Eos dictas definiebas id, cum unum appetere cu!
+<p class='q'>Q. What are your preferred technology area of projects in?</p>
 
-Est inermis theophrastus ei. Vix ei ridens dissentiet, oratio vocibus cu ius? Accusata omittantur vis at, has eu posse soleat legendos. Sed audiam eligendi efficiantur ut. Usu et autem dicunt, ad eam graeci doctus? Vel sale aeque ad, maluisset repudiandae pro no, insolens aliquando argumentum per ex!
+Presently I am more interested in projects on React.js, node.js, postgresql, Docker, dart and flutter hybrid mobile apps. I am less interested in Java, .net, Angular, Sql Server at this time. I am not very conversant with AI, machine learning, Robotics and drone programming but I am willing to do work in that area.
 
-Nec omnium graecis erroribus et? Illud doming antiopam eum in, vis eu erat aeque possim? Ei mea ancillae lucilius conclusionemque. Qui suas decore eruditi no, in usu aliquid tacimates mediocrem, cum habeo scripserit in. Mel quas oportere no, vis porro dictas consetetur ex, mel ne purto essent!
+<p class='q'>Q. Can you visit the place of your client in India or abroad if so required?</p>
 
-His id consulatu tincidunt reformidans, mandamus gloriatur te nam. Habemus expetendis intellegam ex eam, eos vocent interpretaris ad, est et hinc probatus. Graece latine mandamus ei mei, eam dolore intellegam ne, cum ad duis corrumpit hendrerit! Cu corpora reprehendunt vel, vis civibus probatus salutandi et? Ne per laudem mollis antiopam, his ut atomorum adolescens, ne est suas vocent! Eos alia eripuit eleifend in.
+Yes, provided I am paid for transit and lodging.
 
-In sanctus veritus lobortis mel, in mel libris vidisse definiebas, eu vix adhuc verear. Cu laudem prodesset has, per ex aeterno viderer pericula. Eos cu prima ludus vidisse, graecis salutatus adversarium ut ius, id deleniti deserunt eam. Te omnes commodo deterruisset per, usu propriae omnesque et, aperiam honestatis pro at. Ad solum rebum sententiae vix, sea et simul pericula adversarium? Ea nec doming causae, euismod admodum ponderum pri ne, eum quando forensibus ea.
+<p class='q'>Q. What countries you have visited so far?</p>
 
-Id vix tota homero, eu per quod clita maiestatis! Soleat facilisi mel ne, illum primis imperdiet sea eu? No consul numquam sed? Nam ne oblique pertinacia, ferri nominavi voluptatum ad vel! Omittam moderatius est ut, elit magna officiis eos in, an principes incorrupte persequeris per.
+UAE, Hongkong, Thailand, Japan, Italy, Germany, Switzerland and Holland.
 
-Ne odio utinam voluptaria sed. Dicam eruditi equidem cu nam, cum ne omittam accusata electram, debitis facilisi id vis. Oblique discere ad nam, sententiae suscipiantur has eu. Velit choro aliquam et vim. Ius adhuc audire cu?
+<p class = 'q'>What languages can you speak?</p>
 
-Usu ut ferri offendit suscipit, vim eu oporteat eloquentiam consequuntur, in eros instructior concludaturque pri. Quo no elit partiendo appellantur. Et essent adolescens vim, pro dolore dolorum in. Prima viris vivendum ius in.
+English, Hindi and Bengali.
 
-Mei in illum perfecto, at usu blandit luptatum, laoreet instructior eu vim. Ea quot sale placerat has? Nullam impedit tibique his ex, ut possim maluisset eos. Minim quaestio his no. At constituto constituam duo, pro an impetus pericula.
-
-Delicata expetenda an eam, te vim eros wisi scaevola, mei dico prima assum ut? Eu zril lobortis consequuntur vis, vidit corrumpit conceptam at eos? Ex sint habeo atqui nam, alia omnes adipiscing ius id. No vix oratio mediocrem, no facer eruditi dolores sea, eu sit mediocrem signiferumque. Vel dicam reprehendunt id, oporteat platonem salutatus in eum!
-
-Vero virtute ad pri, quas corrumpit gloriatur id his. Vis ad eripuit deleniti. Et vim legere timeam. Nec posse dolor ut, est consulatu disputationi an. Mea etiam commodo percipitur at, quo cu apeirian patrioque. Ridens probatus neglegentur pro no, cibo civibus accumsan pri ad, dicit cetero sit in!
-
-Vim brute reque congue ea, novum comprehensam his in, maluisset sadipscing instructior vim te. Has agam audiam eu. Nemore ancillae salutatus ut eos, ex sit simul graecis. Dolorem adolescens an sit, ut ubique luptatum sea? Est ex nusquam similique, tollit civibus nominati in eam, sit ei legendos gubergren. No vix nominati principes adipiscing, doctus platonem his et.
-
-Mutat omittam has eu, no his iudico graeco recusabo. Sit discere labores epicuri eu, vel ex assum aliquip suscipiantur! Quidam vituperatoribus at mel, usu ex vidit cetero. Ad sint posse liber cum. Debitis pertinax nam at, iuvaret epicuri detracto nec eu?
-
-Et pro stet audire, nam indoctum definitionem an, ut omnes adipisci cum. His ea ubique dissentiet, enim vide persecuti ne duo? Ex est debitis constituam? Mei veri mandamus in. Ne exerci intellegebat nam! Quodsi blandit an vix, eam novum integre fastidii ne, dicat aperiam salutandi id sit?
-
-At quis ipsum eos, per dolor ridens in, at nec nihil vivendo definitiones? Eum in dicat paulo feugiat. Ne mentitum inimicus consetetur duo, an ius wisi dolores. Est adipisci conceptam id.
-
-Nam et menandri assentior. Has saepe facilisi te! Decore partiendo ei eum, ne deserunt contentiones has, per at etiam explicari. Eum te unum cetero! Eos ea meis corrumpit, congue consetetur in vix!
-
-Magna voluptatum argumentum pri ut, te reformidans theophrastus vim! Ne mundi dolore ridens est, at ipsum partem theophrastus sed, laoreet posidonium definitiones at has. Eam decore integre assentior cu, ex quaeque scriptorem vix. Vel ei habeo quaeque referrentur, noster patrioque ne sed, simul moderatius no duo?
-
-Mei eu cibo modus definitionem, vel ne oratio assentior, per ad aperiri atomorum conclusionemque. Porro laoreet conceptam per ei, nihil dolore mediocrem est at. Vis duis adversarium in, duo modo albucius te. Congue impetus petentium ea mel. Ei vis sale repudiandae. Ius te facilis eleifend, albucius imperdiet posidonium quo no.
-
-Cu elit inani iusto sed, ei ius impetus equidem, cu iriure denique intellegebat eum. Falli semper mnesarchum mel cu, invidunt sententiae reprehendunt ut has, ea per dignissim abhorreant? Duis instructior mei in, at eam nobis suscipit. His in labore dictas gubergren.
-
-Mei verear insolens at, quod mazim apeirian mea id. No prima numquam duo, est ea putant scripserit! Pro ex deserunt interesset, his persius apeirian et! Deseruisse dissentias cum an, pro lorem quodsi voluptaria no!
-
-Vis ullum omnium debitis ad, commodo constituam cum ad? Mei dicta oporteat corrumpit at, ea consul labore usu, an usu omnesque consulatu deterruisset? Ei quem integre quo, ipsum summo probatus per et. Pro ad aliquam singulis, cu per menandri mediocrem incorrupte.
-
-Ne nam zril postea dicunt, putant maiorum hendrerit duo ei. Has dicat argumentum ea. Omnis honestatis ex vis. Enim probo aliquip ut quo, graeco intellegam has eu, at labitur instructior usu? Pri an brute putant philosophia. Est no quis ponderum, accusam assueverit ex est.
-
-Eum enim etiam nullam ea, nostrud sapientem definiebas eos in, cu graeci accusata est. Sed ne sale reque quaerendum, no eos nihil nominati intellegam. Et his iudico oporteat. Dolor semper his ut. Per nemore doctus suscipit ut, vel ut harum contentiones, assentior tincidunt persequeris id has.
-
-Brute sonet vix et, quo ad quem eligendi gloriatur! Ei ius sale accumsan, at sumo ferri scripta eum. His quando sensibus delicata eu, no vidit mediocritatem nec? Usu ex sanctus ponderum.
-
-Ne tollit utamur qui, altera luptatum eum ad? Ut his iuvaret accusam constituto, ea dicant scripta regione cum? Pro ea erat epicurei, wisi mollis quaeque pro te. Illud movet accusamus per at, elit aeterno scriptorem no nam, error efficiantur ius ea. Nam adhuc molestiae consetetur in, eos solet tibique quaestio at.
-
-At odio decore officiis pri. Et duo pertinax scriptorem, primis adolescens vis ad. No sit novum iusto graeco, ut laudem saperet vulputate quo, usu ponderum assentior ad. No case consul qui.
-
-Usu te possit omnesque postulant, sit ea copiosae menandri erroribus, ignota graeci mel an. Nulla appellantur mei ne, no zril singulis consulatu vel, regione fastidii accusamus at quo. Mel et magna invidunt, democritum appellantur no cum. Duo cu alii ipsum dissentiet, duo ei denique quaestio tincidunt? Munere habemus eum at, ea regione habemus invidunt nec. Est et quis imperdiet, cu vis aeque legendos suscipiantur.
-
-His id vitae tamquam neglegentur, affert graeci delicata sed no, ferri offendit instructior vel id! Vix ea oportere electram, et sea vide explicari. Et justo intellegebat sed! Cu etiam legendos facilisis ius. Nec ceteros democritum ad.
-
-Civibus facilisi id est, mei melius option expetendis eu. Vide erant noluisse sit ex, ad qui nihil nobis deterruisset. Ne duo magna electram imperdiet, eam te nihil noluisse. Cum et vide sonet iudico?
-
-Nam tation liberavisse eu. Maiorum detracto no his. Pro nullam dissentiet ei? Ad per discere suscipiantur, in brute tantas mentitum mel?
-
-Ut qui eius principes, dicunt consetetur an eum. Sit ubique alterum conclusionemque ad, et graece aliquip sed. Eu quando accusamus sea, an his case temporibus, sit et meliore vulputate. An impetus probatus vel, ius cu exerci dignissim splendide, pro prima brute tamquam te. Pro lucilius explicari ex, odio putant democritum ne pro.
-
-Eu fugit etiam aliquando per, in mel altera maiorum explicari. Sea graece signiferumque ad, sumo aeterno vituperata eum ne? Hinc veritus suscipiantur id sea. Equidem admodum perfecto mei ex, id primis convenire sea, ex paulo accommodare vix. Dicta labores laboramus ut duo, solet labores concludaturque est id!
-
-His graecis sententiae cu! Hinc saepe sea ut, vis no nostrum dolores honestatis. Essent noluisse moderatius pro ad, nec te vocibus sensibus, cu usu tation munere officiis. Mollis referrentur cum eu, no qui verear placerat?
-
-Nam te commodo percipitur. His fabulas expetendis mediocritatem ea! Mei eu utamur ocurreret, eu probo quaerendum voluptatibus pri. Mea te cibo veritus fabellas, eu cetero propriae moderatius eos, eu duo error tractatos definitionem. Pri animal petentium id! Ius diceret scaevola ex, nonumy sensibus nam ut, quo electram consequat cu.
-
-Et nullam suscipiantur his, an nec solum idque possit, eam dictas possim omittantur ad? An sit mutat nominavi assueverit, ad duo vocent impedit. Nulla animal antiopam vix ad! Ei sed quodsi hendrerit sententiae, ignota apeirian eu mea. Suscipit sadipscing per id.
-
-Eu est elaboraret interesset. Quo delenit mentitum ea, choro doming maiestatis an eos. Usu no illud reque nonumes. Te ius eros quidam adipiscing, doming iracundia ius an, quot utinam ex eum.
-
-An eum sonet perfecto. Ex melius iriure scribentur per, ceteros sapientem conclusionemque an quo, usu te atomorum adipiscing. Regione delenit imperdiet ea cum, has assum vivendum id! Mei ne harum singulis pertinacia, eu vim consetetur signiferumque, eam oblique deleniti eu. Esse interpretaris sed ne, quod erat nostrud ex mei. Pro wisi audiam ea.
-
-Eos an aliquip gubergren reprehendunt, honestatis conclusionemque ex sed, aeterno deleniti eos cu. Mediocrem ocurreret sit id? Est cu illud aeque saperet, ferri persequeris eos ei! Ad pro elit graeci repudiandae, nec an recusabo facilisis, dolorem dignissim ex mei! Eam ei omnis molestie consequuntur, has ea mollis option? Per mediocrem moderatius at?
-
-Sed modo graece regione ea, honestatis reformidans et cum. Ne vim illud consul equidem, sed vide theophrastus ex. Ne libris tractatos eam, bonorum elaboraret efficiantur at pro. Te pro mnesarchum inciderint temporibus, vim adhuc inani pericula eu, utamur virtute impedit quo no? Eu tractatos adipiscing concludaturque eum, id viris blandit deleniti has.
-
-Unum ignota convenire eu eum. Inermis electram nam te. Ius quot duis possim ne! Ex vis tale zril, vulputate assueverit adversarium id vel, et his ridens integre definitiones? Volutpat partiendo te sea, sea clita deseruisse ad, ad has menandri platonem neglegentur. Ut vel aeterno dolorum.
-
-Diceret dissentiet te sit, no est velit partem eirmod. Assum postulant pri ad! Has partem putent sensibus te, cu usu quidam utamur, ex quod illum reformidans eum. In mel mollis accusamus neglegentur. Vel et natum euismod eleifend, ex usu justo omittantur, eum dolore liberavisse ut!
-
-Ei eos scripta mediocritatem, quas qualisque vim te, omnes percipitur mediocritatem cu est! In error conclusionemque est, magna expetendis ut his, corpora albucius democritum nec ei? Quo id quas noster, semper praesent te pro. Nec ne munere invenire.
-
-Et vix omnes prompta volumus, nec causae accumsan ne. His congue propriae ad. Esse perpetua erroribus has ne. Fabulas menandri pertinax ea duo. Ea has brute elitr affert, eam purto salutatus ea. Eum tincidunt appellantur liberavisse an.
-
-Vis id mundi eloquentiam, mutat mollis eu mei. Ne eum omnium ceteros, admodum intellegebat pro ea! Eu vel quot primis sensibus, vis ut soleat constituto eloquentiam! Usu ei tantas dictas, ex iusto suavitate accommodare per! Vix cu quod inermis noluisse, quod soleat mentitum has at!
-
-Ne debitis adipiscing has? Ne eam prima mazim dolor! Nam postulant petentium cu. Pri ea tempor adipiscing, an omnes sententiae nec? Eam accumsan electram complectitur in. Dolor graecis sed ne.
-
-Sale paulo et cum, nam ea utroque facilisi laboramus, tibique molestiae ullamcorper usu ne. Pro an facilisi legendos? Ex eos bonorum fuisset tacimates, periculis urbanitas cum te, ut vel denique facilisis? Natum ludus intellegat no quo, vix sonet civibus in! Sea etiam nostrum argumentum ne, sit malis malorum officiis ut, novum vocibus eloquentiam mei an. In nusquam persecuti definitionem pri.
-
-In iudicabit principes gloriatur pri, in virtute interesset nam? No ridens eligendi appetere pri, est ne nullam tamquam facilisi, simul ignota deterruisset mea an. Ne sed simul vulputate. Pro at malis graeco, viderer salutatus quaerendum id eam, vix at mundi utinam cotidieque! Nullam feugait eum eu, honestatis consequuntur cu sea.
-
-Dolores copiosae pri et, lorem alienum efficiendi eos cu, novum error rationibus an sea. Sed cu exerci consectetuer. Laudem nostro verterem mea ex. An sit harum vocent!
-
-Iudicabit imperdiet vel an, te esse alterum dolorem mel, usu numquam tincidunt ex. Eius salutatus quaerendum in eam, ei sed nulla efficiantur, pri te offendit ponderum. Has veri euripidis ex. Dicta harum te vis? Vel nisl expetenda eu?
-
-Eum et oratio eligendi, sit ei torquatos moderatius, lorem animal cu mea. Verterem adipisci ex pri, ea reprimique instructior his? Nulla minim instructior te usu, sit ex sententiae definiebas suscipiantur? No purto ullamcorper deterruisset per, eam id impedit deleniti, in pro dolor scripta sanctus. Idque error quando an eos, nam te alia praesent pericula. Movet detracto ne vel, dicat legere possim no est.
-
-Nam malorum concludaturque eu. Ferri regione vim ut, te ius erat movet qualisque, in velit vituperatoribus has. Ad vel fugit dictas cetero, in graeco persecuti quo. Has ullum omnium voluptaria et! Cu rebum voluptaria mel, sed feugiat recteque posidonium ex! Sea at tale nulla vituperatoribus, ei nec noluisse percipit conceptam.
-
-Vis alterum voluptatum posidonium te, gubergren sententiae ut per. Noluisse omittantur eu cum, ut liber definitiones has. Id postulant liberavisse has, vidisse omittantur mel at. Meis malis errem in vim, id est simul habemus, sea esse paulo prodesset ut.
-
-Ei sed possim persius, ad mea ullum option. Sit munere feugiat salutatus ei, mel ut adhuc oblique! Ad animal voluptatum has, iisque periculis mel ea. Oratio inermis reprehendunt no nec! Prima voluptua cu nec, ex nam fastidii petentium?
-
-Sit alii integre fabulas et, has ne eius fuisset. Ei ancillae suscipit pro, in duo minimum salutandi adversarium, mei justo habemus eligendi no! Ei eam nullam graeci accommodare, vis no dolorem omittam, alterum delectus at mei. Ne congue legendos sed. Mea utinam mucius ex, eam ex nisl semper definiebas!
-
-Per tation aperiam sanctus in? Est et habeo atomorum definitiones. Per libris expetenda principes te, vel an epicurei reprimique. Te probo numquam ornatus qui, his an elitr senserit liberavisse.
-
-Eu vidit fastidii vim, cum suscipit facilisi ut, sed lorem quaeque honestatis id. At quo volutpat accusamus, et congue inimicus per! Melius electram reformidans in mea, an mel modus nostrum. Illud evertitur pertinacia sed at, libris legendos vel an, brute dissentias et has.
-
-Case nihil mea in, nibh laudem an pri. Id eos vide mutat recteque. Sed nulla constituam quaerendum ex, has cu esse platonem? Ea mucius epicurei cum. An esse augue platonem pri. Nonumy nostrud cu duo.
-
-No usu velit alterum urbanitas, enim nibh adhuc mel ut. Invidunt aliquando efficiendi nam cu! Velit volumus euripidis at sit, ipsum audiam mnesarchum at per. Congue dictas per at! Pri ut nostro labitur verterem, at meis quodsi expetendis sed. Vel possit sadipscing ei, cu fierent forensibus vel.
-
-Errem nobis et qui. Referrentur suscipiantur pro cu, lucilius quaerendum cu vim, cu commune cotidieque deterruisset nec? Vel vero reque efficiendi in, unum temporibus cum eu. Quo porro quaeque senserit ex, omnis electram sea ex, est at quod adolescens expetendis.
-
-An assum dicunt quo. Tale ceteros ancillae his ut? Pri id minimum constituto, his graece adolescens ne, nam no saperet dissentias. Has ne molestie epicurei. Tota simul mediocrem duo cu. Qui ne prompta epicurei phaedrum. Vix ex probo menandri electram.
-
-No eos sale cetero aliquid, mel laoreet qualisque in! Eu usu dicant molestie maluisset, ad his elit dictas. Vix in nonumy audiam, an vim abhorreant contentiones, vix id omnes possim. Sit congue everti at! Te nec alii eirmod instructior, usu oblique forensibus an, cum et lobortis forensibus vituperata.
-
-Vel id quis doming imperdiet. Eam nihil choro integre in, an quot antiopam erroribus ius, indoctum repudiandae sit at! His dicant veniam detracto ex, latine inermis disputationi cu vim. Cum movet viderer ne, perfecto oportere at nam. Idque offendit praesent et mea, pro et magna vivendo!
-
-Dico zril deserunt cu nec. Sale autem movet ne usu, pri in nobis tollit utamur, no affert oratio hendrerit qui. Te minim liber viderer qui, idque facer nec.
+<style>
+    .q {
+        color: maroon;
+        font-weight: 900;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+</style>

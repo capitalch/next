@@ -71,11 +71,7 @@
     <p>2) Developed complete service management system for a Authorized Service Centers in India. It consisted of the complete workflow of repair processes of a typical Authorized Service Center of electronic products. The software was particularly used in Casio and Sony authorized service center.</p>
     <p>3) Developed an SMS mobile application in Java working on AT commands.</p>
     <p>4) Developed a reporting sysyem in C# using Dev Express.</p>
-
 </div>
-
-
-
 
 <style>
     table {

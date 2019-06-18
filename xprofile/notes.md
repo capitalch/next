@@ -12,29 +12,46 @@
                                                 create skillset page
                                                 create home.md
                                                 syntax highlight
-                                                blogs implement
+                                                    blogs implement
+                                                        create blogs page
+                                                        create blog page
+                                                        put two snippets /blogs and /blogs/:slug in server.js
+                                                        create blogs folder and put there the blogs file
+                                                        do necessary changes in blogs.tsx and blog.tsx files
+                                                        server.js initialy returns just a dummy blogs list with title
+                                                        modify server.js with correct blogs list with files hierarchy
+                                                         skills.json to be hot editable like md files: not doable
                                                 blogs page styling
                                                 @media strategy for responsive design
-                                                seo implementation
+
+
                                                 client routing
+                                                        
+                                                content writing                                             
+                                                create resume.md
+                                                create academics.md
+                                                create projects.md
+                                                create qa.md
+                                                
+                                                no of hits incorporation
+                                                Comments incorporation
+                                                                    Font adjustment
+                                                                    convert date to local
+                                                                    Download comment as per page
+                                                                    SEO for comments
+                                                                    positioning of comments component in the grid
+                                                                    Capture comments and reply
+                                                                    reverse order
+                                                                    submit form
+                                                                    new root level comments                    
+                                                                    Show success message
+                                                                    icon file size correction
+                                                                    Show count for comments
+                                                                    Form currently stays on in new page                 
 
-right area with articles / blogs                    
-blogs listing on date descending and category ascending
-content writing                                 
-no of hits incorporation
-                                                             
-content
- can speak languages
- visited countries
-domain registration
-Blog short heading and remove portfolio of Sushant fro blog
-Comments incorporation
-    Database
-    server side in tools
-    client side show comments
-    moderation
-    Admin to upload files and moderate comments with authentication
-
-//bugs
-2. Javascript code gets wider in mobile
+                                                Bug: Banner always showing up
+right area with articles / blogs
+Delete comments UI
+seo implementation     
+blogs listing on date descending and category ascending                      
                                                

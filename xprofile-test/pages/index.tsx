@@ -41,11 +41,20 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	const params = {
 		token: settings.token
 	}
-	const pageComments = (await axios.get(url, {
-		params: params
-	})).data
-	
-	return { content, slug, pageComments };
+	let pageComments;
+	try {
+		pageComments = (await axios.get(url, {
+			params: params
+		})).data
+	} catch (e) {
+		console.log((e.response && e.response.data.message) || e.message)
+	}
+
+	return {
+		content, slug
+		,
+		pageComments 
+	};
 };
 
 function getPageContent({ content, slug, pageComments }) {

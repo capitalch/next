@@ -46,76 +46,24 @@ function Contact() {
 					</div>
 					<br></br>
 					<div>
-					<label>Your email: <span className='required'>*</span></label>
+						<label>Your email: <span className='required'>*</span></label>
 					</div>
 					<div>
-					<input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" value={email} onChange={e => setEmail(e.target.value)} />
-					</div>
-					<br></br>
-					<div>
-					<label>Message: <span className='required'>*</span></label>
-					</div>
-					<div>
-					<textarea required rows={6} name="message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+						<input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" value={email} onChange={e => setEmail(e.target.value)} />
 					</div>
 					<br></br>
 					<div>
-					<button type="submit" className="mailButton">Submit</button>
+						<label>Message: <span className='required'>*</span></label>
+					</div>
+					<div>
+						<textarea required rows={6} name="message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
+					</div>
+					<br></br>
+					<div>
+						<button type="submit" className="mailButton">Submit</button>
 					</div>
 					<div className='notes'> Fields marked with <span className='required'>*</span> are required</div>
-					{/* <table>
-						<tbody>
-							<tr>
-								<td>
-									<label>
-										Your name: <span className='required'>*</span>
-									</label>
-								</td>
-								<td >
-									<input
-										type="text"
-										required
-										name="name"
-										value={name}
-										onChange={(e) => setName(e.target.value)}
-									/>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>Your mobile: <span className='required'>*</span></label>
-								</td>
-								<td>
-									<input type="text" pattern="[0-9]*" required name="mobile" value={mobile} minLength={10} maxLength={10} onChange={e => setMobile(e.target.value)} />
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>Your email: <span className='required'>*</span></label>
-								</td>
-								<td>
-									<input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" value={email} onChange={e => setEmail(e.target.value)} />
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label>Message: <span className='required'>*</span></label>
-								</td>
-								<td>
-									<textarea required rows={6} name="message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>
-									<button type="submit" className="mailButton">Submit</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div className='notes'> Fields marked with <span className='required'>*</span> are required</div> */}
 				</Form>
-
 			</div>
 		</div>
 	);

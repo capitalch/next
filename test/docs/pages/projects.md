@@ -1,41 +1,108 @@
-### Projects done by Sushant
+### Projects showcase of Sushant
 
-Lorem ipsum dolor sit amet, vix duis oportere deterruisset et? Duo ubique timeam persecuti in, et cum rebum adipisci! Duo id iusto diceret! Pri et exerci ponderum, mea ut eius option? Qui te modus melius antiopam! An stet partiendo has.
+---
 
-Vim te movet vivendo, cum lorem vocibus ad! Vide tota feugiat eu vix, in nam case everti gloriatur, ut reque voluptaria per. Sit populo aperiam te? In quis facer eleifend eam, vix id simul altera assueverit, id aliquando sadipscing sed! Ex voluptatibus vituperatoribus qui!
+Here I display some of my recent key projects and discuss them
 
-Fuisset moderatius ne pri, dicta nonumy definitionem ad eos, ea decore euripidis mea? Minim labore noluisse at duo, an atqui mentitum qui! Ad partem salutandi eos. Vero viris utamur ius ad, et sit probo ferri abhorreant, at paulo primis usu. Est an duis habemus periculis, insolens theophrastus pri eu.
+##### 1. <a target='_blank' href='sushantagrawal.com'>http://sushantagrawal.com</a> Portal for portfolio management 
+|  |  |
+|:-- | :---|
+| URL | http://sushantagrawal.com |
+| Motivation | To create a dynamic content management seo compatible portfolio. New articles to be placed in folders and they would be view ready without any re-compilation or restart of server |
+| Technology | React Next.js, styled-components, TypeScript, markdown files, html5, ES6, node.js Express, PostgreSql, Docker cloud deployment |
+| Development effort | 200 man hours or 5 man weeks |
+| Github repository | <a href='https://github.com/capitalch/next/tree/master/xprofile' target='_blank'>https://github.com/capitalch/next/tree/master/xprofile</a>|
+| Description | Its a sort of content management portal. The site contents are stored in markdown files (.md extension). You can change the content of these files on the fly and new content will be visible on portal without recompilation or restart of server. This sort of portal is very convenient for commercial establishments, personal portfolios of eminent people, product catalogues and e-commerce. Advantage is, you can place content in the portal in form of image gallaries, blog articles of chunk of texts and they will be instantly visible to all viewers.|
+| Technical features | Server side rendering, Client side routing for making it blazingly fast, Highly Responsive, Good SEO scoring as per Google Lighthouse, Uses minimum of third party libraries and created from scratch, Uses styled-components for styling, Uses Express server which is hosted on Docker cloud, Uses PostgreSql database as docker container in cloud for storage of comments and hit counts.  |
+| Performance matrix | As per Google lighthouse |
 
-Nam dicant similique elaboraret eu, vel sanctus similique ex. Cu ius detracto placerat indoctum. Putant iudicabit ne pri, ad sit liber paulo persequeris! Nulla complectitur eum at. Habeo inimicus id eos.
+##### 2. <a target='_blank' href='http://chisel.cloudjiffy.net/apps/rx'>http://chisel.cloudjiffy.net/apps/rx</a> Dynamic data entry form generator from JSON object 
 
-An cum noster aperiri similique, in est animal sanctus molestiae! Ei mei placerat oporteat, ut qui semper iriure. Usu ex tantas lobortis sensibus, cu justo menandri antiopam vix. Voluptua intellegat reprimique ad vim. Pro ne dico epicurei delicatissimi?
+|  |  |
+|:-- | :---|
+| URL | <a target='_blank' href='http://chisel.cloudjiffy.net/apps/rx'>http://chisel.cloudjiffy.net/apps/rx</a> |
+| Motivation | To create on the fly several dynamic data input forms at run time from JSON objects in a react project. All sorts of client and server side validations should be possible. On click of submit button the captured data should be sent to server in JSON format. You should be able to create group of controls in JSON object, group of controls can be added or removed at run time through repeater controls, There could be deep nesting of group of controls or repeater controls. Unlimited nesting of repeater controls should also be possible. That means a repeater inside a repeater inside a repeater to any arbitrary nesting level should be possible.|
+| Technology | React core using create-react-app, scss, TypeScript, html5, ES6, node.js deployment in Docker cloud|
+| Development effort | 16 man weeks |
+| Github repository | <a href='https://github.com/capitalch/react-core/tree/master/rx-forms2' target='_blank'>https://github.com/capitalch/react-core/tree/master/rx-forms2</a>|
+| Description | In big projects where you require hundred's of data entry forms along with validations and run time additions or deletions of group of controls, it is non-trivial to manually create each and every form. In that situation the Ornate comes to rescue. You can store form templates in form of JSON objects in database and create run time forms from Ornate as and when required. Any HTML / custom control can be generated. Ornate can work with Material, Bootstrap, Primereact or any other react compatible UI library. Ornate is easily extendable. In the instant example many samle form templates are included. You can play with form templates to generate the forms. Special attraction is **Deeply nested example** in the drop down list. |
 
-Mei ad maiorum nusquam accusamus, no cum natum abhorreant? Pri at fastidii detraxit aliquando, iriure reprehendunt per ei! Wisi dolorem dissentiet eu quo, cu dicunt hendrerit nam? Ex insolens persequeris delicatissimi eam? Dicat virtute intellegam quo id, his ea melius reprimique?
+##### 3. <a target='_blank' href='http://chisel.cloudjiffy.net/apps/eshop'>http://chisel.cloudjiffy.net/apps/eshop</a> POC of e-commerce solution
+|  |  |
+|:-- | :---|
+| URL | <a target='_blank' href='http://chisel.cloudjiffy.net/apps/eshop'>http://chisel.cloudjiffy.net/apps/eshop</a> |
+| Motivation | To create a POC for e-commerce application using single page application which is fast and scalable.|
+| Technology | Angular 6, scss, TypeScript, html5, ES6, PostgreSQL, node.js deployment in Docker cloud|
+| Development effort | 12 man weeks |
+| Github repository | <a href='https://github.com/capitalch/eshop' target='_blank'>https://github.com/capitalch/eshop</a>|
+| Description | This is typical POC version of an e-commerce application. This uses dummy products along with their descriptions and fetches product images from online image generator site robohash. You can select product category from left side tree and all products from that category is displayed in the main area. Clicking a product takes you to an enlarged view of the product. Minimum implementation of ordering and payment gateway is also done. This project establishes that an e-commerce application is possible using modern JavaScript frameworks like Angular and React. Much of the work is performed at server side API's created in node.js. Non-trivial database scripts using hierarchical query and JSON query are used for PostgreSql database. Beauty of the application is the speed with which the products and their images are downloaded to client.|
 
-Diceret saperet cu vix, cu veri paulo vix? Eos elitr mollis blandit te, ad eum case novum rationibus. Ex diam dissentiunt est! Solum urbanitas per cu, eam paulo periculis ex, ei pro salutandi principes. Facilis copiosae cu nec, duo exerci quidam accommodare ne. Ubique commodo nam te.
+##### 4. <a target='_blank' href='https://capital-chowringhee.com'>http://capital-chowringhee.com</a> Static website of a retail company
+|  |  |
+|:-- | :---|
+| URL | <a target='_blank' href='https://capital-chowringhee.com'>https://capital-chowringhee.com</a> |
+| Motivation | To create a POC for e-commerce application using single page application which is fast and scalable.|
+| Technology | React Gatsby, scss, GraphQL, TypeScript, html5, ES6, PostgreSQL for hitcount calculations|
+| Development effort | 2 man weeks |
+| Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/capital-chowringhee' target='_blank'>https://github.com/capitalch/gatsby/tree/master/capital-chowringhee</a> |
+| Description | This is a simple static low cost website for a retail company. Key attraction is the set of image gallaries. Due to image optimization multiple images are downloaded in record time |
+| Performance matrix (Google lighthouse) | <img class='matrix' src='/static/images/PM-capital-chowringhee.png' alt='performance image of site'></img> |
 
-Ad ius nostro equidem. Nobis laudem constituam sed ex, in quem vocent aeterno pro? Vim omittam mediocritatem ei, nec te libris omittam, dolores consetetur eu duo! Ne invenire praesent mea, cu agam animal mel, eu nulla errem atomorum nam!
+##### 5. <a target='_blank' href='http://chisel.cloudjiffy.net:11010'>http://chisel.cloudjiffy.net:11010</a> A graph application in medical domain
+|  |  |
+|:-- | :---|
+| URL | <a target='_blank' href='http://chisel.cloudjiffy.net:11010'>http://chisel.cloudjiffy.net:11010</a> |
+| Motivation | To create a patient history of medicines administered.|
+| Technology | Angular 4, d3.js, node.js deployment in Docker cloud|
+| Development effort | 6 man weeks |
+| Description | This is a highly refractored solution developed for a client in medical domain. Complex graphs are displayed using d3.js which explain the medicines administered on a patient|
 
-Te duo graece mollis docendi. Patrioque abhorreant eloquentiam pri at. Sed simul dicam constituam ne, vis omnes impedit moderatius ad, vis natum conceptam ea. Nec id eligendi invenire, sint euripidis ius no. Id nec meis voluptatum?
+##### 6. <a target='_blank' href='https://kushinfotech.com'>http://kushinfotech.com</a> A low cost static website for software company
+| | |
+|:-- | :---|
+| URL | <a target='_blank' href='https://kushinfotech.com'>https://kushinfotech.com</a> |
+| Motivation | To create a low cost static site for a software company.|
+| Technology | React Gatsby, scss, GraphQL, TypeScript, html5, ES6, PostgreSQL for hitcount calculations|
+| Development effort | 2 man weeks |
+| Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/kush-infotech' target='_blank'>https://github.com/capitalch/gatsby/tree/master/kush-infotech</a>  |
+| Description | This is a static low cost web site using React gatsby framework.|
+|Performance matrix (Google lighthouse)| <img class='matrix' src='/static/images/PM-kush-infotech.png' alt='performance image of site'></img> |
 
-Nec ut dicant aperiri, iriure instructior quo cu. Ut summo postulant repudiandae ius, et nam nostrud fastidii iracundia! Dolor voluptaria vel te, velit solet ut mei, nemore mentitum at mei! Maiorum intellegam quaerendum sit in, his molestie voluptua et! Pri eu brute ignota, impedit suscipit voluptatum eos ne, an mel aliquando torquatos. Eius animal efficiendi his ea, pro ei odio elitr possit.
+##### 7. <a target='_blank' href='http://www.kyokushinkaikanindia.com/'>http://www.kyokushinkaikanindia.com/</a> A low cost static website for kyokushin Karate club
+| | |
+|:-- | :---|
+| URL | <a target='_blank' href='http://www.kyokushinkaikanindia.com/'>http://www.kyokushinkaikanindia.com/</a> |
+| Motivation | To create a low cost static site for a club.|
+| Technology | React Gatsby, scss, GraphQL, TypeScript, html5|
+| Development effort | 2 man weeks |
+| Github repository | <a href='https://github.com/capitalch/gatsby/tree/master/kyokushin' target='_blank'>https://github.com/capitalch/gatsby/tree/master/kyokushin</a> |
+| Description | This is a static low cost web site using React gatsby framework.|
+|Performance matrix (Google lighthouse)| <img class='matrix' src='/static/images/PM-kyokushin.png' alt='performance image of site'></img> |
+<style>
+    table {
+        border-collapse: collapse;
+    }
 
-Et amet convenire imperdiet mel. Id legere alterum concludaturque vel, enim putant in qui, vis eu nibh rebum eruditi. Modo adhuc invenire cu nam, prompta scriptorem ne qui. Est habeo augue cu, no eum dicta saperet. Ne soluta disputando mediocritatem duo, id nec consul quaestio dissentias, ad vim viderer numquam epicurei.
+    th {
+        display:none;
+    }
 
-Malis velit efficiendi vix an. Et modo accumsan eos, vide sententiae suscipiantur id vis! Alia democritum est ne, nec clita doctus moderatius an, te vim mucius menandri. Elit clita soluta id pro, eam tota disputando efficiantur te. Qui ea unum nostrud, essent euismod nec eu. Vel fabulas nostrum pericula ei!
+    td {
+        border: 1px solid grey;    
+        padding: 0.5rem;
+        font-size: 1.0rem;
+    }
 
-Oblique adipisci definitiones ad mei, augue ocurreret inciderint ut mea. Erant laudem verterem ea eum. Falli pertinax duo et! Possit instructior his cu, in pro velit dicant altera! Dolor iudico aliquam ut quo! Vix tempor maiestatis in, mei mutat tollit molestiae ex, ex mazim docendi assueverit nec.
+    b {
+        color:blue;
+    }
 
-No sit vidit alterum voluptatibus, cu nec movet regione eruditi. Quo et dicta omnes! Ad nam dolores appellantur? Est et solet aliquid, vix erant tincidunt rationibus ea, qui idque mediocrem ex. Ius no affert nostrum, id natum prompta inermis mea, ea usu dicam fabellas. Legimus definiebas cu eos.
+    h5 {
+        color:blue;
+    }
 
-Et nam eleifend deterruisset, ea laudem scriptorem quo. Ornatus volumus scripserit eu vis, te nec vocibus ancillae epicurei, no dolore partiendo pri. Omnium vocent cu mea, id est sale iisque? Mea cu minim dissentias, an stet putant has. Sed scripta prodesset te! Ei alienum aliquando vim, vim ne purto probo ridens?
-
-Per ei iriure sententiae, platonem scribentur suscipiantur at est. Cu sed purto adversarium, id iisque omittantur consectetuer his, sea munere intellegat ex! An liber praesent mea, viris temporibus ex sea, zril sanctus gubergren vix ex. Ea novum deseruisse his.
-
-Duis ullum ne has, dico molestie partiendo et cum, ut pri hinc euismod? Possit torquatos mel et, lucilius necessitatibus mei eu? Erant recusabo expetendis ex vim, quando habemus ius an? Usu eu case cetero torquatos. Ferri consulatu vituperatoribus quo te, eu case nihil pertinacia vel, eam id fabulas apeirian. Cu molestiae dissentias vel, at purto denique referrentur usu?
-
-Mea ut ignota lobortis, odio adolescens ea his, altera delenit id eam. Ne epicuri scripserit nam! Ut posidonium contentiones sea. Ex choro philosophia duo? Justo sonet lobortis vim at!
-
-Cu error atomorum pri. Prima populo audiam eos id, nam partem repudiandae ad. Cibo lobortis facilisis ex his. Luptatum torquatos ea per. Cu qui modo scripta pertinax!
-
-Quas legere intellegam id pri, nec possit doctus antiopam at, cum habemus disputando efficiantur ut? Mea vocent reprimique referrentur no, qui omnes detraxit delicata an. Nostrud denique delicata vis ad, te sensibus electram gubergren nec! Mea falli veritus id, eos inimicus prodesset te!
+    .matrix {
+        width: 100%;
+    }
+   
+</style>
