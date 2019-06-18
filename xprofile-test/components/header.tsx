@@ -149,54 +149,5 @@ function Header({ currentPage }) {
 export default Header
 
 /*
-function getComments() {
-        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
 
-        doGet('http://localhost:3002/tools/comments/sushantagrawal.com/projects', {
-            token: token
-        })
-    }
-
-    function deleteComment() {
-        const payload = {
-            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY'
-            , commentId: 41
-        }
-        doPost('http://localhost:3002/tools/comments/sushantagrawal.com', payload)
-    }
-
-    function newComment() {
-        const payload = {
-            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY',
-            text: 'id:new-comment',
-            values:
-            {
-                parentId: ''
-                , mname: 'Anshuman'
-                , email: 'ans@gmail.com'
-                , visitorSite: 'www.abc.com'
-                , comment: 'This is a wonderful comment'
-            }
-        }
-        doPost('http://localhost:3002/tools/comments/sushantagrawal.com/projects', payload)
-    }
-
-    function doPost(url, payload) {
-        axios.post(url, payload)
-            .then(res => {
-                console.log(res)
-            }).catch(e => {
-                console.log((e.response && e.response.data.message) || e.message)
-            })
-    }
-
-    function doGet(url, params) {
-        axios.get(url, {
-            params: params
-        }).then(res => {
-            console.log(res.data)
-        }).catch(e => {
-            console.log((e.response && e.response.data.message) || e.message)
-        })
-    }
 */
