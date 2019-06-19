@@ -90,8 +90,8 @@ const StyledMain = styled.div`
 		line-height: 2rem;
 		font-size: 1.2rem;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
-		padding-left:2rem;
-		padding-right:2.3rem;
+		margin-left:2rem;
+		margin-right:2.3rem;
 		text-align: justify;
 	`
 const ProfileImage = styled.img`

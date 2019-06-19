@@ -99,8 +99,8 @@ English, Hindi and Bengali.
 
 <style>
     .q {
-        color: maroon;
-        font-weight: 900;
+        /* color: maroon; */
+        font-weight: bold;
     }
 
     p {
