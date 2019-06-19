@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Header from './header';
 import Footer from './footer'
 import ReactMarkdown from 'react-markdown/with-html';
@@ -87,11 +87,9 @@ const StyledRight = styled.div`
 const StyledMain = styled.div`
 		grid-area: main;
 		background-color:#fff;
-		/* color:#696969; */
 		line-height: 2rem;
 		font-size: 1.2rem;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
-		/* font-family:serif, 'sans-serif', script, decorative; */
 		padding-left:2rem;
 		padding-right:2.3rem;
 		text-align: justify;
@@ -113,9 +111,5 @@ const StyledLeft = styled.div`
 
 export default Layout;
 /*
-{content && <StyledMain>
-				<ReactMarkdown escapeHtml={false} source={content} />
-				{ <div>{children}</div> }
-				</StyledMain>}
-				{children && <StyledMain>{children}</StyledMain>}
+
 */

@@ -1,5 +1,4 @@
 ### Resume of Sushant
-
 | | |
 | :---  |   :---   |
 |Experience | Professionsl hands-on experience of 14+ years. Developing software since 3 decades. |
@@ -12,7 +11,6 @@
 |               | Others: GraphQL, Apollo, d3.js, socket.io, SharePoint, WPF, WCF, REST, LifeRay, Crystal reports, Jasper reports, Office 365 |
 | Other qualities | Individual contributor,  Team worker, Technical content and blog writer, Has good english communication skills, Full stack developer, Hard worker with intelligence, Can roll out complete complex system starting from requirement gathering to production deployment, Good at designing of reusable frameworks and complex algorithms, |
 |Intrested in | Design and implementation of mission critical complex ERP, e-commerce, B2B and B2C systems. Designing of frameworks. Robitics and drone programming. Artificial intelligence and machine learning|
-
 ##### Professional experience of Sushant
 <div class='box'>
     <b>Feb 2018 - June 2019:</b> Part time CTO (Chief Technology Officer) in a multinational company. Worked on React.js, Gatsby, Next.js, PostgreSql, Node.js, GraphQL, Flutter, Dart, Angular 6, Docker
@@ -76,24 +74,27 @@
 <style>
     table {
         border-collapse: collapse;
+        width:100%;
     }
     th {
         display:none;
     }
     td {
         border: 1px solid grey;    
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
         font-size: 1.0rem;
     }
 
     p {
         font-size: 1rem;
         margin-top:0.5rem;
+        /* margin: 1rem; */
         line-height: 1.5rem;
     }
 
-    b{
+    b {
         color:blue;
+        /* margin: 1rem; */
     }
    .highlight {
        color: maroon;
@@ -101,7 +102,7 @@
    }
    .box {
        border: 1px solid grey;
-       padding: 1rem;
+       /* padding: 1rem; */
        font-size:1rem;
    }
 </style>
