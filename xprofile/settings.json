@@ -1,8 +1,8 @@
 {
-    "emailHost": "http://chisel.cloudjiffy.net/email",
+    "emailHost": "https://chisel.cloudjiffy.net/email",
     "to": "capitalch@gmail.com",
     "subject": "Mail from Sushant Agrawal's profile site",
-    "hitCountUrl": "http://chisel.cloudjiffy.net/tools/analytics/hitcount/sushantagrawal.com",
+    "hitCountUrl": "https://chisel.cloudjiffy.net/tools/analytics/hitcount/sushantagrawal.com",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjoic3VzaGFudGFncmF3YWwuY29tIiwiaWF0IjoxNTYwMDcxOTEwfQ.d89Oe7Qm9bajI2qFlm0h6z1aIky6s3u8PXmcKwPyKfY",
-    "commentsUrl": "http://chisel.cloudjiffy.net/tools/comments/sushantagrawal.com"    
+    "commentsUrl": "https://chisel.cloudjiffy.net/tools/comments/sushantagrawal.com"    
 }
