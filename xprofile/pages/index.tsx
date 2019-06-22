@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import GlobalStyle from '../handy/globalStyle'
@@ -19,8 +19,25 @@ const slugMapping = {
 	qa: 'Questions and answers by Sushant',
 
 }
-
+//, pageComments
 const IndexPage = ({ content, slug, pageComments }) => {
+	// let [pageComments, setPageComments] = useState([])
+	// useEffect(() => {
+	// 	console.log('useEffect')
+	// 	const url = `${settings.commentsUrl}/${slug}`
+	// 	const params = {
+	// 		token: settings.token
+	// 	}
+	// 	axios.get(url
+	// 		, {
+	// 			params: params
+	// 		}
+	// 	).then(res => {
+	// 		console.log(res.data)
+	// 		setPageComments([...res.data])
+	// 	}).catch(e=>console.log(e))
+
+	// },[])
 	return (
 		<div>
 			<GlobalStyle />
@@ -43,9 +60,11 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	}
 	let pageComments;
 	try {
-		pageComments = (await axios.get(url, {
-			params: params
-		})).data
+		pageComments = (await axios.get(url
+			, {
+				params: params
+			}
+		)).data
 	} catch (e) {
 		console.log((e.response && e.response.data.message) || e.message)
 	}
@@ -53,7 +72,7 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	return {
 		content, slug
 		,
-		pageComments 
+		pageComments
 	};
 };
 

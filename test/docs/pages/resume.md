@@ -125,6 +125,19 @@ Worked as developer in at least 6 projects in Angular 4 / 5 / 6 platform for a U
 
 4) Developed a reporting sysyem in C# using Dev Express
 
+<!-- <div class = 'box'>
+    <b>Feb 2018 - June 2019:</b> 
+    <p><br></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p> </p>
+    <p></p>
+    <p></p>
+    <p></p>
+</div> -->
+
 <style>
     table {
         border-collapse: collapse;
@@ -140,11 +153,11 @@ Worked as developer in at least 6 projects in Angular 4 / 5 / 6 platform for a U
     }
 
     p {
-        /* font-size: 1.2rem; */
-        margin-top: 0.5rem;
+        font-size: 1.1rem;
+        margin-top:0.5rem;
         /* padding:1rem; */
         /* margin: 1rem; */
-        /* line-height: 1.8rem; */
+        line-height: 1.5rem;
     }
 
     b {

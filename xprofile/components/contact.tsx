@@ -77,7 +77,11 @@ function Contact() {
 
 		axios.post(settings.emailHost, data)
 			.then(() => resetForm())
-			.catch(err => console.log(err));
+			.catch(
+				err => {
+					console.log(err);
+				}
+			);
 	}
 
 	function resetForm() {
