@@ -19,7 +19,6 @@ function Footer() {
 const StyledFooter = styled.div`
     font-size: 0.8rem;
     text-align:right;
-	color:lightgrey;
 `
 
 export default Footer
