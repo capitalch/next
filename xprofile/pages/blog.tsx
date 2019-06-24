@@ -42,6 +42,7 @@ BlogPage.getInitialProps = async ({ asPath }) => {
                 // extensions: [showdownHighlight]
             }
         );
+        // const d = (await require(`../docs/blogs/${slug}.md`)).default;
         const d = (await require(`../docs/blogs/${slug}.md`)).default;
         const content = converter.makeHtml(d);
         const meta = converter.getMetadata();
