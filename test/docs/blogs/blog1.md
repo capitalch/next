@@ -1,9 +1,9 @@
 ---
-title: Setup router based static IP1 in windows server
+title: Setup router based static IP in windows server
 category: Infrastructure
 ---
 
-## How to setup router based static IP1 in windows server 
+## How to setup router based static IP in windows server 
 
 Over a weekend I was trying out to setup a windows server 2008 with TP-Link wireless router. The purpose was I should be able to connect to the server through static IP from anywhere, at the same time I wanted a wireless network in the office. It took me few hours and I thought that it could be a nice blog article, although this is not my core field. Instead of TP-Link router you can use any other router.
 
