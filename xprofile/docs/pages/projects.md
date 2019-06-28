@@ -90,7 +90,7 @@ Here I display some of my recent key projects and discuss them
 
     td {
         border: 1px solid lightGrey;    
-        padding: 0.2rem;
+        padding: 0.3rem;
         font-size: 1.0rem;
     }
 
