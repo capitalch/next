@@ -188,7 +188,7 @@ const StyledPerson = styled.img`
 const CommentsCount = styled.span`
     margin-left:1rem;
     font-size: 1.0rem;
-    color:red;
+    color:#990033;
 `
 const StyledMessage = styled.div`
     background-color:#fff;
@@ -228,7 +228,7 @@ const StyledForm = styled.form`
 `
 
 const StyledName = styled.span`
-    color:red;
+    color: #336600;
     margin-right:0.5rem;
 `
 

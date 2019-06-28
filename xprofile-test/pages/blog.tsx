@@ -9,13 +9,13 @@ import axios from 'axios'
 import showdown from 'showdown'
 import settings from '../settings.json'
 
-import Prism from 'prismjs';
+// import Prism from 'prismjs';
 import './prism.scss'
 
 function BlogPage({ content, meta, pageComments }) {
-    useEffect(() => {
-        Prism.highlightAll();
-    }, [])
+    // useEffect(() => {
+    //     Prism.highlightAll();
+    // }, [])
 
     return (
         <div>
@@ -27,22 +27,30 @@ function BlogPage({ content, meta, pageComments }) {
                 <div dangerouslySetInnerHTML={{ __html: content }} />
                 <Comments pageComments={pageComments}></Comments>
             </Layout>
-            
+
         </div>
     );
 }
 
-BlogPage.getInitialProps = async ({ asPath }) => {
+BlogPage.getInitialProps = async ({ req, res, asPath }) => {
     try {
+        const isServer = !!req;
         const slug = asPath.split('/')[2];
         const converter = new showdown.Converter(
             {
-                metadata: true
-                //,
-                // extensions: [showdownHighlight]
+                metadata: true  //,   // extensions: [showdownHighlight]
             }
         );
-        const d = (await require(`../docs/blogs/${slug}.md`)).default;
+
+        // const d = (await require(`../docs/blogs/${slug}.md`)).default;
+        let d = {}
+        console.log('here:1')
+        if (isServer) {
+            d = res.locals.blog
+        } else {
+            d = (await axios.get(`/blog/${slug}?client=true`)).data
+        }
+        console.log('data: ',d)
         const content = converter.makeHtml(d);
         const meta = converter.getMetadata();
 

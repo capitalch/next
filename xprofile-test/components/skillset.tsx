@@ -69,7 +69,7 @@ function getRandomColor() {
 
 const StyledText = styled.div`
 	margin-bottom:1rem;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	margin-left:1rem;
 `
 

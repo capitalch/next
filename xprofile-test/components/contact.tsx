@@ -77,7 +77,11 @@ function Contact() {
 
 		axios.post(settings.emailHost, data)
 			.then(() => resetForm())
-			.catch(err => console.log(err));
+			.catch(
+				err => {
+					console.log(err);
+				}
+			);
 	}
 
 	function resetForm() {
@@ -99,15 +103,12 @@ const Form = styled.form`
 		color: red;
 	}
     input{
-        /* min-width:180px; */
 		width: 100%;
 		font-size:1rem;
 		line-height: 1.3rem;
     }
     textarea{
-        /* min-width:180px; */
 		width:100%;
-        /* margin-top: 1rem; */
 		font-size:1rem;
     }
     .notes{
