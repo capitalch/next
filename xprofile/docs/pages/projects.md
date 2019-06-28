@@ -7,7 +7,7 @@ Here I display some of my recent key projects and discuss them
 ##### 1. <a target='_blank' href='http://sushantagrawal.com'>sushantagrawal.com</a> Portal for portfolio management 
 |  |  |
 |:-- | :---|
-| URL | <a target='_blank' href='http://sushantagrawal.com>sushantagrawal.com</a> |
+| URL | <a target='_blank' href='http://sushantagrawal.com'>sushantagrawal.com</a> |
 | Motivation | To create a dynamic content management seo compatible portfolio. New articles to be placed in folders and they would be view ready without any re-compilation or restart of server |
 | Technology | React Next.js, styled-components, TypeScript, markdown files, html5, ES6, node.js Express, PostgreSql, Docker cloud deployment |
 | Development effort | 200 man hours or 5 man weeks |

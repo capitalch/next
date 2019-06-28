@@ -7,8 +7,5 @@ After passing out from engineering college I joined my family business. My first
 
 Since year 2017 I mainly worked on open source technology and over the years I developed tremendous confidence in full stack development as invidual contributor and consultant and also as team player while developing severals complex softwares in domain of financial accounting, legal, medical and HR. I am hands-on for over 3 decades and posses a success rate of +95%.
 
-My dream is to work upon mission critical challenging software projects where I am able to utilize my full power of mind. I can be contacted at capitalch@gmail.com for remote software development work.
+I work as independent contractor from remote for mission critical software projects I can be contacted at capitalch@gmail.com for remote software development work.
 
-<style> 
-   
-</style>
