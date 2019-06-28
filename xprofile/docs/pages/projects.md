@@ -4,7 +4,7 @@
 
 Here I display some of my recent key projects and discuss them
 
-##### 1. <a target='_blank' href='http://chisel.cloudjiffy.net:11007/home'>sushantagrawal.com</a> Portal for portfolio management 
+##### 1. <a target='_blank' href='http://sushantagrawal.com'>sushantagrawal.com</a> Portal for portfolio management 
 |  |  |
 |:-- | :---|
 | URL | <a target='_blank' href='http://sushantagrawal.com>sushantagrawal.com</a> |
