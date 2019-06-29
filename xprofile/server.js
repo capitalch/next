@@ -54,15 +54,36 @@ app.prepare().then(() => {
 		res.status(200).sendFile('robots.txt', robotsOptions)
 	));
 
+	// server.get('/skill',(req,res)=>{
+
+	// })
+
 	server.get('/blogs', (req, res) => {
 		const folderPath = path.join(__dirname, 'docs', 'blogs');
 		getBlogs(req, res, app, folderPath, req.query.client)
 	});
 
+	server.get('/:slug', (req, res) => {
+		const slug = req.params.slug;
+		const client = req.query.client;
+		const folderPath = path.join(__dirname, 'docs');
+		const filePath = path.join(folderPath, 'skills.json');
+		if (slug === 'skillset') {
+			const skills = fs.readFileSync(filePath, 'utf8');
+			if(client){
+				res.status(200).json({skills:skills})
+			} else {
+				res.locals.skills = skills;
+			}			
+			// console.log(skills);
+		}
+		return app.render(req, res, '/');
+	})
+
 	server.get('/blog/:slug', (req, res) => {
 		const slug = req.params.slug;
-		const folderPath = path.join(__dirname, 'docs','blogs');
-		const filePath = path.join(folderPath,`${slug}.md`);
+		const folderPath = path.join(__dirname, 'docs', 'blogs');
+		const filePath = path.join(folderPath, `${slug}.md`);
 		const content = fs.readFileSync(filePath, 'utf8').split('---')[2]; //to omit front matter
 		res.locals.content = content;
 		const { data } = matter.read(filePath);
@@ -79,9 +100,9 @@ app.prepare().then(() => {
 		console.log(`> Ready on http://localhost:${port}`);
 	});
 })
-.catch((e) => {
-	console.log(e);
-})
+	.catch((e) => {
+		console.log(e);
+	})
 
 
 /*

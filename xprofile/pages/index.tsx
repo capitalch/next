@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Head from '../components/head'
 import Layout from '../components/layout'
 import GlobalStyle from '../handy/globalStyle'
@@ -19,40 +19,34 @@ const slugMapping = {
 	qa: 'Questions and answers by Sushant',
 
 }
-//, pageComments
-const IndexPage = ({ content, slug, pageComments }) => {
-	// let [pageComments, setPageComments] = useState([])
-	// useEffect(() => {
-	// 	console.log('useEffect')
-	// 	const url = `${settings.commentsUrl}/${slug}`
-	// 	const params = {
-	// 		token: settings.token
-	// 	}
-	// 	axios.get(url
-	// 		, {
-	// 			params: params
-	// 		}
-	// 	).then(res => {
-	// 		console.log(res.data)
-	// 		setPageComments([...res.data])
-	// 	}).catch(e=>console.log(e))
-
-	// },[])
+const IndexPage = ({ content, slug, pageComments, skills }) => {
 	return (
 		<div>
 			<GlobalStyle />
 			<Head title={slugMapping[slug]} />
-			{getPageContent({ content, slug, pageComments })}
+			{getPageContent({ content, slug, pageComments, skills })}
 		</div>
 	);
 };
 
-IndexPage.getInitialProps = async ({ asPath }) => {
+IndexPage.getInitialProps = async ({ res, asPath }) => {
 	let slug = asPath.slice(1) || 'home'; // remove first char (/) from asPath
 
 	(!allPages[slug]) && (slug = 'home');
 	let content;
 	(allPages[slug].isMDFile) && (content = (await import(`../docs/pages/${slug}.md`)).default)
+
+	let skills = {}
+	if (res) {
+		if (slug === 'skillset') {
+			skills = res.locals.skills
+		}
+	} else {
+		if (slug === 'skillset') {
+			const d = (await axios.get('/skillset?client=true')).data
+			skills = d.skills
+		}
+	}
 
 	const url = `${settings.commentsUrl}/${slug}`
 	const params = {
@@ -70,18 +64,19 @@ IndexPage.getInitialProps = async ({ asPath }) => {
 	}
 
 	return {
-		content, slug
-		,
-		pageComments
+		content, 
+		slug,
+		pageComments,
+		skills
 	};
 };
 
-function getPageContent({ content, slug, pageComments }) {
+function getPageContent({ content, slug, pageComments, skills }) {
 	let Ret;
 	if (allPages[slug].isMDFile) {
 		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug} content={content}><Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	} else {
-		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug}>{allPages[slug].component()} <Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
+		Ret = <Layout isBanner={allPages[slug].isBanner} currentPage={slug}>{allPages[slug].component(skills)} <Comments pageComments={pageComments} slug={slug}></Comments></Layout>;
 	}
 	return Ret;
 }
@@ -91,7 +86,7 @@ const allPages = {
 	about: { isBanner: true, isMDFile: true },
 	contact: { isBanner: true, isMDFile: false, component: () => <Contact></Contact> },
 	resume: { isBanner: false, isMDFile: true },
-	skillset: { isBanner: false, isMDFile: false, component: () => <Skillset></Skillset> },
+	skillset: { isBanner: false, isMDFile: false, component: (skills) => <Skillset skills = {skills}></Skillset> },
 	academics: { isBanner: false, isMDFile: true },
 	projects: { isBanner: false, isMDFile: true },
 	qa: { isBanner: false, isMDFile: true }//,

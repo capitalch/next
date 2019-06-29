@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import skills from '../handy/skills.json'
+import skills from '../docs/skills.json'
 import diction from '../diction.json'
 
 
-const  Skillset=() => {
+const  Skillset=({skills1}) => {
 	let runningIndex = 0;
-	// console.log(skills)
 	function Skill({ allSkills, skillGroup }) {
 		return allSkills[skillGroup].map((skill, index) => {
 			runningIndex++;
