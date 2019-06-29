@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 import axios from 'axios'
 import styled, { keyframes } from 'styled-components'
-import { rollIn, fadeIn, fadeOut } from 'react-animations'
+import { rollIn } from 'react-animations'
 import settings from '../settings.json'
 import diction from '../diction.json'
 

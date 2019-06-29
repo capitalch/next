@@ -1,5 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
+
 
 function Blogs({ blogs }) {
     return <div>
@@ -10,7 +12,8 @@ function Blogs({ blogs }) {
                 {blogs[cat].map((obj, index) => {
                     return <StyledDiv key={index}>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <StyledAnchor href={`/blog/${obj.slug}`}>{obj.title}</StyledAnchor>
+                        {/* <StyledAnchor href={`/blog/${obj.slug}`}>{obj.title}</StyledAnchor> */}
+                        <Link href={`/blog/${obj.slug}`}><StyledAnchor>{obj.title}</StyledAnchor></Link>
                     </StyledDiv>
                 })}
             </div>
@@ -32,6 +35,7 @@ const StyledAnchor = styled.a`
     line-height:1rem;
     text-decoration:none;
     font-weight:700;
+    cursor:pointer;
     :visited {
         color: grey;
     }

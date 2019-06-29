@@ -2,9 +2,11 @@ const express = require('express');
 const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
+const path = require('path');
 const port = parseInt(process.env.PORT, 10) || 3001;
 const dev = true;//process.env.NODE_ENV !== 'production';
 const app = next({ dev });
+const matter = require('gray-matter');
 const handle = app.getRequestHandler();
 
 const getFiles = (source) =>
@@ -22,20 +24,21 @@ app.prepare().then(() => {
 	server.use(compression())
 	server.get('/posts', (req, res) => {
 		const posts = getFiles(__dirname.concat('/docs'));
-		console.log('posts');
-		res.locals.posts = posts;
-		return app.render(req, res, '/posts');
-	});
-
-	server.get('/clientposts', (req, res) => {
-		const posts = getFiles(__dirname.concat('/docs'));
-		console.log('clientposts');
-		res.status(200).json({ posts: posts });
+		const client = req.query.client;
+		if (client) {
+			res.status(200).json({ posts: posts });
+		} else {
+			res.locals.posts = posts;
+			return app.render(req, res, '/posts');
+		}
 	});
 
 	server.get('/docs/:slug', (req, res) => {
 		const slug = req.params.slug;
 		res.locals.slug = slug;
+		const folderPath = path.join(__dirname, 'docs');
+		const content = fs.readFileSync(path.join(folderPath, `${slug}.md`), 'utf8');
+		res.locals.content = content;
 		return app.render(req, res, '/post');
 	});
 

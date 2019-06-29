@@ -59,28 +59,15 @@ app.prepare().then(() => {
 		getBlogs(req, res, app, folderPath, req.query.client)
 	});
 
-	server.get('/:slug', (req, res) => {
-		const slug = req.params.slug ;
-		// res.locals.slug = slug;
-		console.log(slug)
-		return app.render(req, res, '/');
-	})
-
 	server.get('/blog/:slug', (req, res) => {
 		const slug = req.params.slug;
-		const client = req.query.client ||true ;
-		console.log('client:',client);
-		const blog = fs.readFileSync(path.join(folderPath, `${slug}.md`),'utf8');
-		// console.log(blog);
-		// console.log('2')
-		if (client) {
-			res.json(blog);
-			console.log('CLIENT');
-		} else {
-			res.locals.blog = blog;
-			console.log('SERVER');
-			return handle(req, res, '/blog/slug');
-		}
+		const folderPath = path.join(__dirname, 'docs','blogs');
+		const filePath = path.join(folderPath,`${slug}.md`);
+		const content = fs.readFileSync(filePath, 'utf8').split('---')[2]; //to omit front matter
+		res.locals.content = content;
+		const { data } = matter.read(filePath);
+		res.locals.title = data.title;
+		return app.render(req, res, '/blog');
 	})
 
 	server.get('*', (req, res) => {
