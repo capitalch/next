@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import skills from '../docs/skills.json'
+import skills1 from '../docs/skills.json'
 import diction from '../diction.json'
 
 
-const  Skillset=({skills1}) => {
+const Skillset = ({ skills }) => {
 	let runningIndex = 0;
 	function Skill({ allSkills, skillGroup }) {
 		return allSkills[skillGroup].map((skill, index) => {
@@ -14,7 +14,7 @@ const  Skillset=({skills1}) => {
 					<td>{runningIndex}</td>
 					<td>{skill.name}</td>
 					<td>
-						<StyledDiv style={{ width: `${skill.level * 10}%` }}></StyledDiv>
+						<StyledDiv style={{ width: `${skill.level * 10}%`, backgroundColor:`${getColor(skill.level)}` }}></StyledDiv>
 						<span>{skill.level}</span>
 					</td>
 					<td className='media-768'><img src={skill.handsOn ? '/static/images/yes-20px.png' : '/static/images/no-20px.png'}></img></td>
@@ -62,8 +62,24 @@ const  Skillset=({skills1}) => {
 	return Container;
 }
 
-function getRandomColor() {
-	return 'hsla(' + Math.floor(Math.random() * 360) + ', 100%, 70%, 1)';
+// function getRandomColor() {
+// 	return 'hsla(' + Math.floor(Math.random() * 360) + ', 100%, 70%, 1)';
+// }
+
+function getColor(value) {
+	const colorScheme = {
+		1: 'grey',
+		2: 'yellow',
+		3: 'green',
+		4: 'blue',
+		5: 'black',
+		6: 'magenta',
+		7: 'cyan',
+		8: 'red',
+		9: 'violet',
+		10: 'red'
+	}
+	return(colorScheme[value])
 }
 
 const StyledText = styled.div`
@@ -129,7 +145,7 @@ const StyledDiv = styled.div`
 	height: 10px;
 	border: 2px solid yellow;
 	vertical-align: middle;
-	background-color: ${() => getRandomColor()};
+	/* background-color: ${() => getRandomColor()}; */
 	margin-left: 0.3rem;
 `;
 

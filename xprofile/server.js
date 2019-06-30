@@ -1,4 +1,5 @@
 const express = require('express');
+const moment= require('moment');
 const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
@@ -18,18 +19,22 @@ function getBlogs(req, res, app, folderPath, client) {
 		const blogs = files.reduce((a, c) => {
 			if (!c.isDirectory) {
 				const filePath = path.join(folderPath, c);
-				const mtime = fs.statSync(filePath).mtimeMs;
-				const { data } = matter.read(filePath);
+				let { data, content } = matter.read(filePath);
+				content = content.split(' ').slice(0,25).join(' ');
+				const birthTime = fs.statSync(filePath).birthtime;
+				const createdOn = data.createdOn || moment(birthTime).format('YYYY-MM-DD');
 				const cat = data.category;
 				a[cat] || (a[cat] = []);
 				a[cat].push({
 					title: data.title
 					, slug: c.split('.')[0]
-					, mtime: mtime
+					, createdOn: createdOn
+					, content: content
 				})
 				return a
 			}
-		}, {})
+		}, {});
+		console.log(blogs);
 		if (client) {
 			res.json(blogs)
 		} else {

@@ -1,6 +1,7 @@
 ---
 title: Setup router based static IP in windows server
 category: Infrastructure
+createdOn: 2019-01-30
 ---
 
 ## How to setup router based static IP in windows server 

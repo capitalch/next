@@ -39,12 +39,12 @@ IndexPage.getInitialProps = async ({ res, asPath }) => {
 	let skills = {}
 	if (res) {
 		if (slug === 'skillset') {
-			skills = res.locals.skills
+			skills = JSON.parse(res.locals.skills)
 		}
 	} else {
 		if (slug === 'skillset') {
 			const d = (await axios.get('/skillset?client=true')).data
-			skills = d.skills
+			skills = JSON.parse(d.skills)
 		}
 	}
 
