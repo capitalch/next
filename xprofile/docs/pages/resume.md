@@ -1,4 +1,4 @@
-### Resume of Sushant
+# Resume of Sushant
 | | |
 | :---  |   :---   |
 |Experience | Professionsl hands-on experience of 14+ years. Developing software since 3 decades. |
@@ -162,4 +162,8 @@ Worked as developer in at least 6 projects in Angular 4 / 5 / 6 platform for a U
        /* padding: 1rem; */
        font-size:1rem;
    }
+
+   h1 {
+        font-size: 1.5rem;
+    }
 </style>

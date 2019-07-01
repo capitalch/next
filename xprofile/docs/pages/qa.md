@@ -1,4 +1,4 @@
-### Questions and answers
+# Questions and answers from Sushant Agrawal
 
 <p class='q'>Q. You claim to possess over 50 skills which are mixture of client and server side technologies. How is it possible for one person to maintain so many skill sets?</p>
 
@@ -97,5 +97,9 @@ English, Hindi and Bengali.
     p {
         font-size: 1rem;
         margin-top: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
     }
 </style>

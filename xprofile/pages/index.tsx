@@ -9,14 +9,14 @@ import settings from '../settings.json'
 import Comments from '../components/comments'
 
 const slugMapping = {
-	home: 'Home',
-	about: 'About Sushant',
-	contact: 'Contact details of Sushant',
-	resume: 'Resume of Sushant',
-	skillset: 'Skillsets of Sushant',
-	academics: 'Academics of Sushant',
-	projects: 'Projects done by Sushant',
-	qa: 'Questions and answers by Sushant',
+	home: 'Home for Sushant Agrawal',
+	about: 'About Sushant Agrawal',
+	contact: 'Contact details of Sushant Agrawal',
+	resume: 'Resume of Sushant Agrawal',
+	skillset: 'Skillsets of Sushant Agrawal',
+	academics: 'Academics of Sushant Agrawal',
+	projects: 'Projects done by Sushant Agrawal',
+	qa: 'Questions and answers by Sushant Agrawal',
 
 }
 const IndexPage = ({ content, slug, pageComments, skills }) => {

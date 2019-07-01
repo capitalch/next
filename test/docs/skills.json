@@ -1,0 +1,430 @@
+{
+	"Front end": [
+		{
+			"name": "React core",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "React Gatsby",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Two projects"
+		},
+		{
+			"name": "React Next.js",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Two projects"
+		},
+		{
+			"name": "Angular",
+			"level": "7",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "HTML5",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "CSS",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Javascript",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "React mobile",
+			"level": "4",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Practised"
+		},
+		{
+			"name": "Flutter",
+			"level": "7",
+			"handsOn": false,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Ionic",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Three projects"
+		}
+	],
+	"Server side": [
+		{
+			"name": "C#",
+			"level": "8",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Java",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Python",
+			"level": "5",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Practised"
+		},
+		{
+			"name": "Node.js",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "asp.net",
+			"level": "5",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		}
+	],
+	"Databases": [
+		{
+			"name": "Sql Server",
+			"level": "7",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "PostgreSQL",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "MySql",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Practised"
+		},
+		{
+			"name": "Oracle",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		},
+		{
+			"name": "MongoDB",
+			"level": "4",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Practised"
+		},
+		{
+			"name": "RethinkDB",
+			"level": "5",
+			"handsOn": false,
+			"interested": true,
+			"projects": "One project"
+		}
+	],
+	"API": [
+		{
+			"name": "GraphQL Apollo",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Practised"
+		},
+		{
+			"name": "Node.js",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		}
+	],
+	"Javascript": [
+		{
+			"name": "moment.js",
+			"level": "7",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Lodash",
+			"level": "7",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "socket.io",
+			"level": "8",
+			"handsOn": false,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "jquery",
+			"level": "7",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "d3.js",
+			"level": "3",
+			"handsOn": false,
+			"interested": true,
+			"projects": "One project"
+		}
+	],
+	"Cloud": [
+		{
+			"name": "Docker",
+			"level": "6",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Two projects"
+		},
+		{
+			"name": "Serverless functions",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Cloud computing",
+			"level": "4",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Practised"
+		}
+	],
+	"CMS": [
+		{
+			"name": "SharePoint",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Office365",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Practised"
+		},
+		{
+			"name": "Wordpress",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Practised"
+		},
+		{
+			"name": "Liferay",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		}
+	],
+	"Tools": [
+		{
+			"name": "Jasper reports",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		},
+		{
+			"name": "Crystal reports",
+			"level": "5",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		},
+		{
+			"name": "Microsoft SSRS",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		},
+		{
+			"name": "Microsoft SSIS",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Two projects"
+		}
+	],
+	"Domain knowledge": [
+		{
+			"name": "Algorithms",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Framework designs",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Financial accounting",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Payroll",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Legal",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Inventory",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Three projects"
+		},
+		{
+			"name": "E-commerce",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Medical",
+			"level": "5",
+			"handsOn": false,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "Engineering design",
+			"level": "4",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		},
+		{
+			"name": "Repairs and service",
+			"level": "7",
+			"handsOn": true,
+			"interested": true,
+			"projects": "One project"
+		},
+		{
+			"name": "HR management",
+			"level": "7",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Two projects"
+		}
+	],
+	"Operating systems": [
+		{
+			"name": "Windows",
+			"level": "7",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Linux Ubuntu",
+			"level": "6",
+			"handsOn": false,
+			"interested": true,
+			"projects": "Two projects"
+		},
+		{
+			"name": "Linux Centos",
+			"level": "5",
+			"handsOn": false,
+			"interested": false,
+			"projects": "One project"
+		}
+	],
+	"Outdated": [
+		{
+			"name": "Powerbuilder",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "SQL Anywhere",
+			"level": "8",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Foxpro, dbase, clipper",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "WPF",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		},
+		{
+			"name": "Windows forms",
+			"level": "6",
+			"handsOn": false,
+			"interested": false,
+			"projects": "Many projects"
+		}
+	]
+}

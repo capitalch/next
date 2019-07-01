@@ -1,4 +1,4 @@
-### Projects showcase of Sushant
+# Projects showcase of Sushant Agrawal
 
 ---
 
@@ -104,6 +104,10 @@ Here I display some of my recent key projects and discuss them
 
     .matrix {
         width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
     }
    
 </style>

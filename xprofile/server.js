@@ -59,10 +59,6 @@ app.prepare().then(() => {
 		res.status(200).sendFile('robots.txt', robotsOptions)
 	));
 
-	// server.get('/skill',(req,res)=>{
-
-	// })
-
 	server.get('/blogs', (req, res) => {
 		const folderPath = path.join(__dirname, 'docs', 'blogs');
 		getBlogs(req, res, app, folderPath, req.query.client)
@@ -79,8 +75,7 @@ app.prepare().then(() => {
 				res.status(200).json({skills:skills})
 			} else {
 				res.locals.skills = skills;
-			}			
-			// console.log(skills);
+			}
 		}
 		return app.render(req, res, '/');
 	})

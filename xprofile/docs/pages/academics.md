@@ -1,4 +1,4 @@
-### Academics of Sushant
+# Academics of Sushant
 
 <!-- | Period | Institute | Stream  |
 | :---  |   :---   |      :----  |
@@ -63,5 +63,8 @@ My educational certificates are below:
     }
     p {
         font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
     }
 </style>
