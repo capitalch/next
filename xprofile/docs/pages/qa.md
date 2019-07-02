@@ -1,4 +1,4 @@
-### Questions and answers
+# Questions and answers from Sushant Agrawal
 
 <p class='q'>Q. You claim to possess over 50 skills which are mixture of client and server side technologies. How is it possible for one person to maintain so many skill sets?</p>
 
@@ -26,11 +26,11 @@ Based on my profile client needs to have faith in me. I shall sign proper legal 
 
 <p class='q'>Q. Can you accept an offer of full time employment?</p>
 
-No, not at present. I prefer to work remotely from my own setup without a full time committment.
+No, not at present. I prefer to work remotely from my own setup.
 
 <p class='q'>Q. What is your rate for working in a project?</p>
 
-My rates vary from $10 – $60 per hour based on technology and challenges. For complex work my rates will be higher. For emerging technology  I shall lower my rates. For routine project management and comparatively simple works I may charge as low as $15 per hour. It is negotiable.
+My rates are negotiable which vary from $20 – $60 per hour based on technology and challenges. For complex work my rates will be higher. For emerging technology  I shall lower my rates. For routine project management and comparatively simple works I may charge as $20 per hour.
 
 <p class='q'>Q. What if you don’t know a technology, will you learn that for the project? What will be your rate during the learning phase?</p>
 
@@ -42,7 +42,7 @@ Yes.
 
 <p class='q'>Q. Can you work as project manager or trainer?</p>
 
-I can do so but for maximum 8 hours a week.
+I can do so but for maximum 8 hours a week because that is not my forte.
 
 <p class='q'>Q. Do you also work on fixed priced projects or only on time and material?</p>
 
@@ -58,7 +58,7 @@ I am good in mathematics and logic. I can solve critical business problems. I ca
 
 <p class='q'>Q. Do you work with free lancing portals?</p>
 
-I tried to do so, but was not very successful because I am not a guy from the crowd.
+I tried to do so, but was not very successful because I could not go very low without compromising quality of work.
 
 <p class='q'>Q. What is suggested way for providing maintenance once a project is complete?</p>
 
@@ -97,5 +97,9 @@ English, Hindi and Bengali.
     p {
         font-size: 1rem;
         margin-top: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
     }
 </style>

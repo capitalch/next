@@ -23,14 +23,14 @@
 		},
 		{
 			"name": "Angular",
-			"level": "8",
+			"level": "7",
 			"handsOn": false,
 			"interested": true,
 			"projects": "Many projects"
 		},
 		{
 			"name": "HTML5",
-			"level": "8",
+			"level": "6",
 			"handsOn": true,
 			"interested": true,
 			"projects": "Many projects"
@@ -58,14 +58,14 @@
 		},
 		{
 			"name": "Flutter",
-			"level": "8",
+			"level": "7",
 			"handsOn": false,
 			"interested": true,
 			"projects": "One project"
 		},
 		{
 			"name": "Ionic",
-			"level": "8",
+			"level": "6",
 			"handsOn": false,
 			"interested": false,
 			"projects": "Three projects"
@@ -81,7 +81,7 @@
 		},
 		{
 			"name": "Java",
-			"level": "7",
+			"level": "6",
 			"handsOn": false,
 			"interested": false,
 			"projects": "Many projects"
@@ -155,7 +155,7 @@
 	"API": [
 		{
 			"name": "GraphQL Apollo",
-			"level": "7",
+			"level": "6",
 			"handsOn": true,
 			"interested": true,
 			"projects": "Practised"
@@ -171,7 +171,7 @@
 	"Javascript": [
 		{
 			"name": "moment.js",
-			"level": "8",
+			"level": "7",
 			"handsOn": true,
 			"interested": true,
 			"projects": "Many projects"
@@ -192,7 +192,7 @@
 		},
 		{
 			"name": "jquery",
-			"level": "8",
+			"level": "7",
 			"handsOn": false,
 			"interested": false,
 			"projects": "Many projects"
@@ -231,7 +231,7 @@
 	"CMS": [
 		{
 			"name": "SharePoint",
-			"level": "8",
+			"level": "6",
 			"handsOn": false,
 			"interested": false,
 			"projects": "Many projects"
@@ -376,7 +376,7 @@
 			"projects": "Many projects"
 		},
 		{
-			"name": "Linux Ubuntur",
+			"name": "Linux Ubuntu",
 			"level": "6",
 			"handsOn": false,
 			"interested": true,

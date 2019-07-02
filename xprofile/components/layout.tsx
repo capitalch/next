@@ -17,7 +17,6 @@ function Layout({ currentPage = '', content = '', children = '' , isBanner=false
 			</StyledLeft>
 			<StyledRight></StyledRight>
 			<XMain content={content} children={children}></XMain>
-			
 		</StyledLayout>
 	);
 }
@@ -72,6 +71,7 @@ const StyledLayout = styled.div`
 
 const StyledBanner = styled.img`
 		grid-area: banner;
+		width:100%;
 		@media(max-width: 500px){
 			display:none;
 		}

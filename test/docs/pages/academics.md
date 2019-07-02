@@ -55,7 +55,7 @@ My educational certificates are below:
 
     td, th {
         border: 1px solid lightGrey;    
-        padding: 0.1rem;
+        padding: 0.3rem;
         /* margin:1rem; */
     }
     td {

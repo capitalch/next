@@ -1,4 +1,4 @@
-### Academics of Sushant
+# Academics of Sushant
 
 <!-- | Period | Institute | Stream  |
 | :---  |   :---   |      :----  |
@@ -55,7 +55,7 @@ My educational certificates are below:
 
     td, th {
         border: 1px solid lightGrey;    
-        padding: 0.1rem;
+        padding: 0.3rem;
         /* margin:1rem; */
     }
     td {
@@ -63,5 +63,8 @@ My educational certificates are below:
     }
     p {
         font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
     }
 </style>

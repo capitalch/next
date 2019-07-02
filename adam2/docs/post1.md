@@ -1,7 +1,7 @@
 ---
 title: this is post1
 slug: post1
-category: general
+category: general1
 ---
 
 Proin eget velit vel mi pulvinar sagittis et nec augue. Cras felis purus, pellentesque et odio vel, dignissim semper mi. Sed non quam elit. Nam id nulla lacus. Vestibulum mollis enim at nibh tincidunt, id accumsan ligula dapibus. Donec sem justo, blandit et nulla sed, tincidunt aliquet neque. Phasellus ultrices et elit in molestie. Morbi tempus ut lacus vel efficitur. Aliquam erat volutpat. Duis pulvinar leo ut purus ullamcorper, nec cursus ligula hendrerit. Duis in diam dapibus, ullamcorper ipsum consectetur, malesuada justo. Vestibulum condimentum odio vitae nibh rutrum dictum.

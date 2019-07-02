@@ -3,7 +3,7 @@ const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
 const port = parseInt(process.env.PORT, 10) || 3001;
-const dev = process.env.NODE_ENV !== 'production';
+const dev = true;//process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -47,4 +47,6 @@ app.prepare().then(() => {
 		if (err) throw err;
 		console.log(`> Ready on http://localhost:${port}`);
 	});
+}).catch(e => {
+	console.log(e);
 });
