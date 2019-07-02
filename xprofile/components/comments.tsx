@@ -13,7 +13,7 @@ function Comments({ pageComments, slug }) {
 
     useEffect(() => {
         setArr(getCommentsArray(pageComments))
-    }, pageComments)
+    },[pageComments])
 
     return <div>
         <StyledCommentButton onClick={() => { setRootForm() }}>{diction.comments.clickForNewComments}</StyledCommentButton>

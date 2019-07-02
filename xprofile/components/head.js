@@ -1,8 +1,9 @@
 import React from 'react'
 import NextHead from 'next/head'
 import { string } from 'prop-types'
+import diction from '../diction.json'
 
-const defaultDescription = 'Portfolio of Sushant Agrawal'
+const defaultDescription = diction.description;// 'Portfolio of Sushant Agrawal'
 const defaultOGURL = ''
 const defaultOGImage = ''
 

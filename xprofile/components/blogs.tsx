@@ -12,7 +12,7 @@ function Blogs({ blogs }) {
                 {
                     blogs[cat].sort((b: any, a: any): any => (a.createdOn.valueOf() - b.createdOn.valueOf())).map((obj, index) => {
                         return <StyledDiv key={index}>                            
-                            <Link href={`/blog/${obj.slug}`}>{`${obj.title}: `}</Link>
+                            <Link href={`/blog/${obj.slug}`}><a>{`${obj.title}: `}</a></Link>
                             <StyledDate>{`${moment(obj.createdOn).format('YYYY, Do MMM')}`}</StyledDate>
                             <br></br>
                             <StyledShortContent>{`${obj.content}`}</StyledShortContent>

@@ -17,7 +17,6 @@ function Layout({ currentPage = '', content = '', children = '' , isBanner=false
 			</StyledLeft>
 			<StyledRight></StyledRight>
 			<XMain content={content} children={children}></XMain>
-			
 		</StyledLayout>
 	);
 }
