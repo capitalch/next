@@ -13,7 +13,7 @@ function Layout({ currentPage = '', content = '', children = '' , isBanner=false
 				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
 				<ProfileText>
 					Sushant Agrawal <div>capitalch@gmail.com</div>
-					<h4>Hire software developer</h4>
+					<h5>Hire software developer</h5>
 				</ProfileText>
 			</StyledLeft>
 			<StyledRight></StyledRight>
