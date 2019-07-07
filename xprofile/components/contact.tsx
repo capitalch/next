@@ -11,7 +11,7 @@ function Contact() {
 	return (
 		<div>
 			<AddressDetails>
-				<h3>Contact details of Sushant</h3>
+				<h3>Contact details of Sushant Agrawal</h3>
 				<div> {contactDetails.address1}</div>
 				<div>{contactDetails.address2}</div>
 				<div>{contactDetails.nearLocation}</div>

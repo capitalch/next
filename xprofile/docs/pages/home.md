@@ -1,13 +1,18 @@
-# Home of Sushant Agrawal
+# Sushant Agrawal, full stack software consultant in open source 
+#### Hire Sushant for full stack software development
 ---
 
-This site is technical portfolio and personal profile of Sushant Agrawal. Sushant is a full stack software developer for React.js, Node.js, Angular, Advanced JavaScript, ES6, Google Flutter, ElasticSearch and PostgreSql database. He holds an engineering degree in B.Tech computer science from BIT, Mesra, india.
+This site is technical portfolio and personal profile of Sushant Agrawal. Sushant is a full stack senior and independent software developer cum consultant for React.js, Node.js, Angular, Advanced JavaScript, ES6, Google Flutter, ElasticSearch and PostgreSql database. He holds an engineering degree in B.Tech computer science from BIT, Mesra, india. 
 
-Sushant's first mentionable project was to computerize a retail business consisting of financial accounting, inventory management, final accounts and payroll. Thereafter he developed a service management software to automate repairs and service management workflow of authorized service centres. Sometime in year 2006 he joined hands with his college friend and started an offshore development centre in Kolkata, India. In this company he worked as technical hand and did many projects in Microsoft stack and also some projects in open source. He is still associated with this company in limited capacity. Sushant is thankful to his friend for his professional career.
+Sushant can be hired as independent developer / consultant for software projects which are really complex and challenging. Hedoes full stack remote software development in capacity of architect / consultant / lead developer / senior developer.
 
-Since year 2017 Sushant primarily worked on open source technology and he developed tremendous confidence in full stack development as invidual contributor and consultant and also as team player while developing severals complex softwares in domain of financial accounting, legal, medical and HR. Sushant has hands-on experience for over 3 decades and posses a success rate of +95% in development of software projects.
+Sushant has broad experience over 20+ years in managing complete lifecycle of software development starting from requirement gathering and estimations to selection of technology, ground level development, project management, research, testing and quality assurance, deployment, UAT and final delivery. Sushant has worked independently and also as project manager, team lead and member of a team. Sushant also has exposure to company formation, accounting, recruitment and HR, relevant company and labor laws and company management.
 
-Sushant works as independent contractor from Kolkata for critical software projects. He can be contacted for full stack remote software development work in capacity of architect / consultant / lead developer.
+Sushant started his carrier as independent freelancer after passing out from engineering college. Sometime in year 2006 he joined hands with his USA based college friend and started an offshore development centre in Kolkata, India. Sushant played key role in starting and managing this company. Sushant is thankful to his friend for his professional career.
+
+Sushant is always connected with ground level software development. He upgrades himself with contemporary technology as and when required. Since year 2017 Sushant focussed on open source technology and he developed tremendous confidence in full stack software development in open source. He possess a success rate of +95% in software development.
+
+Sushant can blend well with startup companies where his comprehensive knowledge and experience in software industry can be widely utilized for formation and management of business, HR and recruitment, selection of technology, development, completion and delivery of projects.
 
 <style>
     h1 {

@@ -39,7 +39,8 @@ const Skillset = ({ skills }) => {
 
 	const Container = (
 		<div>
-			<StyledH1>Software development skills of Sushant</StyledH1>
+			<StyledH1>Skills of Sushant Agrawal</StyledH1>
+			<StyledH4>Hire Sushant for his skills</StyledH4>
 			<StyledText>{diction.skillset[0]}</StyledText>
 			<StyledText>{diction.skillset[1]}</StyledText>
 			<StyledText>{diction.skillset[2]}</StyledText><br></br>
@@ -93,6 +94,13 @@ const StyledH1 = styled.h1`
 	margin-left: 1rem;
 	@media(max-width:992px){
 		font-size: 1.2rem;
+}`
+
+const StyledH4 = styled.h4`
+	font-size: 1.1rem;
+	margin-left: 1rem;
+	@media(max-width:992px){
+		font-size: 0.8rem;
 }`
 
 const StyledTable = styled.table`

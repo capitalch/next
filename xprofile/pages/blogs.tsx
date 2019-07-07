@@ -9,7 +9,7 @@ function BlogsPage({ blogs, slug }) {
     return (
         <div>
             <GlobalStyle />
-            <Head title='Blogs' />
+            <Head title='Blogs by Sushant Agrawal, full stack software consultant' />
             <Layout currentPage={slug}><Blogs blogs={blogs}></Blogs></Layout>
         </div>
     );
