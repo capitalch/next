@@ -2,7 +2,7 @@
 
 ---
 
-Here I display some of my recent key projects and discuss them
+#### We discuss here some recent key projects of Sushant
 
 ##### 1. <a target='_blank' href='http://sushantagrawal.com'>sushantagrawal.com</a> Portal for portfolio management 
 |  |  |

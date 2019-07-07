@@ -108,6 +108,15 @@
 			"projects": "Many projects"
 		}
 	],
+	"Search":[
+		{
+			"name": "ElasticSearch",
+			"level": "4",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Practised"
+		}
+	],
 	"Databases": [
 		{
 			"name": "Sql Server",
