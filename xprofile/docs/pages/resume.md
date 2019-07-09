@@ -4,7 +4,7 @@
 | :---  |   :---   |
 |Experience | Professionsl hands-on experience of 14+ years. Developing software since 3 decades. |
 | Current engagement | Chief Technology Officer in a company for limited time involvement |
-| Experience in | Client side: <span class='highlight'>React.js</span>, Gatsby, <span class='highlight'>next.js</span>, Angular 2 / 4 / 5 / 6, <span class='highlight'>Advanced JavaScript frameworks</span>, Banckbone, ES6, Apollo GraphQL client, scss, HTML5, css-in-js, styled-components |
+| Experience in | Client side: <span class='highlight'><a target='_blank' href='https://reactjs.org'>React.js</a></span>, <a target='_blank' href='https://www.gatsbyjs.org/'>Gatsby</a>, <span class='highlight'><a target='_blank' href='https://nextjs.org/'>Next.js</a></span>, <a target='_blank' href='https://angularjs.org/'>Angularjs</a> / 4 / 5 / 6, <span class='highlight'><a target='_blank' href='https://www.javascript.com/'>Advanced JavaScript</a> frameworks</span>, <a target='_blank' href='https://backbonejs.org/'>Backbone</a>, <a target='_blank' href='http://es6-features.org'>Es6</a>, <a target='_blank' href='https://www.apollographql.com'>Apollo GraphQL Client</a>, scss, HTML5, <a target='_blank' href='https://cssinjs.org'>css-in-js</a>, <a target='_blank' href='https://www.styled-components.com/'>styled-components</a> |
 |               | Server side: <span class='highlight'>Node.js</span>, J2EE, Java, C#, ASP.NET, Apollo GraphQL server|
 |               | Databases: <span class='highlight'>PostgreSql</span>, MySQl, Oracle, Mongo DB, Sql Server, Sql Anywhere, ReThinkDB |
 |               | Mobile: <span class='highlight'>Google Flutter</span>, Dart, Cordova, Ionic, React native |
