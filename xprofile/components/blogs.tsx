@@ -11,11 +11,12 @@ function Blogs({ blogs }) {
                 <Styledcat style={{ textTransform: 'capitalize' }}>{cat}</Styledcat>
                 {
                     blogs[cat].sort((b: any, a: any): any => (a.createdOn.valueOf() - b.createdOn.valueOf())).map((obj, index) => {
+                        const content = obj.content.replace(/[\[\]#]+/g, ''); //remove all occurance of '#'
                         return <StyledDiv key={index}>                            
                             <Link href={`/blog/${obj.slug}`}><a>{`${obj.title}: `}</a></Link>
                             <StyledDate>{`${moment(obj.createdOn).format('YYYY, Do MMM')}`}</StyledDate>
                             <br></br>
-                            <StyledShortContent>{`${obj.content}`}</StyledShortContent>
+                            <StyledShortContent>{content +'...'}</StyledShortContent>
                             <Link href={`/blog/${obj.slug}`}>                                
                                 <a>{'  '}Read more... </a>
                             </Link>
@@ -30,14 +31,13 @@ const StyledDiv = styled.div`
     line-height: 1.5rem;
     font-size: 1rem;
     margin-left: 1rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 
     a {
         font-weight: bold;
         color: blue;
         display: inline;
         text-decoration: none;
-
         :active {
             color: red;
         }
@@ -48,16 +48,17 @@ const StyledDiv = styled.div`
     }
 `
 const Styledcat = styled.div`
-    color:darkslategrey;
+    color:black;
+    margin:0;
     font-weight:bold;
 `
 
 const StyledDate = styled.span`
-    color:black;
+    color:darkorange;
 `
 
 const StyledShortContent = styled.span`
-    color:grey;
+    color:darkmagenta;
 `
 
 export default Blogs

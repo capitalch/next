@@ -45,7 +45,7 @@ With advent of <a target='_blank' href='https://cssinjs.org'>css-in-js</a> techn
         font-size: 1.5rem;
     }
     h4 {
-        color:blue;
+        color:red;
         margin-top:0.3rem;
         margin-bottom:0;
     }

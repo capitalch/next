@@ -22,7 +22,7 @@ Sushant can blend well with startup companies where his comprehensive knowledge 
     h2 {
         font-size:1.2rem;
         display:inline-block;
-        color:blue;
+        color:maroon;
         margin:0;
     }
     a {
