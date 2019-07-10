@@ -7,7 +7,7 @@ import Head from '../components/head'
 import CodeBlock from '../code-block'
 import Comments from '../components/comments'
 import axios from 'axios'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown/with-html'
 import settings from '../settings.json'
 
 // import Prism from 'prismjs';
@@ -35,9 +35,6 @@ BlogPage.getInitialProps = async ({  res, asPath }) => {
         const content = res.locals.content
         const title = res.locals.title
         const slug = asPath.split('/')[2];
-        // return { content, title}
-
-
         const url = `${settings.commentsUrl}/projects`
         const params = {
             token: settings.token
