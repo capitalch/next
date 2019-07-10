@@ -35,21 +35,23 @@ Start the ElasticSearch. In windows you can start the ElasticSearch by running t
 Above will start ElasticSearch instance in Windows. To checkup the correct installation of ElasticSearch, browse at http://localhost:9200. You will see similar to following in browser screen
 ```
 {
-  "name" : "ADMIN-PC",
-  "cluster_name" : "elasticsearch",
-  "cluster_uuid" : "U0qX119mQhONScxxtq-jsQ",
-  "version" : {
-    "number" : "7.2.0",
-    "build_flavor" : "default",
-    "build_type" : "zip",
-    "build_hash" : "508c38a",
-    "build_date" : "2019-06-20T15:54:18.811730Z",
-    "build_snapshot" : false,
-    "lucene_version" : "8.0.0",
-    "minimum_wire_compatibility_version" : "6.8.0",
-    "minimum_index_compatibility_version" : "6.0.0-beta1"
-  },
-  "tagline" : "You Know, for Search"
+"name" : "ADMIN-PC",
+"cluster_name" : "elasticsearch",
+"cluster_uuid" : "U0qX119mQhONScxxtq-jsQ",
+"version" : {
+"number" : "7.2.0",
+"build_flavor" : "default",
+"build_type" : "zip",
+"build_hash" : "508c38a",
+"build_date" : "2019-06-20T15:54:18.811730Z",
+"build_snapshot" : false,
+"lucene_version" : "8.0.0",
+"minimum_wire_compatibility_version" : 
+"6.8.0",
+"minimum_index_compatibility_version" :
+    "6.0.0-beta1"
+},
+"tagline" : "You Know, for Search"
 }
 ```
 ### 2. <a href='https://www.guru99.com/download-install-node-js.html' target='_blank'> Download and Install node.js </a>
@@ -62,68 +64,80 @@ If you have correctly installed node.js then giving the command ```node --versio
 You can download sample data for <a href='http://api.nobelprize.org/v1/prize.json' target='_blank'>Nobel Prize winners</a>. If the download does not start and data is visible in browser screen then you can select all data in browser screen, copy and paste to a local file named as 'nobelprize.json'. We are going to use this data for indexing and querying in ElasticSearch installed as above. Whatever it is, make sure that you have all the JSON data for Nobel prize winners in your 'nobelprize.json' file. Create a folder by name 'data' and put the above file in 'data' folder. The format of the file is as below:
 ```
 {
-    "prizes": [
-        {
-            "year": "2018",
-            "category": "physics",
-            "overallMotivation": "\"for groundbreaking inventions 
-            in the field of laser physics\"",
-            "laureates": [
-                {
-                    "id": "960",
-                    "firstname": "Arthur",
-                    "surname": "Ashkin",
-                    "motivation": "\"for the optical tweezers 
-                    and their application to biological systems\"",
-                    "share": "2"
-                },
-                {
-                    "id": "961",
-                    "firstname": "G\u00e9rard",
-                    "surname": "Mourou",
-                    "motivation": "\"for their method of generating 
-                    high-intensity, ultra-short optical pulses\"",
-                    "share": "4"
-                },
-                {
-                    "id": "962",
-                    "firstname": "Donna",
-                    "surname": "Strickland",
-                    "motivation": "\"for their method of generating 
-                    high-intensity, ultra-short optical pulses\"",
-                    "share": "4"
-                }
-            ]
-        },
-        {
-            "year": "2018",
-            "category": "chemistry",
-            "laureates": [
-                {
-                    "id": "963",
-                    "firstname": "Frances H.",
-                    "surname": "Arnold",
-                    "motivation": "\"for the directed evolution of enzymes\"",
-                    "share": "2"
-                },
-                {
-                    "id": "964",
-                    "firstname": "George P.",
-                    "surname": "Smith",
-                    "motivation": "\"for the phage display of 
-                    peptides and antibodies\"",
-                    "share": "4"
-                },
-                {
-                    "id": "965",
-                    "firstname": "Sir Gregory P.",
-                    "surname": "Winter",
-                    "motivation": "\"for the phage display of 
-                    peptides and antibodies\"",
-                    "share": "4"
-                }
-            ]
-        },
+"prizes": [
+    {
+        "year": "2018",
+        "category": "physics",
+        "overallMotivation": "\"for 
+        groundbreaking 
+        inventions 
+        in the field of laser physics\"",
+        "laureates": [
+    {
+        "id": "960",
+        "firstname": "Arthur",
+        "surname": "Ashkin",
+        "motivation": "\"for the 
+        optical tweezers 
+        and their application to 
+        biological systems\"",
+        "share": "2"
+    },
+    {
+        "id": "961",
+        "firstname": "G\u00e9rard",
+        "surname": "Mourou",
+        "motivation": "\"for their 
+        method of generating 
+        high-intensity, ultra-short 
+        optical pulses\"",
+        "share": "4"
+    },
+    {
+        "id": "962",
+        "firstname": "Donna",
+        "surname": "Strickland",
+        "motivation": "\"for their 
+        method of generating 
+        high-intensity, ultra-short 
+        optical pulses\"",
+        "share": "4"
+    }
+        ]
+    },
+    {
+        "year": "2018",
+        "category": "chemistry",
+        "laureates": [
+    {
+        "id": "963",
+        "firstname": "Frances H.",
+        "surname": "Arnold",
+        "motivation": "\"for the 
+        directed
+            evolution of enzymes\"",
+        "share": "2"
+    },
+    {
+        "id": "964",
+        "firstname": "George P.",
+        "surname": "Smith",
+        "motivation": "\"for the 
+        phage display of 
+        peptides and antibodies\"",
+        "share": "4"
+    },
+    {
+        "id": "965",
+        "firstname": "Sir Gregory P.",
+        "surname": "Winter",
+        "motivation": "\"for the 
+        phage display of 
+        peptides and antibodies\"",
+        "share": "4"
+    }
+        ]
+    },
         ...
 ```
 
@@ -140,22 +154,26 @@ b) Create server.js file with following code
 server.js
 ```javascript
 const es = require('@elastic/elasticsearch');
-const nobelPrizeWinners = require('./data/nobelprize.json');
+const nobelPrizeWinners = 
+    require('./data/nobelprize.json');
 const client = new es.Client({
     node: 'http://localhost:9200'
 })
 const dataArray = nobelPrizeWinners.prizes;
-const getIndexTemplate = (i) => `{"index":{"_id":${i + 1}}}`
+const getIndexTemplate = (i) => 
+    `{"index":{"_id":${i + 1}}}`
 function doIndex(arr, template) {
     const bulk = []
     arr.forEach((x, i) => {
-        const j = JSON.parse(template(i));
+        const j = 
+        JSON.parse(template(i));
         bulk.push(j);
         bulk.push(x);
     })
     return bulk;
 }
-const bulk = doIndex(dataArray, getIndexTemplate);
+const bulk = doIndex(dataArray,
+    getIndexTemplate);
 client.bulk(
     {
         index: 'nobel',
@@ -164,13 +182,15 @@ client.bulk(
         if (err) {
             console.log(err);
         } else {
-            console.log('success:', resp);
+            console.log('success:'
+                , resp);
         }
     });
 ```
 Explaination for
 ```javascript
-const nobelPrizeWinners = require('./data/nobelprize.json');
+const nobelPrizeWinners = 
+    require('./data/nobelprize.json');
 const client = new es.Client({
     node: 'http://localhost:9200'
 })
@@ -180,11 +200,13 @@ load the json data in nobelPrizeWinners and instantiate the ElasticSearch client
 Explaination for
 ```javascript
 const dataArray = nobelPrizeWinners.prizes;
-const getIndexTemplate = (i) => `{"index":{"_id":${i + 1}}}`
+const getIndexTemplate = (i) => 
+    `{"index":{"_id":${i + 1}}}`
 function doIndex(arr, template) {
     const bulk = []
     arr.forEach((x, i) => {
-        const j = JSON.parse(template(i));
+        const j = 
+        JSON.parse(template(i));
         bulk.push(j);
         bulk.push(x);
     })
@@ -195,7 +217,8 @@ function doIndex(arr, template) {
 
 Explaination for
 ```javascript
-const bulk = doIndex(dataArray, getIndexTemplate);
+const bulk = doIndex(dataArray, 
+    getIndexTemplate);
 client.bulk(
     {
         index: 'nobel',
@@ -204,7 +227,8 @@ client.bulk(
         if (err) {
             console.log(err);
         } else {
-            console.log('success:', resp);
+            console.log('success:', 
+                resp);
         }
     });
 ```
@@ -213,8 +237,8 @@ This code at first executes the ```doIndex``` function to get the ```bulk``` arr
 You can test whether the index is correctly created in ElasticSearch or not by using following procedure.
 Start Postman. Give the command ```http://localhost:9200/_cat/indices``` as get request in Postman. **Remember to use Header Content-Type as application/json in all queries for ElasticSearch**. This is your first query to ElasticSearch using cat api. You will see something like 
 ```
-health status index                uuid                   pri rep 
-yellow open   nobel                CHJkNCgJTNGbDH2QKw5bdg   1   1
+health status index
+yellow open   nobel
 ``` 
 as response. Don't worry about health as yellow. If you don't see nobel as index, then something is wrong and you need to checkup your process so far.
 
@@ -256,26 +280,29 @@ Notice the fuzzy character '~' at the end of ```litratur```. There is spelling m
         "max_score": 3.8908901,
         "hits": [
             {
-                "_index": "nobel",
-                "_type": "_doc",
-                "_id": "273",
-                "_score": 3.8908901,
-                "_source": {
-                    "year": "1973",
-                    "category": "literature",
-                    "laureates": [
-                        {
-                            "id": "648",
-                            "firstname": "Patrick",
-                            "surname": "White",
-                            "motivation": "\"for an epic and 
-                            psychological narrative 
-                            art which has introduced a new 
-                            continent into literature\"",
-                            "share": "1"
-                        }
-                    ]
-                }
+        "_index": "nobel",
+        "_type": "_doc",
+        "_id": "273",
+        "_score": 3.8908901,
+        "_source": {
+            "year": "1973",
+            "category": "literature",
+            "laureates": [
+            {
+                "id": "648",
+                "firstname": "Patrick",
+                "surname": "White",
+                "motivation": "\"for 
+                an epic and 
+                psychological narrative 
+                art which has 
+                introduced a new 
+                continent into 
+                literature\"",
+                "share": "1"
+            }
+            ]
+        }
             },
             ...
 ```
@@ -286,7 +313,7 @@ Request body is
 {
     "query": {
         "query_string" : {
-            "query" : "raman~"
+        "query" : "raman~"
         }
     }
 }
