@@ -1,5 +1,6 @@
-#sitemap
-https://creatorsneverdie.com/post/creating-a-dynamic-sitemap-with-ghost-next-js/
+# Google register sitemap
+https://search.google.com/search-console
+
 #self sign certifificate
 https://www.selfsignedcertificate.com/
 #certificate for node.js etc

@@ -1,2 +1,3 @@
 User-agent: * 
 Disallow:
+Sitemap: http://www.sushantagrawal.com/sitemap.xml

@@ -1,5 +1,5 @@
 const express = require('express');
-const moment= require('moment');
+const moment = require('moment');
 const compression = require('compression');
 const next = require('next');
 const fs = require('fs');
@@ -20,7 +20,7 @@ function getBlogs(req, res, app, folderPath, client) {
 			if (!c.isDirectory) {
 				const filePath = path.join(folderPath, c);
 				let { data, content } = matter.read(filePath);
-				content = content.split(' ').slice(0,25).join(' ');
+				content = content.split(' ').slice(0, 25).join(' ');
 				const birthTime = fs.statSync(filePath).birthtime;
 				const createdOn = data.createdOn || moment(birthTime).format('YYYY-MM-DD');
 				const cat = data.category;
@@ -51,6 +51,17 @@ const robotsOptions = {
 	}
 };
 
+const sitemapOptions = {
+	root: __dirname + '/static/',
+	headers: {
+		'Content-Type': 'text/xml;charset=UTF-8',
+	}
+};
+
+const faviconOptions = {
+	root: __dirname + '/static/'
+};
+
 app.prepare().then(() => {
 	const server = express()
 	server.use(compression())
@@ -59,10 +70,19 @@ app.prepare().then(() => {
 		res.status(200).sendFile('robots.txt', robotsOptions)
 	));
 
+	server.get('/sitemap.xml', (req, res) => (
+		res.status(200).sendFile('sitemap.xml', sitemapOptions)
+	));
+
+	server.get('/favicon.ico', (req, res) => (
+		res.status(200).sendFile('favicon.ico', faviconOptions)
+	));
+
 	server.get('/blogs', (req, res) => {
 		const folderPath = path.join(__dirname, 'docs', 'blogs');
 		getBlogs(req, res, app, folderPath, req.query.client)
 	});
+
 
 	server.get('/:slug', (req, res) => {
 		const slug = req.params.slug;
@@ -71,8 +91,8 @@ app.prepare().then(() => {
 		const filePath = path.join(folderPath, 'skills.json');
 		if (slug === 'skillset') {
 			const skills = fs.readFileSync(filePath, 'utf8');
-			if(client){
-				res.status(200).json({skills:skills})
+			if (client) {
+				res.status(200).json({ skills: skills })
 			} else {
 				res.locals.skills = skills;
 			}
