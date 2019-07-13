@@ -34,7 +34,7 @@ function getBlogs(req, res, app, folderPath, client) {
 				return a
 			}
 		}, {});
-		console.log(blogs);
+		// console.log(blogs);
 		if (client) {
 			res.json(blogs)
 		} else {
@@ -119,6 +119,7 @@ app.prepare().then(() => {
 		const filePath = path.join(folderPath, `${slug}.md`);
 		const content = fs.readFileSync(filePath, 'utf8').split('---')[2]; //to omit front matter
 		res.locals.content = content;
+		// console.log(content)
 		const { data } = matter.read(filePath);
 		res.locals.title = data.title;
 		return app.render(req, res, '/blog');

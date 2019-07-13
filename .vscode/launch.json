@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\adam2\\server.js"
+            "program": "${workspaceFolder}\\xprofile\\server.js"
             // "program":"debug"
         }
     ]
