@@ -58,12 +58,21 @@ export default class MyDocument extends Document {
         {
           "@context": "http://schema.org",
           "@type": "Organization",
-          "name": "Kush Infotech",
-          "url": "http://kushinfotech.com",
+          "name": "Sushant Agrawal",
+          "url": "http://www.sushantagrawal.com",
           "sameAs": [
             "https://www.facebook.com/Sushant-Agrawal-684961715281384/",
-            "https://sushant-agrawal.business.site/?m=true"
-          ]
+            "https://sushant-agrawal.business.site/?m=true",
+            "https://twitter.com/SusantAgrawal",
+            "https://www.linkedin.com/in/sushant1234"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "92/2A Bidhan Nagar Road",
+            "addressRegion": "Kolkata",
+            "postalCode": "700067",
+            "addressCountry": "India"
+          }
         }
       `
     }
@@ -84,7 +93,7 @@ export default class MyDocument extends Document {
             </>
           }
           <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={this.setSchema1()} />
+            {/* <script type="application/ld+json" dangerouslySetInnerHTML={this.setSchema1()} /> */}
             <script type="application/ld+json" dangerouslySetInnerHTML={this.setSchema2()} />
           </>
         </body>
