@@ -62,9 +62,18 @@ const faviconOptions = {
 	root: __dirname + '/static/'
 };
 
+
 app.prepare().then(() => {
 	const server = express()
 	server.use(compression())
+
+	server.use((req, res, next) => {
+		var host = req.get('Host');
+		if (host === 'sushantagrawal.com') {
+		  return res.redirect(301, 'http://www.sushantagrawal.com' + req.originalUrl);
+		}
+		return next();
+	});
 
 	server.get('/robots.txt', (req, res) => (
 		res.status(200).sendFile('robots.txt', robotsOptions)
@@ -76,6 +85,10 @@ app.prepare().then(() => {
 
 	server.get('/favicon.ico', (req, res) => (
 		res.status(200).sendFile('favicon.ico', faviconOptions)
+	));
+
+	server.get('/sushant', (req, res) => (
+		res.status(200).sendFile('sush4.jpg', {root: __dirname + '/static/images/'})
 	));
 
 	server.get('/blogs', (req, res) => {

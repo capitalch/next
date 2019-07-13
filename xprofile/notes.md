@@ -1,3 +1,9 @@
+# Seo
+https://www.woorank.com/en
+
+# Domain authirity check
+https://www.seoreviewtools.com
+
 # Google register sitemap
 https://search.google.com/search-console
 

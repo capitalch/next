@@ -4,8 +4,9 @@ import { string } from 'prop-types'
 import diction from '../diction.json'
 
 const defaultDescription = diction.description;// 'Portfolio of Sushant Agrawal'
-const defaultOGURL = ''
-const defaultOGImage = ''
+const defaultOGURL = 'http://sushantagrawal.com'
+const defaultOGImage = 'http://sushantagrawal.com/sushant'
+const defaultOGType = 'Portfolio of Sushant Agrawal, full stack software developer'
 
 const Head = props => (
   <NextHead>
@@ -33,8 +34,9 @@ const Head = props => (
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content={props.ogType || defaultOGType} />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="300" />
   </NextHead>
 )
 
