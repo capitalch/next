@@ -31,21 +31,12 @@ Full stack developers are costly. But often they are still cheaper if you consid
 
 With advent of <a target='_blank' href='https://cssinjs.org'>css-in-js</a> technology a JavaScript developer has to the work of UI designer. QA work has become challenging and programming knowledge for doing QA work has now become mandatory. You are expected to know JavaScript if node.js is selected at server side, which is a valid choice. By deploying separate person for each job of Development, QA, UI design, Database design, API development and Deployment the cost may increase many fold. By using full stack developers you can minimize software development costs to a great extent.
 
-
-
-
-
-
-
-
-
-
 <style>
     h1 {
         font-size: 1.5rem;
     }
     h4 {
-        color:red;
+        color:maroon;
         margin-top:0.3rem;
         margin-bottom:0;
     }

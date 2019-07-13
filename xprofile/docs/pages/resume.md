@@ -182,7 +182,7 @@ Worked as Freelancer mainly in Java, Powerbuilder and Sql Anywhere
     }
 
     h4 {
-        color: red;
+        color: maroon;
         margin:0;
     }
 </style>
