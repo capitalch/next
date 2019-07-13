@@ -40,6 +40,32 @@ export default class MyDocument extends Document {
     };
   }
 
+  setSchema() {
+    return {
+      __html: `
+      <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Blog",
+        "url": "http://www.sushantagrawal.com/blog/elastic-search"
+      }
+      </script>
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Kush Infotech",
+          "url": "http://kushinfotech.com",
+          "sameAs": [
+            "https://www.facebook.com/sushant.agrawal.90",
+            "https://sushant-agrawal.business.site/?m=true"
+          ]
+        }
+      </script>
+      `
+    }
+  }
+
   render() {
     const { isProduction } = this.props;
     return (
@@ -52,6 +78,7 @@ export default class MyDocument extends Document {
           {isProduction && <>
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50190756-3" />
             <script dangerouslySetInnerHTML={this.setGoogleTags()} />
+            <script dangerouslySetInnerHTML={this.setSchema()} />
           </>
           }
         </body>
