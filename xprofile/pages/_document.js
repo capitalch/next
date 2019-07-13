@@ -40,28 +40,31 @@ export default class MyDocument extends Document {
     };
   }
 
-  setSchema() {
+  setSchema1() {
     return {
       __html: `
-      <script type="application/ld+json">
+     
       {
         "@context": "http://schema.org",
         "@type": "Blog",
         "url": "http://www.sushantagrawal.com/blog/elastic-search"
-      }
-      </script>
-      <script type="application/ld+json">
+      }`
+    }
+  }
+
+  setSchema2(){
+    return {
+      __html:`
         {
           "@context": "http://schema.org",
           "@type": "Organization",
           "name": "Kush Infotech",
           "url": "http://kushinfotech.com",
           "sameAs": [
-            "https://www.facebook.com/sushant.agrawal.90",
+            "https://www.facebook.com/Sushant-Agrawal-684961715281384/",
             "https://sushant-agrawal.business.site/?m=true"
           ]
         }
-      </script>
       `
     }
   }
@@ -77,10 +80,13 @@ export default class MyDocument extends Document {
           <NextScript />
           {isProduction && <>
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50190756-3" />
-            <script dangerouslySetInnerHTML={this.setGoogleTags()} />
-            <script dangerouslySetInnerHTML={this.setSchema()} />
-          </>
+            <script dangerouslySetInnerHTML={this.setGoogleTags()} />            
+            </>
           }
+          <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={this.setSchema1()} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={this.setSchema2()} />
+          </>
         </body>
       </Html>
     )
