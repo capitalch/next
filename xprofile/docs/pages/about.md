@@ -1,5 +1,5 @@
 # More about Sushant Agrawal
-##### Hire Sushant as software consultant
+##### Contact Sushant for software consultancy / development at client and server side
 ---
 #### Sushant is passionate about software development
 Sushant's first software program was in Visual basic, way back in 1984 in a Casio programmable calculator PB100. Originally, he wanted to be an electronic engineer because of his family retail and servicing business of electronic goods but exposure to programming made him crazy and he shifted to Computer Science in engineering college. There he learnt Fortran, Cobol, Pascal and assembly language. 

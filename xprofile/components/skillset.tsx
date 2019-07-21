@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import skills1 from '../docs/skills.json'
+// import skills1 from '../docs/skills.json'
 import diction from '../diction.json'
 
 
@@ -40,7 +40,7 @@ const Skillset = ({ skills }) => {
 	const Container = (
 		<div>
 			<StyledH1>Skills of Sushant Agrawal</StyledH1>
-			<StyledH4>Hire Sushant for his skills</StyledH4>
+			<StyledH4>Contact Sushant for his skills</StyledH4>
 			<StyledText>{diction.skillset[0]}</StyledText>
 			<StyledText>{diction.skillset[1]}</StyledText>
 			<StyledText>{diction.skillset[2]}</StyledText><br></br>
@@ -62,10 +62,6 @@ const Skillset = ({ skills }) => {
 
 	return Container;
 }
-
-// function getRandomColor() {
-// 	return 'hsla(' + Math.floor(Math.random() * 360) + ', 100%, 70%, 1)';
-// }
 
 function getColor(value) {
 	const colorScheme = {

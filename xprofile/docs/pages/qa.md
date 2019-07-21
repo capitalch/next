@@ -2,15 +2,15 @@
 
 <p class='q'>Q. You claim to possess over 50 skills which are mixture of client and server side technologies. How is it possible for one person to maintain so many skill sets?</p>
 
-I worked / did projects on many skill-sets sometime in past. I was productive in those skill sets at certain point of time. Over period of time I might have forgotten many of them, but I have my notes which will assist me in coming up to the speed within 1-2 weeks of time in any of skill sets I worked in past. I have mastered the art of learning.
+I worked / did projects on many skill-sets sometime in past. I had been quite productive and expert in those skill sets at certain point of time. Over period I might be out of practice in few of them, but I have my notes which will assist me in coming up to the speed within reasonable time in any of skill sets I worked in past. I have mastered the art of learning.
 
 <p class = 'q'>Q. Can you work on any project which lies within your skill set as mentioned in this portal or is there any condition?</p>
 
-I do have some choice. I want to work on projects of my choice which depends on latest technology trends, challenges of the project and payouts. It depends. For minimum confusion I have already mentioned an 'Interested' column in the skillset page of this portal.
+I do have some preferences. I prefert to work on challenging projects which depend on latest technology trends. It depends. For minimum confusion I have already mentioned an 'Interested' column in the skillset page of this portal.
 
-<p class='q'>Q. How many hours a week you can devote to an external project?</p>
+<p class='q'>Q. How many hours a week you can devote to a project?</p>
 
-I can devote 24 - 40 hours per week if there is an agreement or contract.
+I can devote 24 - 40 hours per week if there is an agreement or contract subject to my availability at that time.
 
 <p class='q'>Q. Can you physically work in premises of a company who offers you a project?</p>
 
@@ -26,13 +26,13 @@ Based on my profile client needs to have faith in me. I shall sign proper legal 
 
 <p class='q'>Q. Can you accept an offer of full time employment?</p>
 
-No, not at present. I prefer to work remotely from my own setup.
+No, not at present. I prefer to work remotely.
 
 <p class='q'>Q. What is your rate for working in a project?</p>
 
-My rates are negotiable which vary from $20 – $60 per hour based on technology and challenges. For complex work my rates will be higher. For emerging technology  I shall lower my rates. For routine project management and comparatively simple works I may charge as $20 per hour.
+My rates are negotiable which vary from $20 – $60 per hour based on technology and challenges. For complex work my rates will be higher. For emerging technology  I shall lower my rates. For routine project management and comparatively simple works I may charge low.
 
-<p class='q'>Q. What if you don’t know a technology, will you learn that for the project? What will be your rate during the learning phase?</p>
+<p class='q'>Q. What if you don’t know a technology, will you learn that for the project? What will be your rate during the learning period?</p>
 
 I shall learn a technology if I don’t know that. My rate will be 50% lower during learning phase.
 
@@ -54,7 +54,7 @@ I suggest an initial advance of 30% followed by weekly / monthly payments as per
 
 <p class='q'>Q. What are your strong points?</p>
 
-I am good in mathematics and logic. I can solve critical business problems. I can devise high class algorithms. Generally I learn new skills in one - two weeks of time. I am good learner. I am methodical and organized. I break bigger problem to multiple smaller units and solve them individually to solve the big one.
+I am good in mathematics and logic. I can solve critical business problems. I can architect full software including client side, server side, database, fulfilling search and machine learning requirements. I can devise high class algorithms. Generally I learn new skills in one - two weeks of time. I am good learner. I am methodical and organized. I break bigger problem to multiple smaller units and solve them individually to solve the big one.
 
 <p class='q'>Q. Do you work with free lancing portals?</p>
 
@@ -74,7 +74,7 @@ Business, Financial accounting, Asset management, Payroll, Medical and Clinical 
 
 <p class='q'>Q. What are your preferred technology area of projects in?</p>
 
-Presently I am more interested in projects on React.js, node.js, postgresql, Docker, dart and flutter hybrid mobile apps. I am less interested in Java, .net, Angular, Sql Server at this time. I am not very conversant with AI, machine learning, Robotics and drone programming but I am willing to do work in that area.
+Presently I am more interested in projects on React.js, node.js, postgresql, Docker, Dart and flutter hybrid mobile apps, Python Django and machine learning. I am less interested in Java, .net, Angular, Sql Server at this time. I am not very conversant Robotics and drone programming but I am willing to do work in that area.
 
 <p class='q'>Q. Can you visit the place of your client in India or abroad if so required?</p>
 
@@ -82,7 +82,7 @@ Yes, provided I am paid for transit and lodging.
 
 <p class='q'>Q. What countries you have visited so far?</p>
 
-UAE, Hongkong, Thailand, Japan, Italy, Germany, Switzerland and Holland.
+UAE, Hongkong, Thailand, Japan, Italy, Germany, Hongkong, singapore, Switzerland and Holland.
 
 <p class = 'q'>What languages can you speak?</p>
 

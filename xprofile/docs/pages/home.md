@@ -1,5 +1,5 @@
 # Sushant Agrawal, full stack software consultant in open source 
-#### Hire Sushant for full stack software development
+#### Contact Sushant for full stack critical software development
 ---
 
 This site is technical portfolio and personal profile of Sushant Agrawal. Sushant is a full stack senior and independent software developer cum consultant for <a target='_blank' href = 'https://reactjs.org'>React.js ( UI )</a>, <a href = 'https://nodejs.org' target='_blank'>Node.js server side</a>, <a target='_blank' href='https://angularjs.org/'>Angular framework</a>, <a target='_blank' href='https://www.javascript.com/'>Advanced JavaScript (ES6)</a>, <a target='_blank' href='https://flutter.dev/'>Google Flutter</a>, <a target='_blank' href='https://www.elastic.co/'>ElasticSearch</a> and <a target='_blank' href = 'https://www.postgresql.org/'>PostgreSql database</a>. He holds an engineering degree in B.Tech computer science from <a target='_blank' href='https://www.bitmesra.ac.in/'>BIT Mesra, india</a>. 
