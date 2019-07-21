@@ -9,14 +9,14 @@ import settings from '../settings.json'
 import Comments from '../components/comments'
 
 const slugMapping = {
-	home: 'Hire React.js developer Sushant Agrawal',
-	about: 'About hiring node.js developer Sushant Agrawal',
-	contact: 'Contact and hire flutter developer Sushant Agrawal',
-	resume: 'Resume of Sushant Agrawal for hiring PostgreSql developer',
-	skillset: 'Check skills to hire Gatsby.js, Next.js developer Sushant Agrawal',
-	academics: 'Academics for hiring React.js developer Sushant Agrawal',
-	projects: 'Projects by Sushant Agrawal to be hired as full stack software developer',
-	qa: 'Interview for hiring Node.js developer Sushant Agrawal',
+	home: 'Contact Sushant Agrawal for React.js development',
+	about: 'About node.js development by Sushant Agrawal',
+	contact: 'Contact Sushant Agrawal for Flutter development',
+	resume: 'Resume of Sushant Agrawal, full stack software developer',
+	skillset: 'Skills of full stack software consultant Sushant Agrawal',
+	academics: 'Academics of full stack software consultant Sushant Agrawal',
+	projects: 'Projects done by Sushant Agrawal, full stack software developer',
+	qa: 'Interview of full stack software consultant Sushant Agrawal',
 
 }
 const IndexPage = ({ content, slug, pageComments, skills }) => {

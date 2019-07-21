@@ -88,7 +88,7 @@
 		},
 		{
 			"name": "Python",
-			"level": "5",
+			"level": "6",
 			"handsOn": false,
 			"interested": true,
 			"projects": "Practised"
@@ -175,6 +175,13 @@
 			"handsOn": true,
 			"interested": true,
 			"projects": "Many projects"
+		},
+		{
+			"name": "Django",
+			"level": "6",
+			"handsOn": true,
+			"interested": true,
+			"projects": "Practised"
 		}
 	],
 	"Javascript": [
