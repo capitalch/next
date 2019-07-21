@@ -12,8 +12,8 @@ function Layout({ currentPage = '', content = '', children = '' , isBanner=false
 			<StyledLeft>
 				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
 				<ProfileText>
-					Sushant Agrawal <div>capitalch@gmail.com</div>
-					<h5>Hire software developer</h5>
+					Sushant Agrawal
+					<StyledH5>Full stack software developer</StyledH5>
 				</ProfileText>
 			</StyledLeft>
 			<StyledRight></StyledRight>
@@ -109,6 +109,12 @@ const StyledLeft = styled.div`
 		grid-area: left;
 		background-color: #fff;
 	`
+
+const StyledH5 = styled.h5`
+	color: maroon;
+	font-size: 0.8rem;
+	margin: 0;
+`
 
 export default Layout;
 /*
