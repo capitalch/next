@@ -10,13 +10,11 @@ Sushant has broad experience over 20+ years in managing complete lifecycle of so
 
 Sushant started his carrier as independent freelancer after obtaining B.Tech. degree in computer science. Sometime in year 2006 he joined hands with his USA based college friend and started an offshore development centre in Kolkata, India. Sushant played key role in starting and managing this company. Sushant is thankful to his friend for his professional career.
 
-Sushant has always been related to ground level software development. He upgrades himself with contemporary technology as and when required. Since year 2017 Sushant focussed on open source technology and he developed tremendous confidence in full stack software development in open source. He possesses a success rate of +95% in software development.
+Sushant has always been connected to ground level software development. He upgrades himself with contemporary technology as and when required. Since year 2017 Sushant focussed on open source technology and he developed tremendous confidence in full stack software development in open source. He possesses a success rate of +95% in software development.
 
 Sushant can blend well with startup companies where his comprehensive knowledge and experience in software industry can be widely utilized for formation and management of business. He can be crucial in interview and recruitment of resources, selection of technology, ground level development and QA. He can help completion, delivery and deployment of projects on cloud platform. 
 
-If you have a great business idea, Sushant can be instrumental in implementing the same. He can be assigned to critical software development / consultancy on part / full time basis.
-
-
+If you have a great business idea, Sushant can be instrumental in implementing the same as a complete solution. He can be assigned to critical software development / consultancy on part / full time basis.
 
 <style>
     h1 {

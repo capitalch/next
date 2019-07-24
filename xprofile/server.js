@@ -69,11 +69,19 @@ app.prepare().then(() => {
 
 	server.use((req, res, next) => {
 		var host = req.get('Host');
-		if (host === 'sushantagrawal.com') {
-		  return res.redirect(301, 'http://www.sushantagrawal.com' + req.originalUrl);
+		if ((host === 'sushantagrawal.com') || (host === 'sushantagarwal.com')) {
+			return res.redirect(301, 'http://www.sushantagrawal.com' + req.originalUrl);
 		}
 		return next();
 	});
+
+	//convert https requests to http
+	server.use((req, res, next) => {
+		if (req.secure) {
+			res.redirect("http://" + req.headers.host + req.url)
+		}
+		return next();
+	})
 
 	server.get('/robots.txt', (req, res) => (
 		res.status(200).sendFile('robots.txt', robotsOptions)
@@ -88,7 +96,7 @@ app.prepare().then(() => {
 	));
 
 	server.get('/sushant', (req, res) => (
-		res.status(200).sendFile('sush4.jpg', {root: __dirname + '/static/images/'})
+		res.status(200).sendFile('sush4.jpg', { root: __dirname + '/static/images/' })
 	));
 
 	server.get('/blogs', (req, res) => {
