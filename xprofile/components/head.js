@@ -37,6 +37,7 @@ const Head = props => (
     <meta property="og:type" content={props.ogType || defaultOGType} />
     <meta property="og:image:width" content="200" />
     <meta property="og:image:height" content="300" />
+    <meta name="google-site-verification" content="8thgOiZYx3xorsYPFRKdvrc79nqhzutPy5Vkj_vTEuU" />
   </NextHead>
 )
 

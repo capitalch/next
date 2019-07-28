@@ -64,7 +64,8 @@ export default class MyDocument extends Document {
             "https://www.facebook.com/Sushant-Agrawal-684961715281384/",
             "https://sushant-agrawal.business.site/?m=true",
             "https://twitter.com/SusantAgrawal",
-            "https://www.linkedin.com/in/sushant1234"
+            "https://www.linkedin.com/in/sushant1234",
+            "https://www.instagram.com/sushantagrawal2/"
           ],
           "address": {
             "@type": "PostalAddress",
