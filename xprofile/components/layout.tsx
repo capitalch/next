@@ -10,7 +10,7 @@ function Layout({ currentPage = '', content = '', children = '' , isBanner=false
 			<Header currentPage={currentPage}>Home</Header>
 			{isBanner && <StyledBanner src="/static/images/banner1.jpg" alt="banner image"></StyledBanner>}
 			<StyledLeft>
-				<ProfileImage src="/static/images/sush4.jpg" alt='Image of Sushant Agrawal' />
+				<ProfileImage src="/static/images/sushant2.jpg" alt='Image of Sushant Agrawal' />
 				<ProfileText>
 					Sushant Agrawal
 					<StyledH5>Full stack software developer</StyledH5>
