@@ -6,7 +6,7 @@ const path = require('path');
 const port = parseInt(process.env.PORT, 10) || 3001;
 const dev = true;//process.env.NODE_ENV !== 'production';
 const app = next({ dev });
-const matter = require('gray-matter');
+// const matter = require('gray-matter');
 const handle = app.getRequestHandler();
 
 const getFiles = (source) =>
