@@ -8,7 +8,7 @@ createdOn: 2019-07-09
 <img src='/static/images/blogs/elasticsearch.jpeg' width='100%' alt='getting started with elasticSearch and Node.js' />
 
 #### Motivation
-While working on an e-commerce project I came across the requirement of searching a product by its name, category, model number or specification on all available fields in database. The search would need to be fast enough to cater a typeahead product box or auto fill suggestion box. After some research I decided to learn and implement ElasticSearch in this context. At first ElasticSearch appeared to be overwhelming with scattered and insufficient tutorials. But after some playing around it appeared to be a manageable beast. After achieving success I thought of sharing my experience with opensource community. I will try to keep this tutorial very simple and informative.
+While working on an e-commerce project I came across the requirement of searching a product by its name, category, model number or specification on all available fields in database. The search would need to be fast enough to cater a typeahead product box or auto fill suggestion box. After some research I decided to learn and implement ElasticSearch in this context. At first ElasticSearch appeared to be overwhelming with scattered and insufficient tutorials. But after some playing around it appeared to be a manageable beast. After achieving success I thought of sharing my experience with opensource community. I will try to keep this tutorial very simple, short and informative.
 
 #### Some minimum background in ElasticSearch
 At this point of time the latest version of ElasticSearch is version 7.2. For understanding sake we can think of ElasticSearch as somewhat analogous to a relational database. Indexing in ElasticSearch can be treated as creation of tables in relational database. An index in ElasticSearch can be considered as a table in datatabase. You index JSON objects in ElasticSearch. In one index you basically assign several JSON objects. 
@@ -22,7 +22,7 @@ ElasticSearch expects same JSON fields of all JSON objects in one index. Actuall
 
 3) By using node.js we will index test data in the ElasticSearch.
 
-4) By using Postman we will make some adhoc query on ElasticSearch.
+4) By using Postman we will make some adhoc queries on ElasticSearch.
 
 
 #### Environment Setup
@@ -32,7 +32,7 @@ Start the ElasticSearch. In windows you can start the ElasticSearch by running t
 > cd C:\elasticsearch-7.2.0\bin
 > elasticsearch
 ```
-Above will start ElasticSearch instance in Windows. To checkup the correct installation of ElasticSearch, browse at http://localhost:9200. You will see similar to following in browser screen
+Above will start ElasticSearch instance in Windows. To checkup the correct installation of ElasticSearch, browse at http://localhost:9200. You will see somewhat similar to following in browser screen
 ```
 {
 "name" : "ADMIN-PC",
@@ -59,7 +59,7 @@ If you have correctly installed node.js then giving the command ```node --versio
 
 ### 3. <a href='https://www.getpostman.com/' target='_blank'>Install Postman</a>. You can also install postman as Google Chrome extension if you are using Google Chrome.
 
-#### Here we go for actual implementation
+#### Here we go for actual work
 ### Step 1: Download data freely available in public domain
 You can download sample data for <a href='http://api.nobelprize.org/v1/prize.json' target='_blank'>Nobel Prize winners</a>. If the download does not start and data is visible in browser screen then you can select all data in browser screen, copy and paste to a local file named as 'nobelprize.json'. We are going to use this data for indexing and querying in ElasticSearch installed as above. Whatever it is, make sure that you have all the JSON data for Nobel prize winners in your 'nobelprize.json' file. Create a folder by name 'data' and put the above file in 'data' folder. The format of the file is as below:
 ```
@@ -141,7 +141,7 @@ You can download sample data for <a href='http://api.nobelprize.org/v1/prize.jso
         ...
 ```
 
-### Step 2: Node.js project for indexing the data in ElasticSearch
+### Step 2: Create Node.js project for indexing the data in ElasticSearch
 a) Give following command in command prompt and follow the instructions.
 ```
 npm init
@@ -187,7 +187,7 @@ client.bulk(
         }
     });
 ```
-Explaination for
+In following paragraphs I explan individual code snippets
 ```javascript
 const nobelPrizeWinners = 
     require('./data/nobelprize.json');
@@ -195,9 +195,8 @@ const client = new es.Client({
     node: 'http://localhost:9200'
 })
 ``` 
-load the json data in nobelPrizeWinners and instantiate the ElasticSearch client in client variable.
+Above code loads the json data in nobelPrizeWinners object and instantiate the ElasticSearch client in client variable.
 
-Explaination for
 ```javascript
 const dataArray = nobelPrizeWinners.prizes;
 const getIndexTemplate = (i) => 
@@ -213,9 +212,8 @@ function doIndex(arr, template) {
     return bulk;
 }
 ```
-```dataArray``` is an array consisting of all the prizes. This contains all the data for Nobel Prize winners. ```getindexTemplate``` is <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals' target='_blank'>template literal</a>, a new feature in ES6. The function ```doIndex``` creates an array 'bulk' , which contains actual data preceded by data required for bulk index api of ElasticSearch. In fact you need to provide the 'index' metadata and 'id' for each JSON object you are required to index. I used ```getIndexTemplate``` for generating such metadata. For more information You can refer to ElasticSearch <a target='_blank' href='https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html'>Bulk API</a>.
+In above code ```dataArray``` is an array consisting of all the prizes. This contains all the data for Nobel Prize winners. ```getindexTemplate``` is <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals' target='_blank'>template literal</a>, a new feature in ES6. The function ```doIndex``` creates an array 'bulk' , which contains actual data preceded by data required for bulk index api of ElasticSearch. In fact you need to provide the 'index' metadata and 'id' for each JSON object you are required to index. I used ```getIndexTemplate``` for generating such metadata. For more information You can refer to ElasticSearch <a target='_blank' href='https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html'>Bulk API</a>.
 
-Explaination for
 ```javascript
 const bulk = doIndex(dataArray, 
     getIndexTemplate);
@@ -232,15 +230,15 @@ client.bulk(
         }
     });
 ```
-This code at first executes the ```doIndex``` function to get the ```bulk``` array. Then the bulk API of ElasticSearch is executed through ```client.bulk```. If everything is fine then you get the index generated in the running instance of ElasticSearch. The name of index is ```nobel```
+This above code at first executes the ```doIndex``` function to get the ```bulk``` array. Then the bulk API of ElasticSearch is executed through ```client.bulk```. If everything is fine then you get the index generated in the running instance of ElasticSearch. The name of index is ```nobel```
 
 You can test whether the index is correctly created in ElasticSearch or not by using following procedure.
-Start Postman. Give the command ```http://localhost:9200/_cat/indices``` as get request in Postman. **Remember to use Header Content-Type as application/json in all queries for ElasticSearch**. This is your first query to ElasticSearch using cat api. You will see something like 
+Start Postman. Give the command ```http://localhost:9200/_cat/indices``` as get request in Postman. **Remember to use Header Content-Type as application/json in all queries for ElasticSearch**. This is your first query to ElasticSearch using cat api. You will see something like following as response.
 ```
 health status index
 yellow open   nobel
 ``` 
-as response. Don't worry about health as yellow. If you don't see nobel as index, then something is wrong and you need to checkup your process so far.
+Don't worry about health as yellow. If you don't see nobel as index, then something is wrong and you need to checkup your process so far.
 
 ### Step 3: Query the data using query api
 Now we will do a series of queries using Postman. Always remember to use Content-Type as application/json in one of the headers.
@@ -326,14 +324,14 @@ Up above I explained how to install ElasticSearch locally, but what about produc
 
 1. Create a new Docker environment and select latest version of 'elasticsearch' as docker image.
 2. Provide a static IP to the application server. An alternative is to provide an end point instead of permanent static IP
-3. When you start the docker based application server you will see errors in log files and default query of http://your-environment:9200 will not work. In **/usr/share/elasticsearch/config/elasticsearch.yml** add this line:
-**cluster.initial_master_nodes: node18391-elastic.cloudjiffy.net**. You can check exact the node name in the log file itself.
+3. When you start the docker based application server you will see errors in log files and default query of http://your-environment:9200 will not work. To get rid of the error, in **/usr/share/elasticsearch/config/elasticsearch.yml** add this line:
+**cluster.initial_master_nodes: node18391-elastic.cloudjiffy.net**. You can check exact node name in the log file itself.
 4. You can now successfully browse at your static IP or Cloudjiffy end point. Remember to append ':9200' at end of url in case you use static IP. The final url will be something like http://xxx.xxx.xxx.xxx:9200. But in case you prefer to use Cloudjiffy end point, you need not append the url with ':9200'
 5. You can index and make queries at the ElasticSearch URL in the same manner as explained above, just by replacing the localhost:9200 with the actual cloud URL.
 
 The above project is available at my github url at <a target='_blank' href='https://github.com/capitalch/elastic-search'>ElasticSearch implementation by Sushant</a>
 
-In case you face any trouble please feel free to put comments below. I can also be contacted at capitalch@gmail.com
+In case you face any trouble please feel free to put comments below. Sushant can also be contacted at <a href='http://sushantagrawal.com/contact'>Contact Sushant</a>
 
 Happy coding!!!
 
