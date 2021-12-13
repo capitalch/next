@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,10 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <h2>Learn Next.js</h2>
+          <h2>
+          <Link href='posts/first-post'><a>First post</a></Link>
+          </h2>
         </h1>
 
         <p className={styles.description}>
